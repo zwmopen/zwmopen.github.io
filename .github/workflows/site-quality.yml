@@ -1,0 +1,116 @@
+name: Site quality
+
+on:
+  push:
+    paths:
+      - "index.html"
+      - ".nojekyll"
+      - ".github/workflows/site-quality.yml"
+  pull_request:
+    paths:
+      - "index.html"
+      - ".nojekyll"
+      - ".github/workflows/site-quality.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Validate static homepage
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlparse
+
+          index = Path('index.html')
+          if not index.is_file():
+              raise SystemExit('index.html is missing')
+
+          text = index.read_text(encoding='utf-8')
+          errors = []
+
+          class AuditParser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.ids = set()
+                  self.duplicate_ids = set()
+                  self.links = []
+                  self.lang = None
+                  self.has_title = False
+                  self.has_viewport = False
+                  self.has_description = False
+
+              def handle_starttag(self, tag, attrs):
+                  values = dict(attrs)
+                  if tag == 'html':
+                      self.lang = values.get('lang')
+                  if tag == 'title':
+                      self.has_title = True
+                  if tag == 'meta' and values.get('name') == 'viewport':
+                      self.has_viewport = True
+                  if tag == 'meta' and values.get('name') == 'description':
+                      self.has_description = bool(values.get('content'))
+                  if 'id' in values:
+                      if values['id'] in self.ids:
+                          self.duplicate_ids.add(values['id'])
+                      self.ids.add(values['id'])
+                  if tag == 'a' and values.get('href'):
+                      self.links.append(values['href'])
+
+          parser = AuditParser()
+          parser.feed(text)
+          parser.close()
+
+          if parser.lang != 'zh-CN':
+              errors.append('html lang must be zh-CN')
+          if not parser.has_title:
+              errors.append('title is missing')
+          if not parser.has_viewport:
+              errors.append('viewport meta is missing')
+          if not parser.has_description:
+              errors.append('description meta is missing')
+          if parser.duplicate_ids:
+              errors.append(f'duplicate ids: {sorted(parser.duplicate_ids)}')
+
+          for href in parser.links:
+              if href.startswith(('#', 'mailto:', 'tel:')):
+                  continue
+              parsed = urlparse(href)
+              if parsed.scheme not in {'https'}:
+                  errors.append(f'non-HTTPS or invalid link: {href}')
+
+          required_fragments = {
+              'mobile responsive rules': '@media (max-width:',
+              'reduced motion support': 'prefers-reduced-motion',
+              'theme control': 'theme-toggle',
+              'GitHub profile link': 'https://github.com/zwmopen',
+              'no Jekyll marker': None,
+          }
+          for label, fragment in required_fragments.items():
+              if fragment and fragment not in text:
+                  errors.append(f'missing {label}')
+
+          if not Path('.nojekyll').is_file():
+              errors.append('.nojekyll is missing')
+          if index.stat().st_size > 1_000_000:
+              errors.append('index.html exceeds 1 MB')
+
+          if errors:
+              print('\n'.join(f'ERROR: {item}' for item in errors))
+              raise SystemExit(1)
+
+          print(f'Homepage validation passed: {len(parser.links)} links, {len(parser.ids)} ids.')
+          PY
+
+      - name: Check whitespace errors
+        run: git diff --check
