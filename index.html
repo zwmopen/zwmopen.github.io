@@ -1,18 +1,248 @@
----
-layout: default
----
-
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ZWM 的个人 AI 工作流主页：工作流、技能、脚本、内容生产与业务系统。">
+  <meta name="theme-color" content="#182019">
+  <title>ZWM · AI 工作流系统</title>
+  <style>
+    :root {
+      --paper: #eef1eb;
+      --card: #faf7ef;
+      --ink: #202620;
+      --soft: #526052;
+      --muted: #788077;
+      --line: #cbd3c8;
+      --green: #315e4c;
+      --green-2: #477d65;
+      --amber: #c88c3f;
+      --shadow: 0 18px 46px rgba(23, 31, 25, .11);
+      --radius: 14px;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Inter, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background:
+        linear-gradient(rgba(32, 38, 32, .045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(32, 38, 32, .045) 1px, transparent 1px),
+        var(--paper);
+      background-size: 64px 64px;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 3px solid var(--amber); outline-offset: 4px; }
+    .shell {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 26px 0 68px;
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 34px;
+    }
+    .side {
+      position: sticky;
+      top: 24px;
+      align-self: start;
+      overflow: hidden;
+      border: 1px solid #aeb8ac;
+      border-radius: var(--radius);
+      background: rgba(250,247,239,.93);
+      box-shadow: var(--shadow);
+    }
+    .portrait {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: #d9e1d8;
+      border-bottom: 1px solid #aeb8ac;
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .portrait::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(24,32,25,.58));
+    }
+    .badge {
+      position: absolute;
+      z-index: 1;
+      top: 14px;
+      left: 14px;
+      padding: 7px 10px;
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: .06em;
+      border: 1px solid rgba(255,255,255,.46);
+      background: rgba(24,32,25,.48);
+      backdrop-filter: blur(8px);
+    }
+    .side-body { padding: 24px; }
+    .kicker { margin: 0 0 8px; color: var(--green); font-weight: 800; font-size: 12px; letter-spacing: .08em; }
+    h1, h2, h3, p { margin-top: 0; }
+    .side h1 { margin-bottom: 10px; font-size: 34px; line-height: 1; }
+    .role { color: var(--soft); line-height: 1.75; }
+    .intro { margin: 18px 0; color: var(--soft); line-height: 1.8; font-size: 14px; }
+    .facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+    .facts li { display: grid; grid-template-columns: 72px 1fr; gap: 10px; padding-bottom: 9px; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--soft); }
+    .facts strong { color: var(--ink); }
+    .buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 20px; }
+    .button { min-height: 42px; display: inline-flex; align-items: center; justify-content: center; padding: 0 12px; border: 1px solid var(--ink); background: var(--ink); color: white; font-size: 13px; font-weight: 700; transition: .18s ease; }
+    .button.secondary { background: transparent; color: var(--ink); }
+    .button:hover { transform: translateY(-2px); background: var(--green); color: white; }
+    main { min-width: 0; }
+    .hero { min-height: 72vh; display: grid; align-content: center; padding: 56px 0; border-bottom: 1px solid #aeb8ac; }
+    .hero-label { width: fit-content; margin-bottom: 22px; padding: 8px 11px; color: white; background: var(--green); font-size: 12px; font-weight: 700; }
+    .hero h2 { max-width: 820px; margin-bottom: 24px; font-size: clamp(42px, 7vw, 78px); line-height: 1.02; letter-spacing: -.035em; }
+    .hero p { max-width: 760px; margin-bottom: 0; color: var(--soft); font-size: clamp(17px, 2.2vw, 22px); line-height: 1.8; }
+    .section { padding: 56px 0; border-bottom: 1px solid #aeb8ac; }
+    .section-head { display: grid; grid-template-columns: 150px 1fr; gap: 24px; align-items: start; margin-bottom: 28px; }
+    .section-index { color: var(--green); font-weight: 800; font-size: 12px; letter-spacing: .08em; }
+    .section h2 { margin-bottom: 8px; font-size: clamp(28px, 4vw, 44px); }
+    .section-lead { color: var(--soft); line-height: 1.8; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+    .card {
+      min-height: 190px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(250,247,239,.86);
+      box-shadow: 0 10px 28px rgba(32,38,32,.055);
+      transition: .18s ease;
+    }
+    a.card:hover { transform: translateY(-4px); border-color: var(--green); box-shadow: var(--shadow); }
+    .card-tag { margin-bottom: 26px; color: var(--green); font-size: 12px; font-weight: 800; }
+    .card h3 { margin-bottom: 10px; font-size: 21px; }
+    .card p { margin-bottom: 0; color: var(--soft); line-height: 1.75; font-size: 14px; }
+    .private { border-style: dashed; }
+    .flow { display: grid; gap: 0; border: 1px solid var(--line); background: var(--card); }
+    .flow-row { display: grid; grid-template-columns: 140px 1fr; gap: 22px; padding: 20px 22px; border-bottom: 1px solid var(--line); }
+    .flow-row:last-child { border-bottom: 0; }
+    .flow-row strong { color: var(--green); }
+    .flow-row span { color: var(--soft); line-height: 1.65; }
+    footer { padding-top: 34px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+    @media (max-width: 880px) {
+      .shell { grid-template-columns: 1fr; }
+      .side { position: relative; top: 0; display: grid; grid-template-columns: 260px 1fr; }
+      .portrait { height: 100%; aspect-ratio: auto; border-bottom: 0; border-right: 1px solid #aeb8ac; }
+      .hero { min-height: auto; padding-top: 42px; }
+    }
+    @media (max-width: 640px) {
+      .shell { width: min(100% - 20px, var(--max)); padding-top: 10px; }
+      .side { display: block; }
+      .portrait { aspect-ratio: 16/10; border-right: 0; border-bottom: 1px solid #aeb8ac; }
+      .grid { grid-template-columns: 1fr; }
+      .section-head { grid-template-columns: 1fr; gap: 8px; }
+      .flow-row { grid-template-columns: 1fr; gap: 8px; }
+      .hero h2 { font-size: 42px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="side">
+      <div class="portrait">
+        <span class="badge">AI NATIVE OPERATOR</span>
+        <img src="https://avatars.githubusercontent.com/u/53870884?v=4" alt="ZWM GitHub 头像">
       </div>
+      <div class="side-body">
+        <p class="kicker">ZWM · WORKBENCH</p>
+        <h1>ZWM</h1>
+        <p class="role">内容运营者、AI 工作流搭建者与自动化实践者。</p>
+        <p class="intro">把真实业务拆成可执行流程，让 AI、脚本与人工判断形成稳定闭环，而不是继续堆工具和概念。</p>
+        <ul class="facts">
+          <li><strong>当前</strong><span>团建内容系统 / AI 自媒体</span></li>
+          <li><strong>方法</strong><span>真实需求 → AI 执行 → 人工验收 → 资产沉淀</span></li>
+          <li><strong>位置</strong><span>杭州</span></li>
+          <li><strong>状态</strong><span>持续构建中</span></li>
+        </ul>
+        <div class="buttons">
+          <a class="button" href="https://github.com/zwmopen">GitHub</a>
+          <a class="button secondary" href="#projects">项目</a>
+        </div>
+      </div>
+    </aside>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+    <main>
+      <section class="hero">
+        <div class="hero-label">个人 AI 工作流系统</div>
+        <h2>把工作经验，沉淀成可以反复调用的系统。</h2>
+        <p>我的重点不是制造更多 AI 演示，而是把内容生产、素材管理、判断标准和日常操作真正接到一起，让系统服务现实推进。</p>
+      </section>
+
+      <section class="section" id="system">
+        <div class="section-head">
+          <div class="section-index">01 / SYSTEM</div>
+          <div><h2>四层工作系统</h2><p class="section-lead">判断、执行、工具和项目各自独立，避免所有内容再次混成一个大仓库。</p></div>
+        </div>
+        <div class="flow">
+          <div class="flow-row"><strong>判断层</strong><span>业务 SOP、决策框架、质量标准、复盘方法和人机协作方式。</span></div>
+          <div class="flow-row"><strong>执行层</strong><span>可以被 Codex、OpenClaw、Claude Code、Cursor 等工具直接调用的 Skill。</span></div>
+          <div class="flow-row"><strong>工具层</strong><span>公开脚本、浏览器辅助、批处理和轻量本地工具。</span></div>
+          <div class="flow-row"><strong>项目层</strong><span>团建视频、素材工作台、内容生产等具体业务系统，各自拥有独立仓库和边界。</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-head">
+          <div class="section-index">02 / PROJECTS</div>
+          <div><h2>公开项目与工具</h2><p class="section-lead">公开仓库用于展示和复用；核心业务工作流与数据仍保持私有。</p></div>
+        </div>
+        <div class="grid">
+          <a class="card" href="https://github.com/zwmopen/scripts">
+            <div class="card-tag">PUBLIC · AUTOMATION</div>
+            <h3>Scripts</h3>
+            <p>ChatGPT 对话分组、作品包生成、图片批处理和日常自动化脚本。</p>
+          </a>
+          <a class="card" href="https://github.com/zwmopen/WindowLayoutLauncher">
+            <div class="card-tag">PUBLIC · WINDOWS APP</div>
+            <h3>窗口布局启动器</h3>
+            <p>保存并恢复文件夹、浏览器和应用窗口布局的绿色 Windows 小工具。</p>
+          </a>
+          <a class="card" href="https://github.com/zwmopen/Life-Game-Management-System">
+            <div class="card-tag">PORTFOLIO · ARCHIVED IDEA</div>
+            <h3>人生游戏管理系统</h3>
+            <p>一次把现实行动、任务和成长反馈游戏化的产品实验与阶段性作品。</p>
+          </a>
+          <a class="card" href="https://github.com/zwmopen/md2card-markdown-to-image-converter">
+            <div class="card-tag">PUBLIC · CONTENT TOOL</div>
+            <h3>Markdown to Card</h3>
+            <p>将 Markdown 内容转换成适合分享与发布的视觉卡片。</p>
+          </a>
+          <div class="card private">
+            <div class="card-tag">PRIVATE · CORE SYSTEM</div>
+            <h3>工作流与 Skill 主仓</h3>
+            <p>判断体系、业务 SOP、AI Skill 和个人操作系统保持私有维护。</p>
+          </div>
+          <div class="card private">
+            <div class="card-tag">PRIVATE · BUSINESS</div>
+            <h3>团建内容与视频工作流</h3>
+            <p>覆盖素材采集、分类、内容生产、作品包、发布和复盘的真实业务系统。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="principles">
+        <div class="section-head">
+          <div class="section-index">03 / PRINCIPLES</div>
+          <div><h2>构建原则</h2><p class="section-lead">系统的价值不在复杂，而在减少摩擦、避免重复并推动结果。</p></div>
+        </div>
+        <div class="grid">
+          <div class="card"><div class="card-tag">01</div><h3>单一事实源</h3><p>同一工具只保留一个源码主仓，其他位置只放调用与同步入口。</p></div>
+          <div class="card"><div class="card-tag">02</div><h3>本地优先</h3><p>素材、隐私和运行数据留在本地，GitHub 保存代码、规则和可恢复结构。</p></div>
+          <div class="card"><div class="card-tag">03</div><h3>AI 与确定性工具分工</h3><p>AI 负责理解、匹配和判断；脚本负责稳定、可验证的执行。</p></div>
+          <div class="card"><div class="card-tag">04</div><h3>结果优先</h3><p>不为搭系统而搭系统，每个模块都必须对应明确输入、输出和完成标准。</p></div>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2026 ZWM · Built around real workflows, not demos.</p>
+        <p>当前主页由 GitHub Pages 托管，持续随项目演化更新。</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
