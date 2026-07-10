@@ -4,11 +4,17 @@ on:
   push:
     paths:
       - "index.html"
+      - "404.html"
+      - "robots.txt"
+      - "sitemap.xml"
       - ".nojekyll"
       - ".github/workflows/site-quality.yml"
   pull_request:
     paths:
       - "index.html"
+      - "404.html"
+      - "robots.txt"
+      - "sitemap.xml"
       - ".nojekyll"
       - ".github/workflows/site-quality.yml"
 
@@ -25,18 +31,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate static homepage
+      - name: Validate static site
         run: |
           python - <<'PY'
           from html.parser import HTMLParser
           from pathlib import Path
           from urllib.parse import urlparse
+          import xml.etree.ElementTree as ET
 
-          index = Path('index.html')
-          if not index.is_file():
-              raise SystemExit('index.html is missing')
-
-          text = index.read_text(encoding='utf-8')
           errors = []
 
           class AuditParser(HTMLParser):
@@ -49,6 +51,7 @@ jobs:
                   self.has_title = False
                   self.has_viewport = False
                   self.has_description = False
+                  self.has_noindex = False
 
               def handle_starttag(self, tag, attrs):
                   values = dict(attrs)
@@ -60,6 +63,8 @@ jobs:
                       self.has_viewport = True
                   if tag == 'meta' and values.get('name') == 'description':
                       self.has_description = bool(values.get('content'))
+                  if tag == 'meta' and values.get('name') == 'robots':
+                      self.has_noindex = 'noindex' in values.get('content', '').lower()
                   if 'id' in values:
                       if values['id'] in self.ids:
                           self.duplicate_ids.add(values['id'])
@@ -67,49 +72,81 @@ jobs:
                   if tag == 'a' and values.get('href'):
                       self.links.append(values['href'])
 
-          parser = AuditParser()
-          parser.feed(text)
-          parser.close()
+          def parse_html(path: Path):
+              if not path.is_file():
+                  errors.append(f'{path} is missing')
+                  return None, ''
+              text = path.read_text(encoding='utf-8')
+              parser = AuditParser()
+              parser.feed(text)
+              parser.close()
+              if parser.lang != 'zh-CN':
+                  errors.append(f'{path}: html lang must be zh-CN')
+              if not parser.has_title:
+                  errors.append(f'{path}: title is missing')
+              if not parser.has_viewport:
+                  errors.append(f'{path}: viewport meta is missing')
+              if parser.duplicate_ids:
+                  errors.append(f'{path}: duplicate ids {sorted(parser.duplicate_ids)}')
+              for href in parser.links:
+                  if href.startswith(('#', 'mailto:', 'tel:')):
+                      continue
+                  if urlparse(href).scheme != 'https':
+                      errors.append(f'{path}: non-HTTPS or invalid link {href}')
+              return parser, text
 
-          if parser.lang != 'zh-CN':
-              errors.append('html lang must be zh-CN')
-          if not parser.has_title:
-              errors.append('title is missing')
-          if not parser.has_viewport:
-              errors.append('viewport meta is missing')
-          if not parser.has_description:
-              errors.append('description meta is missing')
-          if parser.duplicate_ids:
-              errors.append(f'duplicate ids: {sorted(parser.duplicate_ids)}')
+          home_parser, home_text = parse_html(Path('index.html'))
+          error_parser, error_text = parse_html(Path('404.html'))
 
-          for href in parser.links:
-              if href.startswith(('#', 'mailto:', 'tel:')):
-                  continue
-              parsed = urlparse(href)
-              if parsed.scheme not in {'https'}:
-                  errors.append(f'non-HTTPS or invalid link: {href}')
+          if home_parser and not home_parser.has_description:
+              errors.append('index.html: description meta is missing')
+          if error_parser and not error_parser.has_noindex:
+              errors.append('404.html: robots noindex meta is missing')
 
-          required_fragments = {
+          required_home_fragments = {
               'mobile responsive rules': '@media (max-width:',
               'reduced motion support': 'prefers-reduced-motion',
               'theme control': 'theme-toggle',
               'GitHub profile link': 'https://github.com/zwmopen',
-              'no Jekyll marker': None,
           }
-          for label, fragment in required_fragments.items():
-              if fragment and fragment not in text:
-                  errors.append(f'missing {label}')
+          for label, fragment in required_home_fragments.items():
+              if fragment not in home_text:
+                  errors.append(f'index.html: missing {label}')
 
+          if 'https://zwmopen.github.io/' not in error_text:
+              errors.append('404.html: missing canonical home link')
           if not Path('.nojekyll').is_file():
               errors.append('.nojekyll is missing')
-          if index.stat().st_size > 1_000_000:
-              errors.append('index.html exceeds 1 MB')
+
+          robots = Path('robots.txt')
+          if not robots.is_file():
+              errors.append('robots.txt is missing')
+          else:
+              robots_text = robots.read_text(encoding='utf-8')
+              if 'Sitemap: https://zwmopen.github.io/sitemap.xml' not in robots_text:
+                  errors.append('robots.txt: sitemap reference is missing')
+
+          sitemap = Path('sitemap.xml')
+          if not sitemap.is_file():
+              errors.append('sitemap.xml is missing')
+          else:
+              try:
+                  root = ET.parse(sitemap).getroot()
+                  locations = [node.text for node in root.findall('{http://www.sitemaps.org/schemas/sitemap/0.9}url/{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
+                  if 'https://zwmopen.github.io/' not in locations:
+                      errors.append('sitemap.xml: homepage URL is missing')
+              except ET.ParseError as exc:
+                  errors.append(f'sitemap.xml: invalid XML: {exc}')
+
+          for path in (Path('index.html'), Path('404.html')):
+              if path.is_file() and path.stat().st_size > 1_000_000:
+                  errors.append(f'{path}: exceeds 1 MB')
 
           if errors:
               print('\n'.join(f'ERROR: {item}' for item in errors))
               raise SystemExit(1)
 
-          print(f'Homepage validation passed: {len(parser.links)} links, {len(parser.ids)} ids.')
+          print('Static site validation passed.')
           PY
 
       - name: Check whitespace errors
