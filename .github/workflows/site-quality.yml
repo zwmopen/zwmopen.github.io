@@ -1,14 +1,6 @@
 name: Site quality
 
 on:
-  push:
-    paths:
-      - "index.html"
-      - "404.html"
-      - "robots.txt"
-      - "sitemap.xml"
-      - ".nojekyll"
-      - ".github/workflows/site-quality.yml"
   pull_request:
     paths:
       - "index.html"
@@ -17,6 +9,7 @@ on:
       - "sitemap.xml"
       - ".nojekyll"
       - ".github/workflows/site-quality.yml"
+  workflow_dispatch:
 
 permissions:
   contents: read
