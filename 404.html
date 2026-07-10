@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#e0e5ec">
+  <title>页面未找到 · ZWM AI 工作台</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #e0e5ec;
+      --text: #293241;
+      --muted: #748096;
+      --blue: #5068f4;
+      --shadow-dark: rgba(163,177,198,.72);
+      --shadow-light: rgba(255,255,255,.98);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1e1e2e;
+        --text: #eef0fb;
+        --muted: #989db4;
+        --blue: #7894ff;
+        --shadow-dark: rgba(0,0,0,.5);
+        --shadow-light: rgba(48,48,72,.86);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+    }
+    main {
+      width: min(620px, 100%);
+      padding: clamp(36px, 8vw, 72px);
+      text-align: center;
+      border-radius: 36px;
+      background: var(--bg);
+      box-shadow: 16px 16px 38px var(--shadow-dark), -16px -16px 38px var(--shadow-light);
+    }
+    .code { margin-bottom: 16px; color: var(--blue); font-size: clamp(72px, 18vw, 130px); font-weight: 900; line-height: .9; letter-spacing: -.08em; }
+    h1 { margin: 0 0 14px; font-size: clamp(28px, 6vw, 42px); }
+    p { margin: 0 auto 30px; max-width: 460px; color: var(--muted); line-height: 1.8; }
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(145deg, #7394ff, var(--blue));
+      box-shadow: 8px 10px 22px rgba(80,104,244,.28), -7px -7px 18px var(--shadow-light);
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform .2s ease;
+    }
+    a:hover { transform: translateY(-4px); }
+    a:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="code">404</div>
+    <h1>这个页面还没有被构建。</h1>
+    <p>链接可能已经移动，或者这个项目尚未公开。返回 AI 工作台，继续查看当前在役项目。</p>
+    <a href="https://zwmopen.github.io/">返回主页</a>
+  </main>
+</body>
+</html>
