@@ -1,0 +1,11 @@
+{
+  "name": "OwlReader Next",
+  "short_name": "OwlReader",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3eddf",
+  "theme_color": "#1f6d5f",
+  "description": "轻量、现代、合规的 Web 阅读器",
+  "icons": [{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
