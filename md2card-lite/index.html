@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MD2Card Lite：纯前端 Markdown 卡片生成器">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>MD2Card Lite</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zwmopen/md2card-markdown-to-image-converter@ff05519e64bfa8e1f464800d7cbeae3253252a89/lite/lite.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/zwmopen/md2card-markdown-to-image-converter@ff05519e64bfa8e1f464800d7cbeae3253252a89/lite/core.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/zwmopen/md2card-markdown-to-image-converter@ff05519e64bfa8e1f464800d7cbeae3253252a89/lite/lite.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">MD2Card Lite</p>
+      <h1>Markdown 轻量卡片</h1>
+      <p class="subtitle">纯前端运行，不上传内容，不需要服务器。</p>
+    </div>
+    <div class="top-actions">
+      <label class="button secondary" for="fileInput">导入 Markdown</label>
+      <input id="fileInput" type="file" accept=".md,.markdown,text/markdown,text/plain" hidden>
+      <button id="exportCurrentBtn" class="button primary" type="button">导出当前页</button>
+      <button id="exportAllBtn" class="button secondary" type="button">全部打包</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section class="panel editor-panel" aria-labelledby="editorTitle">
+      <div class="panel-header">
+        <div>
+          <p class="panel-kicker">编辑</p>
+          <h2 id="editorTitle">Markdown</h2>
+        </div>
+        <button id="clearBtn" class="text-button" type="button">清空</button>
+      </div>
+      <textarea id="markdownInput" spellcheck="false" aria-label="Markdown 内容"># 轻量版 MD2Card
+
+只保留最常用的能力：
+
+- 实时预览
+- 自动分页
+- 三种主题
+- PNG 导出
+- ZIP 批量导出
+
+## 隐私
+
+内容只在你的浏览器里处理，不会上传到服务器。
+
+> 适合临时做知识卡片、社交媒体图文和笔记截图。</textarea>
+      <div class="editor-meta">
+        <span id="characterCount">0 字</span>
+        <span>快捷键：Ctrl / Cmd + S 导出当前页</span>
+      </div>
+    </section>
+
+    <section class="panel preview-panel" aria-labelledby="previewTitle">
+      <div class="panel-header preview-heading">
+        <div>
+          <p class="panel-kicker">预览</p>
+          <h2 id="previewTitle">卡片</h2>
+        </div>
+        <span id="pageCounter" class="page-counter">1 / 1</span>
+      </div>
+
+      <div class="toolbar" aria-label="卡片设置">
+        <label>
+          主题
+          <select id="themeSelect">
+            <option value="paper">纸张</option>
+            <option value="sunset">暖色</option>
+            <option value="dark">深色</option>
+          </select>
+        </label>
+        <label>
+          比例
+          <select id="ratioSelect">
+            <option value="3:4">3:4</option>
+            <option value="4:5">4:5</option>
+            <option value="1:1">1:1</option>
+          </select>
+        </label>
+        <label class="range-field">
+          字号 <span id="fontSizeValue">18</span>
+          <input id="fontSizeInput" type="range" min="14" max="24" value="18">
+        </label>
+      </div>
+
+      <div class="preview-stage">
+        <article id="cardPreview" class="card theme-paper ratio-3-4" aria-live="polite">
+          <div id="cardContent" class="card-content"></div>
+          <footer class="card-footer">
+            <span>MD2Card Lite</span>
+            <span id="cardPageNumber">01</span>
+          </footer>
+        </article>
+      </div>
+
+      <nav class="pagination" aria-label="分页">
+        <button id="prevBtn" class="icon-button" type="button" aria-label="上一页">←</button>
+        <div class="dots" id="pageDots" aria-hidden="true"></div>
+        <button id="nextBtn" class="icon-button" type="button" aria-label="下一页">→</button>
+      </nav>
+
+      <p id="statusMessage" class="status" role="status">准备就绪</p>
+    </section>
+  </main>
+
+  <div id="exportStage" class="export-stage" aria-hidden="true"></div>
+  <noscript>需要启用 JavaScript 才能使用 MD2Card Lite。</noscript>
+</body>
+</html>
