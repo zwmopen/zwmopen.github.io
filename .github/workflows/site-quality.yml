@@ -82,7 +82,7 @@ jobs:
               if parser.duplicate_ids:
                   errors.append(f'{path}: duplicate ids {sorted(parser.duplicate_ids)}')
               for href in parser.links:
-                  if href.startswith(('#', 'mailto:', 'tel:')):
+                  if href.startswith(('#', '/', 'mailto:', 'tel:')):
                       continue
                   if urlparse(href).scheme != 'https':
                       errors.append(f'{path}: non-HTTPS or invalid link {href}')
