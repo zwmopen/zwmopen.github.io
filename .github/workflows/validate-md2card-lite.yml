@@ -1,0 +1,45 @@
+name: Validate MD2Card Lite
+
+on:
+  pull_request:
+    paths:
+      - 'md2card-lite/**'
+      - '.github/workflows/validate-md2card-lite.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate standalone HTML
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const html = fs.readFileSync('md2card-lite/index.html', 'utf8');
+          const required = [
+            'id="markdown"', 'id="card"', 'id="content"',
+            'id="current"', 'id="all"', 'class="themes"',
+            'data-theme="ivory"', 'data-theme="midnight"',
+            'value="9:16"', 'id="grid"'
+          ];
+          for (const marker of required) {
+            if (!html.includes(marker)) throw new Error(`Missing ${marker}`);
+          }
+          const inlineScripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(match => match[1]);
+          if (inlineScripts.length !== 1) throw new Error('Expected one inline application script');
+          new Function(inlineScripts[0]);
+          if (!html.includes('<div id="content" class="content"><h1>')) {
+            throw new Error('Card must contain visible fallback content before JavaScript runs');
+          }
+          if (/\bfetch\s*\(|XMLHttpRequest/.test(inlineScripts[0])) {
+            throw new Error('The local-only app must not upload content');
+          }
+          console.log('MD2Card Lite standalone page validated');
+          NODE
