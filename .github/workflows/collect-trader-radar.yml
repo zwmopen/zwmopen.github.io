@@ -1,0 +1,59 @@
+name: Collect OKX trader radar data
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/collect-trader-radar.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-trader-radar
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[radar-now]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout public site
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect public OKX data
+        run: python scripts/collect_trader_radar.py
+
+      - name: Validate generated page data
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path("trader-radar/data/traders.json")
+          payload = json.loads(path.read_text(encoding="utf-8"))
+          assert payload.get("detail_count", 0) > 0, payload
+          assert payload.get("traders"), payload
+          print("Validated", payload["detail_count"], "traders")
+          PY
+
+      - name: Publish latest dataset
+        run: |
+          git config user.name "trader-radar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add trader-radar/data/traders.json
+          if git diff --cached --quiet; then
+            echo "No data changes"
+            exit 0
+          fi
+          git commit -m "data: update public OKX trader radar"
+          git pull --rebase origin master
+          git push origin HEAD:master
