@@ -1,8 +1,2903 @@
 {
   "schema_version": 1,
-  "generated_at": null,
+  "generated_at": "2026-07-13T11:42:14+00:00",
   "source": "OKX public copy-trading API",
-  "leaderboard_union_count": 0,
-  "detail_count": 0,
-  "traders": []
+  "leaderboard_union_count": 49,
+  "detail_count": 30,
+  "traders": [
+    {
+      "id": "66CBE179AA38C688",
+      "unique_code": "66CBE179AA38C688",
+      "name": "dylqaz12",
+      "profile_url": "https://www.okx.com/copy-trading/account/66CBE179AA38C688",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20220301/f389ea115c32497bb1cfcc690bbb7205",
+      "source_ranks": {
+        "overview": 11,
+        "aum": 10,
+        "current_copy_trader_pnl": 6
+      },
+      "metrics": {
+        "roi_pct": 23.51,
+        "pnl_usd": 38335.22499464362,
+        "aum_usd": 357233.4749095755,
+        "followers": 53,
+        "followers_accumulated": 259,
+        "lead_days": 321,
+        "win_rate_pct": 60.24,
+        "max_drawdown_pct": 25.65,
+        "curve_upward_ratio_pct": 38.8889,
+        "history_trade_count": 100,
+        "history_win_rate_pct": 93.0,
+        "profit_factor": 106.4852,
+        "avg_holding_hours": 33.6484,
+        "max_trade_loss_pct": 3.6051,
+        "max_history_leverage": 4.0,
+        "current_positions_count": 2,
+        "current_max_leverage": 3.0,
+        "current_total_margin_usd": 33332.1176,
+        "current_total_upl_usd": -1443.8754,
+        "current_upl_pct": -4.3318,
+        "copy_pnl_usd": 79647.14008708177,
+        "avg_follow_days": 167.7089,
+        "median_follow_days": 118.038,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "short",
+          "leverage": 3.0,
+          "margin_usd": 16665.453333333335,
+          "upl_usd": -597.86644,
+          "upl_pct": -3.5875
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "short",
+          "leverage": 3.0,
+          "margin_usd": 16666.664233333333,
+          "upl_usd": -846.00894,
+          "upl_pct": -5.0761
+        }
+      ],
+      "scores": {
+        "risk_control": 42.1,
+        "stability": 77.1,
+        "longevity": 90.1,
+        "copy_confidence": 84.4,
+        "data_reliability": 85.0,
+        "overall": 71.2
+      },
+      "flags": [
+        "收益曲线回撤偏大"
+      ],
+      "recommendation": "小额观察"
+    },
+    {
+      "id": "ECD85D96F372C0D1",
+      "unique_code": "ECD85D96F372C0D1",
+      "name": "不想输02",
+      "profile_url": "https://www.okx.com/copy-trading/account/ECD85D96F372C0D1",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/predefined/0036.png",
+      "source_ranks": {
+        "overview": 1,
+        "pnl": 4,
+        "aum": 18,
+        "win_ratio": 13,
+        "pnl_ratio": 2,
+        "current_copy_trader_pnl": 12
+      },
+      "metrics": {
+        "roi_pct": 210.89,
+        "pnl_usd": 421409.5641152429,
+        "aum_usd": 217144.5164623274,
+        "followers": 300,
+        "followers_accumulated": 764,
+        "lead_days": 201,
+        "win_rate_pct": 63.83,
+        "max_drawdown_pct": 211.26,
+        "curve_upward_ratio_pct": 61.1111,
+        "history_trade_count": 100,
+        "history_win_rate_pct": 91.0,
+        "profit_factor": 54.9657,
+        "avg_holding_hours": 66.0447,
+        "max_trade_loss_pct": 116.5964,
+        "max_history_leverage": 75.0,
+        "current_positions_count": 96,
+        "current_max_leverage": 50.0,
+        "current_total_margin_usd": 88657.089,
+        "current_total_upl_usd": -26141.8527,
+        "current_upl_pct": -29.4865,
+        "copy_pnl_usd": 29142.338313712007,
+        "avg_follow_days": 14.3926,
+        "median_follow_days": 11.0626,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.333,
+          "upl_usd": -12.5356,
+          "upl_pct": -3.7607
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.31666666666666,
+          "upl_usd": -9.7138,
+          "upl_pct": -2.9143
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.295,
+          "upl_usd": -6.876,
+          "upl_pct": -2.063
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.31666666666666,
+          "upl_usd": -9.7138,
+          "upl_pct": -2.9143
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.31666666666666,
+          "upl_usd": -9.7138,
+          "upl_pct": -2.9143
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.295,
+          "upl_usd": -6.876,
+          "upl_pct": -2.063
+        },
+        {
+          "instrument": "ETH-USDT-SWAP",
+          "side": "short",
+          "leverage": 50.0,
+          "margin_usd": 4999.964332,
+          "upl_usd": 7192.3306,
+          "upl_pct": 143.8476
+        },
+        {
+          "instrument": "ETH-USDT-SWAP",
+          "side": "short",
+          "leverage": 50.0,
+          "margin_usd": 4999.9673386,
+          "upl_usd": 7222.77153,
+          "upl_pct": 144.4564
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.19866666666667,
+          "upl_usd": -152.5056,
+          "upl_pct": -45.7702
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.2,
+          "upl_usd": -150.43,
+          "upl_pct": -45.1471
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.2,
+          "upl_usd": -150.43,
+          "upl_pct": -45.1471
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.19866666666667,
+          "upl_usd": -152.5056,
+          "upl_pct": -45.7702
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.2,
+          "upl_usd": -150.43,
+          "upl_pct": -45.1471
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.2,
+          "upl_usd": -150.43,
+          "upl_pct": -45.1471
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.333,
+          "upl_usd": -148.4028,
+          "upl_pct": -44.5209
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.333,
+          "upl_usd": -148.4028,
+          "upl_pct": -44.5209
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.333,
+          "upl_usd": -148.4028,
+          "upl_pct": -44.5209
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.333,
+          "upl_usd": -148.4028,
+          "upl_pct": -44.5209
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.333,
+          "upl_usd": -148.4028,
+          "upl_pct": -44.5209
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 3.0,
+          "margin_usd": 333.333,
+          "upl_usd": -148.4028,
+          "upl_pct": -44.5209
+        }
+      ],
+      "scores": {
+        "risk_control": 0,
+        "stability": 86.6,
+        "longevity": 84.0,
+        "copy_confidence": 82.0,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "存在较高杠杆（最高 75x）",
+        "当前持仓浮亏较大",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "杠杆风险极高",
+        "近3个月存在大额单笔亏损",
+        "近3个月存在接近爆仓级单笔亏损"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "1EA7ED83214F8F22",
+      "unique_code": "1EA7ED83214F8F22",
+      "name": "～小财神～",
+      "profile_url": "https://www.okx.com/copy-trading/account/1EA7ED83214F8F22",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/predefined/0007_vip.png",
+      "source_ranks": {
+        "overview": 2,
+        "pnl": 20,
+        "win_ratio": 12,
+        "pnl_ratio": 3
+      },
+      "metrics": {
+        "roi_pct": 204.65,
+        "pnl_usd": 137783.5523095982,
+        "aum_usd": 101148.60547840441,
+        "followers": 57,
+        "followers_accumulated": 194,
+        "lead_days": 149,
+        "win_rate_pct": 63.86,
+        "max_drawdown_pct": 229.64,
+        "curve_upward_ratio_pct": 38.8889,
+        "history_trade_count": 19,
+        "history_win_rate_pct": 94.7368,
+        "profit_factor": 1220.4242,
+        "avg_holding_hours": 412.3642,
+        "max_trade_loss_pct": 10.8371,
+        "max_history_leverage": 100.0,
+        "current_positions_count": 9,
+        "current_max_leverage": 100.0,
+        "current_total_margin_usd": 4206.1358,
+        "current_total_upl_usd": 33936.8443,
+        "current_upl_pct": 806.8414,
+        "copy_pnl_usd": 966.2560718170967,
+        "avg_follow_days": 18.4071,
+        "median_follow_days": 21.706,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 100.0,
+          "margin_usd": 250.752,
+          "upl_usd": 103.64,
+          "upl_pct": 41.3317
+        },
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 100.0,
+          "margin_usd": 117.0884,
+          "upl_usd": 880.58,
+          "upl_pct": 752.0643
+        },
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 100.0,
+          "margin_usd": 280.44,
+          "upl_usd": 4028.4,
+          "upl_pct": 1436.457
+        },
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 100.0,
+          "margin_usd": 117.776,
+          "upl_usd": 811.82,
+          "upl_pct": 689.2915
+        },
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 100.0,
+          "margin_usd": 186.8016,
+          "upl_usd": 2701.44,
+          "upl_pct": 1446.1546
+        },
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 100.0,
+          "margin_usd": 124.3517565,
+          "upl_usd": 1819.22435,
+          "upl_pct": 1462.9663
+        },
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 100.0,
+          "margin_usd": 706.656,
+          "upl_usd": 4870.92,
+          "upl_pct": 689.2915
+        },
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 100.0,
+          "margin_usd": 313.102,
+          "upl_usd": 3028.06,
+          "upl_pct": 1381.5945
+        },
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 100.0,
+          "margin_usd": 2109.168,
+          "upl_usd": 15692.76,
+          "upl_pct": 744.0261
+        }
+      ],
+      "scores": {
+        "risk_control": 0,
+        "stability": 57.7,
+        "longevity": 80.1,
+        "copy_confidence": 76.3,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "存在较高杠杆（最高 100x）",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "杠杆风险极高",
+        "近3个月历史订单样本偏少"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "DA2B29551CBB2AE7",
+      "unique_code": "DA2B29551CBB2AE7",
+      "name": "龙♪美希.760",
+      "profile_url": "https://www.okx.com/copy-trading/account/DA2B29551CBB2AE7",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20250604/602aaa8ace284e51a3561a06f7a389bc",
+      "source_ranks": {
+        "overview": 3,
+        "aum": 6,
+        "win_ratio": 7,
+        "current_copy_trader_pnl": 9
+      },
+      "metrics": {
+        "roi_pct": 27.18,
+        "pnl_usd": 89294.44777119596,
+        "aum_usd": 501852.6920156121,
+        "followers": 143,
+        "followers_accumulated": 381,
+        "lead_days": 49,
+        "win_rate_pct": 73.81,
+        "max_drawdown_pct": 30.67,
+        "curve_upward_ratio_pct": 37.5,
+        "history_trade_count": 100,
+        "history_win_rate_pct": 99.0,
+        "profit_factor": 102.6825,
+        "avg_holding_hours": 233.0028,
+        "max_trade_loss_pct": 319.6489,
+        "max_history_leverage": 50.0,
+        "current_positions_count": 100,
+        "current_max_leverage": 50.0,
+        "current_total_margin_usd": 18.9591,
+        "current_total_upl_usd": 59.1962,
+        "current_upl_pct": 312.2305,
+        "copy_pnl_usd": 67118.11963605562,
+        "avg_follow_days": 183.1762,
+        "median_follow_days": 37.6734,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.1198176,
+          "upl_usd": 0.30382,
+          "upl_pct": 253.5688
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.1198286,
+          "upl_usd": 0.30327,
+          "upl_pct": 253.0865
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.118165,
+          "upl_usd": 0.38645,
+          "upl_pct": 327.0427
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.1181648,
+          "upl_usd": 0.38646,
+          "upl_pct": 327.0517
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.1181614,
+          "upl_usd": 0.38663,
+          "upl_pct": 327.205
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.1181162,
+          "upl_usd": 0.38889,
+          "upl_pct": 329.2436
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.1181428,
+          "upl_usd": 0.38756,
+          "upl_pct": 328.0437
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.1181498,
+          "upl_usd": 0.38721,
+          "upl_pct": 327.728
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.1184034,
+          "upl_usd": 0.37453,
+          "upl_pct": 316.3169
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.1183764,
+          "upl_usd": 0.37588,
+          "upl_pct": 317.5295
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.118386,
+          "upl_usd": 0.3754,
+          "upl_pct": 317.0983
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.1183178,
+          "upl_usd": 0.37881,
+          "upl_pct": 320.1632
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.1183762,
+          "upl_usd": 0.37589,
+          "upl_pct": 317.5385
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.1183774,
+          "upl_usd": 0.37583,
+          "upl_pct": 317.4846
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.1183832,
+          "upl_usd": 0.37554,
+          "upl_pct": 317.2241
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.118399,
+          "upl_usd": 0.37475,
+          "upl_pct": 316.5145
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.118433,
+          "upl_usd": 0.37305,
+          "upl_pct": 314.9882
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.118429,
+          "upl_usd": 0.37325,
+          "upl_pct": 315.1677
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.1184488,
+          "upl_usd": 0.37226,
+          "upl_pct": 314.2792
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "net",
+          "leverage": 50.0,
+          "margin_usd": 0.1184488,
+          "upl_usd": 0.37226,
+          "upl_pct": 314.2792
+        }
+      ],
+      "scores": {
+        "risk_control": 0,
+        "stability": 78.0,
+        "longevity": 45.9,
+        "copy_confidence": 87.8,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "存在较高杠杆（最高 50x）",
+        "带单时间不足 90 天",
+        "收益曲线回撤偏大",
+        "杠杆风险极高",
+        "近3个月存在大额单笔亏损",
+        "近3个月存在接近爆仓级单笔亏损"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "3E34735C93824CDF",
+      "unique_code": "3E34735C93824CDF",
+      "name": "龚哥哥",
+      "profile_url": "https://www.okx.com/copy-trading/account/3E34735C93824CDF",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20260314/2b06be4746d445cdb5a40d1bffa6640b",
+      "source_ranks": {
+        "overview": 4,
+        "pnl_ratio": 6
+      },
+      "metrics": {
+        "roi_pct": 129.65,
+        "pnl_usd": 106482.59043843031,
+        "aum_usd": 21276.544002430983,
+        "followers": 37,
+        "followers_accumulated": 240,
+        "lead_days": 121,
+        "win_rate_pct": 57.3,
+        "max_drawdown_pct": 146.38,
+        "curve_upward_ratio_pct": 22.2222,
+        "history_trade_count": 0,
+        "history_win_rate_pct": null,
+        "profit_factor": null,
+        "avg_holding_hours": null,
+        "max_trade_loss_pct": 0.0,
+        "max_history_leverage": null,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": -1606.6845680576964,
+        "avg_follow_days": 36.9802,
+        "median_follow_days": 42.0829,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 33.0,
+        "stability": 30.0,
+        "longevity": 77.5,
+        "copy_confidence": 40.5,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "近3个月历史订单样本偏少"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "B74FC756C8EE894B",
+      "unique_code": "B74FC756C8EE894B",
+      "name": "0xleek.eth",
+      "profile_url": "https://www.okx.com/copy-trading/account/B74FC756C8EE894B",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20251230/2ac2f072ff504b52b0d7a99ce076c220",
+      "source_ranks": {
+        "overview": 6
+      },
+      "metrics": {
+        "roi_pct": 37.49,
+        "pnl_usd": 38629.2781429408,
+        "aum_usd": 7902.539240547987,
+        "followers": 2,
+        "followers_accumulated": 9,
+        "lead_days": 236,
+        "win_rate_pct": 58.43,
+        "max_drawdown_pct": 40.02,
+        "curve_upward_ratio_pct": 22.2222,
+        "history_trade_count": 34,
+        "history_win_rate_pct": 85.2941,
+        "profit_factor": 3.1064,
+        "avg_holding_hours": 91.9754,
+        "max_trade_loss_pct": 1198.8402,
+        "max_history_leverage": 100.0,
+        "current_positions_count": 7,
+        "current_max_leverage": 100.0,
+        "current_total_margin_usd": 2359.1078,
+        "current_total_upl_usd": -72.3353,
+        "current_upl_pct": -3.0662,
+        "copy_pnl_usd": 3715.1467394393476,
+        "avg_follow_days": 57.2574,
+        "median_follow_days": 10.6624,
+        "follower_profitable_pct": 33.3333
+      },
+      "current_positions": [
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 1393.57305,
+          "upl_usd": 303.3141,
+          "upl_pct": 21.7652
+        },
+        {
+          "instrument": "",
+          "side": "short",
+          "leverage": 50.0,
+          "margin_usd": 155.9285,
+          "upl_usd": 420.693,
+          "upl_pct": 269.7987
+        },
+        {
+          "instrument": "",
+          "side": "short",
+          "leverage": 50.0,
+          "margin_usd": 273.77262,
+          "upl_usd": -784.437,
+          "upl_pct": -286.5287
+        },
+        {
+          "instrument": "",
+          "side": "short",
+          "leverage": 100.0,
+          "margin_usd": 133.9549695,
+          "upl_usd": -30.06465,
+          "upl_pct": -22.4438
+        },
+        {
+          "instrument": "",
+          "side": "short",
+          "leverage": 100.0,
+          "margin_usd": 133.969632,
+          "upl_usd": 738.7544,
+          "upl_pct": 551.4342
+        },
+        {
+          "instrument": "",
+          "side": "short",
+          "leverage": 100.0,
+          "margin_usd": 133.942578,
+          "upl_usd": -176.74888,
+          "upl_pct": -131.9587
+        },
+        {
+          "instrument": "",
+          "side": "short",
+          "leverage": 100.0,
+          "margin_usd": 133.96644,
+          "upl_usd": -543.84624,
+          "upl_pct": -405.9571
+        }
+      ],
+      "scores": {
+        "risk_control": 0,
+        "stability": 64.5,
+        "longevity": 86.1,
+        "copy_confidence": 54.6,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "存在较高杠杆（最高 100x）",
+        "收益曲线回撤偏大",
+        "杠杆风险极高",
+        "近3个月存在大额单笔亏损",
+        "近3个月存在接近爆仓级单笔亏损"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "097F20F08F8BEB70",
+      "unique_code": "097F20F08F8BEB70",
+      "name": "皮卡稳健投资",
+      "profile_url": "https://www.okx.com/copy-trading/account/097F20F08F8BEB70",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20260225/4f0570fd620444da9cf6ebb74d51f8aa",
+      "source_ranks": {
+        "overview": 7,
+        "pnl": 17,
+        "pnl_ratio": 15,
+        "current_copy_trader_pnl": 17
+      },
+      "metrics": {
+        "roi_pct": 50.41,
+        "pnl_usd": 148737.24902595524,
+        "aum_usd": 92231.43994578974,
+        "followers": 113,
+        "followers_accumulated": 1432,
+        "lead_days": 240,
+        "win_rate_pct": 50.0,
+        "max_drawdown_pct": 81.75,
+        "curve_upward_ratio_pct": 44.4444,
+        "history_trade_count": 0,
+        "history_win_rate_pct": null,
+        "profit_factor": null,
+        "avg_holding_hours": null,
+        "max_trade_loss_pct": 0.0,
+        "max_history_leverage": null,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": -15166.282784394227,
+        "avg_follow_days": 137.4032,
+        "median_follow_days": 150.7346,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 33.0,
+        "stability": 40.0,
+        "longevity": 86.3,
+        "copy_confidence": 50.7,
+        "data_reliability": 55.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "近3个月历史订单样本偏少",
+        "长期带单但近3个月无公开订单，疑似失活"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "24BA42C49DC298DE",
+      "unique_code": "24BA42C49DC298DE",
+      "name": "Harvester",
+      "profile_url": "https://www.okx.com/copy-trading/account/24BA42C49DC298DE",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20240903/a6554e1e881f46de90eaf7824631354c",
+      "source_ranks": {
+        "overview": 8,
+        "pnl_ratio": 18
+      },
+      "metrics": {
+        "roi_pct": 36.11,
+        "pnl_usd": 102620.30328395186,
+        "aum_usd": 9929.545356495299,
+        "followers": 55,
+        "followers_accumulated": 828,
+        "lead_days": 565,
+        "win_rate_pct": 51.11,
+        "max_drawdown_pct": 49.06,
+        "curve_upward_ratio_pct": 50.0,
+        "history_trade_count": 0,
+        "history_win_rate_pct": null,
+        "profit_factor": null,
+        "avg_holding_hours": null,
+        "max_trade_loss_pct": 0.0,
+        "max_history_leverage": null,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": 167.82697772876688,
+        "avg_follow_days": 107.258,
+        "median_follow_days": 127.3466,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 33.0,
+        "stability": 42.5,
+        "longevity": 100,
+        "copy_confidence": 82.0,
+        "data_reliability": 55.0,
+        "overall": 44
+      },
+      "flags": [
+        "收益曲线回撤偏大",
+        "近3个月历史订单样本偏少",
+        "长期带单但近3个月无公开订单，疑似失活"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "0870A246F3749D76",
+      "unique_code": "0870A246F3749D76",
+      "name": "亿辰",
+      "profile_url": "https://www.okx.com/copy-trading/account/0870A246F3749D76",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/predefined/0006.png",
+      "source_ranks": {
+        "overview": 14,
+        "win_ratio": 20
+      },
+      "metrics": {
+        "roi_pct": 17.54,
+        "pnl_usd": 40130.04621429608,
+        "aum_usd": 4464.835175393044,
+        "followers": 32,
+        "followers_accumulated": 2197,
+        "lead_days": 312,
+        "win_rate_pct": 60.71,
+        "max_drawdown_pct": 22.9,
+        "curve_upward_ratio_pct": 27.7778,
+        "history_trade_count": 0,
+        "history_win_rate_pct": null,
+        "profit_factor": null,
+        "avg_holding_hours": null,
+        "max_trade_loss_pct": 0.0,
+        "max_history_leverage": null,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": -27344.518937857825,
+        "avg_follow_days": 671.8799,
+        "median_follow_days": 699.4817,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 49.1,
+        "stability": 32.5,
+        "longevity": 89.7,
+        "copy_confidence": 47.7,
+        "data_reliability": 55.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "近3个月历史订单样本偏少",
+        "长期带单但近3个月无公开订单，疑似失活"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "4A8AB04BF304EBD8",
+      "unique_code": "4A8AB04BF304EBD8",
+      "name": "尘大师",
+      "profile_url": "https://www.okx.com/copy-trading/account/4A8AB04BF304EBD8",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20260305/e63160706b414047931cc0cf4a3f5b9f",
+      "source_ranks": {
+        "overview": 15,
+        "pnl": 16,
+        "pnl_ratio": 13,
+        "current_copy_trader_pnl": 16
+      },
+      "metrics": {
+        "roi_pct": 58.21,
+        "pnl_usd": 160505.58626880808,
+        "aum_usd": 58717.65343584629,
+        "followers": 29,
+        "followers_accumulated": 403,
+        "lead_days": 330,
+        "win_rate_pct": 60.0,
+        "max_drawdown_pct": 74.49,
+        "curve_upward_ratio_pct": 33.3333,
+        "history_trade_count": 100,
+        "history_win_rate_pct": 51.0,
+        "profit_factor": 2.0413,
+        "avg_holding_hours": 102.7438,
+        "max_trade_loss_pct": 124.6978,
+        "max_history_leverage": 50.0,
+        "current_positions_count": 10,
+        "current_max_leverage": 10.0,
+        "current_total_margin_usd": 108030.1613,
+        "current_total_upl_usd": 7003.765,
+        "current_upl_pct": 6.4832,
+        "copy_pnl_usd": 13087.406117388895,
+        "avg_follow_days": 147.414,
+        "median_follow_days": 118.4145,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 4067.1428571428573,
+          "upl_usd": 475.0,
+          "upl_pct": 8.3421
+        },
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 4063.5714285714284,
+          "upl_usd": 500.0,
+          "upl_pct": 8.7889
+        },
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 8180.0,
+          "upl_usd": 630.0,
+          "upl_pct": 5.5012
+        },
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 22899.847,
+          "upl_usd": 1280.765,
+          "upl_pct": 5.5929
+        },
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 22860.0,
+          "upl_usd": 1480.0,
+          "upl_pct": 6.4742
+        },
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 1427.6,
+          "upl_usd": 498.0,
+          "upl_pct": 34.8837
+        },
+        {
+          "instrument": "",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 7234.0,
+          "upl_usd": 1530.0,
+          "upl_pct": 21.1501
+        },
+        {
+          "instrument": "",
+          "side": "short",
+          "leverage": 5.0,
+          "margin_usd": 9486.0,
+          "upl_usd": 960.0,
+          "upl_pct": 10.1202
+        },
+        {
+          "instrument": "",
+          "side": "short",
+          "leverage": 5.0,
+          "margin_usd": 9600.0,
+          "upl_usd": 1530.0,
+          "upl_pct": 15.9375
+        },
+        {
+          "instrument": "",
+          "side": "short",
+          "leverage": 5.0,
+          "margin_usd": 18212.0,
+          "upl_usd": -1880.0,
+          "upl_pct": -10.3229
+        }
+      ],
+      "scores": {
+        "risk_control": 0,
+        "stability": 64.1,
+        "longevity": 90.4,
+        "copy_confidence": 81.8,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "存在较高杠杆（最高 50x）",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "杠杆风险极高",
+        "近3个月存在大额单笔亏损",
+        "近3个月存在接近爆仓级单笔亏损"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "28AEEA33C8C78CC9",
+      "unique_code": "28AEEA33C8C78CC9",
+      "name": "好望角9999",
+      "profile_url": "https://www.okx.com/copy-trading/account/28AEEA33C8C78CC9",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/predefined/0016.png",
+      "source_ranks": {
+        "overview": 16,
+        "pnl": 3,
+        "pnl_ratio": 5
+      },
+      "metrics": {
+        "roi_pct": 183.55,
+        "pnl_usd": 429960.1016493336,
+        "aum_usd": 18901.932881552155,
+        "followers": 97,
+        "followers_accumulated": 1278,
+        "lead_days": 528,
+        "win_rate_pct": 57.78,
+        "max_drawdown_pct": 206.45,
+        "curve_upward_ratio_pct": 33.3333,
+        "history_trade_count": 100,
+        "history_win_rate_pct": 99.0,
+        "profit_factor": 736.5973,
+        "avg_holding_hours": 11.1558,
+        "max_trade_loss_pct": 5.0056,
+        "max_history_leverage": 100.0,
+        "current_positions_count": 42,
+        "current_max_leverage": 100.0,
+        "current_total_margin_usd": 8434.789,
+        "current_total_upl_usd": -31016.2041,
+        "current_upl_pct": -367.7176,
+        "copy_pnl_usd": -22733.872024603148,
+        "avg_follow_days": 116.83,
+        "median_follow_days": 50.3867,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "long",
+          "leverage": 100.0,
+          "margin_usd": 630.88,
+          "upl_usd": -148.5,
+          "upl_pct": -23.5385
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "long",
+          "leverage": 100.0,
+          "margin_usd": 633.849,
+          "upl_usd": -445.4,
+          "upl_pct": -70.2691
+        },
+        {
+          "instrument": "MSTR-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 94.0,
+          "upl_usd": -10.4,
+          "upl_pct": -11.0638
+        },
+        {
+          "instrument": "TRUMP-USDT-SWAP",
+          "side": "long",
+          "leverage": 20.0,
+          "margin_usd": 77.5,
+          "upl_usd": 0.0,
+          "upl_pct": 0.0
+        },
+        {
+          "instrument": "MSTR-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 95.0,
+          "upl_usd": -20.4,
+          "upl_pct": -21.4737
+        },
+        {
+          "instrument": "MSTR-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 94.5,
+          "upl_usd": -15.4,
+          "upl_pct": -16.2963
+        },
+        {
+          "instrument": "MSTR-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 94.0,
+          "upl_usd": -10.4,
+          "upl_pct": -11.0638
+        },
+        {
+          "instrument": "MSTR-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 93.5,
+          "upl_usd": -5.4,
+          "upl_pct": -5.7754
+        },
+        {
+          "instrument": "MSTR-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 93.0,
+          "upl_usd": -0.4,
+          "upl_pct": -0.4301
+        },
+        {
+          "instrument": "MSTR-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 92.5,
+          "upl_usd": 4.6,
+          "upl_pct": 4.973
+        },
+        {
+          "instrument": "MSTR-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 93.0,
+          "upl_usd": -0.4,
+          "upl_pct": -0.4301
+        },
+        {
+          "instrument": "MSTR-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 93.0,
+          "upl_usd": -0.4,
+          "upl_pct": -0.4301
+        },
+        {
+          "instrument": "ETH-USDT-SWAP",
+          "side": "short",
+          "leverage": 100.0,
+          "margin_usd": 176.8,
+          "upl_usd": -136.7,
+          "upl_pct": -77.319
+        },
+        {
+          "instrument": "MSTR-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 92.5,
+          "upl_usd": 4.6,
+          "upl_pct": 4.973
+        },
+        {
+          "instrument": "MSTR-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 93.0,
+          "upl_usd": -0.4,
+          "upl_pct": -0.4301
+        },
+        {
+          "instrument": "LAB-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 76.5,
+          "upl_usd": -237.715,
+          "upl_pct": -932.2157
+        },
+        {
+          "instrument": "DOGE-USDT-SWAP",
+          "side": "long",
+          "leverage": 50.0,
+          "margin_usd": 149.6,
+          "upl_usd": -251.0,
+          "upl_pct": -167.7807
+        },
+        {
+          "instrument": "TRUMP-USDT-SWAP",
+          "side": "long",
+          "leverage": 20.0,
+          "margin_usd": 170.0,
+          "upl_usd": -300.0,
+          "upl_pct": -176.4706
+        },
+        {
+          "instrument": "TRUMP-USDT-SWAP",
+          "side": "long",
+          "leverage": 20.0,
+          "margin_usd": 177.0,
+          "upl_usd": -440.0,
+          "upl_pct": -248.5876
+        },
+        {
+          "instrument": "TRUMP-USDT-SWAP",
+          "side": "long",
+          "leverage": 20.0,
+          "margin_usd": 218.75,
+          "upl_usd": -500.0,
+          "upl_pct": -228.5714
+        }
+      ],
+      "scores": {
+        "risk_control": 0,
+        "stability": 76.1,
+        "longevity": 100,
+        "copy_confidence": 48.7,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "存在较高杠杆（最高 100x）",
+        "当前持仓浮亏较大",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "杠杆风险极高"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "6308333277A08132",
+      "unique_code": "6308333277A08132",
+      "name": "kvss",
+      "profile_url": "https://www.okx.com/copy-trading/account/6308333277A08132",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20231201/51dae4a8dec3489dac65f6b43cc107d1",
+      "source_ranks": {
+        "overview": 17,
+        "pnl_ratio": 11
+      },
+      "metrics": {
+        "roi_pct": 79.8,
+        "pnl_usd": 112218.30208620468,
+        "aum_usd": 5162.202511267623,
+        "followers": 19,
+        "followers_accumulated": 641,
+        "lead_days": 456,
+        "win_rate_pct": 54.44,
+        "max_drawdown_pct": 106.11,
+        "curve_upward_ratio_pct": 22.2222,
+        "history_trade_count": 0,
+        "history_win_rate_pct": null,
+        "profit_factor": null,
+        "avg_holding_hours": null,
+        "max_trade_loss_pct": 0.0,
+        "max_history_leverage": null,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": -4081.3503588924295,
+        "avg_follow_days": 132.0036,
+        "median_follow_days": 133.9922,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 33.0,
+        "stability": 30.0,
+        "longevity": 100,
+        "copy_confidence": 43.3,
+        "data_reliability": 55.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "近3个月历史订单样本偏少",
+        "长期带单但近3个月无公开订单，疑似失活"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "F2BCA22ABBB69F57",
+      "unique_code": "F2BCA22ABBB69F57",
+      "name": "山海匯",
+      "profile_url": "https://www.okx.com/copy-trading/account/F2BCA22ABBB69F57",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20241217/57a00a8557a3457bb18ae45be0ae7f69",
+      "source_ranks": {
+        "overview": 18,
+        "aum": 7,
+        "current_copy_trader_pnl": 4
+      },
+      "metrics": {
+        "roi_pct": 6.59,
+        "pnl_usd": 16121.530459751151,
+        "aum_usd": 432637.54365690745,
+        "followers": 112,
+        "followers_accumulated": 1660,
+        "lead_days": 272,
+        "win_rate_pct": 52.81,
+        "max_drawdown_pct": 19.93,
+        "curve_upward_ratio_pct": 50.0,
+        "history_trade_count": 32,
+        "history_win_rate_pct": 81.25,
+        "profit_factor": 4.517,
+        "avg_holding_hours": 105.4987,
+        "max_trade_loss_pct": 517.6015,
+        "max_history_leverage": 20.0,
+        "current_positions_count": 14,
+        "current_max_leverage": 10.0,
+        "current_total_margin_usd": 50416.5817,
+        "current_total_upl_usd": -36560.969,
+        "current_upl_pct": -72.5177,
+        "copy_pnl_usd": 154375.30151160946,
+        "avg_follow_days": 209.4214,
+        "median_follow_days": 217.8425,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 3089.3,
+          "upl_usd": 576.8,
+          "upl_pct": 18.6709
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 6254.07,
+          "upl_usd": 398.9,
+          "upl_pct": 6.3782
+        },
+        {
+          "instrument": "CRCL-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 1334.4534,
+          "upl_usd": -268.534,
+          "upl_pct": -20.1231
+        },
+        {
+          "instrument": "CL-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 1793.3782,
+          "upl_usd": 533.718,
+          "upl_pct": 29.7605
+        },
+        {
+          "instrument": "CRCL-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 4537.100666666666,
+          "upl_usd": -535.302,
+          "upl_pct": -39.3278
+        },
+        {
+          "instrument": "CL-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 2133.5417,
+          "upl_usd": -2867.917,
+          "upl_pct": -134.4205
+        },
+        {
+          "instrument": "CL-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 2264.6587,
+          "upl_usd": -4179.0869999999995,
+          "upl_pct": -184.535
+        },
+        {
+          "instrument": "CRCL-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 2692.2363333333333,
+          "upl_usd": -1538.709,
+          "upl_pct": -190.5119
+        },
+        {
+          "instrument": "CRCL-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 2826.603,
+          "upl_usd": -1941.809,
+          "upl_pct": -228.9921
+        },
+        {
+          "instrument": "CRCL-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 1494.8686666666667,
+          "upl_usd": -1215.606,
+          "upl_pct": -271.0619
+        },
+        {
+          "instrument": "CRCL-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 7459.441,
+          "upl_usd": -6033.323,
+          "upl_pct": -269.6057
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 3289.265,
+          "upl_usd": -1422.85,
+          "upl_pct": -43.2574
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 3289.655,
+          "upl_usd": -1426.75,
+          "upl_pct": -43.3708
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "long",
+          "leverage": 10.0,
+          "margin_usd": 7958.01,
+          "upl_usd": -16640.5,
+          "upl_pct": -209.1038
+        }
+      ],
+      "scores": {
+        "risk_control": 0,
+        "stability": 75.8,
+        "longevity": 87.9,
+        "copy_confidence": 89.2,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "存在较高杠杆（最高 20x）",
+        "当前持仓浮亏较大",
+        "近3个月存在大额单笔亏损",
+        "近3个月存在接近爆仓级单笔亏损"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "32C76B50BC8D7EDF",
+      "unique_code": "32C76B50BC8D7EDF",
+      "name": "野人大哥",
+      "profile_url": "https://www.okx.com/copy-trading/account/32C76B50BC8D7EDF",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/predefined/0007.png",
+      "source_ranks": {
+        "overview": 19,
+        "pnl_ratio": 16
+      },
+      "metrics": {
+        "roi_pct": 44.49,
+        "pnl_usd": 66759.23046334613,
+        "aum_usd": 13993.64687719235,
+        "followers": 88,
+        "followers_accumulated": 926,
+        "lead_days": 593,
+        "win_rate_pct": 56.1,
+        "max_drawdown_pct": 48.04,
+        "curve_upward_ratio_pct": 27.7778,
+        "history_trade_count": 41,
+        "history_win_rate_pct": 82.9268,
+        "profit_factor": 6.3027,
+        "avg_holding_hours": 224.7848,
+        "max_trade_loss_pct": 36.5246,
+        "max_history_leverage": 10.0,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": -2190.216172512015,
+        "avg_follow_days": 50.6739,
+        "median_follow_days": 48.3225,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 9.3,
+        "stability": 66.9,
+        "longevity": 100,
+        "copy_confidence": 45.1,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "收益曲线回撤偏大",
+        "近3个月存在大额单笔亏损"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "42852C1BDC400BF7",
+      "unique_code": "42852C1BDC400BF7",
+      "name": "是趋势帝",
+      "profile_url": "https://www.okx.com/copy-trading/account/42852C1BDC400BF7",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20260608/2008efb98f874407911af7b73fb122e6",
+      "source_ranks": {
+        "overview": 20,
+        "pnl_ratio": 4
+      },
+      "metrics": {
+        "roi_pct": 184.33,
+        "pnl_usd": 125595.1282839559,
+        "aum_usd": 51886.454699238544,
+        "followers": 219,
+        "followers_accumulated": 1300,
+        "lead_days": 762,
+        "win_rate_pct": 50.0,
+        "max_drawdown_pct": 245.96,
+        "curve_upward_ratio_pct": 55.5556,
+        "history_trade_count": 52,
+        "history_win_rate_pct": 53.8462,
+        "profit_factor": 19.4116,
+        "avg_holding_hours": 112.9387,
+        "max_trade_loss_pct": 440.6361,
+        "max_history_leverage": 100.0,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": -6929.3197037135205,
+        "avg_follow_days": 19.0198,
+        "median_follow_days": 20.8348,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 0,
+        "stability": 72.9,
+        "longevity": 100,
+        "copy_confidence": 45.7,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "存在较高杠杆（最高 100x）",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "杠杆风险极高",
+        "近3个月存在大额单笔亏损",
+        "近3个月存在接近爆仓级单笔亏损"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "D69063F8CC0ECC79",
+      "unique_code": "D69063F8CC0ECC79",
+      "name": "KoreanTop",
+      "profile_url": "https://www.okx.com/copy-trading/account/D69063F8CC0ECC79",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20260606/ac7c3d33b72e4d359cad133d031bc9ad",
+      "source_ranks": {
+        "pnl": 13,
+        "aum": 12,
+        "pnl_ratio": 1
+      },
+      "metrics": {
+        "roi_pct": 821.04,
+        "pnl_usd": 187721.29976097387,
+        "aum_usd": 306043.6658954864,
+        "followers": 458,
+        "followers_accumulated": 2152,
+        "lead_days": 78,
+        "win_rate_pct": 48.05,
+        "max_drawdown_pct": 1327.7,
+        "curve_upward_ratio_pct": 51.2821,
+        "history_trade_count": 0,
+        "history_win_rate_pct": null,
+        "profit_factor": null,
+        "avg_holding_hours": null,
+        "max_trade_loss_pct": 0.0,
+        "max_history_leverage": null,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": -31150.105009804694,
+        "avg_follow_days": 23.693,
+        "median_follow_days": 21.5898,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 33.0,
+        "stability": 43.1,
+        "longevity": 51.8,
+        "copy_confidence": 49.4,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "带单时间不足 90 天",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "近3个月历史订单样本偏少"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "757CC8A7D7FAC010",
+      "unique_code": "757CC8A7D7FAC010",
+      "name": "s4150",
+      "profile_url": "https://www.okx.com/copy-trading/account/757CC8A7D7FAC010",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20260705/f0ab98ecc82a407984c8e61ba31f3ac4",
+      "source_ranks": {
+        "pnl": 14,
+        "pnl_ratio": 8
+      },
+      "metrics": {
+        "roi_pct": 99.33,
+        "pnl_usd": 181966.81537403062,
+        "aum_usd": 799.5630775246013,
+        "followers": 7,
+        "followers_accumulated": 85,
+        "lead_days": 113,
+        "win_rate_pct": 48.89,
+        "max_drawdown_pct": 161.69,
+        "curve_upward_ratio_pct": 50.0,
+        "history_trade_count": 100,
+        "history_win_rate_pct": 74.0,
+        "profit_factor": 6.7672,
+        "avg_holding_hours": 22.0935,
+        "max_trade_loss_pct": 146.1877,
+        "max_history_leverage": 100.0,
+        "current_positions_count": 100,
+        "current_max_leverage": 30.0,
+        "current_total_margin_usd": 7659.8153,
+        "current_total_upl_usd": 34205.4443,
+        "current_upl_pct": 446.557,
+        "copy_pnl_usd": -124.51035978983786,
+        "avg_follow_days": 70.4962,
+        "median_follow_days": 70.0362,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "short",
+          "leverage": 30.0,
+          "margin_usd": 2.142933333333333,
+          "upl_usd": 1.349,
+          "upl_pct": 62.9511
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "short",
+          "leverage": 30.0,
+          "margin_usd": 2.353596666666667,
+          "upl_usd": 1.375,
+          "upl_pct": 58.4212
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "short",
+          "leverage": 30.0,
+          "margin_usd": 6.4318,
+          "upl_usd": 4.137,
+          "upl_pct": 64.321
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "short",
+          "leverage": 30.0,
+          "margin_usd": 2.1403666666666665,
+          "upl_usd": 1.272,
+          "upl_pct": 59.4291
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "short",
+          "leverage": 30.0,
+          "margin_usd": 2.137233333333333,
+          "upl_usd": 1.178,
+          "upl_pct": 55.118
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "short",
+          "leverage": 30.0,
+          "margin_usd": 2.1362666666666668,
+          "upl_usd": 1.149,
+          "upl_pct": 53.7854
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "short",
+          "leverage": 30.0,
+          "margin_usd": 3.85008,
+          "upl_usd": 2.2122,
+          "upl_pct": 57.4585
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "short",
+          "leverage": 30.0,
+          "margin_usd": 21.328333333333333,
+          "upl_usd": 10.46,
+          "upl_pct": 49.0427
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "short",
+          "leverage": 30.0,
+          "margin_usd": 21.30366666666667,
+          "upl_usd": 9.72,
+          "upl_pct": 45.6259
+        },
+        {
+          "instrument": "SPCX-USDT-SWAP",
+          "side": "long",
+          "leverage": 7.0,
+          "margin_usd": 21.714285714285715,
+          "upl_usd": -7.32,
+          "upl_pct": -33.7105
+        },
+        {
+          "instrument": "SPCX-USDT-SWAP",
+          "side": "long",
+          "leverage": 7.0,
+          "margin_usd": 11.54,
+          "upl_usd": -8.44,
+          "upl_pct": -73.1369
+        },
+        {
+          "instrument": "SPCX-USDT-SWAP",
+          "side": "long",
+          "leverage": 7.0,
+          "margin_usd": 7.142571428571428,
+          "upl_usd": -6.594,
+          "upl_pct": -92.3197
+        },
+        {
+          "instrument": "SPCX-USDT-SWAP",
+          "side": "long",
+          "leverage": 7.0,
+          "margin_usd": 11.050071428571428,
+          "upl_usd": -12.2445,
+          "upl_pct": -110.8092
+        },
+        {
+          "instrument": "SPCX-USDT-SWAP",
+          "side": "long",
+          "leverage": 7.0,
+          "margin_usd": 5.333928571428571,
+          "upl_usd": -1.1675,
+          "upl_pct": -21.8882
+        },
+        {
+          "instrument": "SPCX-USDT-SWAP",
+          "side": "long",
+          "leverage": 7.0,
+          "margin_usd": 4.357142857142857,
+          "upl_usd": -1.564,
+          "upl_pct": -35.8951
+        },
+        {
+          "instrument": "SPCX-USDT-SWAP",
+          "side": "long",
+          "leverage": 7.0,
+          "margin_usd": 6.685714285714286,
+          "upl_usd": -3.396,
+          "upl_pct": -50.7949
+        },
+        {
+          "instrument": "SPCX-USDT-SWAP",
+          "side": "long",
+          "leverage": 7.0,
+          "margin_usd": 11.107142857142858,
+          "upl_usd": -5.41,
+          "upl_pct": -48.7074
+        },
+        {
+          "instrument": "SPCX-USDT-SWAP",
+          "side": "long",
+          "leverage": 7.0,
+          "margin_usd": 5.128285714285714,
+          "upl_usd": -6.962,
+          "upl_pct": -135.7569
+        },
+        {
+          "instrument": "SPCX-USDT-SWAP",
+          "side": "long",
+          "leverage": 7.0,
+          "margin_usd": 8.85,
+          "upl_usd": -11.312,
+          "upl_pct": -127.8192
+        },
+        {
+          "instrument": "SPCX-USDT-SWAP",
+          "side": "long",
+          "leverage": 7.0,
+          "margin_usd": 9.111,
+          "upl_usd": -13.139,
+          "upl_pct": -144.2103
+        }
+      ],
+      "scores": {
+        "risk_control": 0,
+        "stability": 77.3,
+        "longevity": 76.6,
+        "copy_confidence": 34.9,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "存在较高杠杆（最高 100x）",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "杠杆风险极高",
+        "近3个月存在大额单笔亏损",
+        "近3个月存在接近爆仓级单笔亏损"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "A60D696F4E92AE5C",
+      "unique_code": "A60D696F4E92AE5C",
+      "name": "Aspirin.",
+      "profile_url": "https://www.okx.com/copy-trading/account/A60D696F4E92AE5C",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20250826/039a0c0023c5415c83c2384b2949204e",
+      "source_ranks": {
+        "pnl_ratio": 17
+      },
+      "metrics": {
+        "roi_pct": 37.01,
+        "pnl_usd": 62924.97107302932,
+        "aum_usd": 26788.788510643448,
+        "followers": 99,
+        "followers_accumulated": 1550,
+        "lead_days": 457,
+        "win_rate_pct": 57.78,
+        "max_drawdown_pct": 50.68,
+        "curve_upward_ratio_pct": 38.8889,
+        "history_trade_count": 0,
+        "history_win_rate_pct": null,
+        "profit_factor": null,
+        "avg_holding_hours": null,
+        "max_trade_loss_pct": 0.0,
+        "max_history_leverage": null,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": 1543.332319029722,
+        "avg_follow_days": 219.22,
+        "median_follow_days": 261.0254,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 33.0,
+        "stability": 37.5,
+        "longevity": 100,
+        "copy_confidence": 87.0,
+        "data_reliability": 55.0,
+        "overall": 44
+      },
+      "flags": [
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "近3个月历史订单样本偏少",
+        "长期带单但近3个月无公开订单，疑似失活"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "C2B269D649346A25",
+      "unique_code": "C2B269D649346A25",
+      "name": "小小的躺赢",
+      "profile_url": "https://www.okx.com/copy-trading/account/C2B269D649346A25",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20221207/7de3f299aac046a6b68b82f2c51ffa3a",
+      "source_ranks": {
+        "pnl_ratio": 19
+      },
+      "metrics": {
+        "roi_pct": 34.86,
+        "pnl_usd": 43937.501686328585,
+        "aum_usd": 3782.677144159678,
+        "followers": 10,
+        "followers_accumulated": 149,
+        "lead_days": 1048,
+        "win_rate_pct": 50.0,
+        "max_drawdown_pct": 54.54,
+        "curve_upward_ratio_pct": 50.0,
+        "history_trade_count": 20,
+        "history_win_rate_pct": 25.0,
+        "profit_factor": 0.2836,
+        "avg_holding_hours": 48.4547,
+        "max_trade_loss_pct": 8.1231,
+        "max_history_leverage": 5.0,
+        "current_positions_count": 2,
+        "current_max_leverage": 5.0,
+        "current_total_margin_usd": 48446.3,
+        "current_total_upl_usd": 53415.4,
+        "current_upl_pct": 110.2569,
+        "copy_pnl_usd": 71.28268745969912,
+        "avg_follow_days": 300.6608,
+        "median_follow_days": 153.7424,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "short",
+          "leverage": 5.0,
+          "margin_usd": 8111.5,
+          "upl_usd": 9088.15,
+          "upl_pct": 112.0403
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "short",
+          "leverage": 5.0,
+          "margin_usd": 40334.8,
+          "upl_usd": 44327.25,
+          "upl_pct": 109.8983
+        }
+      ],
+      "scores": {
+        "risk_control": 9.7,
+        "stability": 60.4,
+        "longevity": 100,
+        "copy_confidence": 77.9,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "近3个月盈利因子低于 1"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "F6476365DB0D09A3",
+      "unique_code": "F6476365DB0D09A3",
+      "name": "****277",
+      "profile_url": "https://www.okx.com/copy-trading/account/F6476365DB0D09A3",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/predefined/0028.png",
+      "source_ranks": {
+        "pnl": 1,
+        "win_ratio": 10,
+        "pnl_ratio": 20
+      },
+      "metrics": {
+        "roi_pct": 33.39,
+        "pnl_usd": 943037.6063993247,
+        "aum_usd": 9086.933208643648,
+        "followers": 34,
+        "followers_accumulated": 1102,
+        "lead_days": 1016,
+        "win_rate_pct": 66.67,
+        "max_drawdown_pct": 45.72,
+        "curve_upward_ratio_pct": 83.3333,
+        "history_trade_count": 37,
+        "history_win_rate_pct": 70.2703,
+        "profit_factor": 3.2943,
+        "avg_holding_hours": 36.8337,
+        "max_trade_loss_pct": 136.5221,
+        "max_history_leverage": 50.0,
+        "current_positions_count": 7,
+        "current_max_leverage": 50.0,
+        "current_total_margin_usd": 392838.8245,
+        "current_total_upl_usd": -120572.9343,
+        "current_upl_pct": -30.6927,
+        "copy_pnl_usd": -170385.32803386237,
+        "avg_follow_days": 331.4987,
+        "median_follow_days": 329.2684,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "long",
+          "leverage": 50.0,
+          "margin_usd": 35824.782958,
+          "upl_usd": -21093.8354,
+          "upl_pct": -58.8806
+        },
+        {
+          "instrument": "ETH-USDT-SWAP",
+          "side": "long",
+          "leverage": 30.0,
+          "margin_usd": 43878.96875366667,
+          "upl_usd": -1064.93655,
+          "upl_pct": -2.427
+        },
+        {
+          "instrument": "ETH-USDT-SWAP",
+          "side": "long",
+          "leverage": 30.0,
+          "margin_usd": 68082.52803166666,
+          "upl_usd": -12211.172129999999,
+          "upl_pct": -17.9358
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "long",
+          "leverage": 50.0,
+          "margin_usd": 47895.5773692,
+          "upl_usd": -34585.11846,
+          "upl_pct": -72.2094
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "long",
+          "leverage": 50.0,
+          "margin_usd": 64079.925069,
+          "upl_usd": -57071.25345,
+          "upl_pct": -89.0626
+        },
+        {
+          "instrument": "ETH-USDT-SWAP",
+          "side": "long",
+          "leverage": 30.0,
+          "margin_usd": 56870.40700266667,
+          "upl_usd": 6507.428940000001,
+          "upl_pct": 11.4426
+        },
+        {
+          "instrument": "ETH-USDT-SWAP",
+          "side": "long",
+          "leverage": 30.0,
+          "margin_usd": 76206.635328,
+          "upl_usd": -1054.0472987105356,
+          "upl_pct": -3.5504
+        }
+      ],
+      "scores": {
+        "risk_control": 0,
+        "stability": 88.5,
+        "longevity": 100,
+        "copy_confidence": 48.2,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "存在较高杠杆（最高 50x）",
+        "当前持仓浮亏较大",
+        "收益曲线回撤偏大",
+        "杠杆风险极高",
+        "近3个月存在大额单笔亏损",
+        "近3个月存在接近爆仓级单笔亏损"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "8DE3E9294C1A2440",
+      "unique_code": "8DE3E9294C1A2440",
+      "name": "bb16888888",
+      "profile_url": "https://www.okx.com/copy-trading/account/8DE3E9294C1A2440",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20250524/f4aa3802340e41c8b36049d386e5816b",
+      "source_ranks": {
+        "pnl": 2,
+        "aum": 14
+      },
+      "metrics": {
+        "roi_pct": 50.46,
+        "pnl_usd": 640067.255282364,
+        "aum_usd": 255635.87193545053,
+        "followers": 219,
+        "followers_accumulated": 3831,
+        "lead_days": 441,
+        "win_rate_pct": 53.49,
+        "max_drawdown_pct": 50.46,
+        "curve_upward_ratio_pct": 55.5556,
+        "history_trade_count": 33,
+        "history_win_rate_pct": 72.7273,
+        "profit_factor": 3.0402,
+        "avg_holding_hours": 52.9025,
+        "max_trade_loss_pct": 109.5106,
+        "max_history_leverage": 20.0,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": -2221714.618502834,
+        "avg_follow_days": 291.7598,
+        "median_follow_days": 405.7835,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 0,
+        "stability": 76.3,
+        "longevity": 100,
+        "copy_confidence": 55.3,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "存在较高杠杆（最高 20x）",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "近3个月存在大额单笔亏损",
+        "近3个月存在接近爆仓级单笔亏损"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "0DAEA9C4B40EFEBC",
+      "unique_code": "0DAEA9C4B40EFEBC",
+      "name": "K W",
+      "profile_url": "https://www.okx.com/copy-trading/account/0DAEA9C4B40EFEBC",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20241225/331ae5624dd44faeb2897a3dec70f8c8",
+      "source_ranks": {
+        "pnl": 6
+      },
+      "metrics": {
+        "roi_pct": 28.55,
+        "pnl_usd": 323576.1998577108,
+        "aum_usd": 24792.892974451777,
+        "followers": 51,
+        "followers_accumulated": 1368,
+        "lead_days": 558,
+        "win_rate_pct": 44.44,
+        "max_drawdown_pct": 52.1,
+        "curve_upward_ratio_pct": 38.8889,
+        "history_trade_count": 0,
+        "history_win_rate_pct": null,
+        "profit_factor": null,
+        "avg_holding_hours": null,
+        "max_trade_loss_pct": 0.0,
+        "max_history_leverage": null,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": -41021.342760358224,
+        "avg_follow_days": 238.6682,
+        "median_follow_days": 237.227,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 33.0,
+        "stability": 37.5,
+        "longevity": 100,
+        "copy_confidence": 49.6,
+        "data_reliability": 55.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "近3个月历史订单样本偏少",
+        "长期带单但近3个月无公开订单，疑似失活"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "4B048A62B1198464",
+      "unique_code": "4B048A62B1198464",
+      "name": "1491",
+      "profile_url": "https://www.okx.com/copy-trading/account/4B048A62B1198464",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20230918/46e858c6f7ba4c0985b47113073a0ce4",
+      "source_ranks": {
+        "pnl": 7
+      },
+      "metrics": {
+        "roi_pct": 29.97,
+        "pnl_usd": 305888.08762911515,
+        "aum_usd": 31580.706615332463,
+        "followers": 147,
+        "followers_accumulated": 1165,
+        "lead_days": 1032,
+        "win_rate_pct": 53.41,
+        "max_drawdown_pct": 89.08,
+        "curve_upward_ratio_pct": 50.0,
+        "history_trade_count": 100,
+        "history_win_rate_pct": 32.0,
+        "profit_factor": 0.0572,
+        "avg_holding_hours": 208.935,
+        "max_trade_loss_pct": 148.4056,
+        "max_history_leverage": 10.0,
+        "current_positions_count": 62,
+        "current_max_leverage": 5.0,
+        "current_total_margin_usd": 343213.769,
+        "current_total_upl_usd": -38946.8605,
+        "current_upl_pct": -11.3477,
+        "copy_pnl_usd": -14724.13501621674,
+        "avg_follow_days": 36.8654,
+        "median_follow_days": 36.9781,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [
+        {
+          "instrument": "SKHYNIX-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 24992.34059,
+          "upl_usd": 1145.29705,
+          "upl_pct": 4.5826
+        },
+        {
+          "instrument": "SKHYNIX-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 12777.966176,
+          "upl_usd": -836.33088,
+          "upl_pct": -6.5451
+        },
+        {
+          "instrument": "SKHYNIX-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 12676.025464,
+          "upl_usd": -326.62732,
+          "upl_pct": -2.5767
+        },
+        {
+          "instrument": "SKHYNIX-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 5020.05316,
+          "upl_usd": -2401.0058,
+          "upl_pct": -47.8283
+        },
+        {
+          "instrument": "SKHYNIX-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 1217.683064,
+          "upl_usd": -1044.13532,
+          "upl_pct": -85.7477
+        },
+        {
+          "instrument": "SKHYNIX-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 1368.539376,
+          "upl_usd": -537.34688,
+          "upl_pct": -39.2643
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 12387.66,
+          "upl_usd": 999.1,
+          "upl_pct": 8.0653
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 39774.515,
+          "upl_usd": 1897.731,
+          "upl_pct": 4.7712
+        },
+        {
+          "instrument": "SKHYNIX-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 2689.089464,
+          "upl_usd": -834.74732,
+          "upl_pct": -31.042
+        },
+        {
+          "instrument": "SKHYNIX-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 2669.05351,
+          "upl_usd": -734.56755,
+          "upl_pct": -27.5216
+        },
+        {
+          "instrument": "SKHYNIX-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 8152.313292,
+          "upl_usd": -2929.46646,
+          "upl_pct": -35.9342
+        },
+        {
+          "instrument": "SKHYNIX-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 2910.510834,
+          "upl_usd": -1941.85417,
+          "upl_pct": -66.7187
+        },
+        {
+          "instrument": "SKHYNIX-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 2907.813308,
+          "upl_usd": -1928.36654,
+          "upl_pct": -66.3167
+        },
+        {
+          "instrument": "SKHYNIX-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 2987.084398,
+          "upl_usd": -2324.72199,
+          "upl_pct": -77.8258
+        },
+        {
+          "instrument": "SKHYNIX-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 2979.809672,
+          "upl_usd": -2288.34836,
+          "upl_pct": -76.7951
+        },
+        {
+          "instrument": "NVDA-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 3952.27324,
+          "upl_usd": 1091.6338,
+          "upl_pct": 27.6204
+        },
+        {
+          "instrument": "SKHYNIX-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 24710.379776,
+          "upl_usd": -22666.29888,
+          "upl_pct": -91.7278
+        },
+        {
+          "instrument": "SKHYNIX-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 30402.465644,
+          "upl_usd": -17356.5699074,
+          "upl_pct": -85.208
+        },
+        {
+          "instrument": "CRCL-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 17256.5726,
+          "upl_usd": -3132.223,
+          "upl_pct": -18.1509
+        },
+        {
+          "instrument": "CRCL-USDT-SWAP",
+          "side": "long",
+          "leverage": 5.0,
+          "margin_usd": 4396.443,
+          "upl_usd": -2371.215,
+          "upl_pct": -53.9349
+        }
+      ],
+      "scores": {
+        "risk_control": 0,
+        "stability": 66.8,
+        "longevity": 100,
+        "copy_confidence": 46.3,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "近3个月存在大额单笔亏损",
+        "近3个月存在接近爆仓级单笔亏损",
+        "近3个月盈利因子低于 1"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "9790D02D71CADF2E",
+      "unique_code": "9790D02D71CADF2E",
+      "name": "B知行合一🈚",
+      "profile_url": "https://www.okx.com/copy-trading/account/9790D02D71CADF2E",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/predefined/0006_vip.png",
+      "source_ranks": {
+        "pnl": 8,
+        "aum": 5,
+        "win_ratio": 5
+      },
+      "metrics": {
+        "roi_pct": 27.26,
+        "pnl_usd": 300488.43066234374,
+        "aum_usd": 634826.9625036921,
+        "followers": 1106,
+        "followers_accumulated": 9297,
+        "lead_days": 780,
+        "win_rate_pct": 79.76,
+        "max_drawdown_pct": 31.0,
+        "curve_upward_ratio_pct": 16.6667,
+        "history_trade_count": 0,
+        "history_win_rate_pct": null,
+        "profit_factor": null,
+        "avg_holding_hours": null,
+        "max_trade_loss_pct": 0.0,
+        "max_history_leverage": null,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": -3772783.4461186207,
+        "avg_follow_days": 211.3512,
+        "median_follow_days": 171.5446,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 35.3,
+        "stability": 27.5,
+        "longevity": 100,
+        "copy_confidence": 58.1,
+        "data_reliability": 55.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "收益曲线回撤偏大",
+        "近3个月历史订单样本偏少",
+        "长期带单但近3个月无公开订单，疑似失活"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "ED5E78290CE31341",
+      "unique_code": "ED5E78290CE31341",
+      "name": "逻辑思维k线",
+      "profile_url": "https://www.okx.com/copy-trading/account/ED5E78290CE31341",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/predefined/0020.png",
+      "source_ranks": {
+        "pnl": 9
+      },
+      "metrics": {
+        "roi_pct": 49.38,
+        "pnl_usd": 297024.762909288,
+        "aum_usd": 4165.154657095043,
+        "followers": 22,
+        "followers_accumulated": 552,
+        "lead_days": 1045,
+        "win_rate_pct": 62.26,
+        "max_drawdown_pct": 54.12,
+        "curve_upward_ratio_pct": 61.1111,
+        "history_trade_count": 1,
+        "history_win_rate_pct": 100.0,
+        "profit_factor": 99.0,
+        "avg_holding_hours": 479.1782,
+        "max_trade_loss_pct": 0.0,
+        "max_history_leverage": 10.0,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": -3208.758588445009,
+        "avg_follow_days": 779.8866,
+        "median_follow_days": 860.0731,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 33.0,
+        "stability": 62.1,
+        "longevity": 100,
+        "copy_confidence": 45.6,
+        "data_reliability": 85.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "近3个月历史订单样本偏少"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "40EB231AEBF6FD65",
+      "unique_code": "40EB231AEBF6FD65",
+      "name": "Burger Anthony",
+      "profile_url": "https://www.okx.com/copy-trading/account/40EB231AEBF6FD65",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/predefined/0037.png",
+      "source_ranks": {
+        "pnl": 10
+      },
+      "metrics": {
+        "roi_pct": 237.05,
+        "pnl_usd": 283034.7499797512,
+        "aum_usd": 130.0,
+        "followers": 1,
+        "followers_accumulated": 17,
+        "lead_days": 667,
+        "win_rate_pct": 50.0,
+        "max_drawdown_pct": 237.71,
+        "curve_upward_ratio_pct": 61.1111,
+        "history_trade_count": 0,
+        "history_win_rate_pct": null,
+        "profit_factor": null,
+        "avg_holding_hours": null,
+        "max_trade_loss_pct": 0.0,
+        "max_history_leverage": null,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": -385.6096796419044,
+        "avg_follow_days": 493.8146,
+        "median_follow_days": 486.6256,
+        "follower_profitable_pct": 29.4118
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 33.0,
+        "stability": 47.5,
+        "longevity": 100,
+        "copy_confidence": 19.7,
+        "data_reliability": 55.0,
+        "overall": 44
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "近3个月历史订单样本偏少",
+        "长期带单但近3个月无公开订单，疑似失活"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "823664FB73B79E41",
+      "unique_code": "823664FB73B79E41",
+      "name": "小周同学。",
+      "profile_url": "https://www.okx.com/copy-trading/account/823664FB73B79E41",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20250531/9fcd52c3166d490ba6f2456e2b0b2e88",
+      "source_ranks": {
+        "pnl": 11,
+        "aum": 1,
+        "win_ratio": 15,
+        "current_copy_trader_pnl": 2
+      },
+      "metrics": {
+        "roi_pct": 3.83,
+        "pnl_usd": 253860.27450099515,
+        "aum_usd": 8785957.050588459,
+        "followers": 447,
+        "followers_accumulated": 17932,
+        "lead_days": 705,
+        "win_rate_pct": 62.5,
+        "max_drawdown_pct": 5.73,
+        "curve_upward_ratio_pct": 33.3333,
+        "history_trade_count": 0,
+        "history_win_rate_pct": null,
+        "profit_factor": null,
+        "avg_holding_hours": null,
+        "max_trade_loss_pct": 0.0,
+        "max_history_leverage": null,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": 420507.38375470537,
+        "avg_follow_days": 656.8602,
+        "median_follow_days": 844.7083,
+        "follower_profitable_pct": 100.0
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 78.3,
+        "stability": 35.0,
+        "longevity": 100,
+        "copy_confidence": 93.7,
+        "data_reliability": 55.0,
+        "overall": 44
+      },
+      "flags": [
+        "近3个月历史订单样本偏少",
+        "长期带单但近3个月无公开订单，疑似失活"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "F3476CC5EA71C0BC",
+      "unique_code": "F3476CC5EA71C0BC",
+      "name": "莫贪心，够了够了",
+      "profile_url": "https://www.okx.com/copy-trading/account/F3476CC5EA71C0BC",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20250709/1bb0c4cb8cca4d9e9a25dd71bfd650c4",
+      "source_ranks": {
+        "overview": 12
+      },
+      "metrics": {
+        "roi_pct": 24.23,
+        "pnl_usd": 122202.32376484139,
+        "aum_usd": 302.8122457820664,
+        "followers": 3,
+        "followers_accumulated": 20,
+        "lead_days": 208,
+        "win_rate_pct": 60.0,
+        "max_drawdown_pct": 34.64,
+        "curve_upward_ratio_pct": 38.8889,
+        "history_trade_count": 0,
+        "history_win_rate_pct": null,
+        "profit_factor": null,
+        "avg_holding_hours": null,
+        "max_trade_loss_pct": 0.0,
+        "max_history_leverage": null,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": -24.789754645415325,
+        "avg_follow_days": 67.9432,
+        "median_follow_days": 16.0241,
+        "follower_profitable_pct": 20.0
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 33.0,
+        "stability": 37.5,
+        "longevity": 84.5,
+        "copy_confidence": 16.0,
+        "data_reliability": 55.0,
+        "overall": 43.9
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "收益曲线回撤偏大",
+        "近3个月历史订单样本偏少",
+        "长期带单但近3个月无公开订单，疑似失活"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "F76CC883269E6FFB",
+      "unique_code": "F76CC883269E6FFB",
+      "name": "小梧桐",
+      "profile_url": "https://www.okx.com/copy-trading/account/F76CC883269E6FFB",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20260702/09e09318122546778604e1eaf3ce8ccf",
+      "source_ranks": {
+        "overview": 13
+      },
+      "metrics": {
+        "roi_pct": 10.37,
+        "pnl_usd": 29141.824036757524,
+        "aum_usd": 23853.52597273835,
+        "followers": 11,
+        "followers_accumulated": 22,
+        "lead_days": 11,
+        "win_rate_pct": 58.33,
+        "max_drawdown_pct": 11.58,
+        "curve_upward_ratio_pct": 41.6667,
+        "history_trade_count": 100,
+        "history_win_rate_pct": 74.0,
+        "profit_factor": 1.7897,
+        "avg_holding_hours": 17.6083,
+        "max_trade_loss_pct": 53.7455,
+        "max_history_leverage": 30.0,
+        "current_positions_count": 6,
+        "current_max_leverage": 20.0,
+        "current_total_margin_usd": 16733.5594,
+        "current_total_upl_usd": -2982.1448,
+        "current_upl_pct": -17.8213,
+        "copy_pnl_usd": 2755.9512351673698,
+        "avg_follow_days": 3.7197,
+        "median_follow_days": 3.3653,
+        "follower_profitable_pct": 77.2727
+      },
+      "current_positions": [
+        {
+          "instrument": "ETH-USDT-SWAP",
+          "side": "long",
+          "leverage": 20.0,
+          "margin_usd": 1676.916352,
+          "upl_usd": -128.26368,
+          "upl_pct": -7.6488
+        },
+        {
+          "instrument": "ETH-USDT-SWAP",
+          "side": "long",
+          "leverage": 20.0,
+          "margin_usd": 1693.871865,
+          "upl_usd": -155.57994,
+          "upl_pct": -9.1849
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "long",
+          "leverage": 20.0,
+          "margin_usd": 1719.512019,
+          "upl_usd": -88.86688,
+          "upl_pct": -5.1681
+        },
+        {
+          "instrument": "ETH-USDT-SWAP",
+          "side": "long",
+          "leverage": 20.0,
+          "margin_usd": 1727.694174,
+          "upl_usd": -263.6702,
+          "upl_pct": -15.2614
+        },
+        {
+          "instrument": "BTC-USDT-SWAP",
+          "side": "long",
+          "leverage": 20.0,
+          "margin_usd": 4507.419105,
+          "upl_usd": -713.0578,
+          "upl_pct": -15.8196
+        },
+        {
+          "instrument": "ETH-USDT-SWAP",
+          "side": "long",
+          "leverage": 20.0,
+          "margin_usd": 5408.145842,
+          "upl_usd": -1632.70628,
+          "upl_pct": -30.1898
+        }
+      ],
+      "scores": {
+        "risk_control": 5.6,
+        "stability": 73.6,
+        "longevity": 27.3,
+        "copy_confidence": 59.8,
+        "data_reliability": 85.0,
+        "overall": 42.9
+      },
+      "flags": [
+        "存在较高杠杆（最高 30x）",
+        "带单时间不足 90 天",
+        "当前持仓浮亏较大",
+        "杠杆风险极高",
+        "近3个月存在大额单笔亏损"
+      ],
+      "recommendation": "不建议跟单"
+    },
+    {
+      "id": "C84FB1E4F4BA4B2A",
+      "unique_code": "C84FB1E4F4BA4B2A",
+      "name": "🌜谨慎前行",
+      "profile_url": "https://www.okx.com/copy-trading/account/C84FB1E4F4BA4B2A",
+      "avatar_url": "https://static.okx.com/cdn/okex/users/headimages/20230120/b1f0025b5a92414190b89cde4e35052c",
+      "source_ranks": {
+        "overview": 5,
+        "pnl": 5,
+        "win_ratio": 2,
+        "pnl_ratio": 10
+      },
+      "metrics": {
+        "roi_pct": 85.03,
+        "pnl_usd": 330944.87253105245,
+        "aum_usd": 33509.227715791465,
+        "followers": 8,
+        "followers_accumulated": 3,
+        "lead_days": 12,
+        "win_rate_pct": 83.33,
+        "max_drawdown_pct": 84.95,
+        "curve_upward_ratio_pct": 16.6667,
+        "history_trade_count": 0,
+        "history_win_rate_pct": null,
+        "profit_factor": null,
+        "avg_holding_hours": null,
+        "max_trade_loss_pct": 0.0,
+        "max_history_leverage": null,
+        "current_positions_count": 0,
+        "current_max_leverage": null,
+        "current_total_margin_usd": null,
+        "current_total_upl_usd": null,
+        "current_upl_pct": null,
+        "copy_pnl_usd": -1477.9782751671241,
+        "avg_follow_days": 3.0937,
+        "median_follow_days": 3.0908,
+        "follower_profitable_pct": 66.6667
+      },
+      "current_positions": [],
+      "scores": {
+        "risk_control": 33.0,
+        "stability": 27.5,
+        "longevity": 28.3,
+        "copy_confidence": 18.5,
+        "data_reliability": 85.0,
+        "overall": 33.6
+      },
+      "flags": [
+        "公开样本中的跟单用户总盈亏为负",
+        "带单时间不足 90 天",
+        "收益曲线出现极端回撤",
+        "收益曲线回撤偏大",
+        "近3个月历史订单样本偏少"
+      ],
+      "recommendation": "不建议跟单"
+    }
+  ]
 }
