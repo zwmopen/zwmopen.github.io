@@ -135,24 +135,46 @@ def details(code: str) -> dict[str, list[dict[str, Any]]]:
     return result
 
 
-def curve_stats(points: list[dict[str, Any]]) -> tuple[float | None, float | None]:
-    series = [pct(item.get("pnlRatio")) for item in points or []]
-    series = [value for value in series if value is not None]
-    if not series:
-        return None, None
-    peak = series[0]
+def curve_stats(points: list[dict[str, Any]]) -> dict[str, Any]:
+    series: list[tuple[float, float]] = []
+    for index, item in enumerate(points or []):
+        value = pct(item.get("pnlRatio"))
+        if value is None:
+            continue
+        ts = number(item.get("beginTs"))
+        series.append((ts if ts is not None else float(index), value))
+    series.sort(key=lambda pair: pair[0])
+    values = [value for _, value in series]
+    if not values:
+        return {
+            "max_drawdown_pct": None,
+            "curve_upward_ratio_pct": None,
+            "curve_direction_change_pct": None,
+            "curve_step_volatility": None,
+        }
+    peak = values[0]
     drawdown = 0.0
     rising = 0
-    for previous, current in zip(series, series[1:]):
+    changes: list[float] = []
+    directions: list[int] = []
+    for previous, current in zip(values, values[1:]):
         peak = max(peak, current)
         drawdown = max(drawdown, peak - current)
-        rising += int(current >= previous)
-    count = max(0, len(series) - 1)
-    return round(drawdown, 4), round(rising / count * 100, 4) if count else None
+        delta = current - previous
+        changes.append(abs(delta))
+        rising += int(delta >= 0)
+        directions.append(1 if delta > 0 else -1 if delta < 0 else 0)
+    nonzero = [value for value in directions if value]
+    reversals = sum(a != b for a, b in zip(nonzero, nonzero[1:]))
+    return {
+        "max_drawdown_pct": round(drawdown, 4),
+        "curve_upward_ratio_pct": round(rising / len(changes) * 100, 4) if changes else None,
+        "curve_direction_change_pct": round(reversals / max(1, len(nonzero) - 1) * 100, 4) if len(nonzero) > 1 else 0.0,
+        "curve_step_volatility": mean(changes),
+    }
 
 
 def history_stats(history: list[dict[str, Any]]) -> dict[str, Any]:
-    pnls: list[float] = []
     ratios: list[float] = []
     levers: list[float] = []
     holds: list[float] = []
@@ -164,7 +186,6 @@ def history_stats(history: list[dict[str, Any]]) -> dict[str, Any]:
         lever = number(trade.get("lever"))
         opened, closed = timestamp(trade.get("openTime")), timestamp(trade.get("closeTime"))
         if trade_pnl is not None:
-            pnls.append(trade_pnl)
             if trade_pnl > 0:
                 wins += 1
                 profit += trade_pnl
@@ -178,11 +199,14 @@ def history_stats(history: list[dict[str, Any]]) -> dict[str, Any]:
         if opened and closed and closed > opened:
             holds.append((closed - opened).total_seconds() / 3600)
     decisive = wins + losses
+    count = len(history)
     return {
-        "history_trade_count": len(history),
+        "history_trade_count": count,
+        "history_trades_per_day_90d": round(count / 90, 4),
         "history_win_rate_pct": round(wins / decisive * 100, 4) if decisive else None,
         "profit_factor": round(profit / loss, 4) if loss else (99.0 if profit else None),
         "avg_holding_hours": mean(holds),
+        "median_holding_hours": median(holds),
         "max_trade_loss_pct": round(abs(min(ratios)), 4) if ratios and min(ratios) < 0 else 0.0,
         "max_history_leverage": round(max(levers), 4) if levers else None,
     }
@@ -203,7 +227,7 @@ def position_stats(positions: list[dict[str, Any]]) -> dict[str, Any]:
 
 def follower_stats(data: list[dict[str, Any]]) -> dict[str, Any]:
     if not data:
-        return {"copy_pnl_usd": None, "avg_follow_days": None, "follower_profitable_pct": None}
+        return {"copy_pnl_usd": None, "avg_follow_days": None, "median_follow_days": None, "follower_profitable_pct": None}
     root = data[0]
     followers = root.get("copyTraders") or []
     durations = [v for item in followers if (v := elapsed_days(item.get("beginCopyTime"))) is not None]
@@ -218,7 +242,6 @@ def follower_stats(data: list[dict[str, Any]]) -> dict[str, Any]:
 
 def normalize(rank: dict[str, Any], detail: dict[str, list[dict[str, Any]]]) -> dict[str, Any]:
     code = rank["uniqueCode"]
-    drawdown, upward = curve_stats(rank.get("pnlRatios") or [])
     metrics = {
         "roi_pct": pct(rank.get("pnlRatio")),
         "pnl_usd": number(rank.get("pnl")),
@@ -227,8 +250,7 @@ def normalize(rank: dict[str, Any], detail: dict[str, list[dict[str, Any]]]) -> 
         "followers_accumulated": integer(rank.get("accCopyTraderNum")),
         "lead_days": integer(rank.get("leadDays")),
         "win_rate_pct": pct(rank.get("winRatio")),
-        "max_drawdown_pct": drawdown,
-        "curve_upward_ratio_pct": upward,
+        **curve_stats(rank.get("pnlRatios") or []),
         **history_stats(detail.get("history") or []),
         **position_stats(detail.get("positions") or []),
         **follower_stats(detail.get("followers") or []),
@@ -253,88 +275,141 @@ def normalize(rank: dict[str, Any], detail: dict[str, list[dict[str, Any]]]) -> 
     }
 
 
-def score(trader: dict[str, Any]) -> tuple[dict[str, float], list[str], str]:
+def score(trader: dict[str, Any]) -> tuple[dict[str, float], list[str], str, int]:
     m = trader["metrics"]
     flags: list[str] = []
-    core = ["roi_pct", "pnl_usd", "aum_usd", "followers", "lead_days", "win_rate_pct", "history_trade_count", "copy_pnl_usd"]
-    reliability = 35 + sum(m.get(key) is not None for key in core) / len(core) * 50
-    if (m.get("lead_days") or 0) >= 180 and (m.get("history_trade_count") or 0) == 0 and (m.get("current_positions_count") or 0) == 0:
+    lead_days = m.get("lead_days") or 0
+    aum = max(0.0, m.get("aum_usd") or 0.0)
+    followers = max(0, m.get("followers") or 0)
+    accumulated = max(0, m.get("followers_accumulated") or 0)
+    roi = m.get("roi_pct") or 0.0
+    drawdown = m.get("max_drawdown_pct")
+    upward = m.get("curve_upward_ratio_pct")
+    reversals = m.get("curve_direction_change_pct")
+    median_hold = m.get("median_holding_hours")
+    trades = m.get("history_trade_count") or 0
+
+    core = ["aum_usd", "followers", "followers_accumulated", "lead_days", "history_trade_count", "copy_pnl_usd"]
+    reliability = 35 + sum(m.get(key) is not None for key in core) / len(core) * 55
+    if lead_days >= 180 and trades == 0 and (m.get("current_positions_count") or 0) == 0:
         reliability -= 30
         flags.append("长期带单但近3个月无公开订单，疑似失活")
-    risk = 88.0
-    drawdown = m.get("max_drawdown_pct")
+
+    if lead_days < 180:
+        maturity_tier = 0
+        flags.append("带单时间不足 180 天，尚未经历完整心理周期")
+    elif lead_days < 365:
+        maturity_tier = 1
+        flags.append("带单时间不足 1 年，只进入观察池")
+    else:
+        maturity_tier = 2
+
+    if lead_days < 90:
+        longevity = 12 + lead_days / 90 * 13
+    elif lead_days < 180:
+        longevity = 25 + (lead_days - 90) / 90 * 20
+    elif lead_days < 365:
+        longevity = 50 + (lead_days - 180) / 185 * 20
+    elif lead_days < 730:
+        longevity = 78 + (lead_days - 365) / 365 * 14
+    else:
+        longevity = min(100, 94 + math.log1p(lead_days - 730) * 1.1)
+
+    capital_trust = min(100, math.log10(aum + 1) * 18) if aum else 0.0
+    crowd_validation = min(100, math.log1p(followers) * 11 + math.log1p(accumulated) * 6)
+
+    curve_quality = 72.0
     if drawdown is None:
-        risk -= 12
+        curve_quality -= 18
         flags.append("缺少可计算的收益曲线回撤")
     else:
-        risk -= min(55, max(0, drawdown) * 1.7)
+        curve_quality -= min(55, max(0, drawdown - 3) * 1.55)
+        if 3 <= drawdown <= 20 and lead_days >= 365:
+            curve_quality += 8
         if drawdown >= 25:
             flags.append("收益曲线回撤偏大")
         if drawdown >= 50:
             flags.append("收益曲线出现极端回撤")
+    if upward is not None:
+        curve_quality += max(-12, min(12, (upward - 55) * 0.35))
+    if reversals is not None and reversals >= 55 and (drawdown or 0) >= 12:
+        curve_quality -= 14
+        flags.append("曲线反复起落，疑似仓位或心态不稳定")
+
+    high_frequency = trades >= 80 and median_hold is not None and median_hold <= 8
+    if high_frequency:
+        curve_quality -= 18
+        flags.append("高频短持仓，疑似量化或蚂蚁仓策略")
+
+    perfect_short_curve = (
+        lead_days <= 365
+        and roi >= 20
+        and drawdown is not None
+        and drawdown <= 5
+        and upward is not None
+        and upward >= 75
+    )
+    if perfect_short_curve:
+        curve_quality -= 22
+        flags.append("短期完美曲线，可被对冲或展示策略设计")
+
+    rapid_profit = (lead_days < 365 and roi >= 100) or (lead_days < 180 and roi >= 50)
+    if rapid_profit:
+        curve_quality -= 20
+        flags.append("短期快速盈利，收益与爆雷风险同步放大")
+
+    risk = 90.0
     max_loss = m.get("max_trade_loss_pct")
     if max_loss is not None:
-        risk -= min(28, max_loss * 0.65)
+        risk -= min(35, max_loss * 0.7)
         if max_loss >= 25:
             flags.append("近3个月存在大额单笔亏损")
         if max_loss >= 60:
             flags.append("近3个月存在接近爆仓级单笔亏损")
     max_leverage = max(m.get("max_history_leverage") or 0, m.get("current_max_leverage") or 0)
     if max_leverage > 10:
-        risk -= min(30, (max_leverage - 10) * 1.2)
+        risk -= min(38, (max_leverage - 10) * 1.2)
         flags.append(f"存在较高杠杆（最高 {max_leverage:g}x）")
     if max_leverage >= 30:
         flags.append("杠杆风险极高")
     if m.get("current_upl_pct") is not None and m["current_upl_pct"] < -15:
-        risk -= min(30, abs(m["current_upl_pct"]) * 0.6)
+        risk -= min(35, abs(m["current_upl_pct"]) * 0.65)
         flags.append("当前持仓浮亏较大")
     if m.get("profit_factor") is not None and m["profit_factor"] < 1:
-        risk -= 18
+        risk -= 20
         flags.append("近3个月盈利因子低于 1")
-    stability = 35.0
-    if m.get("curve_upward_ratio_pct") is not None:
-        stability += m["curve_upward_ratio_pct"] * 0.45
-    trades = m.get("history_trade_count") or 0
-    stability += min(15, math.log1p(trades) * 3)
-    if m.get("history_win_rate_pct") is not None:
-        stability += (m["history_win_rate_pct"] - 50) * 0.25
-    if trades < 20:
-        stability -= 15
-        flags.append("近3个月历史订单样本偏少")
-    lead_days = m.get("lead_days") or 0
-    longevity = 15 + min(85, math.log1p(lead_days) * 13)
-    if lead_days < 90:
-        longevity -= 20
-        flags.append("带单时间不足 90 天")
-    elif lead_days >= 365:
-        longevity += 8
-    copy_confidence = 20.0
-    copy_confidence += min(16, math.log1p(max(0, m.get("followers") or 0)) * 2.4)
-    copy_confidence += min(10, math.log1p(max(0, m.get("followers_accumulated") or 0)) * 1.4)
-    copy_confidence += min(10, math.log1p(max(0, m.get("aum_usd") or 0)) * 0.75)
-    if m.get("avg_follow_days") is not None:
-        copy_confidence += min(18, math.log1p(m["avg_follow_days"]) * 3.2)
-    if m.get("copy_pnl_usd") is not None:
-        if m["copy_pnl_usd"] > 0:
-            copy_confidence += 12
-        else:
-            copy_confidence -= 24
-            flags.append("公开样本中的跟单用户总盈亏为负")
-    if m.get("follower_profitable_pct") is not None:
-        copy_confidence += (m["follower_profitable_pct"] - 50) * 0.18
+    if m.get("copy_pnl_usd") is not None and m["copy_pnl_usd"] < 0:
+        flags.append("公开跟单用户样本总盈亏为负")
+        risk -= 20
+
     scores = {
-        "risk_control": bound(risk),
-        "stability": bound(stability),
         "longevity": bound(longevity),
-        "copy_confidence": bound(copy_confidence),
+        "capital_trust": bound(capital_trust),
+        "crowd_validation": bound(crowd_validation),
+        "curve_quality": bound(curve_quality),
+        "risk_control": bound(risk),
         "data_reliability": bound(reliability),
     }
-    overall = scores["risk_control"] * .30 + scores["stability"] * .24 + scores["longevity"] * .20 + scores["copy_confidence"] * .16 + scores["data_reliability"] * .10
-    hard_markers = ("极端回撤", "接近爆仓级", "杠杆风险极高", "疑似失活", "跟单用户总盈亏为负")
+    overall = (
+        scores["longevity"] * 0.40
+        + scores["capital_trust"] * 0.30
+        + scores["crowd_validation"] * 0.20
+        + scores["curve_quality"] * 0.10
+    )
+    overall *= 0.75 + scores["data_reliability"] / 400
+
+    hard_markers = ("极端回撤", "接近爆仓级", "杠杆风险极高", "疑似失活", "跟单用户样本总盈亏为负")
     hard_risk = any(any(marker in flag for marker in hard_markers) for flag in flags)
     if hard_risk:
-        overall = min(overall, 44)
+        overall = min(overall, 40)
+    if rapid_profit or perfect_short_curve:
+        overall = min(overall, 57)
+    if lead_days < 180:
+        overall = min(overall, 49)
+    elif lead_days < 365:
+        overall = min(overall, 69)
     scores["overall"] = bound(overall)
+
     if scores["data_reliability"] < 40:
         recommendation = "数据不足/暂不判断"
     elif hard_risk or scores["overall"] < 42:
@@ -347,23 +422,57 @@ def score(trader: dict[str, Any]) -> tuple[dict[str, float], list[str], str]:
         recommendation = "重点观察"
     else:
         recommendation = "长期候选"
-    return scores, sorted(set(flags)), recommendation
+
+    safe_tier = 0 if hard_risk else 1
+    ranking_tier = safe_tier * 10 + maturity_tier
+    return scores, sorted(set(flags)), recommendation, ranking_tier
+
+
+def preliminary_rank_key(item: dict[str, Any]) -> tuple[float, float, float, float, float]:
+    lead_days = number(item.get("leadDays")) or 0
+    maturity = 2 if lead_days >= 365 else 1 if lead_days >= 180 else 0
+    return (
+        maturity,
+        lead_days,
+        number(item.get("aum")) or 0,
+        number(item.get("copyTraderNum")) or 0,
+        number(item.get("accCopyTraderNum")) or 0,
+    )
+
+
+def final_rank_key(item: dict[str, Any]) -> tuple[float, float, float, float, float, float]:
+    m = item["metrics"]
+    return (
+        item.get("ranking_tier", 0),
+        m.get("lead_days") or 0,
+        m.get("aum_usd") or 0,
+        m.get("followers") or 0,
+        m.get("followers_accumulated") or 0,
+        item["scores"]["overall"],
+    )
 
 
 def main() -> int:
     ranks = fetch_rankings()
-    ordered = sorted(ranks.values(), key=lambda item: (item.get("sourceRanks", {}).get("overview", 9999), item.get("sourceRanks", {}).get("pnl_ratio", 9999)))[:30]
+    ordered = sorted(ranks.values(), key=preliminary_rank_key, reverse=True)[:30]
     traders: list[dict[str, Any]] = []
     for index, rank in enumerate(ordered, 1):
         print(f"[{index}/{len(ordered)}] {rank.get('nickName') or rank['uniqueCode']}")
         trader = normalize(rank, details(rank["uniqueCode"]))
-        trader["scores"], trader["flags"], trader["recommendation"] = score(trader)
+        trader["scores"], trader["flags"], trader["recommendation"], trader["ranking_tier"] = score(trader)
         traders.append(trader)
-    traders.sort(key=lambda item: item["scores"]["overall"], reverse=True)
+    traders.sort(key=final_rank_key, reverse=True)
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at": now_iso(),
         "source": "OKX public copy-trading API",
+        "time_basis": "OKX public leadDays（公开带单时长；不等同于无法公开核验的真实开户日期）",
+        "ranking_logic": [
+            "风险硬淘汰",
+            "带单时长分档：1年以上 > 180至364天 > 180天以下",
+            "同档按带单天数、AUM、当前跟单人数、累计跟单人数依次排序",
+            "曲线只用于识别爆雷、高频量化、短期完美展示和心态不稳定风险",
+        ],
         "leaderboard_union_count": len(ranks),
         "detail_count": len(traders),
         "traders": traders,
