@@ -16,7 +16,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - name: Checkout public site
         uses: actions/checkout@v4
@@ -28,38 +28,50 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Collect OKX native curves and daily changes
+      - name: Collect OKX leaderboard, curves and deep risk data
         run: python scripts/run_trader_radar.py
 
       - name: Validate generated data
         run: |
           python - <<'PY'
           import json
+          from datetime import datetime, timezone
           from pathlib import Path
 
-          trader_path = Path("trader-radar/data/traders.json")
-          history_path = Path("trader-radar/data/history.json")
+          data_dir = Path("trader-radar/data")
+          trader_path = data_dir / "traders.json"
+          changes_path = data_dir / "changes.json"
+          history_dir = data_dir / "history"
+
           payload = json.loads(trader_path.read_text(encoding="utf-8"))
-          history = json.loads(history_path.read_text(encoding="utf-8"))
+          changes = json.loads(changes_path.read_text(encoding="utf-8"))
           traders = payload.get("traders") or []
           orders = payload.get("official_orders") or {}
           by_code = {item["unique_code"]: item for item in traders}
           deep = [item for item in traders if item.get("is_deep")]
+          curves = [item for item in traders if item.get("is_curve_full")]
+          today = datetime.now(timezone.utc).date().isoformat()
+          snapshot_path = history_dir / f"{today}.json"
 
-          assert payload.get("schema_version", 0) >= 10, payload.get("schema_version")
+          assert payload.get("schema_version", 0) >= 11, payload.get("schema_version")
           assert payload.get("leaderboard_count", 0) == len(traders), payload
           assert payload.get("public_leaderboard_count", 0) > 0, payload
           assert payload.get("client_leaderboard_count", 0) > 0, payload
-          assert payload.get("detail_count") == 10, payload.get("detail_count")
-          assert len(deep) == 10, len(deep)
-          assert history.get("snapshots"), "missing history snapshot"
+          assert payload.get("dataset_health", {}).get("status") == "ok", payload.get("dataset_health")
+          assert len(curves) >= 40, f"only {len(curves)} full curves"
+          assert 10 <= len(deep) <= 20, f"unexpected deep count {len(deep)}"
+          assert changes.get("schema_version", 0) >= 2, changes
+          assert len(changes.get("traders") or {}) == len(traders), "incomplete changes"
+          assert snapshot_path.exists(), f"missing snapshot {snapshot_path}"
           assert len(orders.get("aum") or []) == len(traders), "incomplete AUM order"
           assert len(orders.get("followers") or []) == payload["client_leaderboard_count"], "incomplete follower order"
 
-          native_curves = [item for item in deep if len(item.get("roi_series") or []) >= 2]
-          assert native_curves, "OKX native daily curves missing"
-          assert all("changes" in item for item in traders), "change fields missing"
-          assert all("alerts" in item for item in traders), "alert fields missing"
+          for item in curves:
+              assert len(item.get("roi_series") or []) >= 2, item.get("name")
+              assert "period_metrics" in item, item.get("name")
+          for item in deep:
+              quality = item.get("data_quality") or {}
+              assert quality.get("status") in {"deep_fresh", "stale_preserved"}, (item.get("name"), quality)
 
           for key, field in (("aum", "aum_usd"), ("followers", "followers")):
               values = [by_code[code].get("metrics", {}).get(field) or 0 for code in orders[key]]
@@ -69,22 +81,23 @@ jobs:
               "Validated",
               len(traders),
               "rows,",
+              len(curves),
+              "full curves,",
               len(deep),
-              "deep profiles and",
-              len(history["snapshots"]),
-              "daily snapshots",
+              "deep profiles and snapshot",
+              snapshot_path,
           )
           PY
 
-      - name: Publish latest dataset and history
+      - name: Publish latest dataset, changes and history
         run: |
           git config user.name "trader-radar-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add trader-radar/data/traders.json trader-radar/data/history.json
+          git add trader-radar/data/traders.json trader-radar/data/changes.json trader-radar/data/history/
           if git diff --cached --quiet; then
             echo "No data changes"
             exit 0
           fi
-          git commit -m "data: update OKX native curves changes and alerts"
+          git commit -m "data: update OKX radar curves changes risks and history"
           git pull --rebase origin master
           git push origin HEAD:master
