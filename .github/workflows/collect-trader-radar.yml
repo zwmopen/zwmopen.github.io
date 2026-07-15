@@ -33,6 +33,7 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Trigger verified OKX-native curve, history and alert collection.
       - name: Collect OKX native curves and daily changes
         run: python scripts/run_trader_radar.py
 
