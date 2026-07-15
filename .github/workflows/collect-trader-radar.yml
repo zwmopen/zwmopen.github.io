@@ -5,10 +5,6 @@ on:
   schedule:
     # 每天 01:17 UTC（中国时间 09:17）
     - cron: "17 1 * * *"
-  push:
-    branches: [master]
-    paths:
-      - ".github/workflows/collect-trader-radar.yml"
 
 permissions:
   contents: write
@@ -19,7 +15,6 @@ concurrency:
 
 jobs:
   collect:
-    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[radar-now]')
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -33,7 +28,6 @@ jobs:
         with:
           python-version: "3.12"
 
-      # Trigger verified OKX-native curve, history and alert collection.
       - name: Collect OKX native curves and daily changes
         run: python scripts/run_trader_radar.py
 
