@@ -2,6 +2,10 @@ name: Collect OKX trader radar data
 
 on:
   workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/collect-trader-radar.yml"
 
 permissions:
   contents: write
@@ -12,6 +16,7 @@ concurrency:
 
 jobs:
   collect:
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[radar-now]')
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -33,17 +38,33 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
+
           path = Path("trader-radar/data/traders.json")
           payload = json.loads(path.read_text(encoding="utf-8"))
+          traders = payload.get("traders") or []
+          orders = payload.get("official_orders") or {}
+
+          assert payload.get("schema_version", 0) >= 8, payload.get("schema_version")
+          assert payload.get("leaderboard_count", 0) == len(traders), payload
+          assert payload.get("leaderboard_count", 0) > payload.get("detail_count", 0), payload
           assert payload.get("detail_count", 0) > 0, payload
-          assert payload.get("traders"), payload
-          assert payload.get("leaderboard_union_count", 0) >= payload.get("detail_count", 0), payload
+          assert len(orders.get("aum") or []) == len(traders), "incomplete AUM order"
+          assert len(orders.get("followers") or []) == len(traders), "incomplete follower order"
+
+          by_code = {item["unique_code"]: item for item in traders}
+          for key, field in (("aum", "aum_usd"), ("followers", "followers")):
+              values = [
+                  by_code[code].get("metrics", {}).get(field) or 0
+                  for code in orders[key]
+              ]
+              assert all(a >= b for a, b in zip(values, values[1:])), key
+
           print(
-              "Validated",
+              "Validated full leaderboard",
+              payload["leaderboard_count"],
+              "rows with",
               payload["detail_count"],
-              "deep profiles from",
-              payload["leaderboard_union_count"],
-              "leaderboard candidates",
+              "deep profiles",
           )
           PY
 
@@ -56,6 +77,6 @@ jobs:
             echo "No data changes"
             exit 0
           fi
-          git commit -m "data: update public OKX trader radar"
+          git commit -m "data: update full OKX trader leaderboard"
           git pull --rebase origin master
           git push origin HEAD:master
