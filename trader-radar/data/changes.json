@@ -1,0 +1,1321 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-07-15T17:55:35+00:00",
+  "source_dates": {
+    "1d": null,
+    "7d": null,
+    "30d": null
+  },
+  "traders": {
+    "823664FB73B79E41": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "9C2CB3B2306B28EA": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "C419F165132C0C57": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "24D8CE79A97FD35D": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "DA2B29551CBB2AE7": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "F2BCA22ABBB69F57": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "66CBE179AA38C688": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "4DD7B31069255CCE": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "821360683215706097": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "1173EC858F15E04F": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "D69063F8CC0ECC79": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "A24E06C746B022B4": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "818351355109921732": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "35F888C7BB441B2B": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "8253D21C046EE47C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "8DE3E9294C1A2440": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "ECD85D96F372C0D1": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "0487DE6EF26EFE27": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "C84F6F6717746BD4": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "C343256953163322": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "FEA1F20A4558468F": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "1EA7ED83214F8F22": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "821349237173995404": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "94FC2CF4A047C10E": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "769075957323167141": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "C84FB1E4F4BA4B2A": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "A8AF8AFFAB6051B3": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "FA400F0E91664A05": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "821382564224395312": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "3F6C3036FD9E2E11": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "097F20F08F8BEB70": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "4A8AB04BF304EBD8": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "92CA01EF97EB1C49": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "794421901505786795": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "3E34735C93824CDF": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "849654629733718232": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "F197C033348EFB7D": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "819848249304757406": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "74F7C7A53CD18275": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "C223658C2C4F9C3C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "08E31CADCFDDCFB8": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "42852C1BDC400BF7": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "6A48C398F18CB31C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "35E22983F436F55B": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "FF48C5939FE6119F": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "D387B5B1F098B82C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "9D354B66E31ABEC1": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "F76CC883269E6FFB": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "37D18BE54F98F099": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "A60D696F4E92AE5C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "4B048A62B1198464": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "01DA3FA83DECB99E": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "9482DE57396DAB7C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "ACE79CAACA13F8B9": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "B74FC756C8EE894B": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "70923A619CCB8F2F": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "28AEEA33C8C78CC9": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "D442CF34E4AEEAF1": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "664BD292A54718C3": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "5C9137285EA1382C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "32C76B50BC8D7EDF": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "C9B1558F671ED132": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "609DDBB8C0532E3D": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "14B24FC1CDA23436": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "E173DA219B1AA53B": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "96F4C7FA4260C891": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "0DAEA9C4B40EFEBC": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "F6476365DB0D09A3": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "747097533310546084": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "1EE226C9780E2BEF": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "B31CCBB35ADBF9C0": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "24BA42C49DC298DE": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "B0408645161C1865": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "44570B03F5CBCEDE": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "721A7DFF5AE7AA8C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "5E230B8996BE859D": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "A0EDF7F0D96A7E8C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "6308333277A08132": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "C2B269D649346A25": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "FE701D3CB0AC0E8F": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "ED5E78290CE31341": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "5C5AE0DBE8132751": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "3EB985F124C18792": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "F493744FAA6FDEBA": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "0EAF7292CE2FAAC2": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "8D59B2F61BDDE6D8": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "8F53B7AEDF041739": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "5C872B837465159F": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "741867347484730662": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "BA1A719B8225DD83": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "A69AC87ADD4E76F3": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "822824429641453680": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "CCC8ADEDC122BA29": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "D84980B5C686E346": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "321655528D1AE055": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "31F3288F9B90B496": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "55CE12A569770B28": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "6A30B93C28DD247F": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "757CC8A7D7FAC010": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "9B28742D954561AE": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "F3476CC5EA71C0BC": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "818313090499674879": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "B7AC2E971AF8A325": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "58D7D205FB591484": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "70143FDD8DBF6E53": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "811BB1C9681A4FF5": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "517A2A0B4F4C76D6": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "97AA186B7559E35E": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "952071415C9BAD06": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "5C89E825CCC384BC": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "18FCA6C22F26CBB4": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "70362A15F8B31D3B": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "1499200359BAE11A": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "E9BB0FE3B8797B72": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "104E928646CCD8E9": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "756947198310777386": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "762693453091570080": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "F91659B2DBF66275": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "E3654BF20F6C758D": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "50DC6EE3AB3F8CF5": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "FA5640E3F0C7F17D": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "2A88E34F82400FE3": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "7473FE311E3AD50A": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "811997770117827919": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "ACB30A3293B96B22": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "90AF6C144EC8692F": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "8C13B81A866891F1": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "80A2447E1FD16A12": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "B3C834C23F65A321": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "114A1793308A1CEB": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "924513BC826674CB": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "B3CFC15E61D7A069": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "3B4DA23CA0314FCB": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "F61990B585217C24": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "16063A253CED84AE": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "A6D274A2EDD8FA5E": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "B68D480966C5352A": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "BEA017E03010004C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "061921712F54AADF": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "818795120350074580": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "7E21239BFA805866": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "F10D7F7A4A164AFB": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "95003D5C4FD0C9D2": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "0FD18D81A6980710": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "CC375D11641CCAF3": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "D85B593402E0D85E": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "BCB7573DA3524A17": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "18465ED75256D3D8": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "AA975115A1A01869": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "9D336194ACB74891": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "3E62C27062B1385E": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "C596C02BFACE1D77": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "313CCADFE7227C85": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "E7AC907DED8BE5E4": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "7EA979BCA6BD1007": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "646E26380E35712E": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "7D35C21B23E3DF52": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "A7405DFE93CF41B7": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "D303811F9F41AF27": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "6F262ADB3B44266C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "444BF044C67892FF": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "E94DF3F02F48C881": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "F147E2DE677BC82D": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "53C39E0C25CDD32F": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "4262DC2BDC67F8C9": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "AF2E90B3C25EE4C0": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "528089A445EA8FAA": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "D80DADB888EAE273": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "A2CA799B36AEE1B9": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "B70102CCBEBA2104": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "2A14C427C5E4223E": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "2DE3E8FEAC245B9C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "6CE9B9D4C7E25E2F": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "F740246F4C8BDC75": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "5BA190A5622F92F4": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "318EE7554752576C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "C63D5BF464C578C3": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "8DC9A78EF5C32F2C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "D500A09517C4A154": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "05E5EB022E5B2282": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "EF1CC6F40E834D1A": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "2128BA01363B35A5": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "40039D8E7609EF91": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "36873782B92CA489": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "A53ABB45DE8437C5": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "AE2EDEB88E3F2781": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "2E01D379E7579CF5": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "135DEAD57B17C48E": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "DEB05DBC700AE341": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "2E861CE7BF7B4047": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "FD805C99D384C92C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "0ACDD18DFCF6B273": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "3C7CFC068A890A05": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "A08235B3C7F48634": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "EA315ECC2A50F8B6": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "80DBF719B37B6213": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "8B8ED8BFE4D40EBD": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "A06A1E6EFE75ECCD": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "D286B322B8A241B7": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "3772C46920B1F2A0": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "C4BA2287D1A9D8F4": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "C4C65A2C03F7A086": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "873EEA935003264F": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "558503E1E6FC7081": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "235BCD62102B61F3": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "62C2A7C4A3B1CE7B": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "F2EDD3086F9A651F": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "AF631491B26716D1": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "5401BCA49E164D7A": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "DEBACFD3CAC565B8": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "C01F8039E3A489E7": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "E5513524191E576E": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "50A24ABBFBE2B7CE": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "C024C3CB1B42E876": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "5104082E16D70D9D": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "E24572C6BF759088": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "DA18777FE8FD492B": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "3EE04B241CA3CCD5": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "6BDBCF1C055B071A": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "D5D1725ABE3958B0": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "545F589A73ED2832": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "32768C4C7E4D3B32": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "36EB1609022C3988": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "7D34F0975D241797": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "17D6B48507A54690": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "FC8DBDC1C84C4C67": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "247FE3434DA88B0D": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "31742980DA233D54": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "643A3247025545B6": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "4844EA95A09B5B84": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "E6A0214E4BB6DE47": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "418175BB996A663D": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "5251484445FC52D8": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "711D77D665CC6F49": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "527795C0728F6B96": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "41ED7CB5A87E4012": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "3CE2FA3656DCEECE": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "F8B3F6C7486961B9": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "3DAE42E391E1797B": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "504846ADFA074BBC": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "C690E50CAE78F47C": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "D25DD1A69711A97F": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "F8CAA26A08B83DB3": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "759271548753949930": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "E381F6BA71BCA4D7": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "241CFF1D95076351": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "BE0DCCC5D9571E5A": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "C21BAEFDE06054D3": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "40A3DB1208A52D7D": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "9A073DDF49603886": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "841544924595303288": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "764043965032509720": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "35D5933A1C84CD35": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "BFE2CA86AA853AD0": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "D29C560E3977E801": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "99663D303875EE00": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "65E877B78BD76F5F": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "0BE59BFCA2E9820D": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "38649778D6442398": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "2573552703F070C6": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "A5E84F0EAD743865": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "24A6881333E937FD": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    }
+  }
+}
