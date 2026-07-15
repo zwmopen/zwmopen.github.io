@@ -3,11 +3,8 @@ name: Collect OKX trader radar data
 on:
   workflow_dispatch:
   schedule:
+    # 每天 01:17 UTC（中国时间 09:17）
     - cron: "17 1 * * *"
-  push:
-    branches: [master]
-    paths:
-      - ".github/workflows/collect-trader-radar.yml"
 
 permissions:
   contents: write
@@ -17,31 +14,90 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  diagnose:
-    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[radar-now]')
+  collect:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout public site
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Run collector and capture complete log
+
+      - name: Collect OKX leaderboard, curves and deep risk data
+        run: python scripts/run_trader_radar.py
+
+      - name: Validate generated data
         run: |
-          set +e
-          mkdir -p trader-radar/data
-          python scripts/run_trader_radar.py > trader-radar/data/upgrade-diagnostic.txt 2>&1
-          status=$?
-          echo "EXIT_STATUS=$status" >> trader-radar/data/upgrade-diagnostic.txt
-          tail -200 trader-radar/data/upgrade-diagnostic.txt
-          exit 0
-      - name: Publish diagnostic log only
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          data_dir = Path("trader-radar/data")
+          trader_path = data_dir / "traders.json"
+          changes_path = data_dir / "changes.json"
+          history_dir = data_dir / "history"
+
+          payload = json.loads(trader_path.read_text(encoding="utf-8"))
+          changes = json.loads(changes_path.read_text(encoding="utf-8"))
+          traders = payload.get("traders") or []
+          orders = payload.get("official_orders") or {}
+          by_code = {item["unique_code"]: item for item in traders}
+          deep = [item for item in traders if item.get("is_deep")]
+          curves = [item for item in traders if item.get("is_curve_full")]
+          today = datetime.now(timezone.utc).date().isoformat()
+          snapshot_path = history_dir / f"{today}.json"
+
+          assert payload.get("schema_version", 0) >= 11, payload.get("schema_version")
+          assert payload.get("leaderboard_count", 0) == len(traders), payload
+          assert payload.get("public_leaderboard_count", 0) > 0, payload
+          assert payload.get("client_leaderboard_count", 0) > 0, payload
+          assert payload.get("dataset_health", {}).get("status") == "ok", payload.get("dataset_health")
+          assert len(curves) >= 40, f"only {len(curves)} full curves"
+          assert 10 <= len(deep) <= 20, f"unexpected deep count {len(deep)}"
+          assert changes.get("schema_version", 0) >= 2, changes
+          assert len(changes.get("traders") or {}) == len(traders), "incomplete changes"
+          assert snapshot_path.exists(), f"missing snapshot {snapshot_path}"
+          assert len(orders.get("aum") or []) == len(traders), "incomplete AUM order"
+          assert len(orders.get("followers") or []) == payload["client_leaderboard_count"], "incomplete follower order"
+
+          for item in curves:
+              assert len(item.get("roi_series") or []) >= 2, item.get("name")
+              assert "period_metrics" in item, item.get("name")
+          for item in deep:
+              quality = item.get("data_quality") or {}
+              assert quality.get("status") in {"deep_fresh", "stale_preserved"}, (item.get("name"), quality)
+
+          for key, field in (("aum", "aum_usd"), ("followers", "followers")):
+              values = [by_code[code].get("metrics", {}).get(field) or 0 for code in orders[key]]
+              assert all(a >= b for a, b in zip(values, values[1:])), key
+
+          print(
+              "Validated",
+              len(traders),
+              "rows,",
+              len(curves),
+              "full curves,",
+              len(deep),
+              "deep profiles and snapshot",
+              snapshot_path,
+          )
+          PY
+
+      - name: Publish latest dataset, changes and history
         run: |
           git config user.name "trader-radar-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add trader-radar/data/upgrade-diagnostic.txt
-          git commit -m "chore: write radar upgrade diagnostic"
+          git add trader-radar/data/traders.json trader-radar/data/changes.json trader-radar/data/history/
+          if git diff --cached --quiet; then
+            echo "No data changes"
+            exit 0
+          fi
+          git commit -m "data: update OKX radar curves changes risks and history"
           git pull --rebase origin master
           git push origin HEAD:master
