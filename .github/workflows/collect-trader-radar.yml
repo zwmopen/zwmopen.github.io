@@ -30,6 +30,7 @@ jobs:
         with:
           python-version: "3.12"
 
+      # One-time verification run; push trigger will be removed after success.
       - name: Collect public OKX data
         run: python scripts/run_trader_radar.py
 
