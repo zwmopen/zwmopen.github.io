@@ -18,7 +18,7 @@ jobs:
   collect:
     if: github.event_name != 'push' || contains(github.event.head_commit.message, '[radar-now]')
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 10
     steps:
       - name: Checkout public site
         uses: actions/checkout@v4
@@ -30,70 +30,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Collect OKX public and client leaderboards
-        run: python scripts/run_trader_radar.py
+      - name: Probe OKX client leaderboard
+        run: python scripts/probe_okx_client.py
 
-      - name: Validate client-compatible ordering
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-
-          path = Path("trader-radar/data/traders.json")
-          payload = json.loads(path.read_text(encoding="utf-8"))
-          traders = payload.get("traders") or []
-          orders = payload.get("official_orders") or {}
-          by_code = {item["unique_code"]: item for item in traders}
-
-          assert payload.get("schema_version", 0) >= 9, payload.get("schema_version")
-          assert payload.get("leaderboard_count", 0) == len(traders), payload
-          assert payload.get("client_leaderboard_count", 0) > payload.get("public_leaderboard_count", 0), payload
-          assert payload.get("detail_count", 0) > 0, payload
-          assert len(orders.get("aum") or []) == len(traders), "incomplete AUM order"
-          assert len(orders.get("followers") or []) == payload["client_leaderboard_count"], "incomplete client follower order"
-
-          def names(key, limit=3):
-              return [by_code[code]["name"] for code in orders[key][:limit]]
-
-          aum_names = names("aum")
-          follower_names = names("followers")
-          print("AUM top 3:", aum_names)
-          print("Followers top 3:", follower_names)
-
-          assert "小周" in aum_names[0], aum_names
-          assert "平凡无奇" in aum_names[1], aum_names
-          assert "kxiandaoyan" in aum_names[2].lower(), aum_names
-          assert "平凡无奇" in follower_names[0], follower_names
-          assert "知行合一" in follower_names[1], follower_names
-          assert "天道酬勤" in follower_names[2], follower_names
-
-          for key, field in (("aum", "aum_usd"), ("followers", "followers")):
-              values = [
-                  by_code[code].get("metrics", {}).get(field) or 0
-                  for code in orders[key]
-              ]
-              assert all(a >= b for a, b in zip(values, values[1:])), key
-
-          print(
-              "Validated",
-              payload["leaderboard_count"],
-              "merged rows,",
-              payload["client_leaderboard_count"],
-              "client rows and",
-              payload["detail_count"],
-              "deep profiles",
-          )
-          PY
-
-      - name: Publish latest dataset
+      - name: Publish probe response
         run: |
           git config user.name "trader-radar-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add trader-radar/data/traders.json
-          if git diff --cached --quiet; then
-            echo "No data changes"
-            exit 0
-          fi
-          git commit -m "data: update OKX client-compatible leaderboard"
+          git add trader-radar/data/client-probe.json
+          git commit -m "chore: write OKX client leaderboard probe"
           git pull --rebase origin master
           git push origin HEAD:master
