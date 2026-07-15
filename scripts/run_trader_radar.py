@@ -11,6 +11,19 @@ _original_position_stats = radar.position_stats
 _original_normalize = radar.normalize
 _original_score = radar.score
 
+# OKX's documented public sort types. Current follower count is not a public
+# sortType, so it must be derived from the complete leaderboard using
+# copyTraderNum rather than guessed API aliases.
+OFFICIAL_SORT_SPECS = [
+    ("overview", ["overview"]),
+    ("pnl", ["pnl"]),
+    ("aum", ["aum"]),
+    ("win_ratio", ["win_ratio"]),
+    ("pnl_ratio", ["pnl_ratio"]),
+    ("copy_pnl", ["current_copy_trader_pnl"]),
+]
+DETAIL_LIMIT = 80
+
 
 def tolerant_get_json(path: str, params: dict):
     try:
@@ -18,7 +31,7 @@ def tolerant_get_json(path: str, params: dict):
     except Exception as exc:  # noqa: BLE001
         if path == radar.LEADERBOARD:
             print(
-                "skip unsupported or unavailable leaderboard request:",
+                "skip unavailable leaderboard request:",
                 params.get("sortType"),
                 "page",
                 params.get("page"),
@@ -87,6 +100,7 @@ def normalize(rank: dict, detail: dict[str, list[dict]]) -> dict:
         if valid_position(source)
     ]
     trader["metrics"]["current_positions_count"] = len(trader["current_positions"])
+    trader["is_deep"] = True
     return trader
 
 
@@ -109,6 +123,7 @@ def activity_status(metrics: dict) -> tuple[str, int]:
 
 
 def score(trader: dict):
+    # Accumulated followers are background information only.
     original_accumulated = trader["metrics"].get("followers_accumulated")
     trader["metrics"]["followers_accumulated"] = 0
     scores, flags, recommendation, _ = _original_score(trader)
@@ -151,22 +166,92 @@ def score(trader: dict):
     return scores, sorted(set(flags)), recommendation, ranking_tier
 
 
-def preliminary_rank_key(item: dict) -> tuple[float, float, float, float]:
-    return (
-        radar.number(item.get("aum")) or 0,
-        radar.number(item.get("copyTraderNum")) or 0,
-        radar.number(item.get("leadDays")) or 0,
-        radar.number(item.get("pnl")) or 0,
+def normalize_shallow(rank: dict) -> dict:
+    code = rank["uniqueCode"]
+    curve_metrics, roi_series = radar.curve_stats(rank.get("pnlRatios") or [])
+    return {
+        "id": code,
+        "unique_code": code,
+        "name": rank.get("nickName") or code,
+        "profile_url": f"https://www.okx.com/copy-trading/account/{code}",
+        "avatar_url": rank.get("portLink"),
+        "source_ranks": rank.get("sourceRanks") or {},
+        "source_sorts": sorted(set(rank.get("sourceSorts") or [])),
+        "source_aliases": sorted(set(rank.get("sourceAliases") or [])),
+        "is_deep": False,
+        "metrics": {
+            "roi_pct": radar.pct(rank.get("pnlRatio")),
+            "pnl_usd": radar.number(rank.get("pnl")),
+            "aum_usd": radar.number(rank.get("aum")),
+            "followers": radar.integer(rank.get("copyTraderNum")),
+            "followers_capacity": radar.integer(rank.get("maxCopyTraderNum")),
+            "followers_accumulated": radar.integer(rank.get("accCopyTraderNum")),
+            "lead_days": radar.integer(rank.get("leadDays")),
+            "win_rate_pct": radar.pct(rank.get("winRatio")),
+            "activity_status": "未深度分析",
+            "activity_tier": -1,
+            **curve_metrics,
+        },
+        "roi_series": roi_series,
+        "current_positions": [],
+        "scores": {},
+        "flags": [],
+        "recommendation": "未深度分析",
+        "ranking_tier": -100,
+    }
+
+
+def sort_ranks(ranks: dict[str, dict], field: str) -> list[dict]:
+    return sorted(
+        ranks.values(),
+        key=lambda item: (
+            radar.number(item.get(field)) or 0,
+            -(item.get("sourceRanks", {}).get("overview") or 10**9),
+        ),
+        reverse=True,
     )
 
 
-def final_rank_key(item: dict) -> tuple[float, float, float, float, float]:
+def assign_derived_ranks(ranks: dict[str, dict]) -> dict[str, list[str]]:
+    definitions = {
+        "aum": "aum",
+        "followers": "copyTraderNum",
+        "days": "leadDays",
+        "roi": "pnlRatio",
+        "pnl": "pnl",
+    }
+    orders: dict[str, list[str]] = {}
+    for label, field in definitions.items():
+        ordered = sort_ranks(ranks, field)
+        orders[label] = [item["uniqueCode"] for item in ordered]
+        for index, item in enumerate(ordered, 1):
+            item.setdefault("sourceRanks", {})[label] = index
+    return orders
+
+
+def detail_candidates(ranks: dict[str, dict]) -> list[dict]:
+    selected: dict[str, dict] = {}
+    buckets = [
+        ("aum", 35),
+        ("copyTraderNum", 35),
+        ("leadDays", 20),
+        ("pnl", 15),
+    ]
+    for field, limit in buckets:
+        for item in sort_ranks(ranks, field)[:limit]:
+            selected.setdefault(item["uniqueCode"], item)
+            if len(selected) >= DETAIL_LIMIT:
+                return list(selected.values())
+    return list(selected.values())[:DETAIL_LIMIT]
+
+
+def custom_rank_key(item: dict) -> tuple[float, float, float, float, float]:
     metrics = item["metrics"]
     return (
         metrics.get("activity_tier", -1),
         1
         if item.get("recommendation")
-        not in {"不建议跟单", "数据不足/暂不判断"}
+        not in {"不建议跟单", "数据不足/暂不判断", "未深度分析"}
         else 0,
         metrics.get("aum_usd") or 0,
         metrics.get("followers") or 0,
@@ -174,44 +259,124 @@ def final_rank_key(item: dict) -> tuple[float, float, float, float, float]:
     )
 
 
-def run() -> int:
-    result = radar.main()
-    payload = json.loads(radar.OUTPUT.read_text(encoding="utf-8"))
-    payload["schema_version"] = max(7, int(payload.get("schema_version", 0)))
-    payload["ranking_logic"] = [
-        "第一道门槛：确认最近仍有有效仓位或近期真实订单",
-        "已确认活跃的账户进入主排序；活跃度未知不等于失活",
-        "综合排序第一：带单规模 AUM",
-        "综合排序第二：当前跟单人数 copyTraderNum",
-        "综合排序第三：公开带单天数 leadDays",
-        "累计历史人数 accCopyTraderNum 不参与排序和评分",
-        "曲线、杠杆、亏损和高频特征只用于风险排雷",
+def preview(traders: list[dict], key: str, limit: int = 5) -> list[dict]:
+    field_map = {
+        "aum": "aum_usd",
+        "followers": "followers",
+        "days": "lead_days",
+    }
+    field = field_map[key]
+    ordered = sorted(
+        traders,
+        key=lambda item: item.get("metrics", {}).get(field) or 0,
+        reverse=True,
+    )[:limit]
+    return [
+        {
+            "name": item["name"],
+            "unique_code": item["unique_code"],
+            "value": item["metrics"].get(field),
+        }
+        for item in ordered
     ]
-    payload["activity_rules"] = {
-        "active": "存在有效公开仓位，或最近30天有历史订单",
-        "low_activity": "最近30天无单，但最近60天仍有订单",
-        "suspected_stopped": "最近60天无单，但最近90天仍有订单",
-        "inactive": "最近一次可验证交易超过90天，且没有有效当前仓位",
-        "unknown": "接口未返回可验证的当前仓位和最近交易时间，只能标记活跃度未知",
+
+
+def run() -> int:
+    radar.SORT_SPECS = OFFICIAL_SORT_SPECS
+    radar.DETAIL_LIMIT = DETAIL_LIMIT
+
+    ranks, diagnostics = radar.fetch_rankings()
+    if not ranks:
+        raise RuntimeError("OKX leaderboard collection returned no traders")
+
+    official_orders = assign_derived_ranks(ranks)
+    traders_by_code = {
+        code: normalize_shallow(rank)
+        for code, rank in ranks.items()
     }
-    payload["follower_basis"] = (
-        "主界面和综合排序只使用当前跟单人数 copyTraderNum；"
-        "accCopyTraderNum 只在详情中作为历史背景展示"
-    )
-    payload["chart_periods"] = {
-        "total": "当前已采集的完整公开曲线",
-        "year": "按公开曲线时间戳截取最近365天",
-        "month": "按公开曲线时间戳截取最近30天",
-        "week": "按公开曲线时间戳截取最近7天",
-        "day": "按公开曲线时间戳截取最近1天",
-        "order": ["total", "year", "month", "week", "day"],
-        "fallback": "对应周期不足两个真实数据点时显示暂无数据，不复用其他周期曲线",
+
+    candidates = detail_candidates(ranks)
+    for index, rank in enumerate(candidates, 1):
+        print(
+            f"[{index}/{len(candidates)}] deep analyze "
+            f"{rank.get('nickName') or rank['uniqueCode']}"
+        )
+        trader = normalize(rank, radar.fetch_details(rank["uniqueCode"]))
+        (
+            trader["scores"],
+            trader["flags"],
+            trader["recommendation"],
+            trader["ranking_tier"],
+        ) = score(trader)
+        traders_by_code[rank["uniqueCode"]] = trader
+
+    traders = list(traders_by_code.values())
+    traders.sort(key=custom_rank_key, reverse=True)
+
+    payload = {
+        "schema_version": 8,
+        "generated_at": radar.now_iso(),
+        "source": "OKX public copy-trading API",
+        "source_endpoints": [
+            radar.LEADERBOARD,
+            radar.POSITIONS,
+            radar.HISTORY,
+            radar.FOLLOWERS,
+        ],
+        "leaderboard_count": len(traders),
+        "leaderboard_union_count": len(ranks),
+        "detail_count": sum(bool(item.get("is_deep")) for item in traders),
+        "official_orders": official_orders,
+        "official_top_preview": {
+            "aum": preview(traders, "aum"),
+            "followers": preview(traders, "followers"),
+            "days": preview(traders, "days"),
+        },
+        "collection_diagnostics": diagnostics,
+        "ranking_logic": [
+            "官方带单规模：完整榜单按 aum 降序，不附加活跃或风险过滤",
+            "官方当前跟单人数：完整榜单按 copyTraderNum 降序，不使用 accCopyTraderNum",
+            "自定义综合排序：已验证活跃优先，再按 AUM、当前跟单人数、带单天数",
+            "深度样本只补充仓位、历史订单与风险，不决定是否进入官方榜单",
+        ],
+        "activity_rules": {
+            "active": "存在有效公开仓位，或最近30天有历史订单",
+            "low_activity": "最近30天无单，但最近60天仍有订单",
+            "suspected_stopped": "最近60天无单，但最近90天仍有订单",
+            "inactive": "最近一次可验证交易超过90天，且没有有效当前仓位",
+            "unknown": "未深度分析或接口缺少时间时，不判定失活",
+        },
+        "follower_basis": (
+            "主榜当前人数只使用 copyTraderNum；"
+            "accCopyTraderNum 只在详情中作为历史背景"
+        ),
+        "chart_periods": {
+            "total": "当前已采集的完整公开曲线",
+            "year": "最近365天",
+            "month": "最近30天",
+            "week": "最近7天",
+            "day": "最近1天",
+            "order": ["total", "year", "month", "week", "day"],
+            "fallback": "不足两个真实点时显示暂无数据",
+        },
+        "traders": traders,
     }
+
+    radar.OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     radar.OUTPUT.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-    return result
+    print(
+        "updated",
+        radar.OUTPUT.relative_to(radar.ROOT),
+        "with",
+        len(traders),
+        "leaderboard rows and",
+        payload["detail_count"],
+        "deep profiles",
+    )
+    return 0
 
 
 radar.get_json = tolerant_get_json
@@ -219,8 +384,6 @@ radar.history_stats = history_stats
 radar.position_stats = position_stats
 radar.normalize = normalize
 radar.score = score
-radar.preliminary_rank_key = preliminary_rank_key
-radar.final_rank_key = final_rank_key
 
 if __name__ == "__main__":
     raise SystemExit(run())
