@@ -3,7 +3,7 @@
   "snapshots": [
     {
       "date": "2026-07-15",
-      "generated_at": "2026-07-15T09:56:57+00:00",
+      "generated_at": "2026-07-15T09:58:18+00:00",
       "traders": {
         "823664FB73B79E41": {
           "aum_usd": 8761956.424344452,
@@ -15,7 +15,7 @@
         },
         "9C2CB3B2306B28EA": {
           "aum_usd": 2734122.2408744222,
-          "followers": 1188,
+          "followers": 1189,
           "lead_days": 1047,
           "roi_pct": 29.09,
           "rank_aum": 2,
@@ -259,7 +259,7 @@
           "lead_days": 242,
           "roi_pct": 39.62,
           "rank_aum": 32,
-          "rank_followers": 26
+          "rank_followers": 25
         },
         "983AC67F2C0E41B5": {
           "aum_usd": 73308.8549333894,
@@ -471,11 +471,11 @@
         },
         "28AEEA33C8C78CC9": {
           "aum_usd": 24237.663903629957,
-          "followers": 117,
+          "followers": 116,
           "lead_days": 530,
           "roi_pct": 244.46,
           "rank_aum": 59,
-          "rank_followers": 25
+          "rank_followers": 26
         },
         "D442CF34E4AEEAF1": {
           "aum_usd": 21241.12942837821,
