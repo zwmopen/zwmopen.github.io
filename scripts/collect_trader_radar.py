@@ -12,13 +12,33 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "trader-radar" / "data" / "traders.json"
+
 BASE_URLS = ["https://www.okx.com", "https://aws.okx.com", "https://okx.com"]
-SORT_TYPES = ["overview", "pnl", "aum", "win_ratio", "pnl_ratio", "current_copy_trader_pnl"]
 HEADERS = {
     "Accept": "application/json",
     "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
     "User-Agent": "Mozilla/5.0 AppleWebKit/537.36 Chrome/126 Safari/537.36",
 }
+
+SORT_SPECS: list[tuple[str, list[str]]] = [
+    ("overview", ["overview"]),
+    ("win_ratio", ["win_ratio"]),
+    ("pnl_ratio", ["pnl_ratio"]),
+    ("pnl", ["pnl"]),
+    ("aum", ["aum"]),
+    ("followers", ["copy_trader_num", "current_copy_trader_num", "copy_trader_count"]),
+    ("copy_pnl", ["copy_trader_pnl", "current_copy_trader_pnl"]),
+]
+
+MAX_PAGES_PER_SORT = 50
+PAGE_SIZE = 20
+DETAIL_LIMIT = 80
+REQUEST_DELAY_SECONDS = 0.22
+
+LEADERBOARD = "/api/v5/copytrading/public-lead-traders"
+POSITIONS = "/api/v5/copytrading/public-current-subpositions"
+HISTORY = "/api/v5/copytrading/public-subpositions-history"
+FOLLOWERS = "/api/v5/copytrading/public-copy-traders"
 
 
 def now_iso() -> str:
@@ -56,7 +76,9 @@ def timestamp(value: Any) -> datetime | None:
 
 def elapsed_days(value: Any) -> float | None:
     parsed = timestamp(value)
-    return round(max(0.0, (datetime.now(timezone.utc) - parsed).total_seconds() / 86400), 4) if parsed else None
+    if not parsed:
+        return None
+    return round(max(0.0, (datetime.now(timezone.utc) - parsed).total_seconds() / 86400), 4)
 
 
 def mean(values: list[float]) -> float | None:
@@ -75,55 +97,106 @@ def get_json(path: str, params: dict[str, Any]) -> dict[str, Any]:
     query = urllib.parse.urlencode(params)
     errors: list[str] = []
     for base in BASE_URLS:
-        url = f"{base}{path}?{query}"
-        request = urllib.request.Request(url, headers=HEADERS)
+        request = urllib.request.Request(f"{base}{path}?{query}", headers=HEADERS)
         try:
             with urllib.request.urlopen(request, timeout=25) as response:
                 payload = json.loads(response.read().decode("utf-8"))
             if str(payload.get("code", "0")) == "0":
-                time.sleep(0.22)
+                time.sleep(REQUEST_DELAY_SECONDS)
                 return payload
             errors.append(f"{base}:{payload.get('code')}:{payload.get('msg')}")
         except Exception as exc:  # noqa: BLE001
             errors.append(f"{base}:{type(exc).__name__}:{exc}")
-            time.sleep(0.4)
+            time.sleep(0.35)
     raise RuntimeError(" | ".join(errors))
 
 
-def rank_rows(payload: dict[str, Any]) -> tuple[list[dict[str, Any]], str | None]:
+def rank_rows(payload: dict[str, Any]) -> tuple[list[dict[str, Any]], str | None, int]:
     data = payload.get("data") or []
     if data and isinstance(data[0], dict) and "ranks" in data[0]:
-        return data[0].get("ranks") or [], data[0].get("dataVer")
-    return [item for item in data if isinstance(item, dict)], None
+        root = data[0]
+        return root.get("ranks") or [], root.get("dataVer"), integer(root.get("totalPage")) or 1
+    rows = [item for item in data if isinstance(item, dict)] if isinstance(data, list) else []
+    return rows, None, 1
 
 
-def fetch_rankings() -> dict[str, dict[str, Any]]:
+def fetch_rankings() -> tuple[dict[str, dict[str, Any]], dict[str, Any]]:
     merged: dict[str, dict[str, Any]] = {}
-    for sort_type in SORT_TYPES:
-        rows, data_version = rank_rows(get_json(
-            "/api/v5/copytrading/public-lead-traders",
-            {"instType": "SWAP", "sortType": sort_type, "state": "0", "page": "1", "limit": "20"},
-        ))
-        for index, incoming in enumerate(rows):
-            code = str(incoming.get("uniqueCode") or "").upper()
-            if len(code) != 16 or not code.isalnum():
-                continue
-            item = merged.setdefault(code, {"uniqueCode": code, "sourceRanks": {}, "sourceSorts": []})
-            for key, value in incoming.items():
-                if value not in (None, "", [], {}):
-                    item[key] = value
-            item["sourceRanks"][sort_type] = index + 1
-            item["sourceSorts"].append(sort_type)
-            if data_version:
-                item.setdefault("dataVersions", {})[sort_type] = data_version
-    return merged
+    diagnostics: dict[str, Any] = {}
+
+    for canonical, aliases in SORT_SPECS:
+        canonical_codes: set[str] = set()
+        alias_info: dict[str, Any] = {}
+
+        for alias in aliases:
+            data_version: str | None = None
+            seen_pages: set[tuple[str, ...]] = set()
+            alias_codes: set[str] = set()
+            pages_read = 0
+
+            for page in range(1, MAX_PAGES_PER_SORT + 1):
+                params: dict[str, Any] = {
+                    "instType": "SWAP",
+                    "sortType": alias,
+                    "state": "0",
+                    "page": str(page),
+                    "limit": str(PAGE_SIZE),
+                }
+                if data_version:
+                    params["dataVer"] = data_version
+
+                rows, returned_version, total_pages = rank_rows(get_json(LEADERBOARD, params))
+                data_version = returned_version or data_version
+                fingerprint = tuple(str(row.get("uniqueCode") or "") for row in rows)
+
+                if not rows or not any(fingerprint) or fingerprint in seen_pages:
+                    break
+                seen_pages.add(fingerprint)
+                pages_read += 1
+
+                for index, incoming in enumerate(rows):
+                    code = str(incoming.get("uniqueCode") or "").upper()
+                    if len(code) != 16 or not code.isalnum():
+                        continue
+
+                    item = merged.setdefault(code, {
+                        "uniqueCode": code,
+                        "sourceRanks": {},
+                        "sourceSorts": [],
+                        "sourceAliases": [],
+                        "dataVersions": {},
+                    })
+                    for key, value in incoming.items():
+                        if value not in (None, "", [], {}):
+                            item[key] = value
+
+                    absolute_rank = (page - 1) * PAGE_SIZE + index + 1
+                    current_rank = item["sourceRanks"].get(canonical)
+                    if current_rank is None or absolute_rank < current_rank:
+                        item["sourceRanks"][canonical] = absolute_rank
+                    item["sourceSorts"].append(canonical)
+                    item["sourceAliases"].append(alias)
+                    if data_version:
+                        item["dataVersions"][alias] = data_version
+
+                    alias_codes.add(code)
+                    canonical_codes.add(code)
+
+                if page >= total_pages:
+                    break
+
+            alias_info[alias] = {"pages": pages_read, "unique_traders": len(alias_codes)}
+
+        diagnostics[canonical] = {"unique_traders": len(canonical_codes), "aliases": alias_info}
+
+    return merged, diagnostics
 
 
-def details(code: str) -> dict[str, list[dict[str, Any]]]:
+def fetch_details(code: str) -> dict[str, list[dict[str, Any]]]:
     calls = {
-        "positions": ("/api/v5/copytrading/public-current-subpositions", {"instType": "SWAP", "uniqueCode": code, "limit": "100"}),
-        "history": ("/api/v5/copytrading/public-subpositions-history", {"instType": "SWAP", "uniqueCode": code, "limit": "100"}),
-        "followers": ("/api/v5/copytrading/public-copy-traders", {"instType": "SWAP", "uniqueCode": code, "limit": "100"}),
+        "positions": (POSITIONS, {"instType": "SWAP", "uniqueCode": code, "limit": "100"}),
+        "history": (HISTORY, {"instType": "SWAP", "uniqueCode": code, "limit": "100"}),
+        "followers": (FOLLOWERS, {"instType": "SWAP", "uniqueCode": code, "limit": "100"}),
     }
     result: dict[str, list[dict[str, Any]]] = {}
     for name, (path, params) in calls.items():
@@ -135,28 +208,34 @@ def details(code: str) -> dict[str, list[dict[str, Any]]]:
     return result
 
 
-def curve_stats(points: list[dict[str, Any]]) -> dict[str, Any]:
-    series: list[tuple[float, float]] = []
+def curve_stats(points: list[dict[str, Any]]) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+    series: list[tuple[float, float, str | None]] = []
     for index, item in enumerate(points or []):
         value = pct(item.get("pnlRatio"))
         if value is None:
             continue
-        ts = number(item.get("beginTs"))
-        series.append((ts if ts is not None else float(index), value))
+        raw_ts = number(item.get("beginTs"))
+        dt = timestamp(raw_ts)
+        series.append((raw_ts if raw_ts is not None else float(index), value, dt.isoformat() if dt else None))
+
     series.sort(key=lambda pair: pair[0])
-    values = [value for _, value in series]
+    values = [value for _, value, _ in series]
+    public_series = [{"time": dt, "roi_pct": value} for _, value, dt in series]
+
     if not values:
         return {
             "max_drawdown_pct": None,
             "curve_upward_ratio_pct": None,
             "curve_direction_change_pct": None,
             "curve_step_volatility": None,
-        }
+        }, []
+
     peak = values[0]
     drawdown = 0.0
     rising = 0
     changes: list[float] = []
     directions: list[int] = []
+
     for previous, current in zip(values, values[1:]):
         peak = max(peak, current)
         drawdown = max(drawdown, peak - current)
@@ -164,14 +243,16 @@ def curve_stats(points: list[dict[str, Any]]) -> dict[str, Any]:
         changes.append(abs(delta))
         rising += int(delta >= 0)
         directions.append(1 if delta > 0 else -1 if delta < 0 else 0)
+
     nonzero = [value for value in directions if value]
     reversals = sum(a != b for a, b in zip(nonzero, nonzero[1:]))
+
     return {
         "max_drawdown_pct": round(drawdown, 4),
         "curve_upward_ratio_pct": round(rising / len(changes) * 100, 4) if changes else None,
         "curve_direction_change_pct": round(reversals / max(1, len(nonzero) - 1) * 100, 4) if len(nonzero) > 1 else 0.0,
         "curve_step_volatility": mean(changes),
-    }
+    }, public_series
 
 
 def history_stats(history: list[dict[str, Any]]) -> dict[str, Any]:
@@ -180,11 +261,13 @@ def history_stats(history: list[dict[str, Any]]) -> dict[str, Any]:
     holds: list[float] = []
     wins = losses = 0
     profit = loss = 0.0
+
     for trade in history:
         trade_pnl = number(trade.get("pnl"))
         trade_ratio = pct(trade.get("pnlRatio"))
         lever = number(trade.get("lever"))
         opened, closed = timestamp(trade.get("openTime")), timestamp(trade.get("closeTime"))
+
         if trade_pnl is not None:
             if trade_pnl > 0:
                 wins += 1
@@ -198,6 +281,7 @@ def history_stats(history: list[dict[str, Any]]) -> dict[str, Any]:
             levers.append(lever)
         if opened and closed and closed > opened:
             holds.append((closed - opened).total_seconds() / 3600)
+
     decisive = wins + losses
     count = len(history)
     return {
@@ -228,10 +312,12 @@ def position_stats(positions: list[dict[str, Any]]) -> dict[str, Any]:
 def follower_stats(data: list[dict[str, Any]]) -> dict[str, Any]:
     if not data:
         return {"copy_pnl_usd": None, "avg_follow_days": None, "median_follow_days": None, "follower_profitable_pct": None}
+
     root = data[0]
     followers = root.get("copyTraders") or []
     durations = [v for item in followers if (v := elapsed_days(item.get("beginCopyTime"))) is not None]
     pnls = [v for item in followers if (v := number(item.get("pnl"))) is not None]
+
     return {
         "copy_pnl_usd": number(root.get("copyTotalPnl")),
         "avg_follow_days": mean(durations),
@@ -242,19 +328,22 @@ def follower_stats(data: list[dict[str, Any]]) -> dict[str, Any]:
 
 def normalize(rank: dict[str, Any], detail: dict[str, list[dict[str, Any]]]) -> dict[str, Any]:
     code = rank["uniqueCode"]
+    curve_metrics, roi_series = curve_stats(rank.get("pnlRatios") or [])
     metrics = {
         "roi_pct": pct(rank.get("pnlRatio")),
         "pnl_usd": number(rank.get("pnl")),
         "aum_usd": number(rank.get("aum")),
         "followers": integer(rank.get("copyTraderNum")),
+        "followers_capacity": integer(rank.get("maxCopyTraderNum")),
         "followers_accumulated": integer(rank.get("accCopyTraderNum")),
         "lead_days": integer(rank.get("leadDays")),
         "win_rate_pct": pct(rank.get("winRatio")),
-        **curve_stats(rank.get("pnlRatios") or []),
+        **curve_metrics,
         **history_stats(detail.get("history") or []),
         **position_stats(detail.get("positions") or []),
         **follower_stats(detail.get("followers") or []),
     }
+
     positions = [{
         "instrument": item.get("instId"),
         "side": item.get("posSide"),
@@ -263,6 +352,7 @@ def normalize(rank: dict[str, Any], detail: dict[str, list[dict[str, Any]]]) -> 
         "upl_usd": number(item.get("upl")),
         "upl_pct": pct(item.get("uplRatio")),
     } for item in (detail.get("positions") or [])[:20]]
+
     return {
         "id": code,
         "unique_code": code,
@@ -270,7 +360,10 @@ def normalize(rank: dict[str, Any], detail: dict[str, list[dict[str, Any]]]) -> 
         "profile_url": f"https://www.okx.com/copy-trading/account/{code}",
         "avatar_url": rank.get("portLink"),
         "source_ranks": rank.get("sourceRanks") or {},
+        "source_sorts": sorted(set(rank.get("sourceSorts") or [])),
+        "source_aliases": sorted(set(rank.get("sourceAliases") or [])),
         "metrics": metrics,
+        "roi_series": roi_series,
         "current_positions": positions,
     }
 
@@ -341,14 +434,7 @@ def score(trader: dict[str, Any]) -> tuple[dict[str, float], list[str], str, int
         curve_quality -= 18
         flags.append("高频短持仓，疑似量化或蚂蚁仓策略")
 
-    perfect_short_curve = (
-        lead_days <= 365
-        and roi >= 20
-        and drawdown is not None
-        and drawdown <= 5
-        and upward is not None
-        and upward >= 75
-    )
+    perfect_short_curve = lead_days <= 365 and roi >= 20 and drawdown is not None and drawdown <= 5 and upward is not None and upward >= 75
     if perfect_short_curve:
         curve_quality -= 22
         flags.append("短期完美曲线，可被对冲或展示策略设计")
@@ -366,6 +452,7 @@ def score(trader: dict[str, Any]) -> tuple[dict[str, float], list[str], str, int
             flags.append("近3个月存在大额单笔亏损")
         if max_loss >= 60:
             flags.append("近3个月存在接近爆仓级单笔亏损")
+
     max_leverage = max(m.get("max_history_leverage") or 0, m.get("current_max_leverage") or 0)
     if max_leverage > 10:
         risk -= min(38, (max_leverage - 10) * 1.2)
@@ -390,16 +477,13 @@ def score(trader: dict[str, Any]) -> tuple[dict[str, float], list[str], str, int
         "risk_control": bound(risk),
         "data_reliability": bound(reliability),
     }
-    overall = (
-        scores["longevity"] * 0.40
-        + scores["capital_trust"] * 0.30
-        + scores["crowd_validation"] * 0.20
-        + scores["curve_quality"] * 0.10
-    )
+
+    overall = scores["longevity"] * 0.40 + scores["capital_trust"] * 0.30 + scores["crowd_validation"] * 0.20 + scores["curve_quality"] * 0.10
     overall *= 0.75 + scores["data_reliability"] / 400
 
     hard_markers = ("极端回撤", "接近爆仓级", "杠杆风险极高", "疑似失活", "跟单用户样本总盈亏为负")
     hard_risk = any(any(marker in flag for marker in hard_markers) for flag in flags)
+
     if hard_risk:
         overall = min(overall, 40)
     if rapid_profit or perfect_short_curve:
@@ -408,6 +492,7 @@ def score(trader: dict[str, Any]) -> tuple[dict[str, float], list[str], str, int
         overall = min(overall, 49)
     elif lead_days < 365:
         overall = min(overall, 69)
+
     scores["overall"] = bound(overall)
 
     if scores["data_reliability"] < 40:
@@ -431,41 +516,31 @@ def score(trader: dict[str, Any]) -> tuple[dict[str, float], list[str], str, int
 def preliminary_rank_key(item: dict[str, Any]) -> tuple[float, float, float, float, float]:
     lead_days = number(item.get("leadDays")) or 0
     maturity = 2 if lead_days >= 365 else 1 if lead_days >= 180 else 0
-    return (
-        maturity,
-        lead_days,
-        number(item.get("aum")) or 0,
-        number(item.get("copyTraderNum")) or 0,
-        number(item.get("accCopyTraderNum")) or 0,
-    )
+    return maturity, lead_days, number(item.get("aum")) or 0, number(item.get("copyTraderNum")) or 0, number(item.get("accCopyTraderNum")) or 0
 
 
 def final_rank_key(item: dict[str, Any]) -> tuple[float, float, float, float, float, float]:
     m = item["metrics"]
-    return (
-        item.get("ranking_tier", 0),
-        m.get("lead_days") or 0,
-        m.get("aum_usd") or 0,
-        m.get("followers") or 0,
-        m.get("followers_accumulated") or 0,
-        item["scores"]["overall"],
-    )
+    return item.get("ranking_tier", 0), m.get("lead_days") or 0, m.get("aum_usd") or 0, m.get("followers") or 0, m.get("followers_accumulated") or 0, item["scores"]["overall"]
 
 
 def main() -> int:
-    ranks = fetch_rankings()
-    ordered = sorted(ranks.values(), key=preliminary_rank_key, reverse=True)[:30]
+    ranks, diagnostics = fetch_rankings()
+    ordered = sorted(ranks.values(), key=preliminary_rank_key, reverse=True)[:DETAIL_LIMIT]
+
     traders: list[dict[str, Any]] = []
     for index, rank in enumerate(ordered, 1):
         print(f"[{index}/{len(ordered)}] {rank.get('nickName') or rank['uniqueCode']}")
-        trader = normalize(rank, details(rank["uniqueCode"]))
+        trader = normalize(rank, fetch_details(rank["uniqueCode"]))
         trader["scores"], trader["flags"], trader["recommendation"], trader["ranking_tier"] = score(trader)
         traders.append(trader)
+
     traders.sort(key=final_rank_key, reverse=True)
     payload = {
-        "schema_version": 2,
+        "schema_version": 3,
         "generated_at": now_iso(),
         "source": "OKX public copy-trading API",
+        "source_endpoints": [LEADERBOARD, POSITIONS, HISTORY, FOLLOWERS],
         "time_basis": "OKX public leadDays（公开带单时长；不等同于无法公开核验的真实开户日期）",
         "ranking_logic": [
             "风险硬淘汰",
@@ -475,11 +550,13 @@ def main() -> int:
         ],
         "leaderboard_union_count": len(ranks),
         "detail_count": len(traders),
+        "collection_diagnostics": diagnostics,
         "traders": traders,
     }
+
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"updated {OUTPUT.relative_to(ROOT)} with {len(traders)} traders")
+    print(f"updated {OUTPUT.relative_to(ROOT)} with {len(traders)} traders from union {len(ranks)}")
     return 0
 
 
