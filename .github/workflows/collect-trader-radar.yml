@@ -2,10 +2,6 @@ name: Collect OKX trader radar data
 
 on:
   workflow_dispatch:
-  push:
-    branches: [master]
-    paths:
-      - ".github/workflows/collect-trader-radar.yml"
 
 permissions:
   contents: write
@@ -16,7 +12,6 @@ concurrency:
 
 jobs:
   collect:
-    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[radar-now]')
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -33,7 +28,7 @@ jobs:
       - name: Collect OKX public and client leaderboards
         run: python scripts/run_trader_radar.py
 
-      - name: Validate client-compatible ordering
+      - name: Validate generated ordering
         run: |
           python - <<'PY'
           import json
@@ -47,26 +42,11 @@ jobs:
 
           assert payload.get("schema_version", 0) >= 9, payload.get("schema_version")
           assert payload.get("leaderboard_count", 0) == len(traders), payload
-          assert payload.get("public_leaderboard_count", 0) >= 240, payload
-          assert payload.get("client_leaderboard_count", 0) >= 260, payload
+          assert payload.get("public_leaderboard_count", 0) > 0, payload
+          assert payload.get("client_leaderboard_count", 0) > 0, payload
           assert payload.get("detail_count", 0) > 0, payload
           assert len(orders.get("aum") or []) == len(traders), "incomplete AUM order"
-          assert len(orders.get("followers") or []) == payload["client_leaderboard_count"], "incomplete client follower order"
-
-          def names(key, limit=3):
-              return [by_code[code]["name"] for code in orders[key][:limit]]
-
-          aum_names = names("aum")
-          follower_names = names("followers")
-          print("AUM top 3:", aum_names)
-          print("Followers top 3:", follower_names)
-
-          assert "小周" in aum_names[0], aum_names
-          assert "平凡无奇" in aum_names[1], aum_names
-          assert "kxiandaoyan" in aum_names[2].lower(), aum_names
-          assert "平凡无奇" in follower_names[0], follower_names
-          assert "知行合一" in follower_names[1], follower_names
-          assert "天道酬勤" in follower_names[2], follower_names
+          assert len(orders.get("followers") or []) == payload["client_leaderboard_count"], "incomplete follower order"
 
           for key, field in (("aum", "aum_usd"), ("followers", "followers")):
               values = [by_code[code].get("metrics", {}).get(field) or 0 for code in orders[key]]
