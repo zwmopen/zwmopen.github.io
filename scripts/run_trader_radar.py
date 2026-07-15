@@ -109,7 +109,6 @@ def activity_status(metrics: dict) -> tuple[str, int]:
 
 
 def score(trader: dict):
-    # 累计历史跟单人数只作背景信息，不参与评分或排序。
     original_accumulated = trader["metrics"].get("followers_accumulated")
     trader["metrics"]["followers_accumulated"] = 0
     scores, flags, recommendation, _ = _original_score(trader)
@@ -178,7 +177,7 @@ def final_rank_key(item: dict) -> tuple[float, float, float, float, float]:
 def run() -> int:
     result = radar.main()
     payload = json.loads(radar.OUTPUT.read_text(encoding="utf-8"))
-    payload["schema_version"] = max(6, int(payload.get("schema_version", 0)))
+    payload["schema_version"] = max(7, int(payload.get("schema_version", 0)))
     payload["ranking_logic"] = [
         "第一道门槛：确认最近仍有有效仓位或近期真实订单",
         "已确认活跃的账户进入主排序；活跃度未知不等于失活",
@@ -194,16 +193,18 @@ def run() -> int:
         "suspected_stopped": "最近60天无单，但最近90天仍有订单",
         "inactive": "最近一次可验证交易超过90天，且没有有效当前仓位",
         "unknown": "接口未返回可验证的当前仓位和最近交易时间，只能标记活跃度未知",
-        "invalid_position": "合约代码为空或保证金无效的仓位不算有效当前仓位",
     }
     payload["follower_basis"] = (
         "主界面和综合排序只使用当前跟单人数 copyTraderNum；"
         "accCopyTraderNum 只在详情中作为历史背景展示"
     )
     payload["chart_periods"] = {
+        "total": "当前已采集的完整公开曲线",
         "year": "按公开曲线时间戳截取最近365天",
         "month": "按公开曲线时间戳截取最近30天",
+        "week": "按公开曲线时间戳截取最近7天",
         "day": "按公开曲线时间戳截取最近1天",
+        "order": ["total", "year", "month", "week", "day"],
         "fallback": "对应周期不足两个真实数据点时显示暂无数据，不复用其他周期曲线",
     }
     radar.OUTPUT.write_text(
