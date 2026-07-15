@@ -33,6 +33,7 @@ jobs:
         with:
           python-version: "3.12"
 
+      # One-time full upgrade verification run.
       - name: Collect OKX leaderboard, curves and deep risk data
         run: python scripts/run_trader_radar.py
 
