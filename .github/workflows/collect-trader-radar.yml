@@ -12,13 +12,13 @@ permissions:
 
 concurrency:
   group: public-trader-radar
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   collect:
     if: github.event_name != 'push' || contains(github.event.head_commit.message, '[radar-now]')
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 15
     steps:
       - name: Checkout public site
         uses: actions/checkout@v4
@@ -47,6 +47,7 @@ jobs:
 
           assert payload.get("schema_version", 0) >= 9, payload.get("schema_version")
           assert payload.get("leaderboard_count", 0) == len(traders), payload
+          assert payload.get("public_leaderboard_count", 0) >= 240, payload
           assert payload.get("client_leaderboard_count", 0) >= 260, payload
           assert payload.get("detail_count", 0) > 0, payload
           assert len(orders.get("aum") or []) == len(traders), "incomplete AUM order"
@@ -68,10 +69,7 @@ jobs:
           assert "天道酬勤" in follower_names[2], follower_names
 
           for key, field in (("aum", "aum_usd"), ("followers", "followers")):
-              values = [
-                  by_code[code].get("metrics", {}).get(field) or 0
-                  for code in orders[key]
-              ]
+              values = [by_code[code].get("metrics", {}).get(field) or 0 for code in orders[key]]
               assert all(a >= b for a, b in zip(values, values[1:])), key
 
           print(
