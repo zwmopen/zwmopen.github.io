@@ -1,0 +1,29 @@
+name: Diagnose trader radar ranking
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/diagnose-radar.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/build_radar_diagnostic.py
+      - run: |
+          git config user.name "trader-radar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add trader-radar/data/ranking-diagnostic.json
+          git commit -m "chore: write radar ranking diagnostic"
+          git pull --rebase origin master
+          git push origin HEAD:master
