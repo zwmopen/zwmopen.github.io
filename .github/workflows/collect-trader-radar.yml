@@ -33,6 +33,7 @@ jobs:
         with:
           python-version: "3.12"
 
+      # 本次提交立即运行一轮；后续按每周六自动运行。
       - name: Collect OKX public and client leaderboards
         run: python scripts/run_trader_radar.py
 
