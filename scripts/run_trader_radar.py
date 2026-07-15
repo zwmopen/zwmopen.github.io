@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import json
+
 import collect_trader_radar as radar
 
 _original_get_json = radar.get_json
@@ -46,9 +48,30 @@ def final_rank_key(item: dict) -> tuple[float, float, float, float, float, float
     )
 
 
+def run() -> int:
+    result = radar.main()
+    payload = json.loads(radar.OUTPUT.read_text(encoding="utf-8"))
+    payload["schema_version"] = max(4, int(payload.get("schema_version", 0)))
+    payload["ranking_logic"] = [
+        "硬风险账户排在正常账户之后",
+        "综合排序第一：带单规模 AUM",
+        "综合排序第二：当前跟单人数，其次累计跟单人数",
+        "综合排序第三：公开带单天数",
+        "曲线、杠杆和亏损特征只用于风险淘汰与提示",
+    ]
+    payload["chart_periods"] = {
+        "total": "当前已采集的完整公开曲线",
+        "year": "按公开曲线时间戳截取最近 365 天",
+        "month": "按公开曲线时间戳截取最近 30 天",
+        "fallback": "对应周期数据不足时显示当前可用完整曲线，不生成虚假历史",
+    }
+    radar.OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    return result
+
+
 radar.get_json = tolerant_get_json
 radar.preliminary_rank_key = preliminary_rank_key
 radar.final_rank_key = final_rank_key
 
 if __name__ == "__main__":
-    raise SystemExit(radar.main())
+    raise SystemExit(run())
