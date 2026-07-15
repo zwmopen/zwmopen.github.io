@@ -5,6 +5,10 @@ on:
   schedule:
     # 每天 01:17 UTC（中国时间 09:17）
     - cron: "17 1 * * *"
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/collect-trader-radar.yml"
 
 permissions:
   contents: write
@@ -15,8 +19,9 @@ concurrency:
 
 jobs:
   collect:
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[radar-now]')
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout public site
         uses: actions/checkout@v4
@@ -28,28 +33,38 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Collect OKX public and client leaderboards
+      - name: Collect OKX native curves and daily changes
         run: python scripts/run_trader_radar.py
 
-      - name: Validate generated ordering
+      - name: Validate generated data
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
 
-          path = Path("trader-radar/data/traders.json")
-          payload = json.loads(path.read_text(encoding="utf-8"))
+          trader_path = Path("trader-radar/data/traders.json")
+          history_path = Path("trader-radar/data/history.json")
+          payload = json.loads(trader_path.read_text(encoding="utf-8"))
+          history = json.loads(history_path.read_text(encoding="utf-8"))
           traders = payload.get("traders") or []
           orders = payload.get("official_orders") or {}
           by_code = {item["unique_code"]: item for item in traders}
+          deep = [item for item in traders if item.get("is_deep")]
 
-          assert payload.get("schema_version", 0) >= 9, payload.get("schema_version")
+          assert payload.get("schema_version", 0) >= 10, payload.get("schema_version")
           assert payload.get("leaderboard_count", 0) == len(traders), payload
           assert payload.get("public_leaderboard_count", 0) > 0, payload
           assert payload.get("client_leaderboard_count", 0) > 0, payload
-          assert payload.get("detail_count", 0) > 0, payload
+          assert payload.get("detail_count") == 10, payload.get("detail_count")
+          assert len(deep) == 10, len(deep)
+          assert history.get("snapshots"), "missing history snapshot"
           assert len(orders.get("aum") or []) == len(traders), "incomplete AUM order"
           assert len(orders.get("followers") or []) == payload["client_leaderboard_count"], "incomplete follower order"
+
+          native_curves = [item for item in deep if len(item.get("roi_series") or []) >= 2]
+          assert native_curves, "OKX native daily curves missing"
+          assert all("changes" in item for item in traders), "change fields missing"
+          assert all("alerts" in item for item in traders), "alert fields missing"
 
           for key, field in (("aum", "aum_usd"), ("followers", "followers")):
               values = [by_code[code].get("metrics", {}).get(field) or 0 for code in orders[key]]
@@ -57,24 +72,24 @@ jobs:
 
           print(
               "Validated",
-              payload["leaderboard_count"],
-              "merged rows,",
-              payload["client_leaderboard_count"],
-              "client rows and",
-              payload["detail_count"],
-              "deep profiles",
+              len(traders),
+              "rows,",
+              len(deep),
+              "deep profiles and",
+              len(history["snapshots"]),
+              "daily snapshots",
           )
           PY
 
-      - name: Publish latest dataset
+      - name: Publish latest dataset and history
         run: |
           git config user.name "trader-radar-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add trader-radar/data/traders.json
+          git add trader-radar/data/traders.json trader-radar/data/history.json
           if git diff --cached --quiet; then
             echo "No data changes"
             exit 0
           fi
-          git commit -m "data: update OKX client-compatible leaderboard"
+          git commit -m "data: update OKX native curves changes and alerts"
           git pull --rebase origin master
           git push origin HEAD:master
