@@ -1,1318 +1,3491 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-15T17:55:35+00:00",
+  "generated_at": "2026-07-18T04:13:51+00:00",
   "source_dates": {
-    "1d": null,
+    "1d": "2026-07-15",
     "7d": null,
     "30d": null
   },
   "traders": {
     "823664FB73B79E41": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 621942.8934,
+        "followers": -2.0,
+        "roi_pct": 0.73,
+        "aum_pct": 7.1794,
+        "followers_pct": -0.4587,
+        "rank_aum": 0,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": 558703.9925
+      },
       "7d": null,
       "30d": null
     },
     "9C2CB3B2306B28EA": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -95640.8499,
+        "followers": -5.0,
+        "roi_pct": 2.22,
+        "aum_pct": -3.4846,
+        "followers_pct": -0.4212,
+        "rank_aum": 0,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": -156572.8126
+      },
       "7d": null,
       "30d": null
     },
     "C419F165132C0C57": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -5970.4581,
+        "followers": 0.0,
+        "roi_pct": -1.55,
+        "aum_pct": -0.4333,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": 15386.1566
+      },
       "7d": null,
       "30d": null
     },
     "24D8CE79A97FD35D": {
+      "1d": {
+        "aum_usd": -9003.3681,
+        "followers": 0.0,
+        "roi_pct": 1.95,
+        "aum_pct": -0.9065,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": -28369.8533
+      },
+      "7d": null,
+      "30d": null
+    },
+    "9790D02D71CADF2E": {
       "1d": null,
       "7d": null,
       "30d": null
     },
     "DA2B29551CBB2AE7": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "F2BCA22ABBB69F57": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "66CBE179AA38C688": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -20853.3789,
+        "followers": 11.0,
+        "roi_pct": -4.54,
+        "aum_pct": -3.8124,
+        "followers_pct": 6.6265,
+        "rank_aum": -1,
+        "rank_followers": 1,
+        "estimated_net_flow_usd": 3979.808
+      },
       "7d": null,
       "30d": null
     },
     "4DD7B31069255CCE": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 110327.3162,
+        "followers": 3.0,
+        "roi_pct": 0.0,
+        "aum_pct": 31.762,
+        "followers_pct": 2.0134,
+        "rank_aum": 1,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": 110327.3162
+      },
       "7d": null,
       "30d": null
     },
-    "821360683215706097": {
-      "1d": null,
+    "F2BCA22ABBB69F57": {
+      "1d": {
+        "aum_usd": -14447.3723,
+        "followers": 0.0,
+        "roi_pct": -5.31,
+        "aum_pct": -3.1568,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": 9854.5967
+      },
       "7d": null,
       "30d": null
     },
-    "1173EC858F15E04F": {
-      "1d": null,
+    "66CBE179AA38C688": {
+      "1d": {
+        "aum_usd": -3709.6433,
+        "followers": 3.0,
+        "roi_pct": 2.22,
+        "aum_pct": -1.0013,
+        "followers_pct": 5.6604,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": -11934.7069
+      },
       "7d": null,
       "30d": null
     },
     "D69063F8CC0ECC79": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 9061.7149,
+        "followers": 9.0,
+        "roi_pct": 278.43,
+        "aum_pct": 3.1578,
+        "followers_pct": 2.1378,
+        "rank_aum": 1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": -789922.2865
+      },
       "7d": null,
       "30d": null
     },
-    "A24E06C746B022B4": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "818351355109921732": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "35F888C7BB441B2B": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "8253D21C046EE47C": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "8DE3E9294C1A2440": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "ECD85D96F372C0D1": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "0487DE6EF26EFE27": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "C84F6F6717746BD4": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "C343256953163322": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "FEA1F20A4558468F": {
-      "1d": null,
+    "1173EC858F15E04F": {
+      "1d": {
+        "aum_usd": 5886.386,
+        "followers": 7.0,
+        "roi_pct": 32.9,
+        "aum_pct": 2.0347,
+        "followers_pct": 1.8568,
+        "rank_aum": -1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": -89294.3543
+      },
       "7d": null,
       "30d": null
     },
     "1EA7ED83214F8F22": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 119961.1752,
+        "followers": -2.0,
+        "roi_pct": -14.99,
+        "aum_pct": 72.7419,
+        "followers_pct": -2.8169,
+        "rank_aum": 10,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": 144681.7035
+      },
       "7d": null,
       "30d": null
     },
-    "821349237173995404": {
-      "1d": null,
+    "821360683215706097": {
+      "1d": {
+        "aum_usd": -21580.7357,
+        "followers": -13.0,
+        "roi_pct": 9.17,
+        "aum_pct": -7.2991,
+        "followers_pct": -2.1959,
+        "rank_aum": -4,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": -48693.1021
+      },
       "7d": null,
       "30d": null
     },
-    "94FC2CF4A047C10E": {
-      "1d": null,
+    "A24E06C746B022B4": {
+      "1d": {
+        "aum_usd": -77.4007,
+        "followers": -1.0,
+        "roi_pct": 0.78,
+        "aum_pct": -0.0301,
+        "followers_pct": -0.3086,
+        "rank_aum": -2,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": -2083.1317
+      },
       "7d": null,
       "30d": null
     },
-    "769075957323167141": {
-      "1d": null,
+    "818351355109921732": {
+      "1d": {
+        "aum_usd": -6272.2904,
+        "followers": 0.0,
+        "roi_pct": -4.32,
+        "aum_pct": -2.4978,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": 4575.9817
+      },
+      "7d": null,
+      "30d": null
+    },
+    "35F888C7BB441B2B": {
+      "1d": {
+        "aum_usd": -5768.127,
+        "followers": -7.0,
+        "roi_pct": -0.92,
+        "aum_pct": -2.3095,
+        "followers_pct": -1.8767,
+        "rank_aum": -2,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": -3470.3414
+      },
+      "7d": null,
+      "30d": null
+    },
+    "8253D21C046EE47C": {
+      "1d": {
+        "aum_usd": -2149.4677,
+        "followers": -1.0,
+        "roi_pct": -0.44,
+        "aum_pct": -0.9235,
+        "followers_pct": -1.6949,
+        "rank_aum": -2,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": -1125.4084
+      },
       "7d": null,
       "30d": null
     },
     "C84FB1E4F4BA4B2A": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 112821.7585,
+        "followers": 20.0,
+        "roi_pct": 17.07,
+        "aum_pct": 106.8994,
+        "followers_pct": 111.1111,
+        "rank_aum": 8,
+        "rank_followers": 14,
+        "estimated_net_flow_usd": 94806.0623
+      },
       "7d": null,
       "30d": null
     },
-    "A8AF8AFFAB6051B3": {
-      "1d": null,
+    "0487DE6EF26EFE27": {
+      "1d": {
+        "aum_usd": -13526.1277,
+        "followers": 0.0,
+        "roi_pct": -2.42,
+        "aum_pct": -7.3231,
+        "followers_pct": 0.0,
+        "rank_aum": -1,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": -9056.2975
+      },
       "7d": null,
       "30d": null
     },
-    "FA400F0E91664A05": {
-      "1d": null,
+    "C84F6F6717746BD4": {
+      "1d": {
+        "aum_usd": -4520.209,
+        "followers": 1.0,
+        "roi_pct": -1.9,
+        "aum_pct": -2.6121,
+        "followers_pct": 0.5848,
+        "rank_aum": -1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": -1232.2808
+      },
       "7d": null,
       "30d": null
     },
-    "821382564224395312": {
-      "1d": null,
+    "8DE3E9294C1A2440": {
+      "1d": {
+        "aum_usd": -47356.4411,
+        "followers": -22.0,
+        "roi_pct": -37.71,
+        "aum_pct": -21.9546,
+        "followers_pct": -10.2326,
+        "rank_aum": -5,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": 33984.7637
+      },
       "7d": null,
       "30d": null
     },
-    "3F6C3036FD9E2E11": {
-      "1d": null,
+    "FEA1F20A4558468F": {
+      "1d": {
+        "aum_usd": -0.0,
+        "followers": 0.0,
+        "roi_pct": -1.45,
+        "aum_pct": -0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -1,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": 2410.1458
+      },
       "7d": null,
       "30d": null
     },
-    "097F20F08F8BEB70": {
-      "1d": null,
+    "821349237173995404": {
+      "1d": {
+        "aum_usd": 13716.2649,
+        "followers": 15.0,
+        "roi_pct": 23.37,
+        "aum_pct": 9.1682,
+        "followers_pct": 5.137,
+        "rank_aum": 0,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": -21246.8757
+      },
+      "7d": null,
+      "30d": null
+    },
+    "ECD85D96F372C0D1": {
+      "1d": {
+        "aum_usd": -37882.666,
+        "followers": 8.0,
+        "roi_pct": 57.25,
+        "aum_pct": -18.858,
+        "followers_pct": 3.5242,
+        "rank_aum": -7,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": -152888.5207
+      },
+      "7d": null,
+      "30d": null
+    },
+    "C343256953163322": {
+      "1d": {
+        "aum_usd": -32964.8944,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": -19.1891,
+        "followers_pct": 0.0,
+        "rank_aum": -5,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": -32964.8944
+      },
+      "7d": null,
+      "30d": null
+    },
+    "94FC2CF4A047C10E": {
+      "1d": {
+        "aum_usd": -1122.4701,
+        "followers": 3.0,
+        "roi_pct": -4.56,
+        "aum_pct": -0.8374,
+        "followers_pct": 0.6977,
+        "rank_aum": -2,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": 4989.6979
+      },
+      "7d": null,
+      "30d": null
+    },
+    "769075957323167141": {
+      "1d": {
+        "aum_usd": 3454.1084,
+        "followers": 0.0,
+        "roi_pct": 2.21,
+        "aum_pct": 2.7693,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": 697.5875
+      },
       "7d": null,
       "30d": null
     },
     "4A8AB04BF304EBD8": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 27171.3114,
+        "followers": 54.0,
+        "roi_pct": 37.83,
+        "aum_pct": 35.2988,
+        "followers_pct": 128.5714,
+        "rank_aum": 4,
+        "rank_followers": 14,
+        "estimated_net_flow_usd": -1948.3903
+      },
+      "7d": null,
+      "30d": null
+    },
+    "A8AF8AFFAB6051B3": {
+      "1d": {
+        "aum_usd": -256.6739,
+        "followers": 1.0,
+        "roi_pct": -0.06,
+        "aum_pct": -0.2509,
+        "followers_pct": 0.4032,
+        "rank_aum": -2,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": -195.2951
+      },
+      "7d": null,
+      "30d": null
+    },
+    "FA400F0E91664A05": {
+      "1d": {
+        "aum_usd": 3588.9183,
+        "followers": 0.0,
+        "roi_pct": 5.23,
+        "aum_pct": 3.6532,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": -1549.0359
+      },
+      "7d": null,
+      "30d": null
+    },
+    "821382564224395312": {
+      "1d": {
+        "aum_usd": 3164.574,
+        "followers": -1.0,
+        "roi_pct": 2.08,
+        "aum_pct": 3.4043,
+        "followers_pct": -0.495,
+        "rank_aum": -2,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": 1231.0519
+      },
+      "7d": null,
+      "30d": null
+    },
+    "097F20F08F8BEB70": {
+      "1d": {
+        "aum_usd": 5942.9114,
+        "followers": 6.0,
+        "roi_pct": 19.69,
+        "aum_pct": 6.6958,
+        "followers_pct": 5.2174,
+        "rank_aum": -1,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": -11533.1737
+      },
+      "7d": null,
+      "30d": null
+    },
+    "3F6C3036FD9E2E11": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.03,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": 27.1842
+      },
       "7d": null,
       "30d": null
     },
     "92CA01EF97EB1C49": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "794421901505786795": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "3E34735C93824CDF": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "849654629733718232": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "F197C033348EFB7D": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -2.7306,
+        "followers": 0.0,
+        "roi_pct": -1.83,
+        "aum_pct": -0.0038,
+        "followers_pct": 0.0,
+        "rank_aum": -1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": 1299.5091
+      },
       "7d": null,
       "30d": null
     },
     "819848249304757406": {
+      "1d": {
+        "aum_usd": 3309.4472,
+        "followers": 0.0,
+        "roi_pct": 9.72,
+        "aum_pct": 6.7799,
+        "followers_pct": 0.0,
+        "rank_aum": 3,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": -1435.1556
+      },
+      "7d": null,
+      "30d": null
+    },
+    "849654629733718232": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 2.43,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": -1215.0017
+      },
+      "7d": null,
+      "30d": null
+    },
+    "F197C033348EFB7D": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.24,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": 120.0
+      },
+      "7d": null,
+      "30d": null
+    },
+    "847105357930795384": {
       "1d": null,
       "7d": null,
       "30d": null
     },
     "74F7C7A53CD18275": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -1009.4396,
+        "followers": 0.0,
+        "roi_pct": -1.89,
+        "aum_pct": -2.3116,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": -184.1233
+      },
       "7d": null,
       "30d": null
     },
     "C223658C2C4F9C3C": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "08E31CADCFDDCFB8": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "42852C1BDC400BF7": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 1259.8782,
+        "followers": 0.0,
+        "roi_pct": 12.08,
+        "aum_pct": 3.0825,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": -3677.5146
+      },
       "7d": null,
       "30d": null
     },
     "6A48C398F18CB31C": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.23,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": 2,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": 90.85
+      },
+      "7d": null,
+      "30d": null
+    },
+    "08E31CADCFDDCFB8": {
+      "1d": {
+        "aum_usd": -1026.4282,
+        "followers": -1.0,
+        "roi_pct": -1.56,
+        "aum_pct": -2.5471,
+        "followers_pct": -2.7778,
+        "rank_aum": -1,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": -397.7887
+      },
       "7d": null,
       "30d": null
     },
     "35E22983F436F55B": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -120.6125,
+        "followers": 0.0,
+        "roi_pct": -7.5,
+        "aum_pct": -0.3213,
+        "followers_pct": 0.0,
+        "rank_aum": 1,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": 2694.6241
+      },
       "7d": null,
       "30d": null
     },
     "FF48C5939FE6119F": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 618.1553,
+        "followers": 0.0,
+        "roi_pct": 4.45,
+        "aum_pct": 1.6816,
+        "followers_pct": 0.0,
+        "rank_aum": 1,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": -1017.7091
+      },
+      "7d": null,
+      "30d": null
+    },
+    "42852C1BDC400BF7": {
+      "1d": {
+        "aum_usd": -3348.6437,
+        "followers": -15.0,
+        "roi_pct": -2.13,
+        "aum_pct": -8.3672,
+        "followers_pct": -8.427,
+        "rank_aum": -3,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": -2496.1969
+      },
       "7d": null,
       "30d": null
     },
     "D387B5B1F098B82C": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "9D354B66E31ABEC1": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -77.589,
+        "followers": 0.0,
+        "roi_pct": -0.78,
+        "aum_pct": -0.2352,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": 179.7226
+      },
       "7d": null,
       "30d": null
     },
     "F76CC883269E6FFB": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "37D18BE54F98F099": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "A60D696F4E92AE5C": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "4B048A62B1198464": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "01DA3FA83DECB99E": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "9482DE57396DAB7C": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "ACE79CAACA13F8B9": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "B74FC756C8EE894B": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "70923A619CCB8F2F": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 2534.8831,
+        "followers": 1.0,
+        "roi_pct": 9.23,
+        "aum_pct": 9.359,
+        "followers_pct": 12.5,
+        "rank_aum": 1,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": 34.9316
+      },
       "7d": null,
       "30d": null
     },
     "28AEEA33C8C78CC9": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 4925.2875,
+        "followers": 25.0,
+        "roi_pct": 14.98,
+        "aum_pct": 20.5191,
+        "followers_pct": 21.5517,
+        "rank_aum": 9,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": 1329.5708
+      },
+      "7d": null,
+      "30d": null
+    },
+    "9D354B66E31ABEC1": {
+      "1d": {
+        "aum_usd": -0.4448,
+        "followers": 0.0,
+        "roi_pct": -0.35,
+        "aum_pct": -0.0015,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": 100.2824
+      },
+      "7d": null,
+      "30d": null
+    },
+    "A60D696F4E92AE5C": {
+      "1d": {
+        "aum_usd": 1343.2885,
+        "followers": 2.0,
+        "roi_pct": 9.02,
+        "aum_pct": 5.0928,
+        "followers_pct": 2.1053,
+        "rank_aum": 0,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": -1035.8651
+      },
+      "7d": null,
+      "30d": null
+    },
+    "37D18BE54F98F099": {
+      "1d": {
+        "aum_usd": 1066.8271,
+        "followers": 0.0,
+        "roi_pct": 5.18,
+        "aum_pct": 4.0336,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": -303.1922
+      },
+      "7d": null,
+      "30d": null
+    },
+    "01DA3FA83DECB99E": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": 0.0
+      },
+      "7d": null,
+      "30d": null
+    },
+    "B74FC756C8EE894B": {
+      "1d": {
+        "aum_usd": 365.8341,
+        "followers": 0.0,
+        "roi_pct": 0.16,
+        "aum_pct": 1.4611,
+        "followers_pct": 0.0,
+        "rank_aum": 2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": 325.7741
+      },
+      "7d": null,
+      "30d": null
+    },
+    "ACE79CAACA13F8B9": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.05,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": 2,
+        "estimated_net_flow_usd": 12.6329
+      },
+      "7d": null,
+      "30d": null
+    },
+    "70923A619CCB8F2F": {
+      "1d": {
+        "aum_usd": -259.3801,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": -1.0374,
+        "followers_pct": 0.0,
+        "rank_aum": 1,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": -259.3801
+      },
+      "7d": null,
+      "30d": null
+    },
+    "9482DE57396DAB7C": {
+      "1d": {
+        "aum_usd": -724.3691,
+        "followers": -5.0,
+        "roi_pct": -11.78,
+        "aum_pct": -2.8521,
+        "followers_pct": -7.1429,
+        "rank_aum": -3,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": 2267.4491
+      },
+      "7d": null,
+      "30d": null
+    },
+    "794421901505786795": {
+      "1d": {
+        "aum_usd": -31097.5098,
+        "followers": -12.0,
+        "roi_pct": 5.02,
+        "aum_pct": -58.7066,
+        "followers_pct": -7.7922,
+        "rank_aum": -23,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": -33756.6569
+      },
+      "7d": null,
+      "30d": null
+    },
+    "4B048A62B1198464": {
+      "1d": {
+        "aum_usd": -4801.2489,
+        "followers": -18.0,
+        "roi_pct": -15.81,
+        "aum_pct": -18.2937,
+        "followers_pct": -14.1732,
+        "rank_aum": -7,
+        "rank_followers": -6,
+        "estimated_net_flow_usd": -651.8664
+      },
       "7d": null,
       "30d": null
     },
     "D442CF34E4AEEAF1": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -479.1848,
+        "followers": 0.0,
+        "roi_pct": -11.82,
+        "aum_pct": -2.269,
+        "followers_pct": 0.0,
+        "rank_aum": -1,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": 2017.1028
+      },
+      "7d": null,
+      "30d": null
+    },
+    "E173DA219B1AA53B": {
+      "1d": {
+        "aum_usd": 6529.0896,
+        "followers": 11.0,
+        "roi_pct": 54.95,
+        "aum_pct": 59.4549,
+        "followers_pct": 110.0,
+        "rank_aum": 5,
+        "rank_followers": 7,
+        "estimated_net_flow_usd": 494.7104
+      },
       "7d": null,
       "30d": null
     },
     "664BD292A54718C3": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -61.9019,
+        "followers": 0.0,
+        "roi_pct": -2.28,
+        "aum_pct": -0.3757,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": 313.8069
+      },
       "7d": null,
       "30d": null
     },
-    "5C9137285EA1382C": {
-      "1d": null,
+    "31F3288F9B90B496": {
+      "1d": {
+        "aum_usd": 13966.0126,
+        "followers": 3.0,
+        "roi_pct": -1.8,
+        "aum_pct": 1237.8473,
+        "followers_pct": 60.0,
+        "rank_aum": 34,
+        "rank_followers": 5,
+        "estimated_net_flow_usd": 13986.3211
+      },
       "7d": null,
       "30d": null
     },
     "32C76B50BC8D7EDF": {
+      "1d": {
+        "aum_usd": 441.6734,
+        "followers": 2.0,
+        "roi_pct": -8.66,
+        "aum_pct": 3.2493,
+        "followers_pct": 2.381,
+        "rank_aum": -2,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": 1618.8017
+      },
+      "7d": null,
+      "30d": null
+    },
+    "034D3F0E99001B9D": {
       "1d": null,
       "7d": null,
       "30d": null
     },
     "C9B1558F671ED132": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -37.0476,
+        "followers": 0.0,
+        "roi_pct": -0.44,
+        "aum_pct": -0.307,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": 16.0469
+      },
       "7d": null,
       "30d": null
     },
     "609DDBB8C0532E3D": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 2.65,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": -316.5181
+      },
       "7d": null,
       "30d": null
     },
     "14B24FC1CDA23436": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "E173DA219B1AA53B": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": 0.0
+      },
       "7d": null,
       "30d": null
     },
     "96F4C7FA4260C891": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": -0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": 0.0
+      },
       "7d": null,
       "30d": null
     },
     "0DAEA9C4B40EFEBC": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "F6476365DB0D09A3": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "747097533310546084": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "1EE226C9780E2BEF": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 55.5171,
+        "followers": -2.0,
+        "roi_pct": 32.2,
+        "aum_pct": 0.5614,
+        "followers_pct": -4.0816,
+        "rank_aum": -2,
+        "rank_followers": -6,
+        "estimated_net_flow_usd": -3128.9748
+      },
       "7d": null,
       "30d": null
     },
     "B31CCBB35ADBF9C0": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -0.0205,
+        "followers": 0.0,
+        "roi_pct": -0.12,
+        "aum_pct": -0.0002,
+        "followers_pct": 0.0,
+        "rank_aum": 1,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": 11.0228
+      },
+      "7d": null,
+      "30d": null
+    },
+    "1EE226C9780E2BEF": {
+      "1d": {
+        "aum_usd": -56.7789,
+        "followers": 1.0,
+        "roi_pct": -5.86,
+        "aum_pct": -0.6143,
+        "followers_pct": 3.8462,
+        "rank_aum": -1,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": 484.8507
+      },
       "7d": null,
       "30d": null
     },
     "24BA42C49DC298DE": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -256.2167,
+        "followers": -3.0,
+        "roi_pct": 0.7,
+        "aum_pct": -2.8654,
+        "followers_pct": -5.7692,
+        "rank_aum": 0,
+        "rank_followers": -6,
+        "estimated_net_flow_usd": -318.809
+      },
       "7d": null,
       "30d": null
     },
-    "B0408645161C1865": {
+    "DF321EDC67DA8F3D": {
       "1d": null,
       "7d": null,
       "30d": null
     },
     "44570B03F5CBCEDE": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "721A7DFF5AE7AA8C": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -172.3603,
+        "followers": -1.0,
+        "roi_pct": -8.38,
+        "aum_pct": -2.2518,
+        "followers_pct": -2.1739,
+        "rank_aum": 0,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": 469.0694
+      },
       "7d": null,
       "30d": null
     },
     "5E230B8996BE859D": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 27.6895,
+        "followers": 2.0,
+        "roi_pct": 0.25,
+        "aum_pct": 0.4058,
+        "followers_pct": 15.3846,
+        "rank_aum": 1,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": 10.6318
+      },
       "7d": null,
       "30d": null
     },
-    "A0EDF7F0D96A7E8C": {
-      "1d": null,
+    "721A7DFF5AE7AA8C": {
+      "1d": {
+        "aum_usd": -499.7844,
+        "followers": -2.0,
+        "roi_pct": -0.57,
+        "aum_pct": -7.0427,
+        "followers_pct": -4.2553,
+        "rank_aum": -1,
+        "rank_followers": -7,
+        "estimated_net_flow_usd": -459.3341
+      },
+      "7d": null,
+      "30d": null
+    },
+    "741867347484730662": {
+      "1d": {
+        "aum_usd": 4058.4176,
+        "followers": 28.0,
+        "roi_pct": -0.72,
+        "aum_pct": 171.8381,
+        "followers_pct": 116.6667,
+        "rank_aum": 12,
+        "rank_followers": 15,
+        "estimated_net_flow_usd": 4075.4223
+      },
       "7d": null,
       "30d": null
     },
     "6308333277A08132": {
+      "1d": {
+        "aum_usd": 107.0621,
+        "followers": 0.0,
+        "roi_pct": 15.76,
+        "aum_pct": 2.1529,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": -676.6879
+      },
+      "7d": null,
+      "30d": null
+    },
+    "FFFC009D717DAEB1": {
       "1d": null,
       "7d": null,
       "30d": null
     },
-    "C2B269D649346A25": {
+    "0870A246F3749D76": {
       "1d": null,
       "7d": null,
       "30d": null
     },
     "FE701D3CB0AC0E8F": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 66.6321,
+        "followers": 0.0,
+        "roi_pct": 45.2,
+        "aum_pct": 1.8426,
+        "followers_pct": 0.0,
+        "rank_aum": -1,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": -1567.9001
+      },
+      "7d": null,
+      "30d": null
+    },
+    "C2B269D649346A25": {
+      "1d": {
+        "aum_usd": 6.2823,
+        "followers": 0.0,
+        "roi_pct": 6.39,
+        "aum_pct": 0.1711,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": -228.3176
+      },
       "7d": null,
       "30d": null
     },
     "ED5E78290CE31341": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 2.7651,
+        "followers": 1.0,
+        "roi_pct": 1.61,
+        "aum_pct": 0.0768,
+        "followers_pct": 4.7619,
+        "rank_aum": -2,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": -55.1887
+      },
+      "7d": null,
+      "30d": null
+    },
+    "F6476365DB0D09A3": {
+      "1d": {
+        "aum_usd": -6193.9725,
+        "followers": -4.0,
+        "roi_pct": -23.72,
+        "aum_pct": -64.0016,
+        "followers_pct": -11.1111,
+        "rank_aum": -16,
+        "rank_followers": -6,
+        "estimated_net_flow_usd": -3898.3878
+      },
+      "7d": null,
+      "30d": null
+    },
+    "A0EDF7F0D96A7E8C": {
+      "1d": {
+        "aum_usd": -2060.9021,
+        "followers": -1.0,
+        "roi_pct": -3.03,
+        "aum_pct": -37.4311,
+        "followers_pct": -5.5556,
+        "rank_aum": -8,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": -1894.0748
+      },
       "7d": null,
       "30d": null
     },
     "5C5AE0DBE8132751": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -4,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": 0.0
+      },
       "7d": null,
       "30d": null
     },
     "3EB985F124C18792": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -50.0,
+        "followers": 0.0,
+        "roi_pct": 0.49,
+        "aum_pct": -1.5548,
+        "followers_pct": 0.0,
+        "rank_aum": -4,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": -65.7579
+      },
       "7d": null,
       "30d": null
     },
     "F493744FAA6FDEBA": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.2545,
+        "followers": 0.0,
+        "roi_pct": -12.47,
+        "aum_pct": 0.0082,
+        "followers_pct": 0.0,
+        "rank_aum": -4,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": 385.358
+      },
       "7d": null,
       "30d": null
     },
     "0EAF7292CE2FAAC2": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 2.1674,
+        "followers": 0.0,
+        "roi_pct": 9.35,
+        "aum_pct": 0.0713,
+        "followers_pct": 0.0,
+        "rank_aum": -4,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": -281.945
+      },
       "7d": null,
       "30d": null
     },
     "8D59B2F61BDDE6D8": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 3.5798,
+        "followers": 0.0,
+        "roi_pct": 0.63,
+        "aum_pct": 0.129,
+        "followers_pct": 0.0,
+        "rank_aum": -4,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": -13.8999
+      },
       "7d": null,
       "30d": null
     },
     "8F53B7AEDF041739": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -0.0,
+        "followers": 0.0,
+        "roi_pct": -0.15,
+        "aum_pct": -0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -4,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": 3.9492
+      },
       "7d": null,
       "30d": null
     },
     "5C872B837465159F": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "741867347484730662": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 58.8981,
+        "followers": 0.0,
+        "roi_pct": 2.76,
+        "aum_pct": 2.4137,
+        "followers_pct": 0.0,
+        "rank_aum": -4,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": -8.4491
+      },
       "7d": null,
       "30d": null
     },
     "BA1A719B8225DD83": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -7.5003,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": -0.3218,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": -7.5003
+      },
       "7d": null,
       "30d": null
     },
     "A69AC87ADD4E76F3": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.38,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": 7.3993
+      },
       "7d": null,
       "30d": null
     },
-    "822824429641453680": {
+    "645B5F315CDE16D8": {
       "1d": null,
       "7d": null,
       "30d": null
     },
     "CCC8ADEDC122BA29": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "D84980B5C686E346": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "321655528D1AE055": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "31F3288F9B90B496": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "55CE12A569770B28": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "6A30B93C28DD247F": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "757CC8A7D7FAC010": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "9B28742D954561AE": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "F3476CC5EA71C0BC": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "818313090499674879": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -7.69,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": 131.6849
+      },
       "7d": null,
       "30d": null
     },
     "B7AC2E971AF8A325": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 1020.3615,
+        "followers": 1.0,
+        "roi_pct": 34.45,
+        "aum_pct": 170.0603,
+        "followers_pct": 100.0,
+        "rank_aum": 6,
+        "rank_followers": 30,
+        "estimated_net_flow_usd": 813.6615
+      },
+      "7d": null,
+      "30d": null
+    },
+    "9B28742D954561AE": {
+      "1d": {
+        "aum_usd": 718.9879,
+        "followers": 0.0,
+        "roi_pct": 2.82,
+        "aum_pct": 103.6834,
+        "followers_pct": 0.0,
+        "rank_aum": 2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": 699.4327
+      },
+      "7d": null,
+      "30d": null
+    },
+    "D84980B5C686E346": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -5,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": 0.0
+      },
+      "7d": null,
+      "30d": null
+    },
+    "55CE12A569770B28": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.58,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": 6.38
+      },
+      "7d": null,
+      "30d": null
+    },
+    "822824429641453680": {
+      "1d": {
+        "aum_usd": -657.69,
+        "followers": -1.0,
+        "roi_pct": -108.09,
+        "aum_pct": -37.6751,
+        "followers_pct": -50.0,
+        "rank_aum": -9,
+        "rank_followers": -28,
+        "estimated_net_flow_usd": 1229.2263
+      },
+      "7d": null,
+      "30d": null
+    },
+    "757CC8A7D7FAC010": {
+      "1d": {
+        "aum_usd": 211.9855,
+        "followers": 1.0,
+        "roi_pct": 16.53,
+        "aum_pct": 27.2162,
+        "followers_pct": 14.2857,
+        "rank_aum": -3,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": 83.2344
+      },
+      "7d": null,
+      "30d": null
+    },
+    "6A30B93C28DD247F": {
+      "1d": {
+        "aum_usd": -75.7129,
+        "followers": 0.0,
+        "roi_pct": -1.18,
+        "aum_pct": -8.5611,
+        "followers_pct": 0.0,
+        "rank_aum": -5,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": -65.2772
+      },
+      "7d": null,
+      "30d": null
+    },
+    "F3476CC5EA71C0BC": {
+      "1d": {
+        "aum_usd": 50.401,
+        "followers": 0.0,
+        "roi_pct": 2.37,
+        "aum_pct": 7.8254,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": 35.1365
+      },
       "7d": null,
       "30d": null
     },
     "58D7D205FB591484": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -0.765,
+        "followers": 0.0,
+        "roi_pct": -0.55,
+        "aum_pct": -0.1436,
+        "followers_pct": 0.0,
+        "rank_aum": -1,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": 2.1661
+      },
+      "7d": null,
+      "30d": null
+    },
+    "818313090499674879": {
+      "1d": {
+        "aum_usd": -102.9236,
+        "followers": -1.0,
+        "roi_pct": -8.36,
+        "aum_pct": -16.2561,
+        "followers_pct": -14.2857,
+        "rank_aum": -4,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": -49.9931
+      },
       "7d": null,
       "30d": null
     },
     "70143FDD8DBF6E53": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.56,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -10,
+        "estimated_net_flow_usd": -2.8
+      },
       "7d": null,
       "30d": null
     },
     "811BB1C9681A4FF5": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -0.0,
+        "followers": 0.0,
+        "roi_pct": -4.96,
+        "aum_pct": -0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": 22.6801
+      },
       "7d": null,
       "30d": null
     },
     "517A2A0B4F4C76D6": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -0.0,
+        "followers": 0.0,
+        "roi_pct": 0.12,
+        "aum_pct": -0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": -0.5407
+      },
       "7d": null,
       "30d": null
     },
-    "97AA186B7559E35E": {
+    "171F98A6EAE83C1D": {
       "1d": null,
       "7d": null,
       "30d": null
     },
     "952071415C9BAD06": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -1.04,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": 3.6013
+      },
+      "7d": null,
+      "30d": null
+    },
+    "818795120350074580": {
+      "1d": {
+        "aum_usd": 341.7886,
+        "followers": 0.0,
+        "roi_pct": -2.4,
+        "aum_pct": null,
+        "followers_pct": 0.0,
+        "rank_aum": 148,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "5C89E825CCC384BC": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -0.1832,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": -0.0597,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": -0.1832
+      },
       "7d": null,
       "30d": null
     },
     "18FCA6C22F26CBB4": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.31,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": 0.93
+      },
       "7d": null,
       "30d": null
     },
     "70362A15F8B31D3B": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -1.0,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": 3.0
+      },
       "7d": null,
       "30d": null
     },
     "1499200359BAE11A": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -13.0859,
+        "followers": 0.0,
+        "roi_pct": -3.26,
+        "aum_pct": -4.8234,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": -4.2415
+      },
       "7d": null,
       "30d": null
     },
     "E9BB0FE3B8797B72": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0169,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": 0.0067,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": 0.0169
+      },
       "7d": null,
       "30d": null
     },
     "104E928646CCD8E9": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "756947198310777386": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "762693453091570080": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.53,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": 1.326
+      },
       "7d": null,
       "30d": null
     },
     "F91659B2DBF66275": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 48.6903,
+        "followers": 0.0,
+        "roi_pct": -13.14,
+        "aum_pct": 34.7182,
+        "followers_pct": 0.0,
+        "rank_aum": -1,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": 67.1184
+      },
       "7d": null,
       "30d": null
     },
-    "E3654BF20F6C758D": {
+    "756947198310777386": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -1.79,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -4,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": 2.9884
+      },
+      "7d": null,
+      "30d": null
+    },
+    "40EB231AEBF6FD65": {
       "1d": null,
       "7d": null,
       "30d": null
     },
     "50DC6EE3AB3F8CF5": {
-      "1d": null,
+      "1d": {
+        "aum_usd": -1.2226,
+        "followers": 0.0,
+        "roi_pct": -4.48,
+        "aum_pct": -0.9754,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": 4.3927
+      },
       "7d": null,
       "30d": null
     },
     "FA5640E3F0C7F17D": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.9838,
+        "followers": 0.0,
+        "roi_pct": 0.02,
+        "aum_pct": 0.8455,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": 0.9605
+      },
       "7d": null,
       "30d": null
     },
     "2A88E34F82400FE3": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 24.7,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": -27.2046
+      },
+      "7d": null,
+      "30d": null
+    },
+    "E3654BF20F6C758D": {
+      "1d": {
+        "aum_usd": -31.8354,
+        "followers": 0.0,
+        "roi_pct": -0.42,
+        "aum_pct": -23.3041,
+        "followers_pct": 0.0,
+        "rank_aum": -6,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": -31.2616
+      },
       "7d": null,
       "30d": null
     },
     "7473FE311E3AD50A": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.06,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": -0.0628
+      },
       "7d": null,
       "30d": null
     },
-    "811997770117827919": {
-      "1d": null,
+    "762693453091570080": {
+      "1d": {
+        "aum_usd": -50.0,
+        "followers": -1.0,
+        "roi_pct": 6.38,
+        "aum_pct": -32.9946,
+        "followers_pct": -33.3333,
+        "rank_aum": -10,
+        "rank_followers": -14,
+        "estimated_net_flow_usd": -59.6683
+      },
       "7d": null,
       "30d": null
     },
     "ACB30A3293B96B22": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -2.06,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": 2.06
+      },
       "7d": null,
       "30d": null
     },
     "90AF6C144EC8692F": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.32,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": 0.32
+      },
       "7d": null,
       "30d": null
     },
     "8C13B81A866891F1": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": 0.0
+      },
       "7d": null,
       "30d": null
     },
     "80A2447E1FD16A12": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -3,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": 0.0
+      },
       "7d": null,
       "30d": null
     },
     "B3C834C23F65A321": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 5.58,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": -2,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": -2.79
+      },
       "7d": null,
       "30d": null
     },
     "114A1793308A1CEB": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "924513BC826674CB": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "B3CFC15E61D7A069": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": 0.0
+      },
       "7d": null,
       "30d": null
     },
     "3B4DA23CA0314FCB": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "F61990B585217C24": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 1.78,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": 6,
+        "estimated_net_flow_usd": -0.89
+      },
       "7d": null,
       "30d": null
     },
     "16063A253CED84AE": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.34,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": 0.034
+      },
       "7d": null,
       "30d": null
     },
     "A6D274A2EDD8FA5E": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.02,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": -9,
+        "estimated_net_flow_usd": 0.0
+      },
       "7d": null,
       "30d": null
     },
     "B68D480966C5352A": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.02,
+        "aum_pct": 0.0,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": 0.0
+      },
       "7d": null,
       "30d": null
     },
     "BEA017E03010004C": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": 0.0,
+        "rank_aum": 0,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "061921712F54AADF": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.18,
+        "aum_pct": null,
+        "followers_pct": 0.0,
+        "rank_aum": -1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
-    "818795120350074580": {
-      "1d": null,
+    "2E01D379E7579CF5": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 1.0,
+        "roi_pct": -22.96,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -1,
+        "rank_followers": 22,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "7E21239BFA805866": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.69,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -9,
+        "rank_followers": -9,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "F10D7F7A4A164AFB": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "95003D5C4FD0C9D2": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.19,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -9,
+        "rank_followers": -9,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "0FD18D81A6980710": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 0,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "CC375D11641CCAF3": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "D85B593402E0D85E": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 0,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "BCB7573DA3524A17": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "18465ED75256D3D8": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 0,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "AA975115A1A01869": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 0,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "9D336194ACB74891": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -4.32,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -25,
+        "rank_followers": -24,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "3E62C27062B1385E": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "C596C02BFACE1D77": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "313CCADFE7227C85": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 0,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "E7AC907DED8BE5E4": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.17,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -4,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "7EA979BCA6BD1007": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.81,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
+      "7d": null,
+      "30d": null
+    },
+    "D2A8F38CFFF5F992": {
       "1d": null,
       "7d": null,
       "30d": null
     },
     "646E26380E35712E": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.01,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "7D35C21B23E3DF52": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "A7405DFE93CF41B7": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "D303811F9F41AF27": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 0,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "6F262ADB3B44266C": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -1.04,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -5,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": null
+      },
+      "7d": null,
+      "30d": null
+    },
+    "97AA186B7559E35E": {
+      "1d": {
+        "aum_usd": -437.75,
+        "followers": -1.0,
+        "roi_pct": 23.08,
+        "aum_pct": -100.0,
+        "followers_pct": -100.0,
+        "rank_aum": -80,
+        "rank_followers": -61,
+        "estimated_net_flow_usd": -538.7827
+      },
+      "7d": null,
+      "30d": null
+    },
+    "13D0569BB1A1408B": {
       "1d": null,
       "7d": null,
       "30d": null
     },
     "444BF044C67892FF": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.65,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -7,
+        "rank_followers": -7,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "E94DF3F02F48C881": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "F147E2DE677BC82D": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 1.05,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 17,
+        "rank_followers": 17,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "53C39E0C25CDD32F": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 2.96,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 1,
+        "rank_followers": 1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "4262DC2BDC67F8C9": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "AF2E90B3C25EE4C0": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -1.57,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -4,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "528089A445EA8FAA": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "D80DADB888EAE273": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "A2CA799B36AEE1B9": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "B70102CCBEBA2104": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 1.07,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 6,
+        "rank_followers": 6,
+        "estimated_net_flow_usd": null
+      },
+      "7d": null,
+      "30d": null
+    },
+    "A2CA799B36AEE1B9": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 2,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "2A14C427C5E4223E": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 0,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "2DE3E8FEAC245B9C": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.84,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "6CE9B9D4C7E25E2F": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.02,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -4,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "F740246F4C8BDC75": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "5BA190A5622F92F4": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "318EE7554752576C": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "C63D5BF464C578C3": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 0,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "8DC9A78EF5C32F2C": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "D500A09517C4A154": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 7.27,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 3,
+        "rank_followers": 3,
+        "estimated_net_flow_usd": null
+      },
+      "7d": null,
+      "30d": null
+    },
+    "9C80FEE38C0C9BFE": {
       "1d": null,
       "7d": null,
       "30d": null
     },
     "05E5EB022E5B2282": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "EF1CC6F40E834D1A": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "2128BA01363B35A5": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -3.34,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -7,
+        "rank_followers": -7,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "40039D8E7609EF91": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -2.58,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -9,
+        "rank_followers": -9,
+        "estimated_net_flow_usd": null
+      },
+      "7d": null,
+      "30d": null
+    },
+    "2128BA01363B35A5": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 0,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "36873782B92CA489": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "A53ABB45DE8437C5": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 3.33,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 21,
+        "rank_followers": 22,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "AE2EDEB88E3F2781": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.54,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -4,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
-    "2E01D379E7579CF5": {
-      "1d": null,
+    "A53ABB45DE8437C5": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -4.11,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -4,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "135DEAD57B17C48E": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "DEB05DBC700AE341": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.4,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -5,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "2E861CE7BF7B4047": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -1.13,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -8,
+        "rank_followers": -9,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "FD805C99D384C92C": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.95,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "0ACDD18DFCF6B273": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
+      "7d": null,
+      "30d": null
+    },
+    "924513BC826674CB": {
+      "1d": {
+        "aum_usd": -50.0,
+        "followers": -1.0,
+        "roi_pct": -4.45,
+        "aum_pct": -100.0,
+        "followers_pct": -100.0,
+        "rank_aum": -32,
+        "rank_followers": -44,
+        "estimated_net_flow_usd": -47.775
+      },
       "7d": null,
       "30d": null
     },
     "3C7CFC068A890A05": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 1.75,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 0,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "A08235B3C7F48634": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 1,
+        "rank_followers": 1,
+        "estimated_net_flow_usd": null
+      },
+      "7d": null,
+      "30d": null
+    },
+    "05F41A1FD4A0C520": {
       "1d": null,
       "7d": null,
       "30d": null
     },
     "EA315ECC2A50F8B6": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -1.98,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -7,
+        "rank_followers": -7,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "80DBF719B37B6213": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -2.08,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -4,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "8B8ED8BFE4D40EBD": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.13,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "A06A1E6EFE75ECCD": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.69,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -10,
+        "rank_followers": -10,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "D286B322B8A241B7": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.6,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -5,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "3772C46920B1F2A0": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 1.18,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "C4BA2287D1A9D8F4": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.49,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -9,
+        "rank_followers": -9,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "C4C65A2C03F7A086": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.43,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -7,
+        "rank_followers": -7,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "873EEA935003264F": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.02,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
+      "7d": null,
+      "30d": null
+    },
+    "B3CFC15E61D7A069": {
+      "1d": {
+        "aum_usd": -50.0,
+        "followers": -1.0,
+        "roi_pct": 1.0,
+        "aum_pct": -100.0,
+        "followers_pct": -100.0,
+        "rank_aum": -11,
+        "rank_followers": -23,
+        "estimated_net_flow_usd": -50.5
+      },
       "7d": null,
       "30d": null
     },
     "558503E1E6FC7081": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -1.39,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "235BCD62102B61F3": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.12,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -11,
+        "rank_followers": -11,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "62C2A7C4A3B1CE7B": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "F2EDD3086F9A651F": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.47,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -8,
+        "rank_followers": -9,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "AF631491B26716D1": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "5401BCA49E164D7A": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "DEBACFD3CAC565B8": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -2.19,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 7,
+        "rank_followers": 7,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "C01F8039E3A489E7": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 2,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "E5513524191E576E": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 0,
+        "rank_followers": 0,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "50A24ABBFBE2B7CE": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 0,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "C024C3CB1B42E876": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 7.94,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "5104082E16D70D9D": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.12,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -4,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "E24572C6BF759088": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
+      "7d": null,
+      "30d": null
+    },
+    "2FFE9D537E04AE7B": {
       "1d": null,
       "7d": null,
       "30d": null
     },
-    "DA18777FE8FD492B": {
+    "B15E19173830B674": {
       "1d": null,
       "7d": null,
       "30d": null
     },
     "3EE04B241CA3CCD5": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.21,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -6,
+        "rank_followers": -6,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "6BDBCF1C055B071A": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 0,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "D5D1725ABE3958B0": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "545F589A73ED2832": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "32768C4C7E4D3B32": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -1.4,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -10,
+        "rank_followers": -10,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "36EB1609022C3988": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.16,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -5,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "7D34F0975D241797": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.13,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -9,
+        "rank_followers": -9,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "17D6B48507A54690": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.44,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -9,
+        "rank_followers": -9,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "FC8DBDC1C84C4C67": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.06,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -3,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "247FE3434DA88B0D": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.06,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "31742980DA233D54": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 1.66,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -7,
+        "rank_followers": -8,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "643A3247025545B6": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -1.02,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -9,
+        "rank_followers": -9,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "4844EA95A09B5B84": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.95,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 7,
+        "rank_followers": 7,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "E6A0214E4BB6DE47": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 1.41,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -6,
+        "rank_followers": -6,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "418175BB996A663D": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 2.33,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -4,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "5251484445FC52D8": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.78,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -9,
+        "rank_followers": -9,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
-    "711D77D665CC6F49": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "527795C0728F6B96": {
-      "1d": null,
+    "F61990B585217C24": {
+      "1d": {
+        "aum_usd": -50.0,
+        "followers": 0.0,
+        "roi_pct": -0.28,
+        "aum_pct": -100.0,
+        "followers_pct": null,
+        "rank_aum": -54,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": -49.86
+      },
       "7d": null,
       "30d": null
     },
     "41ED7CB5A87E4012": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 11.94,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 4,
+        "rank_followers": 4,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "3CE2FA3656DCEECE": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 2.46,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -7,
+        "rank_followers": -7,
+        "estimated_net_flow_usd": null
+      },
+      "7d": null,
+      "30d": null
+    },
+    "742936864373631567": {
       "1d": null,
       "7d": null,
       "30d": null
     },
     "F8B3F6C7486961B9": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.95,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -36,
+        "rank_followers": -37,
+        "estimated_net_flow_usd": null
+      },
+      "7d": null,
+      "30d": null
+    },
+    "1A65EB15227777A9": {
       "1d": null,
       "7d": null,
       "30d": null
     },
     "3DAE42E391E1797B": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "504846ADFA074BBC": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "C690E50CAE78F47C": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -2.04,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 21,
+        "rank_followers": 22,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "D25DD1A69711A97F": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "F8CAA26A08B83DB3": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 2.1,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 2,
+        "rank_followers": 2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "759271548753949930": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "E381F6BA71BCA4D7": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "241CFF1D95076351": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 1.63,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -10,
+        "rank_followers": -10,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "BE0DCCC5D9571E5A": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "C21BAEFDE06054D3": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.87,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -2,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "40A3DB1208A52D7D": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -1.67,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -9,
+        "rank_followers": -9,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "9A073DDF49603886": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 93.1,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 16,
+        "rank_followers": 17,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "841544924595303288": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -6.72,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 3,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "764043965032509720": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.15,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 4,
+        "rank_followers": -8,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "35D5933A1C84CD35": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "BFE2CA86AA853AD0": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -7.32,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "D29C560E3977E801": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 16.73,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -4,
+        "rank_followers": -4,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "99663D303875EE00": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -2.35,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -5,
+        "rank_followers": -5,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "65E877B78BD76F5F": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 0,
+        "rank_followers": -2,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "0BE59BFCA2E9820D": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -0.2,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": -3,
+        "rank_followers": -3,
+        "estimated_net_flow_usd": null
+      },
+      "7d": null,
+      "30d": null
+    },
+    "811997770117827919": {
+      "1d": {
+        "aum_usd": -100.39,
+        "followers": -1.0,
+        "roi_pct": -30.88,
+        "aum_pct": -100.0,
+        "followers_pct": -100.0,
+        "rank_aum": -134,
+        "rank_followers": -64,
+        "estimated_net_flow_usd": -69.3896
+      },
       "7d": null,
       "30d": null
     },
     "38649778D6442398": {
-      "1d": null,
-      "7d": null,
-      "30d": null
-    },
-    "2573552703F070C6": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.11,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 34,
+        "rank_followers": 33,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "A5E84F0EAD743865": {
-      "1d": null,
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": -3.63,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 54,
+        "rank_followers": 52,
+        "estimated_net_flow_usd": null
+      },
       "7d": null,
       "30d": null
     },
     "24A6881333E937FD": {
+      "1d": {
+        "aum_usd": 0.0,
+        "followers": 0.0,
+        "roi_pct": 0.0,
+        "aum_pct": null,
+        "followers_pct": null,
+        "rank_aum": 1,
+        "rank_followers": -1,
+        "estimated_net_flow_usd": null
+      },
+      "7d": null,
+      "30d": null
+    },
+    "EE92C6B25AEAC2CE": {
+      "1d": null,
+      "7d": null,
+      "30d": null
+    },
+    "802192502018438605": {
       "1d": null,
       "7d": null,
       "30d": null
