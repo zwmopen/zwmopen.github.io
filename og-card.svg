@@ -1,21 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-<title id="title">ZWM · AI 工作台</title><desc id="desc">内容运营、AI 工作流与自动化工具</desc>
+<title id="title">ZWM · AI 工作台</title><desc id="desc">内容增长、AI 系统与自动化产品</desc>
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse"><stop stop-color="#e9edf4"/><stop offset="1" stop-color="#d9e0ea"/></linearGradient>
-  <linearGradient id="brand" x1="180" y1="120" x2="990" y2="520" gradientUnits="userSpaceOnUse"><stop stop-color="#5068f4"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
-  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="18" dy="18" stdDeviation="20" flood-color="#9aa8bc" flood-opacity=".55"/><feDropShadow dx="-16" dy="-16" stdDeviation="18" flood-color="#fff" flood-opacity=".95"/></filter>
+  <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse"><stop stop-color="#eef1f6"/><stop offset="1" stop-color="#dce3ed"/></linearGradient>
+  <linearGradient id="brand" x1="180" y1="120" x2="990" y2="520" gradientUnits="userSpaceOnUse"><stop stop-color="#526bf2"/><stop offset="1" stop-color="#8d5cf6"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="18" dy="18" stdDeviation="20" flood-color="#9aa8bc" flood-opacity=".52"/><feDropShadow dx="-16" dy="-16" stdDeviation="18" flood-color="#fff" flood-opacity=".96"/></filter>
 </defs>
 <rect width="1200" height="630" fill="url(#bg)"/>
-<circle cx="1080" cy="60" r="240" fill="#5068f4" opacity=".08"/><circle cx="80" cy="610" r="230" fill="#8b5cf6" opacity=".08"/>
-<rect x="90" y="72" width="1020" height="486" rx="54" fill="#e0e5ec" filter="url(#shadow)"/>
+<circle cx="1080" cy="60" r="240" fill="#526bf2" opacity=".08"/><circle cx="80" cy="610" r="230" fill="#8d5cf6" opacity=".08"/>
+<rect x="90" y="72" width="1020" height="486" rx="54" fill="#e7ebf2" filter="url(#shadow)"/>
 <rect x="150" y="132" width="92" height="92" rx="46" fill="url(#brand)"/>
 <text x="196" y="187" text-anchor="middle" fill="#fff" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="800">ZWM</text>
-<text x="150" y="304" fill="#293241" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="72" font-weight="850">ZWM · AI 工作台</text>
-<text x="150" y="382" fill="url(#brand)" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="48" font-weight="800">把经验，变成可以直接使用的工具。</text>
-<text x="150" y="458" fill="#6f7b91" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="28" font-weight="600">内容运营 × AI 工作流 × 自动化工具</text>
-<g font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700">
-  <rect x="150" y="492" width="188" height="44" rx="22" fill="#5068f4" opacity=".12"/><text x="244" y="520" text-anchor="middle" fill="#5068f4">MD2Card Studio</text>
-  <rect x="354" y="492" width="180" height="44" rx="22" fill="#18a875" opacity=".12"/><text x="444" y="520" text-anchor="middle" fill="#14845d">OwlReader Next</text>
-  <rect x="550" y="492" width="148" height="44" rx="22" fill="#8b5cf6" opacity=".12"/><text x="624" y="520" text-anchor="middle" fill="#7444da">Automation</text>
+<text x="150" y="304" fill="#263142" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="72" font-weight="850">ZWM · AI 工作台</text>
+<text x="150" y="382" fill="url(#brand)" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="46" font-weight="800">把真实工作，变成可执行的 AI 系统。</text>
+<text x="150" y="458" fill="#6d7890" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="28" font-weight="600">内容增长 × AI Gateway × 知识库 × 自动化产品</text>
+<g font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="19" font-weight="700">
+  <rect x="150" y="492" width="184" height="44" rx="22" fill="#526bf2" opacity=".12"/><text x="242" y="520" text-anchor="middle" fill="#526bf2">MD2Card Studio</text>
+  <rect x="350" y="492" width="174" height="44" rx="22" fill="#18a875" opacity=".12"/><text x="437" y="520" text-anchor="middle" fill="#14845d">OwlReader Next</text>
+  <rect x="540" y="492" width="126" height="44" rx="22" fill="#ef8c46" opacity=".12"/><text x="603" y="520" text-anchor="middle" fill="#c46f34">xhs-dl</text>
+  <rect x="682" y="492" width="160" height="44" rx="22" fill="#8d5cf6" opacity=".12"/><text x="762" y="520" text-anchor="middle" fill="#7444da">AI Gateway</text>
 </g>
 </svg>
