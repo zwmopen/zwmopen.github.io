@@ -1,0 +1,2410 @@
+{
+  "schema_version": 2,
+  "date": "2026-08-11",
+  "generated_at": "2026-08-11T03:11:07+00:00",
+  "traders": {
+    "823664FB73B79E41": {
+      "name": "小周同学。",
+      "aum_usd": 8442861.810449654,
+      "followers": 405,
+      "lead_days": 734,
+      "roi_pct": 4.41,
+      "rank_aum": 1,
+      "rank_followers": 7
+    },
+    "9C2CB3B2306B28EA": {
+      "name": "平凡无奇交易员",
+      "aum_usd": 2560425.2985342033,
+      "followers": 1117,
+      "lead_days": 1074,
+      "roi_pct": 40.06,
+      "rank_aum": 2,
+      "rank_followers": 2
+    },
+    "C419F165132C0C57": {
+      "name": "kxiandaoyan",
+      "aum_usd": 1370967.8941656605,
+      "followers": 45,
+      "lead_days": 385,
+      "roi_pct": -19.48,
+      "rank_aum": 3,
+      "rank_followers": 52
+    },
+    "C84FB1E4F4BA4B2A": {
+      "name": "🌜谨慎前行",
+      "aum_usd": 1125300.4667863431,
+      "followers": 71,
+      "lead_days": 40,
+      "roi_pct": 128.52,
+      "rank_aum": 4,
+      "rank_followers": 36
+    },
+    "24D8CE79A97FD35D": {
+      "name": "明明明宏",
+      "aum_usd": 954496.4899642018,
+      "followers": 295,
+      "lead_days": 1154,
+      "roi_pct": -2.51,
+      "rank_aum": 5,
+      "rank_followers": 13
+    },
+    "9790D02D71CADF2E": {
+      "name": "B知行合一🈚",
+      "aum_usd": 673247.520594621,
+      "followers": 1180,
+      "lead_days": 808,
+      "roi_pct": 7.01,
+      "rank_aum": 6,
+      "rank_followers": 1
+    },
+    "F2BCA22ABBB69F57": {
+      "name": "山海匯",
+      "aum_usd": 581347.7680967936,
+      "followers": 117,
+      "lead_days": 300,
+      "roi_pct": 3.17,
+      "rank_aum": 7,
+      "rank_followers": 26
+    },
+    "DA2B29551CBB2AE7": {
+      "name": "龙♪美希.760",
+      "aum_usd": 526895.8168870183,
+      "followers": 246,
+      "lead_days": 77,
+      "roi_pct": 30.08,
+      "rank_aum": 8,
+      "rank_followers": 15
+    },
+    "4A8AB04BF304EBD8": {
+      "name": "尘大师Master Dust",
+      "aum_usd": 526776.7528867243,
+      "followers": 279,
+      "lead_days": 359,
+      "roi_pct": 110.96,
+      "rank_aum": 9,
+      "rank_followers": 14
+    },
+    "F76CC883269E6FFB": {
+      "name": "小梧桐",
+      "aum_usd": 510049.8500291879,
+      "followers": 16,
+      "lead_days": 40,
+      "roi_pct": 40.76,
+      "rank_aum": 10,
+      "rank_followers": 78
+    },
+    "821360683215706097": {
+      "name": "B天道酬勤🈚️",
+      "aum_usd": 412568.1575503754,
+      "followers": 596,
+      "lead_days": 89,
+      "roi_pct": 113.62,
+      "rank_aum": 11,
+      "rank_followers": 4
+    },
+    "28AEEA33C8C78CC9": {
+      "name": "好望角9999",
+      "aum_usd": 391767.37333585066,
+      "followers": 601,
+      "lead_days": 556,
+      "roi_pct": 371.34,
+      "rank_aum": 12,
+      "rank_followers": 3
+    },
+    "66CBE179AA38C688": {
+      "name": "dylqaz12",
+      "aum_usd": 390720.08252749604,
+      "followers": 64,
+      "lead_days": 350,
+      "roi_pct": 28.28,
+      "rank_aum": 13,
+      "rank_followers": 39
+    },
+    "4DD7B31069255CCE": {
+      "name": "a9实盘直播",
+      "aum_usd": 364134.57347467594,
+      "followers": 125,
+      "lead_days": 93,
+      "roi_pct": 0.03,
+      "rank_aum": 14,
+      "rank_followers": 25
+    },
+    "A24E06C746B022B4": {
+      "name": "RealCryptoFox",
+      "aum_usd": 256001.3954807697,
+      "followers": 319,
+      "lead_days": 784,
+      "roi_pct": -3.05,
+      "rank_aum": 15,
+      "rank_followers": 11
+    },
+    "818351355109921732": {
+      "name": "陈陈陈沉稳",
+      "aum_usd": 248452.00483268336,
+      "followers": 35,
+      "lead_days": 150,
+      "roi_pct": -16.08,
+      "rank_aum": 16,
+      "rank_followers": 57
+    },
+    "821349237173995404": {
+      "name": "B超越自我🈚️",
+      "aum_usd": 248149.55080260723,
+      "followers": 454,
+      "lead_days": 91,
+      "roi_pct": 99.17,
+      "rank_aum": 17,
+      "rank_followers": 6
+    },
+    "D69063F8CC0ECC79": {
+      "name": "KoreanTop",
+      "aum_usd": 235182.3574344528,
+      "followers": 335,
+      "lead_days": 107,
+      "roi_pct": 661.76,
+      "rank_aum": 18,
+      "rank_followers": 9
+    },
+    "35F888C7BB441B2B": {
+      "name": "中线情报哥",
+      "aum_usd": 215220.10204060632,
+      "followers": 331,
+      "lead_days": 998,
+      "roi_pct": 23.91,
+      "rank_aum": 19,
+      "rank_followers": 10
+    },
+    "1173EC858F15E04F": {
+      "name": "大皇子",
+      "aum_usd": 213709.1663060893,
+      "followers": 341,
+      "lead_days": 966,
+      "roi_pct": -2.19,
+      "rank_aum": 20,
+      "rank_followers": 8
+    },
+    "C84F6F6717746BD4": {
+      "name": "BestMax",
+      "aum_usd": 211037.1002677078,
+      "followers": 184,
+      "lead_days": 768,
+      "roi_pct": 7.24,
+      "rank_aum": 21,
+      "rank_followers": 20
+    },
+    "8253D21C046EE47C": {
+      "name": "BTV-Michael",
+      "aum_usd": 197034.10883262448,
+      "followers": 57,
+      "lead_days": 177,
+      "roi_pct": -7.22,
+      "rank_aum": 22,
+      "rank_followers": 42
+    },
+    "171F98A6EAE83C1D": {
+      "name": "金条大爷",
+      "aum_usd": 192556.47189939773,
+      "followers": 155,
+      "lead_days": 675,
+      "roi_pct": 1393.62,
+      "rank_aum": 23,
+      "rank_followers": 22
+    },
+    "802192502018438605": {
+      "name": "帆啊（资产a10）",
+      "aum_usd": 177074.8719921658,
+      "followers": 71,
+      "lead_days": 23,
+      "roi_pct": 7.08,
+      "rank_aum": 24,
+      "rank_followers": 37
+    },
+    "0487DE6EF26EFE27": {
+      "name": "惜命师",
+      "aum_usd": 174092.32189045844,
+      "followers": 4,
+      "lead_days": 303,
+      "roi_pct": -13.25,
+      "rank_aum": 25,
+      "rank_followers": 104
+    },
+    "B15E19173830B674": {
+      "name": "135***9010",
+      "aum_usd": 167932.49370905428,
+      "followers": 300,
+      "lead_days": 321,
+      "roi_pct": 118.51,
+      "rank_aum": 26,
+      "rank_followers": 12
+    },
+    "FEA1F20A4558468F": {
+      "name": "吾上皇",
+      "aum_usd": 165716.9537163773,
+      "followers": 116,
+      "lead_days": 349,
+      "roi_pct": -20.91,
+      "rank_aum": 27,
+      "rank_followers": 27
+    },
+    "C343256953163322": {
+      "name": "长年韭菜",
+      "aum_usd": 162080.2173959134,
+      "followers": 22,
+      "lead_days": 992,
+      "roi_pct": -0.23,
+      "rank_aum": 28,
+      "rank_followers": 70
+    },
+    "ECD85D96F372C0D1": {
+      "name": "不想输02",
+      "aum_usd": 161415.6088364425,
+      "followers": 194,
+      "lead_days": 229,
+      "roi_pct": 157.15,
+      "rank_aum": 29,
+      "rank_followers": 18
+    },
+    "8DE3E9294C1A2440": {
+      "name": "bb16888888",
+      "aum_usd": 153327.6797157306,
+      "followers": 167,
+      "lead_days": 470,
+      "roi_pct": -18.24,
+      "rank_aum": 30,
+      "rank_followers": 21
+    },
+    "94FC2CF4A047C10E": {
+      "name": "博弈者任逍遥",
+      "aum_usd": 146062.86660856745,
+      "followers": 458,
+      "lead_days": 1294,
+      "roi_pct": 8.47,
+      "rank_aum": 31,
+      "rank_followers": 5
+    },
+    "769075957323167141": {
+      "name": "Jerry杰睿",
+      "aum_usd": 124258.8890386458,
+      "followers": 29,
+      "lead_days": 245,
+      "roi_pct": 4.6,
+      "rank_aum": 32,
+      "rank_followers": 62
+    },
+    "821382564224395312": {
+      "name": "B大道至简🈚️",
+      "aum_usd": 110901.3819114667,
+      "followers": 212,
+      "lead_days": 89,
+      "roi_pct": 28.32,
+      "rank_aum": 33,
+      "rank_followers": 17
+    },
+    "1EA7ED83214F8F22": {
+      "name": "～小财神～",
+      "aum_usd": 106140.93988974403,
+      "followers": 52,
+      "lead_days": 178,
+      "roi_pct": 270.25,
+      "rank_aum": 34,
+      "rank_followers": 46
+    },
+    "FA400F0E91664A05": {
+      "name": "TradingNotes",
+      "aum_usd": 102007.89089365471,
+      "followers": 20,
+      "lead_days": 553,
+      "roi_pct": 28.41,
+      "rank_aum": 35,
+      "rank_followers": 74
+    },
+    "818795120350074580": {
+      "name": "hyperion.exe",
+      "aum_usd": 100148.76744319208,
+      "followers": 14,
+      "lead_days": 31,
+      "roi_pct": 3.11,
+      "rank_aum": 36,
+      "rank_followers": 79
+    },
+    "A8AF8AFFAB6051B3": {
+      "name": "PlymouthUltra",
+      "aum_usd": 97158.31798255758,
+      "followers": 241,
+      "lead_days": 1158,
+      "roi_pct": 8.69,
+      "rank_aum": 37,
+      "rank_followers": 16
+    },
+    "3F6C3036FD9E2E11": {
+      "name": "心灵在合作",
+      "aum_usd": 90722.62792709234,
+      "followers": 1,
+      "lead_days": 235,
+      "roi_pct": 0.51,
+      "rank_aum": 38,
+      "rank_followers": 136
+    },
+    "097F20F08F8BEB70": {
+      "name": "皮卡稳健投资",
+      "aum_usd": 83414.29837980265,
+      "followers": 97,
+      "lead_days": 268,
+      "roi_pct": 73.42,
+      "rank_aum": 39,
+      "rank_followers": 33
+    },
+    "92CA01EF97EB1C49": {
+      "name": "Upward right",
+      "aum_usd": 71158.5544495957,
+      "followers": 186,
+      "lead_days": 879,
+      "roi_pct": -19.61,
+      "rank_aum": 40,
+      "rank_followers": 19
+    },
+    "819848249304757406": {
+      "name": "天王盖地虎M",
+      "aum_usd": 62378.97453504551,
+      "followers": 32,
+      "lead_days": 139,
+      "roi_pct": 31.28,
+      "rank_aum": 41,
+      "rank_followers": 59
+    },
+    "31F3288F9B90B496": {
+      "name": "信持力",
+      "aum_usd": 55678.00038301499,
+      "followers": 19,
+      "lead_days": 938,
+      "roi_pct": 3.9,
+      "rank_aum": 42,
+      "rank_followers": 75
+    },
+    "849654629733718232": {
+      "name": "العمدة_94",
+      "aum_usd": 50000.07,
+      "followers": 1,
+      "lead_days": 60,
+      "roi_pct": -3.24,
+      "rank_aum": 43,
+      "rank_followers": 142
+    },
+    "F197C033348EFB7D": {
+      "name": "京北商行",
+      "aum_usd": 50000.0,
+      "followers": 2,
+      "lead_days": 638,
+      "roi_pct": 0.21,
+      "rank_aum": 44,
+      "rank_followers": 119
+    },
+    "847105357930795384": {
+      "name": "B涅槃重生🈚",
+      "aum_usd": 49200.571474158234,
+      "followers": 131,
+      "lead_days": 71,
+      "roi_pct": -27.33,
+      "rank_aum": 45,
+      "rank_followers": 23
+    },
+    "C223658C2C4F9C3C": {
+      "name": "CoinCircle 阿飞",
+      "aum_usd": 42400.441090952,
+      "followers": 32,
+      "lead_days": 329,
+      "roi_pct": 20.69,
+      "rank_aum": 46,
+      "rank_followers": 60
+    },
+    "6A48C398F18CB31C": {
+      "name": "史莱姆冲冲冲!",
+      "aum_usd": 39500.0,
+      "followers": 2,
+      "lead_days": 583,
+      "roi_pct": -2.03,
+      "rank_aum": 47,
+      "rank_followers": 121
+    },
+    "08E31CADCFDDCFB8": {
+      "name": "Kunpeng Plan",
+      "aum_usd": 39069.1494838273,
+      "followers": 34,
+      "lead_days": 527,
+      "roi_pct": -7.52,
+      "rank_aum": 48,
+      "rank_followers": 58
+    },
+    "74F7C7A53CD18275": {
+      "name": "Algotoria",
+      "aum_usd": 37659.53796101457,
+      "followers": 8,
+      "lead_days": 840,
+      "roi_pct": -2.19,
+      "rank_aum": 49,
+      "rank_followers": 91
+    },
+    "35E22983F436F55B": {
+      "name": "人生没有如果 只有后果和结果",
+      "aum_usd": 37460.49399629251,
+      "followers": 48,
+      "lead_days": 565,
+      "roi_pct": -10.64,
+      "rank_aum": 50,
+      "rank_followers": 50
+    },
+    "FF48C5939FE6119F": {
+      "name": "终极投机之王",
+      "aum_usd": 37449.53491758284,
+      "followers": 24,
+      "lead_days": 1053,
+      "roi_pct": 12.4,
+      "rank_aum": 51,
+      "rank_followers": 67
+    },
+    "D31CB746779023A9": {
+      "name": "特尼斯",
+      "aum_usd": 36639.19106727647,
+      "followers": 128,
+      "lead_days": 973,
+      "roi_pct": 62.76,
+      "rank_aum": 52,
+      "rank_followers": 24
+    },
+    "D387B5B1F098B82C": {
+      "name": "Regression",
+      "aum_usd": 33149.75123106262,
+      "followers": 56,
+      "lead_days": 625,
+      "roi_pct": -14.43,
+      "rank_aum": 53,
+      "rank_followers": 43
+    },
+    "9D354B66E31ABEC1": {
+      "name": "顺利，发财",
+      "aum_usd": 28678.826577094642,
+      "followers": 53,
+      "lead_days": 790,
+      "roi_pct": -10.5,
+      "rank_aum": 54,
+      "rank_followers": 45
+    },
+    "37D18BE54F98F099": {
+      "name": "huge77888",
+      "aum_usd": 27913.049621713402,
+      "followers": 1,
+      "lead_days": 106,
+      "roi_pct": 0.88,
+      "rank_aum": 55,
+      "rank_followers": 138
+    },
+    "DB8E8E7946D5F1DB": {
+      "name": "年内完成一个小目标",
+      "aum_usd": 26743.942976379836,
+      "followers": 115,
+      "lead_days": 501,
+      "roi_pct": 26.01,
+      "rank_aum": 56,
+      "rank_followers": 28
+    },
+    "4CB5596A9CF90DEA": {
+      "name": "GoGoJoJ0",
+      "aum_usd": 26604.597194228318,
+      "followers": 23,
+      "lead_days": 4,
+      "roi_pct": 2.21,
+      "rank_aum": 57,
+      "rank_followers": 69
+    },
+    "A60D696F4E92AE5C": {
+      "name": "Aspirin.",
+      "aum_usd": 24896.49194743706,
+      "followers": 107,
+      "lead_days": 485,
+      "roi_pct": 39.1,
+      "rank_aum": 58,
+      "rank_followers": 29
+    },
+    "B74FC756C8EE894B": {
+      "name": "0xleek.eth",
+      "aum_usd": 24895.01266994916,
+      "followers": 4,
+      "lead_days": 264,
+      "roi_pct": 17.15,
+      "rank_aum": 59,
+      "rank_followers": 100
+    },
+    "70923A619CCB8F2F": {
+      "name": "无魂",
+      "aum_usd": 20884.98300799764,
+      "followers": 101,
+      "lead_days": 1000,
+      "roi_pct": 0.0,
+      "rank_aum": 60,
+      "rank_followers": 30
+    },
+    "9482DE57396DAB7C": {
+      "name": "GG16888888",
+      "aum_usd": 20403.610006235256,
+      "followers": 50,
+      "lead_days": 381,
+      "roi_pct": -86.27,
+      "rank_aum": 61,
+      "rank_followers": 48
+    },
+    "D442CF34E4AEEAF1": {
+      "name": "Trader KS",
+      "aum_usd": 19785.572171534393,
+      "followers": 39,
+      "lead_days": 649,
+      "roi_pct": -6.28,
+      "rank_aum": 62,
+      "rank_followers": 56
+    },
+    "4B048A62B1198464": {
+      "name": "1491",
+      "aum_usd": 16385.193718058137,
+      "followers": 77,
+      "lead_days": 1060,
+      "roi_pct": 3.27,
+      "rank_aum": 63,
+      "rank_followers": 35
+    },
+    "664BD292A54718C3": {
+      "name": "ty1024",
+      "aum_usd": 15459.144547452715,
+      "followers": 49,
+      "lead_days": 1152,
+      "roi_pct": -3.83,
+      "rank_aum": 64,
+      "rank_followers": 49
+    },
+    "6BDAFE4381357DBA": {
+      "name": "笨笨球",
+      "aum_usd": 15057.492777985524,
+      "followers": 98,
+      "lead_days": 1044,
+      "roi_pct": 54.87,
+      "rank_aum": 65,
+      "rank_followers": 32
+    },
+    "5C872B837465159F": {
+      "name": "夜望城南33",
+      "aum_usd": 14266.258760183217,
+      "followers": 5,
+      "lead_days": 167,
+      "roi_pct": 21.41,
+      "rank_aum": 66,
+      "rank_followers": 97
+    },
+    "5C9137285EA1382C": {
+      "name": "AXAX888",
+      "aum_usd": 13500.29,
+      "followers": 9,
+      "lead_days": 610,
+      "roi_pct": -2.69,
+      "rank_aum": 67,
+      "rank_followers": 90
+    },
+    "811997770117827919": {
+      "name": "盖盖大王666",
+      "aum_usd": 12950.876110828305,
+      "followers": 63,
+      "lead_days": 39,
+      "roi_pct": 157.54,
+      "rank_aum": 68,
+      "rank_followers": 40
+    },
+    "794421901505786795": {
+      "name": "996688",
+      "aum_usd": 12517.791320577613,
+      "followers": 87,
+      "lead_days": 201,
+      "roi_pct": 74.4,
+      "rank_aum": 69,
+      "rank_followers": 34
+    },
+    "609DDBB8C0532E3D": {
+      "name": "豆芽啦啦",
+      "aum_usd": 11944.077882330923,
+      "followers": 8,
+      "lead_days": 518,
+      "roi_pct": 12.86,
+      "rank_aum": 70,
+      "rank_followers": 92
+    },
+    "C9B1558F671ED132": {
+      "name": "孤舟创世纪",
+      "aum_usd": 11738.537593004103,
+      "followers": 99,
+      "lead_days": 887,
+      "roi_pct": -20.48,
+      "rank_aum": 71,
+      "rank_followers": 31
+    },
+    "034D3F0E99001B9D": {
+      "name": "蝉中说缠",
+      "aum_usd": 11718.679167081922,
+      "followers": 60,
+      "lead_days": 299,
+      "roi_pct": -23.28,
+      "rank_aum": 72,
+      "rank_followers": 41
+    },
+    "32C76B50BC8D7EDF": {
+      "name": "野人大哥",
+      "aum_usd": 11373.578518723394,
+      "followers": 65,
+      "lead_days": 622,
+      "roi_pct": 18.68,
+      "rank_aum": 73,
+      "rank_followers": 38
+    },
+    "14B24FC1CDA23436": {
+      "name": "WyzFi AI",
+      "aum_usd": 11250.450116007298,
+      "followers": 6,
+      "lead_days": 337,
+      "roi_pct": -0.96,
+      "rank_aum": 74,
+      "rank_followers": 94
+    },
+    "0DAEA9C4B40EFEBC": {
+      "name": "K W",
+      "aum_usd": 10694.412868624151,
+      "followers": 55,
+      "lead_days": 586,
+      "roi_pct": 54.53,
+      "rank_aum": 75,
+      "rank_followers": 44
+    },
+    "E173DA219B1AA53B": {
+      "name": "趋势动物Max",
+      "aum_usd": 10390.76,
+      "followers": 1,
+      "lead_days": 137,
+      "roi_pct": 100.69,
+      "rank_aum": 76,
+      "rank_followers": 127
+    },
+    "96F4C7FA4260C891": {
+      "name": "医学博士交易员",
+      "aum_usd": 9878.000855374396,
+      "followers": 43,
+      "lead_days": 975,
+      "roi_pct": -4.85,
+      "rank_aum": 77,
+      "rank_followers": 53
+    },
+    "B31CCBB35ADBF9C0": {
+      "name": "稳稳赚钱",
+      "aum_usd": 9202.72322580506,
+      "followers": 7,
+      "lead_days": 826,
+      "roi_pct": -10.88,
+      "rank_aum": 78,
+      "rank_followers": 93
+    },
+    "1EE226C9780E2BEF": {
+      "name": "船长417",
+      "aum_usd": 8953.379639015515,
+      "followers": 25,
+      "lead_days": 716,
+      "roi_pct": -35.39,
+      "rank_aum": 79,
+      "rank_followers": 64
+    },
+    "741867347484730662": {
+      "name": "东方朝霞",
+      "aum_usd": 8187.8589390261595,
+      "followers": 46,
+      "lead_days": 354,
+      "roi_pct": 53.7,
+      "rank_aum": 80,
+      "rank_followers": 51
+    },
+    "721A7DFF5AE7AA8C": {
+      "name": "林嘻嘻😬",
+      "aum_usd": 7979.063614921114,
+      "followers": 50,
+      "lead_days": 512,
+      "roi_pct": 47.93,
+      "rank_aum": 81,
+      "rank_followers": 47
+    },
+    "24BA42C49DC298DE": {
+      "name": "Harvester",
+      "aum_usd": 7832.964987822211,
+      "followers": 42,
+      "lead_days": 594,
+      "roi_pct": 42.65,
+      "rank_aum": 82,
+      "rank_followers": 54
+    },
+    "44570B03F5CBCEDE": {
+      "name": "随便起个名字",
+      "aum_usd": 6903.129592836192,
+      "followers": 40,
+      "lead_days": 197,
+      "roi_pct": -16.93,
+      "rank_aum": 83,
+      "rank_followers": 55
+    },
+    "821389378923984847": {
+      "name": "TT不emo",
+      "aum_usd": 5077.457386439433,
+      "followers": 17,
+      "lead_days": 51,
+      "roi_pct": -0.25,
+      "rank_aum": 84,
+      "rank_followers": 77
+    },
+    "6308333277A08132": {
+      "name": "kvss",
+      "aum_usd": 4761.761383213042,
+      "followers": 18,
+      "lead_days": 485,
+      "roi_pct": 53.64,
+      "rank_aum": 85,
+      "rank_followers": 76
+    },
+    "1DE51D3DCADDDC29": {
+      "name": "鑫复商贸",
+      "aum_usd": 4656.348658259648,
+      "followers": 31,
+      "lead_days": 1334,
+      "roi_pct": 8.4,
+      "rank_aum": 86,
+      "rank_followers": 61
+    },
+    "ED5E78290CE31341": {
+      "name": "逻辑思维k线",
+      "aum_usd": 4652.629146925509,
+      "followers": 23,
+      "lead_days": 1073,
+      "roi_pct": 53.82,
+      "rank_aum": 87,
+      "rank_followers": 68
+    },
+    "9B28742D954561AE": {
+      "name": "Alvinnn111",
+      "aum_usd": 3731.032565023627,
+      "followers": 5,
+      "lead_days": 562,
+      "roi_pct": 0.8,
+      "rank_aum": 88,
+      "rank_followers": 99
+    },
+    "C2B269D649346A25": {
+      "name": "小小的躺赢",
+      "aum_usd": 3684.038488663372,
+      "followers": 11,
+      "lead_days": 1076,
+      "roi_pct": 42.99,
+      "rank_aum": 89,
+      "rank_followers": 85
+    },
+    "0870A246F3749D76": {
+      "name": "亿辰",
+      "aum_usd": 3422.765954548723,
+      "followers": 24,
+      "lead_days": 340,
+      "roi_pct": 5.35,
+      "rank_aum": 90,
+      "rank_followers": 66
+    },
+    "FE701D3CB0AC0E8F": {
+      "name": "Kelcrypto",
+      "aum_usd": 3311.9399792328195,
+      "followers": 21,
+      "lead_days": 306,
+      "roi_pct": 122.41,
+      "rank_aum": 91,
+      "rank_followers": 72
+    },
+    "3EB985F124C18792": {
+      "name": "mia***@yandex.ru",
+      "aum_usd": 3267.2300555186303,
+      "followers": 21,
+      "lead_days": 601,
+      "roi_pct": 27.98,
+      "rank_aum": 92,
+      "rank_followers": 71
+    },
+    "F6476365DB0D09A3": {
+      "name": "****277",
+      "aum_usd": 3044.851683653626,
+      "followers": 26,
+      "lead_days": 1045,
+      "roi_pct": 18.98,
+      "rank_aum": 93,
+      "rank_followers": 63
+    },
+    "5C5AE0DBE8132751": {
+      "name": "JrKripto",
+      "aum_usd": 2894.76,
+      "followers": 12,
+      "lead_days": 319,
+      "roi_pct": 0.0,
+      "rank_aum": 94,
+      "rank_followers": 84
+    },
+    "F493744FAA6FDEBA": {
+      "name": "阿飞很OK",
+      "aum_usd": 2783.955598277791,
+      "followers": 25,
+      "lead_days": 322,
+      "roi_pct": -45.56,
+      "rank_aum": 95,
+      "rank_followers": 65
+    },
+    "0EAF7292CE2FAAC2": {
+      "name": "招财小牛猫",
+      "aum_usd": 2738.6795146335153,
+      "followers": 14,
+      "lead_days": 125,
+      "roi_pct": -52.84,
+      "rank_aum": 96,
+      "rank_followers": 81
+    },
+    "8F53B7AEDF041739": {
+      "name": "锐锋量化",
+      "aum_usd": 2632.7802889511,
+      "followers": 3,
+      "lead_days": 284,
+      "roi_pct": -0.49,
+      "rank_aum": 97,
+      "rank_followers": 110
+    },
+    "BA1A719B8225DD83": {
+      "name": "subiru",
+      "aum_usd": 2245.2847556975753,
+      "followers": 21,
+      "lead_days": 911,
+      "roi_pct": 0.0,
+      "rank_aum": 98,
+      "rank_followers": 73
+    },
+    "A69AC87ADD4E76F3": {
+      "name": "bobozi",
+      "aum_usd": 1947.1805042174276,
+      "followers": 11,
+      "lead_days": 1087,
+      "roi_pct": -0.27,
+      "rank_aum": 99,
+      "rank_followers": 86
+    },
+    "F3476CC5EA71C0BC": {
+      "name": "莫贪心，够了够了",
+      "aum_usd": 1912.7387569621283,
+      "followers": 12,
+      "lead_days": 236,
+      "roi_pct": 35.63,
+      "rank_aum": 100,
+      "rank_followers": 82
+    },
+    "A0EDF7F0D96A7E8C": {
+      "name": "金水相生3",
+      "aum_usd": 1848.313323944835,
+      "followers": 12,
+      "lead_days": 333,
+      "roi_pct": 34.78,
+      "rank_aum": 101,
+      "rank_followers": 83
+    },
+    "CCC8ADEDC122BA29": {
+      "name": "星爆氣流斬",
+      "aum_usd": 1671.581571370714,
+      "followers": 14,
+      "lead_days": 201,
+      "roi_pct": -13.34,
+      "rank_aum": 102,
+      "rank_followers": 80
+    },
+    "D84980B5C686E346": {
+      "name": "常胜游龙",
+      "aum_usd": 1252.8963671428623,
+      "followers": 2,
+      "lead_days": 521,
+      "roi_pct": -0.26,
+      "rank_aum": 103,
+      "rank_followers": 124
+    },
+    "55CE12A569770B28": {
+      "name": "领航金舵手",
+      "aum_usd": 1100.0,
+      "followers": 2,
+      "lead_days": 183,
+      "roi_pct": -1.55,
+      "rank_aum": 104,
+      "rank_followers": 120
+    },
+    "E381F6BA71BCA4D7": {
+      "name": "峰言疯语",
+      "aum_usd": 1050.0,
+      "followers": 2,
+      "lead_days": 140,
+      "roi_pct": 2.63,
+      "rank_aum": 105,
+      "rank_followers": 114
+    },
+    "38649778D6442398": {
+      "name": "Enigm4",
+      "aum_usd": 1017.5385956228095,
+      "followers": 1,
+      "lead_days": 36,
+      "roi_pct": -10.26,
+      "rank_aum": 106,
+      "rank_followers": 141
+    },
+    "757CC8A7D7FAC010": {
+      "name": "s4150",
+      "aum_usd": 988.4472635661272,
+      "followers": 9,
+      "lead_days": 141,
+      "roi_pct": 120.53,
+      "rank_aum": 107,
+      "rank_followers": 89
+    },
+    "6A30B93C28DD247F": {
+      "name": "里诺",
+      "aum_usd": 865.814017804543,
+      "followers": 3,
+      "lead_days": 725,
+      "roi_pct": -2.03,
+      "rank_aum": 108,
+      "rank_followers": 107
+    },
+    "756947198310777386": {
+      "name": "启航量化",
+      "aum_usd": 617.7808030579163,
+      "followers": 5,
+      "lead_days": 201,
+      "roi_pct": 8.29,
+      "rank_aum": 109,
+      "rank_followers": 95
+    },
+    "58D7D205FB591484": {
+      "name": "招财猫5535",
+      "aum_usd": 533.872599143236,
+      "followers": 4,
+      "lead_days": 291,
+      "roi_pct": -18.43,
+      "rank_aum": 110,
+      "rank_followers": 103
+    },
+    "70143FDD8DBF6E53": {
+      "name": "老金掘金记",
+      "aum_usd": 500.0,
+      "followers": 1,
+      "lead_days": 116,
+      "roi_pct": 6.33,
+      "rank_aum": 111,
+      "rank_followers": 129
+    },
+    "811BB1C9681A4FF5": {
+      "name": "故·里",
+      "aum_usd": 457.2600097834545,
+      "followers": 5,
+      "lead_days": 492,
+      "roi_pct": -30.03,
+      "rank_aum": 112,
+      "rank_followers": 96
+    },
+    "517A2A0B4F4C76D6": {
+      "name": "狂人再现",
+      "aum_usd": 450.5912838392847,
+      "followers": 10,
+      "lead_days": 706,
+      "roi_pct": -4.95,
+      "rank_aum": 113,
+      "rank_followers": 87
+    },
+    "818313090499674879": {
+      "name": "ryry^",
+      "aum_usd": 448.3281248249705,
+      "followers": 5,
+      "lead_days": 111,
+      "roi_pct": -35.0,
+      "rank_aum": 114,
+      "rank_followers": 98
+    },
+    "CC823D13AD6C7506": {
+      "name": "YXN",
+      "aum_usd": 380.46369350536537,
+      "followers": 2,
+      "lead_days": 262,
+      "roi_pct": 41.27,
+      "rank_aum": 115,
+      "rank_followers": 113
+    },
+    "2E01D379E7579CF5": {
+      "name": "****092",
+      "aum_usd": 350.0,
+      "followers": 4,
+      "lead_days": 597,
+      "roi_pct": 67.33,
+      "rank_aum": 116,
+      "rank_followers": 101
+    },
+    "952071415C9BAD06": {
+      "name": "亿难贫",
+      "aum_usd": 346.28,
+      "followers": 2,
+      "lead_days": 394,
+      "roi_pct": 3.71,
+      "rank_aum": 117,
+      "rank_followers": 115
+    },
+    "5C89E825CCC384BC": {
+      "name": "快乐稳定盈利",
+      "aum_usd": 306.4029315179134,
+      "followers": 10,
+      "lead_days": 889,
+      "roi_pct": 0.0,
+      "rank_aum": 118,
+      "rank_followers": 88
+    },
+    "18FCA6C22F26CBB4": {
+      "name": "DuelYu",
+      "aum_usd": 300.0,
+      "followers": 2,
+      "lead_days": 680,
+      "roi_pct": -5.55,
+      "rank_aum": 119,
+      "rank_followers": 122
+    },
+    "1499200359BAE11A": {
+      "name": "dai***@yinowealth.com",
+      "aum_usd": 253.1927324691578,
+      "followers": 3,
+      "lead_days": 402,
+      "roi_pct": -15.74,
+      "rank_aum": 120,
+      "rank_followers": 109
+    },
+    "104E928646CCD8E9": {
+      "name": "登登的小钱包",
+      "aum_usd": 250.18,
+      "followers": 3,
+      "lead_days": 775,
+      "roi_pct": -4.04,
+      "rank_aum": 121,
+      "rank_followers": 106
+    },
+    "E9BB0FE3B8797B72": {
+      "name": "加密舰长",
+      "aum_usd": 206.55288747537622,
+      "followers": 4,
+      "lead_days": 284,
+      "roi_pct": 1.26,
+      "rank_aum": 122,
+      "rank_followers": 102
+    },
+    "FCBA51EA0A2B71A8": {
+      "name": "重修无敌路",
+      "aum_usd": 200.096278635,
+      "followers": 1,
+      "lead_days": 10,
+      "roi_pct": 1.01,
+      "rank_aum": 123,
+      "rank_followers": 137
+    },
+    "6FEC3B15A9B869C2": {
+      "name": "日进一币",
+      "aum_usd": 161.0,
+      "followers": 1,
+      "lead_days": 558,
+      "roi_pct": -0.54,
+      "rank_aum": 124,
+      "rank_followers": 131
+    },
+    "841544924595303288": {
+      "name": "841544924595303288",
+      "aum_usd": 154.88,
+      "followers": 1,
+      "lead_days": 67,
+      "roi_pct": 34.71,
+      "rank_aum": 125,
+      "rank_followers": 132
+    },
+    "50DC6EE3AB3F8CF5": {
+      "name": "DegenBing",
+      "aum_usd": 124.12,
+      "followers": 3,
+      "lead_days": 976,
+      "roi_pct": 18.61,
+      "rank_aum": 126,
+      "rank_followers": 108
+    },
+    "FA5640E3F0C7F17D": {
+      "name": "MeiZey",
+      "aum_usd": 115.52086860334964,
+      "followers": 2,
+      "lead_days": 1258,
+      "roi_pct": -0.27,
+      "rank_aum": 127,
+      "rank_followers": 118
+    },
+    "2A88E34F82400FE3": {
+      "name": "Fine-Timestamp-Hyena",
+      "aum_usd": 110.14,
+      "followers": 2,
+      "lead_days": 497,
+      "roi_pct": 163.08,
+      "rank_aum": 128,
+      "rank_followers": 117
+    },
+    "762693453091570080": {
+      "name": "五年百倍本金",
+      "aum_usd": 106.19052229614174,
+      "followers": 2,
+      "lead_days": 115,
+      "roi_pct": -26.92,
+      "rank_aum": 129,
+      "rank_followers": 123
+    },
+    "7473FE311E3AD50A": {
+      "name": "心曲",
+      "aum_usd": 104.70383988441716,
+      "followers": 1,
+      "lead_days": 269,
+      "roi_pct": 8.07,
+      "rank_aum": 130,
+      "rank_followers": 133
+    },
+    "ACB30A3293B96B22": {
+      "name": "188***6287",
+      "aum_usd": 102.26686372832177,
+      "followers": 2,
+      "lead_days": 348,
+      "roi_pct": 5.74,
+      "rank_aum": 131,
+      "rank_followers": 111
+    },
+    "4844EA95A09B5B84": {
+      "name": "jhon小明",
+      "aum_usd": 100.0,
+      "followers": 2,
+      "lead_days": 254,
+      "roi_pct": 12.77,
+      "rank_aum": 133,
+      "rank_followers": 112
+    },
+    "90AF6C144EC8692F": {
+      "name": "金蛋蛋",
+      "aum_usd": 100.0,
+      "followers": 1,
+      "lead_days": 376,
+      "roi_pct": -2.53,
+      "rank_aum": 134,
+      "rank_followers": 140
+    },
+    "BCE9B878034E7E56": {
+      "name": "顺顺顺哥",
+      "aum_usd": 100.0,
+      "followers": 1,
+      "lead_days": 283,
+      "roi_pct": 9.73,
+      "rank_aum": 132,
+      "rank_followers": 126
+    },
+    "8C13B81A866891F1": {
+      "name": "苍苍红",
+      "aum_usd": 100.0,
+      "followers": 1,
+      "lead_days": 96,
+      "roi_pct": -29.0,
+      "rank_aum": 135,
+      "rank_followers": 144
+    },
+    "F8CAA26A08B83DB3": {
+      "name": "bsjggyx66",
+      "aum_usd": 52.42349451866768,
+      "followers": 1,
+      "lead_days": 145,
+      "roi_pct": 7.83,
+      "rank_aum": 136,
+      "rank_followers": 125
+    },
+    "80A2447E1FD16A12": {
+      "name": "量化利维坦",
+      "aum_usd": 50.063422710203135,
+      "followers": 1,
+      "lead_days": 258,
+      "roi_pct": 0.0,
+      "rank_aum": 137,
+      "rank_followers": 143
+    },
+    "B3C834C23F65A321": {
+      "name": "时间很有限",
+      "aum_usd": 50.0,
+      "followers": 1,
+      "lead_days": 1189,
+      "roi_pct": 21.06,
+      "rank_aum": 138,
+      "rank_followers": 128
+    },
+    "A390341B73E3087F": {
+      "name": "RyanBull",
+      "aum_usd": 50.0,
+      "followers": 1,
+      "lead_days": 646,
+      "roi_pct": 2.47,
+      "rank_aum": 139,
+      "rank_followers": 130
+    },
+    "114A1793308A1CEB": {
+      "name": "天南散修",
+      "aum_usd": 50.0,
+      "followers": 1,
+      "lead_days": 598,
+      "roi_pct": 0.0,
+      "rank_aum": 141,
+      "rank_followers": 146
+    },
+    "3B4DA23CA0314FCB": {
+      "name": "134***4265",
+      "aum_usd": 50.0,
+      "followers": 1,
+      "lead_days": 302,
+      "roi_pct": -2.13,
+      "rank_aum": 140,
+      "rank_followers": 135
+    },
+    "16063A253CED84AE": {
+      "name": "是金子总会发光",
+      "aum_usd": 10.0,
+      "followers": 1,
+      "lead_days": 1168,
+      "roi_pct": -0.15,
+      "rank_aum": 142,
+      "rank_followers": 134
+    },
+    "E3654BF20F6C758D": {
+      "name": "MultiTimeframe",
+      "aum_usd": 4.770486717417474,
+      "followers": 4,
+      "lead_days": 972,
+      "roi_pct": -1.96,
+      "rank_aum": 143,
+      "rank_followers": 105
+    },
+    "A6D274A2EDD8FA5E": {
+      "name": "无敌大鲤鱼",
+      "aum_usd": 0.22963926,
+      "followers": 1,
+      "lead_days": 1096,
+      "roi_pct": -0.05,
+      "rank_aum": 144,
+      "rank_followers": 139
+    },
+    "B68D480966C5352A": {
+      "name": "牛The sky is vast and",
+      "aum_usd": 2.4261101e-09,
+      "followers": 2,
+      "lead_days": 998,
+      "roi_pct": 0.02,
+      "rank_aum": 145,
+      "rank_followers": 116
+    },
+    "45673567CA5FB669": {
+      "name": "现账",
+      "aum_usd": 0.0,
+      "followers": 1,
+      "lead_days": 1019,
+      "roi_pct": 0.0,
+      "rank_aum": 257,
+      "rank_followers": 145
+    },
+    "7E21239BFA805866": {
+      "name": "哒哒的声音",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 1271,
+      "roi_pct": -0.95,
+      "rank_aum": 155,
+      "rank_followers": 157
+    },
+    "F10D7F7A4A164AFB": {
+      "name": "+Key",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 1231,
+      "roi_pct": -1.1,
+      "rank_aum": 224,
+      "rank_followers": 228
+    },
+    "95003D5C4FD0C9D2": {
+      "name": "三年十倍",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 1202,
+      "roi_pct": 0.41,
+      "rank_aum": 166,
+      "rank_followers": 169
+    },
+    "0FD18D81A6980710": {
+      "name": "小羊菜",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 1173,
+      "roi_pct": 0.0,
+      "rank_aum": 243,
+      "rank_followers": 248
+    },
+    "CC375D11641CCAF3": {
+      "name": "梁远",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 1148,
+      "roi_pct": 0.0,
+      "rank_aum": 252,
+      "rank_followers": 257
+    },
+    "BCB7573DA3524A17": {
+      "name": "CryptoYy",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 1103,
+      "roi_pct": 0.0,
+      "rank_aum": 235,
+      "rank_followers": 240
+    },
+    "18465ED75256D3D8": {
+      "name": "阿金哥",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 1032,
+      "roi_pct": 0.0,
+      "rank_aum": 250,
+      "rank_followers": 255
+    },
+    "9D336194ACB74891": {
+      "name": "LanayaFrv",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 1004,
+      "roi_pct": -14.13,
+      "rank_aum": 214,
+      "rank_followers": 217
+    },
+    "3E62C27062B1385E": {
+      "name": "锤哥说币量化策略",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 938,
+      "roi_pct": 0.0,
+      "rank_aum": 216,
+      "rank_followers": 219
+    },
+    "C596C02BFACE1D77": {
+      "name": "Bobby_Yang",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 925,
+      "roi_pct": 0.0,
+      "rank_aum": 233,
+      "rank_followers": 238
+    },
+    "313CCADFE7227C85": {
+      "name": "FastingAlien",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 911,
+      "roi_pct": 0.0,
+      "rank_aum": 251,
+      "rank_followers": 256
+    },
+    "7EA979BCA6BD1007": {
+      "name": "Andyvillajr",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 892,
+      "roi_pct": 2.15,
+      "rank_aum": 152,
+      "rank_followers": 154
+    },
+    "7D35C21B23E3DF52": {
+      "name": "横断古今荒天帝",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 852,
+      "roi_pct": 0.0,
+      "rank_aum": 217,
+      "rank_followers": 220
+    },
+    "D303811F9F41AF27": {
+      "name": "哈利～路亚",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 837,
+      "roi_pct": 0.0,
+      "rank_aum": 244,
+      "rank_followers": 249
+    },
+    "97AA186B7559E35E": {
+      "name": "稳定薅羊毛",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 829,
+      "roi_pct": -30.38,
+      "rank_aum": 201,
+      "rank_followers": 204
+    },
+    "23DB0F009F4E5609": {
+      "name": "榴莲炖蘑菇",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 810,
+      "roi_pct": -10.64,
+      "rank_aum": 205,
+      "rank_followers": 208
+    },
+    "444BF044C67892FF": {
+      "name": "跟着我一起上岸",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 759,
+      "roi_pct": 1.64,
+      "rank_aum": 177,
+      "rank_followers": 180
+    },
+    "E94DF3F02F48C881": {
+      "name": "一起發大财",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 755,
+      "roi_pct": 1.58,
+      "rank_aum": 190,
+      "rank_followers": 193
+    },
+    "F147E2DE677BC82D": {
+      "name": "一百次",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 740,
+      "roi_pct": -0.44,
+      "rank_aum": 236,
+      "rank_followers": 241
+    },
+    "4262DC2BDC67F8C9": {
+      "name": "智来渔量化",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 735,
+      "roi_pct": 0.0,
+      "rank_aum": 259,
+      "rank_followers": 263
+    },
+    "AF2E90B3C25EE4C0": {
+      "name": "泡泡t",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 734,
+      "roi_pct": -1.67,
+      "rank_aum": 172,
+      "rank_followers": 175
+    },
+    "528089A445EA8FAA": {
+      "name": "180***3767",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 721,
+      "roi_pct": 0.21,
+      "rank_aum": 220,
+      "rank_followers": 224
+    },
+    "D80DADB888EAE273": {
+      "name": "cychain",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 713,
+      "roi_pct": 0.0,
+      "rank_aum": 258,
+      "rank_followers": 262
+    },
+    "B70102CCBEBA2104": {
+      "name": "阴天子1",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 711,
+      "roi_pct": 1.53,
+      "rank_aum": 182,
+      "rank_followers": 185
+    },
+    "A2CA799B36AEE1B9": {
+      "name": "Durrrrrrr",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 711,
+      "roi_pct": 0.0,
+      "rank_aum": 253,
+      "rank_followers": 258
+    },
+    "ACE79CAACA13F8B9": {
+      "name": "我们一定赢",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 700,
+      "roi_pct": -1.84,
+      "rank_aum": 184,
+      "rank_followers": 187
+    },
+    "2A14C427C5E4223E": {
+      "name": "风寻",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 695,
+      "roi_pct": 0.0,
+      "rank_aum": 249,
+      "rank_followers": 254
+    },
+    "6BDAF7AF09C2AEDF": {
+      "name": "icelove",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 688,
+      "roi_pct": 0.0,
+      "rank_aum": 238,
+      "rank_followers": 243
+    },
+    "2DE3E8FEAC245B9C": {
+      "name": "BTC策略",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 681,
+      "roi_pct": -2.68,
+      "rank_aum": 199,
+      "rank_followers": 202
+    },
+    "6CE9B9D4C7E25E2F": {
+      "name": "婧姝",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 670,
+      "roi_pct": -0.12,
+      "rank_aum": 213,
+      "rank_followers": 216
+    },
+    "F740246F4C8BDC75": {
+      "name": "Jeffx",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 654,
+      "roi_pct": 0.0,
+      "rank_aum": 226,
+      "rank_followers": 230
+    },
+    "52B8DE53054B1D0D": {
+      "name": "li_***@163.com",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 649,
+      "roi_pct": -4.52,
+      "rank_aum": 180,
+      "rank_followers": 183
+    },
+    "5BA190A5622F92F4": {
+      "name": "胜率大师",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 648,
+      "roi_pct": 0.0,
+      "rank_aum": 260,
+      "rank_followers": 264
+    },
+    "318EE7554752576C": {
+      "name": "Momentum Trading God",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 641,
+      "roi_pct": -0.01,
+      "rank_aum": 189,
+      "rank_followers": 192
+    },
+    "0B839006AFCA7A52": {
+      "name": "333***1411",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 639,
+      "roi_pct": -1.17,
+      "rank_aum": 164,
+      "rank_followers": 167
+    },
+    "D43B819B2C06251F": {
+      "name": "831777",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 635,
+      "roi_pct": -0.21,
+      "rank_aum": 222,
+      "rank_followers": 226
+    },
+    "B85D79D1BD84BC60": {
+      "name": "饼圈二当家",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 633,
+      "roi_pct": 4.8,
+      "rank_aum": 200,
+      "rank_followers": 203
+    },
+    "8DC9A78EF5C32F2C": {
+      "name": "cychain03",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 633,
+      "roi_pct": 0.0,
+      "rank_aum": 255,
+      "rank_followers": 260
+    },
+    "9C80FEE38C0C9BFE": {
+      "name": "努力挣錢吧",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 616,
+      "roi_pct": 0.3,
+      "rank_aum": 170,
+      "rank_followers": 173
+    },
+    "05E5EB022E5B2282": {
+      "name": "J_R",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 616,
+      "roi_pct": 0.0,
+      "rank_aum": 219,
+      "rank_followers": 223
+    },
+    "0D3F8425CE1599BD": {
+      "name": "189***3925",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 608,
+      "roi_pct": 0.15,
+      "rank_aum": 202,
+      "rank_followers": 205
+    },
+    "EF1CC6F40E834D1A": {
+      "name": "2026王者归来",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 607,
+      "roi_pct": -0.94,
+      "rank_aum": 149,
+      "rank_followers": 150
+    },
+    "40039D8E7609EF91": {
+      "name": "lin***@163.com",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 607,
+      "roi_pct": -15.73,
+      "rank_aum": 176,
+      "rank_followers": 179
+    },
+    "2128BA01363B35A5": {
+      "name": "小龙不会理财抖音同号1",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 607,
+      "roi_pct": 0.0,
+      "rank_aum": 248,
+      "rank_followers": 253
+    },
+    "F40F5A70BC7DE41E": {
+      "name": "证道成神之路",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 602,
+      "roi_pct": -0.16,
+      "rank_aum": 195,
+      "rank_followers": 198
+    },
+    "AE2EDEB88E3F2781": {
+      "name": "tangqiang",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 599,
+      "roi_pct": -0.83,
+      "rank_aum": 230,
+      "rank_followers": 235
+    },
+    "A53ABB45DE8437C5": {
+      "name": "缘来缘来",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 598,
+      "roi_pct": -11.22,
+      "rank_aum": 207,
+      "rank_followers": 210
+    },
+    "135DEAD57B17C48E": {
+      "name": "主于$15366897857",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 596,
+      "roi_pct": -4.52,
+      "rank_aum": 175,
+      "rank_followers": 178
+    },
+    "FD805C99D384C92C": {
+      "name": "小龙不会理财抖音同号",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 569,
+      "roi_pct": 0.0,
+      "rank_aum": 240,
+      "rank_followers": 245
+    },
+    "FB0B6DCE883B3B1E": {
+      "name": "Good Nite",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 566,
+      "roi_pct": -10.88,
+      "rank_aum": 239,
+      "rank_followers": 244
+    },
+    "0ACDD18DFCF6B273": {
+      "name": "F云",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 557,
+      "roi_pct": 0.0,
+      "rank_aum": 225,
+      "rank_followers": 229
+    },
+    "3C7CFC068A890A05": {
+      "name": "bhghug",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 552,
+      "roi_pct": -1.72,
+      "rank_aum": 197,
+      "rank_followers": 200
+    },
+    "A08235B3C7F48634": {
+      "name": "Happy tails",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 536,
+      "roi_pct": 0.0,
+      "rank_aum": 246,
+      "rank_followers": 251
+    },
+    "EA315ECC2A50F8B6": {
+      "name": "用户1118",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 532,
+      "roi_pct": -1.17,
+      "rank_aum": 159,
+      "rank_followers": 162
+    },
+    "80DBF719B37B6213": {
+      "name": "凤妤同舟币姐",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 529,
+      "roi_pct": -0.56,
+      "rank_aum": 158,
+      "rank_followers": 161
+    },
+    "8B8ED8BFE4D40EBD": {
+      "name": "Grid_trader",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 529,
+      "roi_pct": 0.0,
+      "rank_aum": 242,
+      "rank_followers": 247
+    },
+    "A06A1E6EFE75ECCD": {
+      "name": "凤凰院友人A",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 512,
+      "roi_pct": 0.76,
+      "rank_aum": 162,
+      "rank_followers": 165
+    },
+    "D286B322B8A241B7": {
+      "name": "HWAN100",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 510,
+      "roi_pct": 11.8,
+      "rank_aum": 171,
+      "rank_followers": 174
+    },
+    "C4BA2287D1A9D8F4": {
+      "name": "Apexmirror",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 473,
+      "roi_pct": -3.63,
+      "rank_aum": 183,
+      "rank_followers": 186
+    },
+    "C4C65A2C03F7A086": {
+      "name": "冬歌",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 472,
+      "roi_pct": 1.2,
+      "rank_aum": 160,
+      "rank_followers": 163
+    },
+    "F643354795E7C7EA": {
+      "name": "长线趋势加低仓 也能翻10倍",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 469,
+      "roi_pct": 2.15,
+      "rank_aum": 187,
+      "rank_followers": 190
+    },
+    "873EEA935003264F": {
+      "name": "ric***@hotmail.com",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 456,
+      "roi_pct": -1.0,
+      "rank_aum": 198,
+      "rank_followers": 201
+    },
+    "B3CFC15E61D7A069": {
+      "name": "狂暴大咸鱼",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 448,
+      "roi_pct": -0.21,
+      "rank_aum": 188,
+      "rank_followers": 191
+    },
+    "235BCD62102B61F3": {
+      "name": "Scofield史高飞",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 427,
+      "roi_pct": -4.83,
+      "rank_aum": 173,
+      "rank_followers": 176
+    },
+    "37131D5541108735": {
+      "name": "保护我啊露露！",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 419,
+      "roi_pct": 2.47,
+      "rank_aum": 154,
+      "rank_followers": 156
+    },
+    "62C2A7C4A3B1CE7B": {
+      "name": "渔网大作手",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 419,
+      "roi_pct": 0.0,
+      "rank_aum": 256,
+      "rank_followers": 261
+    },
+    "F2EDD3086F9A651F": {
+      "name": "唠叨",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 418,
+      "roi_pct": 0.85,
+      "rank_aum": 194,
+      "rank_followers": 197
+    },
+    "AF631491B26716D1": {
+      "name": "必备小神器",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 415,
+      "roi_pct": -0.02,
+      "rank_aum": 223,
+      "rank_followers": 227
+    },
+    "15BE83C58CB76652": {
+      "name": "DamiStone",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 385,
+      "roi_pct": -3.05,
+      "rank_aum": 168,
+      "rank_followers": 171
+    },
+    "5401BCA49E164D7A": {
+      "name": "185***6081",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 383,
+      "roi_pct": 0.0,
+      "rank_aum": 231,
+      "rank_followers": 236
+    },
+    "DEBACFD3CAC565B8": {
+      "name": "Bbbbeth buy",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 377,
+      "roi_pct": -10.35,
+      "rank_aum": 165,
+      "rank_followers": 168
+    },
+    "ACF27806CDEBF639": {
+      "name": "mic***@yahoo.com",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 377,
+      "roi_pct": -0.01,
+      "rank_aum": 261,
+      "rank_followers": 265
+    },
+    "C01F8039E3A489E7": {
+      "name": "max***@gmail.com",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 370,
+      "roi_pct": 0.0,
+      "rank_aum": 263,
+      "rank_followers": 267
+    },
+    "E5513524191E576E": {
+      "name": "加密熊猫侠",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 368,
+      "roi_pct": 0.0,
+      "rank_aum": 227,
+      "rank_followers": 231
+    },
+    "50A24ABBFBE2B7CE": {
+      "name": "laokongquant",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 358,
+      "roi_pct": 0.0,
+      "rank_aum": 247,
+      "rank_followers": 252
+    },
+    "C024C3CB1B42E876": {
+      "name": "mrs-exchanger",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 355,
+      "roi_pct": 1.16,
+      "rank_aum": 212,
+      "rank_followers": 215
+    },
+    "5104082E16D70D9D": {
+      "name": "Alpha哥",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 354,
+      "roi_pct": -6.94,
+      "rank_aum": 211,
+      "rank_followers": 214
+    },
+    "E24572C6BF759088": {
+      "name": "137***2806",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 354,
+      "roi_pct": 0.0,
+      "rank_aum": 221,
+      "rank_followers": 225
+    },
+    "2FFE9D537E04AE7B": {
+      "name": "巴菲摩尔",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 341,
+      "roi_pct": 0.47,
+      "rank_aum": 228,
+      "rank_followers": 232
+    },
+    "3EE04B241CA3CCD5": {
+      "name": "金满贯",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 315,
+      "roi_pct": -0.12,
+      "rank_aum": 151,
+      "rank_followers": 153
+    },
+    "6BDBCF1C055B071A": {
+      "name": "金鸡带单",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 306,
+      "roi_pct": 0.0,
+      "rank_aum": 245,
+      "rank_followers": 250
+    },
+    "D5D1725ABE3958B0": {
+      "name": "182***7573",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 302,
+      "roi_pct": -8.52,
+      "rank_aum": 179,
+      "rank_followers": 182
+    },
+    "545F589A73ED2832": {
+      "name": "176***6787",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 299,
+      "roi_pct": -11.26,
+      "rank_aum": 203,
+      "rank_followers": 206
+    },
+    "36EB1609022C3988": {
+      "name": "币圈小韭菜叻",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 286,
+      "roi_pct": 6.54,
+      "rank_aum": 148,
+      "rank_followers": 149
+    },
+    "36A47C886FB953EA": {
+      "name": "DDW",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 273,
+      "roi_pct": 0.0,
+      "rank_aum": 254,
+      "rank_followers": 259
+    },
+    "FC8DBDC1C84C4C67": {
+      "name": "交易员大侠",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 273,
+      "roi_pct": -0.02,
+      "rank_aum": 262,
+      "rank_followers": 266
+    },
+    "247FE3434DA88B0D": {
+      "name": "内幕 抄底王",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 272,
+      "roi_pct": -0.23,
+      "rank_aum": 229,
+      "rank_followers": 233
+    },
+    "31742980DA233D54": {
+      "name": "糖朝丽子",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 262,
+      "roi_pct": 5.84,
+      "rank_aum": 157,
+      "rank_followers": 160
+    },
+    "643A3247025545B6": {
+      "name": "小黄油交易员",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 260,
+      "roi_pct": 39.62,
+      "rank_aum": 185,
+      "rank_followers": 188
+    },
+    "418175BB996A663D": {
+      "name": "鬼神棋手",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 236,
+      "roi_pct": -0.85,
+      "rank_aum": 209,
+      "rank_followers": 212
+    },
+    "5251484445FC52D8": {
+      "name": "金风$",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 213,
+      "roi_pct": -3.8,
+      "rank_aum": 169,
+      "rank_followers": 172
+    },
+    "711D77D665CC6F49": {
+      "name": "富赢8987",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 198,
+      "roi_pct": -30.9,
+      "rank_aum": 153,
+      "rank_followers": 155
+    },
+    "F61990B585217C24": {
+      "name": "卡莎BTC",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 197,
+      "roi_pct": -1.51,
+      "rank_aum": 163,
+      "rank_followers": 166
+    },
+    "41ED7CB5A87E4012": {
+      "name": "孤独的灵魂",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 186,
+      "roi_pct": -22.96,
+      "rank_aum": 206,
+      "rank_followers": 209
+    },
+    "3CE2FA3656DCEECE": {
+      "name": "yehangchuan",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 180,
+      "roi_pct": 15.55,
+      "rank_aum": 167,
+      "rank_followers": 170
+    },
+    "F8B3F6C7486961B9": {
+      "name": "GEELY哥",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 175,
+      "roi_pct": -27.52,
+      "rank_aum": 208,
+      "rank_followers": 211
+    },
+    "1761D578C7A15813": {
+      "name": "123565",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 168,
+      "roi_pct": -30.24,
+      "rank_aum": 174,
+      "rank_followers": 177
+    },
+    "1A65EB15227777A9": {
+      "name": "逍遥姐-陪你飞",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 166,
+      "roi_pct": -28.37,
+      "rank_aum": 186,
+      "rank_followers": 189
+    },
+    "078C0C74541EDD12": {
+      "name": "gn0***@yahoo.com.tw",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 157,
+      "roi_pct": 0.0,
+      "rank_aum": 237,
+      "rank_followers": 242
+    },
+    "3DAE42E391E1797B": {
+      "name": "wei1769",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 151,
+      "roi_pct": 8.69,
+      "rank_aum": 181,
+      "rank_followers": 184
+    },
+    "D25DD1A69711A97F": {
+      "name": "好学人",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 147,
+      "roi_pct": 0.0,
+      "rank_aum": 218,
+      "rank_followers": 222
+    },
+    "241CFF1D95076351": {
+      "name": "白泽czh",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 139,
+      "roi_pct": -3.93,
+      "rank_aum": 178,
+      "rank_followers": 181
+    },
+    "BE0DCCC5D9571E5A": {
+      "name": "TT16888888",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 131,
+      "roi_pct": -57.69,
+      "rank_aum": 241,
+      "rank_followers": 246
+    },
+    "826719397204409118": {
+      "name": "All in以太",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 122,
+      "roi_pct": -15.18,
+      "rank_aum": 266,
+      "rank_followers": 221
+    },
+    "822824429641453680": {
+      "name": "15M_",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 116,
+      "roi_pct": 25.39,
+      "rank_aum": 264,
+      "rank_followers": 152
+    },
+    "40A3DB1208A52D7D": {
+      "name": "菜头弟",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 99,
+      "roi_pct": -42.82,
+      "rank_aum": 215,
+      "rank_followers": 218
+    },
+    "764164297168879957": {
+      "name": "boostmode",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 99,
+      "roi_pct": -2.75,
+      "rank_aum": 267,
+      "rank_followers": 234
+    },
+    "9A073DDF49603886": {
+      "name": "ღღZs",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 80,
+      "roi_pct": 84.11,
+      "rank_aum": 150,
+      "rank_followers": 151
+    },
+    "764043965032509720": {
+      "name": "只做日线的阿东",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 66,
+      "roi_pct": 1.12,
+      "rank_aum": 265,
+      "rank_followers": 159
+    },
+    "35D5933A1C84CD35": {
+      "name": "操盘手鸭鸭，",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 59,
+      "roi_pct": 14.86,
+      "rank_aum": 146,
+      "rank_followers": 147
+    },
+    "D29C560E3977E801": {
+      "name": "手搓s480",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 54,
+      "roi_pct": -20.1,
+      "rank_aum": 210,
+      "rank_followers": 213
+    },
+    "99663D303875EE00": {
+      "name": "天智の星",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 50,
+      "roi_pct": 10.17,
+      "rank_aum": 147,
+      "rank_followers": 148
+    },
+    "0BE59BFCA2E9820D": {
+      "name": "二多🌚",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 39,
+      "roi_pct": -22.6,
+      "rank_aum": 204,
+      "rank_followers": 207
+    },
+    "F8630F17405A4FFF": {
+      "name": "Allthewayback",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 38,
+      "roi_pct": 4.27,
+      "rank_aum": 156,
+      "rank_followers": 158
+    },
+    "A5E84F0EAD743865": {
+      "name": "先赚1亿再说",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 33,
+      "roi_pct": -11.94,
+      "rank_aum": 161,
+      "rank_followers": 164
+    },
+    "24A6881333E937FD": {
+      "name": "jas***@gmail.com",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 31,
+      "roi_pct": 0.95,
+      "rank_aum": 196,
+      "rank_followers": 199
+    },
+    "EE92C6B25AEAC2CE": {
+      "name": "1Umut",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 26,
+      "roi_pct": -0.97,
+      "rank_aum": 193,
+      "rank_followers": 196
+    },
+    "11DF4BEED16379CB": {
+      "name": "小宝111111",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 7,
+      "roi_pct": 0.32,
+      "rank_aum": 192,
+      "rank_followers": 195
+    },
+    "72AFDC179D66D034": {
+      "name": "同花顺",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 3,
+      "roi_pct": 0.12,
+      "rank_aum": 191,
+      "rank_followers": 194
+    },
+    "73D06406BAA64CA8": {
+      "name": "挑剔（战神提款版）",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 1,
+      "roi_pct": -6.11,
+      "rank_aum": 234,
+      "rank_followers": 239
+    },
+    "C4A37D4C83CC8F7D": {
+      "name": "玩的就是实盘  九总",
+      "aum_usd": 0.0,
+      "followers": 0,
+      "lead_days": 0,
+      "roi_pct": -0.13,
+      "rank_aum": 232,
+      "rank_followers": 237
+    }
+  }
+}
