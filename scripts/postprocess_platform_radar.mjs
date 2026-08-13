@@ -1,11 +1,59 @@
 import fs from 'node:fs';
 
-const path='crypto-radar/platforms-generated.js';
-const text=fs.readFileSync(path,'utf8');
+const dataPath='crypto-radar/platforms-generated.js';
+const historyPath='crypto-radar/platform-history.js';
+const text=fs.readFileSync(dataPath,'utf8');
 const match=text.match(/window\.PLATFORM_GENERATED=(.*);\s*$/s);
 if(!match) throw new Error('invalid platform generated file');
 const data=JSON.parse(match[1]);
 const now=new Date().toISOString();
+
+function loadHistory(){
+  try{
+    const src=fs.readFileSync(historyPath,'utf8');
+    const m=src.match(/window\.PLATFORM_HISTORY=(.*);\s*$/s);
+    return m?JSON.parse(m[1]):{updatedAt:null,series:{}};
+  }catch{return{updatedAt:null,series:{}}}
+}
+function idFor(user){
+  return String(user?.rawId||user?.wallet||user?.name||'unknown').trim().toLowerCase().replace(/[^a-z0-9\u4e00-\u9fff._:-]+/g,'_').slice(0,120);
+}
+function cleanMetrics(metrics={}){
+  const out={};
+  for(const [k,v] of Object.entries(metrics)){
+    const n=Number(v);
+    if(Number.isFinite(n))out[k]=Math.round(n*1e8)/1e8;
+  }
+  return out;
+}
+function ingest(history,snapshot,at){
+  if(!at||!Number.isFinite(Date.parse(at)))return;
+  history.series=history.series||{};
+  for(const [platform,modes] of Object.entries(snapshot.platforms||{})){
+    for(const [mode,board] of Object.entries(modes||{})){
+      if(!Array.isArray(board?.users))continue;
+      for(const user of board.users){
+        const metrics=cleanMetrics(user.metrics);
+        if(!Object.keys(metrics).length)continue;
+        const key=`${platform}:${mode}:${idFor(user)}`;
+        const bucket=history.series[key]||(history.series[key]={name:user.name||null,platform,mode,raw:[],daily:[]});
+        bucket.name=user.name||bucket.name||null;
+        const point={at,metrics};
+        const raw=bucket.raw||(bucket.raw=[]);
+        const lastRaw=raw.at(-1);
+        if(!lastRaw||Math.abs(Date.parse(at)-Date.parse(lastRaw.at))>=3*3600e3) raw.push(point); else raw[raw.length-1]=point;
+        bucket.raw=raw.slice(-140);
+        const day=at.slice(0,10),daily=bucket.daily||(bucket.daily=[]),lastDaily=daily.at(-1);
+        if(lastDaily?.at?.slice(0,10)===day) daily[daily.length-1]=point; else daily.push(point);
+        bucket.daily=daily.slice(-400);
+      }
+    }
+  }
+  history.updatedAt=at;
+}
+
+const history=loadHistory();
+if(data.generatedAt) ingest(history,data,data.generatedAt);
 
 for(const key of ['mexc','htx']){
   const board=data.platforms?.[key]?.copy;
@@ -51,5 +99,7 @@ try{
 }
 
 data.generatedAt=now;
-fs.writeFileSync(path,`// Auto-generated public leaderboard snapshot.\nwindow.PLATFORM_GENERATED=${JSON.stringify(data,null,2)};\n`,'utf8');
-console.log('postprocessed platform radar',now);
+ingest(history,data,now);
+fs.writeFileSync(dataPath,`// Auto-generated public leaderboard snapshot.\nwindow.PLATFORM_GENERATED=${JSON.stringify(data,null,2)};\n`,'utf8');
+fs.writeFileSync(historyPath,`// Auto-generated historical public snapshots. Missing points are never interpolated.\nwindow.PLATFORM_HISTORY=${JSON.stringify(history,null,2)};\n`,'utf8');
+console.log('postprocessed platform radar',now,'history series',Object.keys(history.series||{}).length);
