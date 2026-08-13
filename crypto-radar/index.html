@@ -4,12 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#dfe7ef">
-<meta name="description" content="币圈雷达系统：全球交易所排行、带单榜、交易员榜、自动同步、自选与预警">
+<meta name="description" content="币圈雷达系统：全球交易所排行、带单榜、交易员榜、历史曲线、自动同步、自选与预警">
 <title>币圈雷达系统</title>
 <link rel="stylesheet" href="./base.css?v=20260813-2308">
 <link rel="stylesheet" href="./features.css?v=20260813-2308">
 <link rel="stylesheet" href="./gold-standard.css?v=20260813-2308">
 <link rel="stylesheet" href="./platform-v2.css?v=20260813-2308">
+<link rel="stylesheet" href="./platform-v3.css?v=20260814-0029">
 </head>
 <body>
 <div class="app">
@@ -24,7 +25,7 @@
         <article class="hero-main card">
           <span class="label">GLOBAL · USER SCALE</span>
           <h1>全球交易所雷达</h1>
-          <p>顶部切换交易所；进入平台后，再分别查看带单榜与普通交易员榜。具体用户、指标和详情优先直接同步到本站，不再用大段文字和外链代替榜单。</p>
+          <p>顶部切换交易所；进入平台后，再分别查看带单榜与普通交易员榜。具体用户、指标、判断规则、历史曲线和风险检查优先直接同步到本站。</p>
         </article>
         <article class="metric card"><span>全球榜首</span><strong>3.0亿+</strong><small>Binance</small></article>
         <article class="metric card"><span>亿级平台</span><strong>4</strong><small>当前纳入平台</small></article>
@@ -61,12 +62,12 @@
     </section>
 
     <section class="view" id="watchView">
-      <section class="watch-head card"><span class="label">WATCHLIST</span><h1>自选观察池</h1><p>点交易员卡片右上角 ☆ 加入。数据存在浏览器本机，不需要登录。</p></section>
+      <section class="watch-head card"><span class="label">WATCHLIST</span><h1>自选观察池</h1><p>OKX 与其他交易所都可以加入自选；跨平台自选保存在浏览器本机，不需要登录。</p></section>
       <section class="trader-list" id="watchList"></section>
     </section>
 
     <section class="view" id="alertsView">
-      <section class="alerts-head card"><span class="label">ALERT CENTER</span><h1>预警中心</h1><p>汇总现有数据中已经触发的资金、交易与数据异常；风险只做提示，不改变综合排序。</p></section>
+      <section class="alerts-head card"><span class="label">ALERT CENTER</span><h1>预警中心</h1><p>汇总公开数据中已经触发的资金、交易、回撤与跟单结果异常；风险只做提示，不改变综合排序。</p></section>
       <section class="alert-grid" id="alertList"></section>
     </section>
 
@@ -77,7 +78,7 @@
     </section>
   </main>
 
-  <footer>币圈雷达系统 · 研究工具，不构成投资建议</footer>
+  <footer>币圈雷达系统 · 公开数据研究工具，不构成投资建议</footer>
 </div>
 <script src="./data.js?v=20260813-2308"></script>
 <script src="./ranking-policy.js?v=20260813-2308"></script>
@@ -87,7 +88,10 @@
 <script src="./gold-standard.js?v=20260813-2308"></script>
 <script src="./platform-seed.js?v=20260813-2308"></script>
 <script>document.write('<script src="./platforms-generated.js?t='+Date.now()+'"><\/script>')</script>
+<script src="./platform-history.js?v=20260814-0029"></script>
+<script>if(window.PLATFORM_GENERATED&&window.PLATFORM_GENERATED.history)window.PLATFORM_HISTORY=window.PLATFORM_GENERATED.history;</script>
 <script src="./platform-v2.js?v=20260813-2308"></script>
+<script src="./platform-v3.js?v=20260814-0029"></script>
 <script src="./boot.js?v=20260813-2308"></script>
 </body>
 </html>
