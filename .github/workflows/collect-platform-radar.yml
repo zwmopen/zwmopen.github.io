@@ -8,6 +8,7 @@ on:
     branches: [master]
     paths:
       - "scripts/collect_platform_radar.mjs"
+      - "scripts/postprocess_platform_radar.mjs"
       - "crypto-radar/platform-seed.js"
       - ".github/workflows/collect-platform-radar.yml"
 
@@ -31,26 +32,53 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Install public leaderboard collectors
+      - name: Install public leaderboard collector
         run: |
           npm install --no-save playwright
           npx playwright install --with-deps chromium
-          npm install -g @binance/agentic-wallet || true
 
       - name: Collect public platform leaderboards
         run: node scripts/collect_platform_radar.mjs
+
+      - name: Normalize metrics and add Binance Web3 trader leaderboard
+        run: node scripts/postprocess_platform_radar.mjs
 
       - name: Validate generated radar data
         run: |
           node --check crypto-radar/platforms-generated.js
           node --check crypto-radar/platform-v2.js
           node --check crypto-radar/ranking-policy.js
+          node --check scripts/postprocess_platform_radar.mjs
           node - <<'NODE'
           const fs=require('fs'),vm=require('vm');
           const src=fs.readFileSync('crypto-radar/platforms-generated.js','utf8');
           const box={window:{}}; vm.runInNewContext(src,box);
           const d=box.window.PLATFORM_GENERATED;
           if(!d||!d.platforms||!d.diagnostics) throw new Error('invalid generated payload');
+          const count=(p,m)=>d.platforms?.[p]?.[m]?.users?.length||0;
+          const minimums={
+            'binance:copy':10,
+            'bitget:copy':10,
+            'mexc:copy':20,
+            'htx:copy':8,
+            'kucoin:copy':8,
+            'binance:trader':3
+          };
+          for(const [key,min] of Object.entries(minimums)){
+            const [p,m]=key.split(':');
+            const c=count(p,m);
+            if(c<min) throw new Error(`${key} only ${c}, expected >= ${min}`);
+          }
+          for(const p of ['mexc','htx']){
+            const board=d.platforms[p].copy;
+            if(!board.percentNormalized) throw new Error(`${p} percent fields not normalized`);
+            for(const u of board.users){
+              const wr=Number(u.metrics?.winRate),mdd=Number(u.metrics?.mdd);
+              if(Number.isFinite(wr)&&(wr<0||wr>100.01)) throw new Error(`${p} invalid winRate ${wr}`);
+              if(Number.isFinite(mdd)&&(mdd<0||mdd>100.01)) throw new Error(`${p} invalid mdd ${mdd}`);
+            }
+          }
+          console.log('Validated synced boards:',Object.entries(minimums).map(([k])=>{const [p,m]=k.split(':');return `${k}=${count(p,m)}`}).join(', '));
           console.log('generatedAt',d.generatedAt);
           for(const [k,v] of Object.entries(d.diagnostics)) console.log(k,'found=',v.found,'error=',v.error||'none');
           NODE
