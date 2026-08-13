@@ -19,3 +19,45 @@ $('#traderSearch').oninput=e=>{query=e.target.value.trim();renderLimit=30;render
 $('#loadMore').onclick=()=>{renderLimit+=30;renderTraders()};
 renderExchangeRows();renderTop();rankTabs();
 const initial=location.hash.slice(1);go(TOP.some(x=>x.key===initial)?initial:'global');
+
+// Keep every exchange visually and behaviorally aligned with the OKX mother template.
+const alignedPeriodInit=new Set();
+function alignPlatformPeriodControls(){
+ if(['global','okx','watch','alerts'].includes(current))return;
+ const body=document.getElementById('platformBody'), select=body?.querySelector('[data-v3-period]');
+ if(!body||!select)return;
+ if(!alignedPeriodInit.has(current)){
+   alignedPeriodInit.add(current);
+   if(select.value!=='year'){
+     select.value='year';
+     select.dispatchEvent(new Event('change',{bubbles:true}));
+     return;
+   }
+ }
+ const names={year:'年',month:'月',week:'周',day:'日'};
+ body.querySelectorAll('.v3-chart').forEach(chart=>{
+   if(chart.querySelector('.periods'))return;
+   const periods=document.createElement('div');periods.className='periods';
+   ['year','month','week','day'].forEach(key=>{
+     const btn=document.createElement('button');
+     btn.className=`period-btn ${select.value===key?'active':''}`;
+     btn.textContent=names[key];
+     btn.type='button';
+     btn.onclick=e=>{
+       e.preventDefault();e.stopPropagation();
+       const liveSelect=document.querySelector('#platformBody [data-v3-period]');
+       if(!liveSelect)return;
+       liveSelect.value=key;
+       liveSelect.dispatchEvent(new Event('change',{bubbles:true}));
+     };
+     periods.appendChild(btn);
+   });
+   const tip=document.createElement('div');tip.className='chart-tip';tip.textContent='年 / 月 / 周 / 日 · 真实快照曲线';
+   chart.append(periods,tip);
+ });
+}
+const platformBody=document.getElementById('platformBody');
+if(platformBody){
+ new MutationObserver(()=>requestAnimationFrame(alignPlatformPeriodControls)).observe(platformBody,{childList:true,subtree:true});
+ requestAnimationFrame(alignPlatformPeriodControls);
+}
