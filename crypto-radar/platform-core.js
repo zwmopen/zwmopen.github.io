@@ -14,7 +14,7 @@ function renderTop(){
 function renderExchangeRows(){
  const table=$('#exchangeRows').closest('table');
  table?.querySelectorAll('thead th:nth-child(5),thead th:nth-child(6)').forEach(th=>th.remove());
- $('#exchangeRows').innerHTML=EX.map(x=>`<tr data-ex="${x.key}"><td><span class="rank">${x.rank}</span></td><td class="exchange"><strong>${x.name}</strong>${x.key==='gate'?'<small>原 Gate.io</small>':''}</td><td class="users">${x.users}</td><td><span class="status ${x.key==='okx'?'live':''}">${x.key==='okx'?'多榜单已接入':'平台入口'}</span></td><td><button class="enter">进入 →</button></td></tr>`).join('');
+ $('#exchangeRows').innerHTML=EX.map(x=>`<tr data-ex="${x.key}"><td><span class="rank">${x.rank}</span></td><td class="exchange"><strong>${x.name}</strong>${x.key==='gate'?'<small>原 Gate.io</small>':''}</td><td class="users">${x.users}</td><td><span class="status ${x.key==='okx'?'live':''}">${x.key==='okx'?'多榜单已接入':'平台入口'}</span></td></tr>`).join('');
  $$('[data-ex]').forEach(r=>r.onclick=()=>go(r.dataset.ex));
 }
 function renderPlatformSubnav(){
