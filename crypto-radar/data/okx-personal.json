@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "unavailable",
+  "trader_type": "personal",
+  "source_type": "official_api",
+  "updated_at": "2026-08-14T03:09:15+00:00",
+  "period": null,
+  "traders": [],
+  "source_candidates": [
+    {
+      "url": "https://www.okx.com/en-us/leaderboard",
+      "source_type": "official_page",
+      "status": 404,
+      "reason": "official leaderboard route is not currently available anonymously",
+      "contains_leaderboard_text": false
+    },
+    {
+      "url": "https://www.okx.com/leaderboard",
+      "source_type": "official_page",
+      "status": 404,
+      "reason": "official leaderboard route is not currently available anonymously",
+      "contains_leaderboard_text": false
+    },
+    {
+      "url": "https://www.okx.com/orbit",
+      "source_type": "official_page",
+      "status": 200,
+      "reason": "anonymous page exposes community feed, not a public Top Trader data feed",
+      "contains_leaderboard_text": false
+    },
+    {
+      "url": "https://www.okx.com/priapi/v5/ecotrade/public/follow-rank",
+      "source_type": "official_api",
+      "status": 200,
+      "reason": "rejected: response contains Copy Trading semantics",
+      "rejected_keys": [
+        "copyRelId",
+        "followPnl",
+        "followerLimit",
+        "totalLeadInstNum"
+      ],
+      "row_count": 20
+    }
+  ],
+  "disclaimer": "No anonymous Personal Trader source is published until independently verified. Screenshot values remain regression-only fixture data."
+}
