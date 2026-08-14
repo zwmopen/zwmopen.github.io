@@ -31,6 +31,9 @@ jobs:
       - name: Collect OKX leaderboard, curves and deep risk data
         run: python scripts/run_trader_radar.py
 
+      - name: Probe OKX Personal Trader source
+        run: python scripts/probe_okx_personal.py
+
       - name: Validate generated data
         run: |
           python - <<'PY'
@@ -39,12 +42,14 @@ jobs:
           from pathlib import Path
 
           data_dir = Path("trader-radar/data")
+          personal_path = Path("crypto-radar/data/okx-personal.json")
           trader_path = data_dir / "traders.json"
           changes_path = data_dir / "changes.json"
           history_dir = data_dir / "history"
 
           payload = json.loads(trader_path.read_text(encoding="utf-8"))
           changes = json.loads(changes_path.read_text(encoding="utf-8"))
+          personal = json.loads(personal_path.read_text(encoding="utf-8"))
           traders = payload.get("traders") or []
           orders = payload.get("official_orders") or {}
           by_code = {item["unique_code"]: item for item in traders}
@@ -58,6 +63,11 @@ jobs:
           assert payload.get("public_leaderboard_count", 0) > 0, payload
           assert payload.get("client_leaderboard_count", 0) > 0, payload
           assert payload.get("dataset_health", {}).get("status") == "ok", payload.get("dataset_health")
+          assert personal.get("status") in {"ready", "unavailable"}, personal
+          assert personal.get("trader_type") == "personal", personal
+          if personal.get("status") == "ready":
+              assert personal.get("traders"), personal
+              assert all("aum_usd" not in item and "lead_days" not in item for item in personal["traders"])
           assert len(curves) >= 40, f"only {len(curves)} full curves"
           assert 10 <= len(deep) <= 20, f"unexpected deep count {len(deep)}"
           assert changes.get("schema_version", 0) >= 2, changes
@@ -93,7 +103,7 @@ jobs:
         run: |
           git config user.name "trader-radar-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add trader-radar/data/traders.json trader-radar/data/changes.json trader-radar/data/history/
+          git add trader-radar/data/traders.json trader-radar/data/changes.json trader-radar/data/history/ crypto-radar/data/okx-personal.json
           if git diff --cached --quiet; then
             echo "No data changes"
             exit 0

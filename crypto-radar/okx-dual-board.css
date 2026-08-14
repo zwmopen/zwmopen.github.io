@@ -14,7 +14,7 @@
 .okx-personal-head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:18px}
 .okx-personal-head h2{margin:5px 0 5px;font-size:25px}
 .okx-personal-head p{margin:0;color:var(--muted);font-size:10px;line-height:1.6}
-.okx-personal-status{flex:none;padding:6px 9px;border-radius:999px;background:#e3ece8;color:var(--green);font-size:9px;font-weight:900}
+.okx-personal-status{flex:none;padding:6px 9px;border-radius:999px;background:#e3ece8;color:var(--green);font-size:9px;font-weight:900}.okx-personal-status.pending{background:#f2eadb;color:#9b6d24}.okx-personal-status.ready{background:#e3ece8;color:var(--green)}
 .okx-personal-controls{display:flex;align-items:center;gap:9px;padding:12px 14px;position:sticky;top:82px;z-index:20;background:rgba(231,237,244,.94);backdrop-filter:blur(18px)}
 .okx-personal-controls select{height:38px;border:1px solid rgba(105,124,146,.16);border-radius:12px;padding:0 12px;background:rgba(241,245,249,.88);color:var(--soft);font-size:11px;font-weight:850;outline:0}
 .okx-personal-controls .personal-count{margin-left:auto;color:var(--muted);font-size:9px}
@@ -38,6 +38,7 @@
 .okx-personal-svg{display:block;width:100%;height:65px}
 .okx-personal-foot{grid-column:2/-1;display:flex;gap:20px;align-items:center;padding-top:9px;border-top:1px solid var(--line);color:var(--muted);font-size:9px}
 .okx-personal-foot b{color:var(--soft);font-size:10px}.okx-personal-open{margin-left:auto;border:0;border-radius:999px;padding:7px 10px;background:#dfe6ee;color:var(--soft);font-size:8px;font-weight:900}
+.okx-personal-chart-empty{display:grid;place-items:center;height:65px;color:var(--muted);font-size:9px}.okx-personal-empty{display:grid;gap:9px;padding:28px 22px;color:var(--muted);font-size:11px;line-height:1.7}.okx-personal-empty b{color:var(--soft);font-size:16px}.okx-personal-empty a{width:max-content;color:var(--blue2);font-size:10px;font-weight:850}
 
 .okx-personal-mask{position:fixed;inset:0;z-index:159;background:rgba(34,44,58,.3);backdrop-filter:blur(5px);display:none}.okx-personal-mask.open{display:block}
 .okx-personal-drawer{position:fixed;right:8px;top:8px;bottom:8px;z-index:160;width:min(600px,calc(100vw - 16px));padding:22px;overflow:auto;border:1px solid rgba(255,255,255,.62);border-radius:25px;background:linear-gradient(145deg,#e9eff5,#dbe4ed);box-shadow:18px 20px 46px rgba(72,87,108,.38),-10px -10px 28px rgba(255,255,255,.76);transform:translateX(calc(100% + 28px));transition:.2s}.okx-personal-drawer.open{transform:none}
