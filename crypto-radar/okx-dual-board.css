@@ -1,0 +1,50 @@
+/* OKX dual-board boundary: Lead Trader and ordinary personal Trader are different products. */
+#globalView .hero{grid-template-columns:1fr!important}
+#globalView .hero .metric{display:none!important}
+
+.okx-dual-switch{display:flex;align-items:center;gap:12px;padding:12px 14px;margin:0 0 14px;overflow:auto}
+.okx-dual-switch .dual-label{flex:none;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.08em}
+.okx-dual-tabs{display:flex;gap:7px}
+.okx-dual-btn{border:0;border-radius:999px;padding:10px 16px;background:#e1e7ee;color:var(--muted);font-size:11px;font-weight:900;white-space:nowrap}
+.okx-dual-btn.active{background:#202a38;color:#fff;box-shadow:4px 5px 11px rgba(75,91,110,.2)}
+.okx-dual-btn small{margin-left:5px;opacity:.66;font-size:8px}
+
+.okx-personal-shell{display:grid;gap:13px}
+.okx-personal-head{padding:18px 20px}
+.okx-personal-head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:18px}
+.okx-personal-head h2{margin:5px 0 5px;font-size:25px}
+.okx-personal-head p{margin:0;color:var(--muted);font-size:10px;line-height:1.6}
+.okx-personal-status{flex:none;padding:6px 9px;border-radius:999px;background:#e3ece8;color:var(--green);font-size:9px;font-weight:900}
+.okx-personal-controls{display:flex;align-items:center;gap:9px;padding:12px 14px;position:sticky;top:82px;z-index:20;background:rgba(231,237,244,.94);backdrop-filter:blur(18px)}
+.okx-personal-controls select{height:38px;border:1px solid rgba(105,124,146,.16);border-radius:12px;padding:0 12px;background:rgba(241,245,249,.88);color:var(--soft);font-size:11px;font-weight:850;outline:0}
+.okx-personal-controls .personal-count{margin-left:auto;color:var(--muted);font-size:9px}
+
+.okx-personal-list{display:grid;gap:10px}
+.okx-personal-card{position:relative;display:grid;grid-template-columns:46px minmax(180px,.85fr) minmax(220px,.95fr) minmax(280px,1.25fr);align-items:center;gap:15px;padding:17px 18px;cursor:pointer;transition:.15s}
+.okx-personal-card:hover{transform:translateY(-1px)}
+.okx-personal-rank{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#e1e8f0;font-size:13px;font-weight:950}
+.okx-personal-rank.top{color:#fff;background:linear-gradient(145deg,var(--blue),var(--purple))}
+.okx-personal-id{display:flex;align-items:center;gap:11px;min-width:0}
+.okx-personal-avatar{width:48px;height:48px;flex:none;border-radius:50%;display:grid;place-items:center;background:#dce4ec;color:var(--soft);font-size:16px;font-weight:950}
+.okx-personal-namebox{min-width:0}
+.okx-personal-name{font-size:17px;font-weight:950;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.okx-personal-badges{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}
+.okx-personal-badge{padding:4px 7px;border-radius:7px;background:#e5e2f7;color:#6659bc;font-size:8px;font-weight:850}
+.okx-personal-main small{display:block;color:var(--muted);font-size:9px}
+.okx-personal-main strong{display:block;margin-top:4px;color:var(--green);font-size:27px;line-height:1;font-weight:950}
+.okx-personal-roi{margin-top:8px;color:var(--soft);font-size:10px}.okx-personal-roi b{color:var(--green)}
+.okx-personal-chart{padding:9px 10px;border-radius:13px;background:rgba(239,244,248,.7)}
+.okx-personal-chart-head{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:8px;margin-bottom:4px}.okx-personal-chart-head b{color:var(--green)}
+.okx-personal-svg{display:block;width:100%;height:65px}
+.okx-personal-foot{grid-column:2/-1;display:flex;gap:20px;align-items:center;padding-top:9px;border-top:1px solid var(--line);color:var(--muted);font-size:9px}
+.okx-personal-foot b{color:var(--soft);font-size:10px}.okx-personal-open{margin-left:auto;border:0;border-radius:999px;padding:7px 10px;background:#dfe6ee;color:var(--soft);font-size:8px;font-weight:900}
+
+.okx-personal-mask{position:fixed;inset:0;z-index:159;background:rgba(34,44,58,.3);backdrop-filter:blur(5px);display:none}.okx-personal-mask.open{display:block}
+.okx-personal-drawer{position:fixed;right:8px;top:8px;bottom:8px;z-index:160;width:min(600px,calc(100vw - 16px));padding:22px;overflow:auto;border:1px solid rgba(255,255,255,.62);border-radius:25px;background:linear-gradient(145deg,#e9eff5,#dbe4ed);box-shadow:18px 20px 46px rgba(72,87,108,.38),-10px -10px 28px rgba(255,255,255,.76);transform:translateX(calc(100% + 28px));transition:.2s}.okx-personal-drawer.open{transform:none}
+.okx-personal-close{float:right;width:35px;height:35px;border:0;border-radius:50%;background:#dfe6ee;color:var(--soft);font-size:17px;font-weight:950}
+.okx-profile-kicker{color:var(--blue2);font-size:9px;font-weight:900;letter-spacing:.08em}.okx-profile-title{margin:18px 0 4px;font-size:30px}.okx-profile-sub{color:var(--muted);font-size:10px}
+.okx-profile-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:16px}.okx-profile-grid>div{padding:12px;border-radius:13px;background:rgba(239,244,248,.75)}.okx-profile-grid span{display:block;color:var(--muted);font-size:8px}.okx-profile-grid b{display:block;margin-top:4px;font-size:13px}
+.okx-profile-tabs{display:flex;gap:7px;margin-top:16px}.okx-profile-tabs span{padding:7px 10px;border-radius:999px;background:#dfe6ee;color:var(--soft);font-size:9px;font-weight:850}.okx-profile-note{margin-top:16px;padding:13px;border-radius:13px;background:rgba(239,244,248,.75);color:var(--muted);font-size:10px;line-height:1.7}
+
+@media(max-width:900px){.okx-personal-card{grid-template-columns:40px minmax(160px,.8fr) minmax(210px,1fr)}.okx-personal-chart{grid-column:2/-1}.okx-personal-foot{grid-column:2/-1}}
+@media(max-width:700px){.okx-personal-head-row{display:block}.okx-personal-status{display:inline-flex;margin-top:8px}.okx-personal-controls{top:6px;display:grid;grid-template-columns:1fr 1fr}.okx-personal-controls select{width:100%}.okx-personal-controls .personal-count{grid-column:1/-1;margin:0}.okx-personal-card{grid-template-columns:34px minmax(0,1fr);gap:8px;padding:13px 12px}.okx-personal-rank{width:32px;height:32px}.okx-personal-id{grid-column:2}.okx-personal-main,.okx-personal-chart,.okx-personal-foot{grid-column:1/-1;padding-left:42px}.okx-personal-main strong{font-size:25px}.okx-personal-foot{gap:10px;flex-wrap:wrap}.okx-personal-open{margin-left:0}.okx-personal-drawer{top:4px;right:4px;bottom:4px;width:calc(100vw - 8px);padding:16px}}
