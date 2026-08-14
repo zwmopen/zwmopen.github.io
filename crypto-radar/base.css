@@ -45,7 +45,7 @@ th{color:var(--muted);font-size:10px;letter-spacing:.04em}tbody tr{transition:.1
  box-shadow:3px 3px 8px rgba(130,149,170,.2),-3px -3px 8px rgba(255,255,255,.62)}
 .exchange strong{display:block;font-size:14px}.exchange small{display:block;margin-top:4px;color:var(--muted)}
 .users{font-size:18px;font-weight:950;color:var(--blue2);white-space:nowrap}.status{display:inline-flex;border-radius:999px;padding:5px 9px;font-size:10px;font-weight:850;background:#e4eaf0;color:var(--muted)}
-.status.live{background:#e2eee9;color:var(--green)}.enter{border:0;background:transparent;color:var(--blue2);font-weight:900}
+.status.live{background:#e2eee9;color:var(--green)}
 .note{margin:16px 2px 0;color:var(--muted);font-size:11px;line-height:1.7}
 
 .okx-head{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:21px 23px;margin-bottom:15px}
@@ -106,4 +106,17 @@ html[data-theme="dark"] tbody tr:hover{background:rgba(120,150,195,.08)}
  .trader-card{grid-template-columns:38px minmax(0,1fr);gap:10px;padding:14px 13px;align-items:start}
  .ranknum{width:36px;height:36px}.identity{grid-column:2}.mid{grid-column:1/-1;padding-left:48px}.side-metrics{grid-column:1/-1;padding-left:48px;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.mini{min-width:0;padding:8px 7px}.mini b{overflow:hidden;text-overflow:ellipsis}.name{font-size:16px}.primary{font-size:26px}.actions{right:10px;top:10px}
  .theme-toggle{position:absolute;right:9px;top:9px}
+ .table-wrap{overflow-x:hidden}
+ .table-wrap table{min-width:0;width:100%;table-layout:fixed}
+ .table-wrap th,.table-wrap td{padding:11px 4px;font-size:11px}
+ .table-wrap th:nth-child(1),.table-wrap td:nth-child(1){width:34px}
+ .table-wrap th:nth-child(2),.table-wrap td:nth-child(2){width:36%}
+ .table-wrap th:nth-child(3),.table-wrap td:nth-child(3){width:25%}
+ .table-wrap th:nth-child(4),.table-wrap td:nth-child(4){width:39%}
+ .table-wrap .rank{width:28px;height:28px}
+ .table-wrap .exchange{min-width:0;overflow:hidden}
+ .table-wrap .exchange strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px}
+ .table-wrap .exchange small{margin-top:2px;font-size:9px;white-space:nowrap}
+ .table-wrap .users{font-size:16px}
+ .table-wrap .status{max-width:100%;padding:4px 6px;font-size:9px;white-space:nowrap}
 }
