@@ -54,6 +54,6 @@ python scripts/run_trader_radar.py
 
 1. 尚未发现可匿名、可持续且能证明为 Personal Trader 的官方排行榜接口。
 2. 尚未把 Personal Trader 详情页接到独立公开 profile URL；必须等稳定源提供 profile/id。
-3. 本轮尚未推送、合并或验证 GitHub Pages；当前结论不能写成已上线。
+3. 本轮分支已推送并已创建 PR（公共仓库 #16、私有仓库 #4），尚未合并，也尚未验证合并后的 GitHub Pages；当前结论不能写成已上线。
 
 后续唯一优先动作：继续跟踪 OKX 官方 Web/App 的 Personal Trader 或 Orbit Top Trader 数据请求，发现新候选后先通过语义拒绝测试，再接入正式 JSON。
