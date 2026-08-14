@@ -94,4 +94,16 @@ html[data-theme="dark"] .mini,html[data-theme="dark"] .fact,html[data-theme="dar
 html[data-theme="dark"] .source-btn.secondary{background:#263342;color:var(--soft)}
 html[data-theme="dark"] tbody tr:hover{background:rgba(120,150,195,.08)}
 
-@media(max-width:760px){.theme-toggle{position:absolute;right:9px;top:9px}.topbar{position:sticky}}
+@media(max-width:760px){
+ .app{padding:10px 12px 28px}
+ .topbar{top:6px;margin-bottom:12px;padding:9px 10px;gap:8px}
+ .brand{min-width:132px;padding:2px 4px}.brand strong{font-size:14px}
+ .tabs{gap:6px}.tab{padding:8px 11px;font-size:11px}
+ .hero-main{padding:20px;min-height:auto}.hero-main h1{font-size:36px}
+ .panel{padding:14px}.heading{display:block}.heading p{text-align:left;margin-top:6px}
+ .okx-head{display:block;padding:17px}.okx-head h1{font-size:26px}.open-origin{width:100%;margin-top:12px}
+ .rank-console{padding:12px}.console-row{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center}.console-label{grid-column:1}.rank-tabs{grid-column:2;min-width:0}.period-select{grid-column:1}.search{grid-column:2;min-width:0;width:100%}.console-meta{display:block}.console-meta span{display:block}
+ .trader-card{grid-template-columns:38px minmax(0,1fr);gap:10px;padding:14px 13px;align-items:start}
+ .ranknum{width:36px;height:36px}.identity{grid-column:2}.mid{grid-column:1/-1;padding-left:48px}.side-metrics{grid-column:1/-1;padding-left:48px;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.mini{min-width:0;padding:8px 7px}.mini b{overflow:hidden;text-overflow:ellipsis}.name{font-size:16px}.primary{font-size:26px}.actions{right:10px;top:10px}
+ .theme-toggle{position:absolute;right:9px;top:9px}
+}
