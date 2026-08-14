@@ -1,4 +1,16 @@
 if(!document.querySelector('link[rel="icon"]')){const icon=document.createElement('link');icon.rel='icon';icon.type='image/svg+xml';icon.href='./favicon.svg';document.head.appendChild(icon)}
+const THEME_KEY='crypto-radar-theme';
+function installThemeToggle(){
+ const topbar=document.querySelector('.topbar');if(!topbar||document.getElementById('themeToggle'))return;
+ const button=document.createElement('button');button.id='themeToggle';button.className='theme-toggle';button.type='button';
+ button.innerHTML='<span class="theme-icon sun" aria-hidden="true">☀</span><span class="theme-icon moon" aria-hidden="true">☾</span>';
+ topbar.appendChild(button);
+ const apply=theme=>{const dark=theme==='dark';document.documentElement.dataset.theme=dark?'dark':'light';button.dataset.theme=dark?'dark':'light';button.setAttribute('aria-pressed',String(dark));button.setAttribute('aria-label',dark?'切换浅色模式':'切换深色模式');button.title=dark?'切换浅色模式':'切换深色模式'};
+ let saved='light';try{saved=localStorage.getItem(THEME_KEY)==='dark'?'dark':'light'}catch(e){}
+ apply(saved);
+ button.onclick=()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';apply(next);try{localStorage.setItem(THEME_KEY,next)}catch(e){}};
+}
+installThemeToggle();
 async function ensureData(){
  if(loaded)return;
  try{
