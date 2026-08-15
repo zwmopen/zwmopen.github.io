@@ -3,7 +3,7 @@
   "status": "unavailable",
   "trader_type": "personal",
   "source_type": "official_api",
-  "updated_at": "2026-08-14T03:31:42+00:00",
+  "updated_at": "2026-08-15T02:20:11+00:00",
   "period": null,
   "traders": [],
   "source_candidates": [
@@ -26,7 +26,7 @@
       "source_type": "official_page",
       "status": 200,
       "reason": "anonymous page exposes community feed, not a public Top Trader data feed",
-      "contains_leaderboard_text": true
+      "contains_leaderboard_text": false
     },
     {
       "url": "https://www.okx.com/priapi/v5/ecotrade/public/follow-rank",
