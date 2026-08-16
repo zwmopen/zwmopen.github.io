@@ -1,6 +1,6 @@
 // Auto-generated public leaderboard snapshot.
 window.PLATFORM_GENERATED={
-  "generatedAt": "2026-08-16T13:04:13.274Z",
+  "generatedAt": "2026-08-16T18:50:18.446Z",
   "platforms": {
     "binance": {
       "copy": {
@@ -11,12 +11,12 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://public.bnbstatic.com/image/avatar/202410/11bd34f8c9100af9296117826c3ca08f.jpeg",
             "rawId": null,
             "metrics": {
-              "aum": 35697.02032037,
+              "aum": 36328.73775417,
               "days": 270,
-              "pnl": 8103.13407287,
-              "roi": 40.82590568,
+              "pnl": 8556.46560987,
+              "roi": 43.11018744,
               "mdd": 42.243035,
-              "sharpe": -0.38835997
+              "sharpe": -0.38018543
             },
             "source": "runtime-public"
           },
@@ -26,27 +26,12 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://public-1306379396.file.myqcloud.com/image/pgc/202412/3c25ce453a0bbdca7e00add8b69461c7.png",
             "rawId": null,
             "metrics": {
-              "aum": 397722.90956773,
+              "aum": 400278.56269336,
               "days": 600,
-              "pnl": 3723.02295008,
-              "roi": 1.81849936,
+              "pnl": 3861.3971507,
+              "roi": 1.87375439,
               "mdd": 2.568688,
-              "sharpe": -1.09155897
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "DAOSCIENCE QUANT",
-            "profileUrl": null,
-            "avatarUrl": "https://public.bnbstatic.com/image/avatar/202509/7cfe510c78641f616245101a31d81287.jpg",
-            "rawId": null,
-            "metrics": {
-              "aum": 38111.62214554,
-              "days": 540,
-              "pnl": 2927.32443503,
-              "roi": 9.02200626,
-              "mdd": 2.479223,
-              "sharpe": -0.00192934
+              "sharpe": -1.09312163
             },
             "source": "runtime-public"
           },
@@ -56,27 +41,27 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://public.bnbstatic.com/image/pgc/20260705/628e7969d45f4e3b8227177dcffb13ea.jpg",
             "rawId": null,
             "metrics": {
-              "aum": 445681.81071842,
+              "aum": 445561.47464998,
               "days": 255,
-              "pnl": 2863.0379901,
-              "roi": 0.90391648,
+              "pnl": 3732.41836548,
+              "roi": 1.10541935,
               "mdd": 4.15318,
-              "sharpe": -0.13410063
+              "sharpe": -0.13723635
             },
             "source": "runtime-public"
           },
           {
-            "name": "_p_",
+            "name": "TrustUP",
             "profileUrl": null,
-            "avatarUrl": "https://public.bnbstatic.com/image/avatar/202410/ddbce8e8c5efb2905c68c5c747dc2387.jpg",
+            "avatarUrl": "https://public.bnbstatic.com/image/avatar/202504/aaefcab0e44344a9b93eab27a5b09104.jpeg",
             "rawId": null,
             "metrics": {
-              "aum": 46288.12063409,
-              "days": 305,
-              "pnl": 342.29360376,
-              "roi": 141.95735455,
-              "mdd": 84.88317,
-              "sharpe": 0.96734612
+              "aum": 66437.19093523,
+              "days": 480,
+              "pnl": 3110.03266601,
+              "roi": 5.14484033,
+              "mdd": 7.495719,
+              "sharpe": -0.57983043
             },
             "source": "runtime-public"
           },
@@ -86,12 +71,12 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://bin.bnbstatic.com/static/images/copytrading/default-avatar.png",
             "rawId": null,
             "metrics": {
-              "aum": 7768.75776284,
+              "aum": 13623.92439898,
               "days": 817,
-              "pnl": 39.0501537,
-              "roi": 115.02737834,
+              "pnl": 37.37905564,
+              "roi": 110.10256811,
               "mdd": 12.207081,
-              "sharpe": -0.08672091
+              "sharpe": -0.0662936
             },
             "source": "runtime-public"
           },
@@ -101,12 +86,12 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://public.bnbstatic.com/image/pgc/20260808/02968216444b4e31b3761628796ab220.jpg",
             "rawId": null,
             "metrics": {
-              "aum": 32107.22475474,
+              "aum": 32027.47391156,
               "days": 234,
-              "pnl": 693.87045793,
-              "roi": 96.85206624,
+              "pnl": 747.26472498,
+              "roi": 104.30518687,
               "mdd": 26.147157,
-              "sharpe": 1.97677894
+              "sharpe": 1.9943461
             },
             "source": "runtime-public"
           },
@@ -116,12 +101,27 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://public.bnbstatic.com/image/common_notification/20211230/fe45acbe-4cb8-4d78-b426-07f3402e285c.png",
             "rawId": null,
             "metrics": {
-              "aum": 511.60629827,
+              "aum": 796.13557849,
               "days": 740,
-              "pnl": 97.69501822,
-              "roi": 91.27105294,
+              "pnl": 93.31508844,
+              "roi": 87.17745631,
               "mdd": 11.415459,
-              "sharpe": -0.56659168
+              "sharpe": -0.54587551
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Fansgurus",
+            "profileUrl": null,
+            "avatarUrl": "https://public.nftstatic.com/static/nft/res/nft-cex/S3/1698378538672_lr28zy0wc48q1c4l9b5usjtbxrps3nws.png",
+            "rawId": null,
+            "metrics": {
+              "aum": 5429.31662532,
+              "days": 390,
+              "pnl": 65.58749472,
+              "roi": 81.967983,
+              "mdd": 28.95467,
+              "sharpe": -1.59327699
             },
             "source": "runtime-public"
           },
@@ -131,12 +131,12 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://public.bnbstatic.com/image/avatar/202503/d34119be784089961a960104eff4ec90.jpg",
             "rawId": null,
             "metrics": {
-              "aum": 50114.13914758,
+              "aum": 49906.91216224,
               "days": 572,
-              "pnl": 6.4251016,
-              "roi": 0.22150675,
+              "pnl": 6.42264763,
+              "roi": 0.22139672,
               "mdd": 9.437022,
-              "sharpe": 0.38731875
+              "sharpe": 0.38731984
             },
             "source": "runtime-public"
           },
@@ -146,12 +146,12 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://public-1306379396.file.myqcloud.com/image/avatar/202509/88879ef87920bf7174d546a5e67525e4.jpg",
             "rawId": null,
             "metrics": {
-              "aum": 1242236.73197753,
+              "aum": 1242370.47378068,
               "days": 346,
-              "pnl": 57.58306805,
-              "roi": 0.03459681,
+              "pnl": 72.31392023,
+              "roi": 0.04461937,
               "mdd": 0.012466,
-              "sharpe": 0.39540367
+              "sharpe": 0.39517424
             },
             "source": "runtime-public"
           },
@@ -161,12 +161,12 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://public.bnbstatic.com/image/common_notification/20211230/fe45acbe-4cb8-4d78-b426-07f3402e285c.png",
             "rawId": null,
             "metrics": {
-              "aum": 54908.62528853,
+              "aum": 55232.26841029,
               "days": 339,
-              "pnl": 290.32571944,
-              "roi": 0.00579694,
-              "mdd": 14.750009,
-              "sharpe": -0.00116922
+              "pnl": 378.23348109,
+              "roi": 0.62354281,
+              "mdd": 14.582189,
+              "sharpe": -0.00087167
             },
             "source": "runtime-public"
           },
@@ -176,12 +176,12 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://bin.bnbstatic.com/static/images/copytrading/default-avatar.png",
             "rawId": null,
             "metrics": {
-              "aum": 40062.8233463,
+              "aum": 40019.89076605,
               "days": 494,
-              "pnl": 71.39210317,
-              "roi": 11.17822508,
+              "pnl": 66.51510943,
+              "roi": 10.52747237,
               "mdd": 4.792188,
-              "sharpe": 0.96157327
+              "sharpe": 0.96157085
             },
             "source": "runtime-public"
           },
@@ -191,12 +191,12 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://public.bnbstatic.com/image/avatar/202411/61bc6831e4e4d165c8a1ad1e4171b266.jpg",
             "rawId": null,
             "metrics": {
-              "aum": 514350.41868349,
+              "aum": 515373.5151719,
               "days": 740,
-              "pnl": -9548.29996487,
-              "roi": -4.47094715,
+              "pnl": -9361.61430813,
+              "roi": -4.38365873,
               "mdd": 6.608349,
-              "sharpe": -1.29859422
+              "sharpe": -1.29449366
             },
             "source": "runtime-public"
           },
@@ -206,12 +206,12 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://public.bscdnweb.com/image/avatar/202601/3545b2cf05f4fbcbaef3a934d22a0c31.jpg",
             "rawId": null,
             "metrics": {
-              "aum": 980150.50017713,
+              "aum": 979855.03381436,
               "days": 754,
-              "pnl": 116.42486746,
-              "roi": 0.15773032,
+              "pnl": 101.22479007,
+              "roi": 0.13667035,
               "mdd": 4.825633,
-              "sharpe": 0.16766201
+              "sharpe": 0.16354976
             },
             "source": "runtime-public"
           },
@@ -221,26 +221,24 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://public.bnbstatic.com/image/avatar/202508/33ca060507ca01065cfe0e9a05d1dd54.jpg",
             "rawId": null,
             "metrics": {
-              "aum": 83242.11557337,
+              "aum": 83132.0202048,
               "days": 823,
-              "pnl": -98.21704883,
-              "roi": -9.39422362,
-              "mdd": 10.37989,
-              "sharpe": -1.50701179
+              "pnl": -99.8575604,
+              "roi": -9.55099033,
+              "mdd": 10.401853,
+              "sharpe": -1.50012343
             },
             "source": "runtime-public"
           }
         ],
         "title": "binance copy",
         "sourceUrl": "https://www.binance.com/en/copy-trading",
-        "generatedAt": "2026-08-16T13:02:27.063Z",
+        "generatedAt": "2026-08-16T18:48:29.613Z",
         "apiSources": [],
         "domAvatarHints": 0,
         "avatarUsers": 15,
         "profileUsers": 0,
         "errors": [
-          "Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is",
-          "Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is",
           "Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is",
           "Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is",
           "Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is"
@@ -250,7 +248,7 @@ window.PLATFORM_GENERATED={
         "title": "Binance Web3 链上交易员榜",
         "period": "30D",
         "sourceUrl": "https://www.binance.com/zh-TC/skills/detail/binance-web3/crypto-market-rank",
-        "generatedAt": "2026-08-16T13:04:13.274Z",
+        "generatedAt": "2026-08-16T18:50:18.446Z",
         "users": [
           {
             "name": "阿峰_Afeng",
@@ -259,12 +257,12 @@ window.PLATFORM_GENERATED={
             "rawId": "0xbf004bff64725914ee36d03b87d6965b0ced4903",
             "profileUrl": null,
             "metrics": {
-              "pnl": 362209.0760765046,
-              "roi": 0.16474339937683738,
-              "winRate": 0.6399,
-              "volume": 5230987.098872764,
-              "trades": 25901,
-              "assets": 293.34026665864326
+              "pnl": 367525.8212544768,
+              "roi": 0.16400591839294065,
+              "winRate": 0.6398,
+              "volume": 5389685.7122995425,
+              "trades": 26141,
+              "assets": 187.56696047546396
             },
             "source": "binance-official-web3"
           },
@@ -275,12 +273,12 @@ window.PLATFORM_GENERATED={
             "rawId": "0x2ce9d43d1cba6ae31d7f07bfe0098dfa2d833373",
             "profileUrl": null,
             "metrics": {
-              "pnl": 351943.66455391963,
-              "roi": 0.5874520657648323,
-              "winRate": 0.7503,
-              "volume": 1674520.7064665854,
-              "trades": 4277,
-              "assets": 108.73571825924176
+              "pnl": 352512.3760929277,
+              "roi": 0.5748775713064966,
+              "winRate": 0.7448,
+              "volume": 1709654.4583081373,
+              "trades": 4329,
+              "assets": 100.40118292543013
             },
             "source": "binance-official-web3"
           },
@@ -291,12 +289,12 @@ window.PLATFORM_GENERATED={
             "rawId": "0x82fc58011d50bfda0dd10bbecab41803a7758939",
             "profileUrl": null,
             "metrics": {
-              "pnl": 349566.05680671753,
-              "roi": 0.5602066643870512,
-              "winRate": 0.129,
-              "volume": 1615509.7642799811,
-              "trades": 414,
-              "assets": 410.2493176595549
+              "pnl": 349416.6327714855,
+              "roi": 0.5283763667512914,
+              "winRate": 0.1765,
+              "volume": 1690454.3468347394,
+              "trades": 437,
+              "assets": 408.6351168989383
             },
             "source": "binance-official-web3"
           },
@@ -307,12 +305,12 @@ window.PLATFORM_GENERATED={
             "rawId": "0xa83b73f5644cde337b61da79589f10ea15548811",
             "profileUrl": null,
             "metrics": {
-              "pnl": 256712.88366584305,
-              "roi": 0.0730330854466854,
-              "winRate": 0.4065,
-              "volume": 7448716.145759931,
-              "trades": 21987,
-              "assets": 133.2834944484602
+              "pnl": 276615.1642758934,
+              "roi": 0.07707198784065761,
+              "winRate": 0.4076,
+              "volume": 7622159.302673065,
+              "trades": 22424,
+              "assets": 153.949197863063
             },
             "source": "binance-official-web3"
           },
@@ -323,12 +321,28 @@ window.PLATFORM_GENERATED={
             "rawId": "0x3391a39a1b508e54a361924a26056c01c1c2c07d",
             "profileUrl": null,
             "metrics": {
-              "pnl": 255987.0877902625,
-              "roi": 0.5322117358891525,
+              "pnl": 265223.1938566354,
+              "roi": 0.5418660238161892,
               "winRate": 0.4189,
-              "volume": 1320987.4849697924,
-              "trades": 2933,
-              "assets": 96.3955103522105
+              "volume": 1338698.9630770506,
+              "trades": 2936,
+              "assets": 125.27119346737231
+            },
+            "source": "binance-official-web3"
+          },
+          {
+            "name": "Cowboy🔶BNB ｜版本之牛",
+            "wallet": "0x38e47fece3ea323e864c65410f6458c820eaa897",
+            "avatarUrl": "https://bin.bnbstatic.com/images/web3-data/public/social_tracker/user_images/1877978075557945344_f3a04d2c6e9d.jpg",
+            "rawId": "0x38e47fece3ea323e864c65410f6458c820eaa897",
+            "profileUrl": null,
+            "metrics": {
+              "pnl": 265085.0806802866,
+              "roi": 0.13105590081988902,
+              "winRate": 0.5983,
+              "volume": 4519077.795396765,
+              "trades": 12664,
+              "assets": 80.98606686573464
             },
             "source": "binance-official-web3"
           },
@@ -349,34 +363,18 @@ window.PLATFORM_GENERATED={
             "source": "binance-official-web3"
           },
           {
-            "name": "Cowboy🔶BNB ｜版本之牛",
-            "wallet": "0x38e47fece3ea323e864c65410f6458c820eaa897",
-            "avatarUrl": "https://bin.bnbstatic.com/images/web3-data/public/social_tracker/user_images/1877978075557945344_f3a04d2c6e9d.jpg",
-            "rawId": "0x38e47fece3ea323e864c65410f6458c820eaa897",
-            "profileUrl": null,
-            "metrics": {
-              "pnl": 236991.25781843637,
-              "roi": 0.11868554911254292,
-              "winRate": 0.5976,
-              "volume": 4440719.524627146,
-              "trades": 12594,
-              "assets": 31.659657743096574
-            },
-            "source": "binance-official-web3"
-          },
-          {
             "name": "陈佩佩",
             "wallet": "0xcbc04b6607e7ebe0373c3ee361ba396b8ecb721c",
             "avatarUrl": "https://bin.bnbstatic.com/images/web3-data/public/social_tracker/user_images/2028522285796319232_7e26557ff1fa.jpg",
             "rawId": "0xcbc04b6607e7ebe0373c3ee361ba396b8ecb721c",
             "profileUrl": null,
             "metrics": {
-              "pnl": 234509.69635455354,
-              "roi": 0.1610336606164483,
-              "winRate": 0.3212,
-              "volume": 3330297.007172126,
-              "trades": 10819,
-              "assets": 10.817659190554911
+              "pnl": 233089.72197797458,
+              "roi": 0.152462978750682,
+              "winRate": 0.3244,
+              "volume": 3419242.08247668,
+              "trades": 10940,
+              "assets": 17.458347051427445
             },
             "source": "binance-official-web3"
           },
@@ -387,12 +385,12 @@ window.PLATFORM_GENERATED={
             "rawId": "0x7a2363a401b2340c7941dd2eeff0196a5078d2e6",
             "profileUrl": null,
             "metrics": {
-              "pnl": 217506.6640342271,
-              "roi": 0.21672873504979373,
-              "winRate": 0.6271,
-              "volume": 2301615.70757519,
-              "trades": 12293,
-              "assets": 129.43431156854618
+              "pnl": 218694.7320486989,
+              "roi": 0.21601326874532006,
+              "winRate": 0.6275,
+              "volume": 2320278.7582114683,
+              "trades": 12384,
+              "assets": 132.20338588003375
             },
             "source": "binance-official-web3"
           },
@@ -413,6 +411,22 @@ window.PLATFORM_GENERATED={
             "source": "binance-official-web3"
           },
           {
+            "name": "0x3147…f886",
+            "wallet": "0x314725c51aaa6d32f6fe871335e73d42987df886",
+            "avatarUrl": null,
+            "rawId": "0x314725c51aaa6d32f6fe871335e73d42987df886",
+            "profileUrl": null,
+            "metrics": {
+              "pnl": 161209.65504453378,
+              "roi": 5.350451354456471,
+              "winRate": 0.3846,
+              "volume": 237834.04825024708,
+              "trades": 252,
+              "assets": 228.8458552343859
+            },
+            "source": "binance-official-web3"
+          },
+          {
             "name": "0x53d9…08a2",
             "wallet": "0x53d92c4a321c3aa50e93bde1e5874dd9c0ce08a2",
             "avatarUrl": null,
@@ -429,34 +443,18 @@ window.PLATFORM_GENERATED={
             "source": "binance-official-web3"
           },
           {
-            "name": "0xae98…4706",
-            "wallet": "0xae988c405ed6c30dfbefa3b4d884d28d9b994706",
-            "avatarUrl": null,
-            "rawId": "0xae988c405ed6c30dfbefa3b4d884d28d9b994706",
-            "profileUrl": null,
-            "metrics": {
-              "pnl": 152334.7138415305,
-              "roi": 2.0374858668599263,
-              "winRate": 0.5,
-              "volume": 448078.05713078444,
-              "trades": 772,
-              "assets": 14.979449081400988
-            },
-            "source": "binance-official-web3"
-          },
-          {
             "name": "Zephyr",
             "wallet": "0xb2d1af0746c410e146272e804b1741f07f83b851",
             "avatarUrl": "https://bin.bnbstatic.com/images/web3-data/public/social_tracker/user_images/1755186363085783040_e81cfe38e9bb.jpg",
             "rawId": "0xb2d1af0746c410e146272e804b1741f07f83b851",
             "profileUrl": null,
             "metrics": {
-              "pnl": 150238.53309194828,
-              "roi": 0.06509722571815235,
-              "winRate": 0.4605,
-              "volume": 4818078.799921128,
-              "trades": 20953,
-              "assets": 145.15955774508154
+              "pnl": 151572.27920695482,
+              "roi": 0.06449117081162974,
+              "winRate": 0.4611,
+              "volume": 4914194.139527807,
+              "trades": 21283,
+              "assets": 130.06280360372125
             },
             "source": "binance-official-web3"
           },
@@ -477,34 +475,50 @@ window.PLATFORM_GENERATED={
             "source": "binance-official-web3"
           },
           {
-            "name": "0x3147…f886",
-            "wallet": "0x314725c51aaa6d32f6fe871335e73d42987df886",
-            "avatarUrl": null,
-            "rawId": "0x314725c51aaa6d32f6fe871335e73d42987df886",
-            "profileUrl": null,
-            "metrics": {
-              "pnl": 140609.48202007977,
-              "roi": 5.582153317660497,
-              "winRate": 0.3846,
-              "volume": 212292.88280362258,
-              "trades": 237,
-              "assets": 186.83775838478377
-            },
-            "source": "binance-official-web3"
-          },
-          {
             "name": "0xLuck",
             "wallet": "0x8ade93ba431a2ce19fc62a9ce97626e69a4a333f",
             "avatarUrl": "https://bin.bnbstatic.com/images/web3-data/public/social_tracker/user_images/1941563216636858368_6ac37ee8549e.jpg",
             "rawId": "0x8ade93ba431a2ce19fc62a9ce97626e69a4a333f",
             "profileUrl": null,
             "metrics": {
-              "pnl": 136844.39633991118,
-              "roi": 0.10424888379538547,
-              "winRate": 0.4335,
-              "volume": 2853818.3897310984,
-              "trades": 18506,
-              "assets": 16.801881168850883
+              "pnl": 139272.07965776097,
+              "roi": 0.10482342131509804,
+              "winRate": 0.4345,
+              "volume": 2888002.023709906,
+              "trades": 18622,
+              "assets": 27.14292515568052
+            },
+            "source": "binance-official-web3"
+          },
+          {
+            "name": "0xae98…4706",
+            "wallet": "0xae988c405ed6c30dfbefa3b4d884d28d9b994706",
+            "avatarUrl": null,
+            "rawId": "0xae988c405ed6c30dfbefa3b4d884d28d9b994706",
+            "profileUrl": null,
+            "metrics": {
+              "pnl": 135558.82842521704,
+              "roi": 1.411585609427076,
+              "winRate": 0.4714,
+              "volume": 456379.59852872463,
+              "trades": 781,
+              "assets": 16.07054155737397
+            },
+            "source": "binance-official-web3"
+          },
+          {
+            "name": "bruce",
+            "wallet": "0x051a53d095d277e22e3d905b10d3bbe75f0ac508",
+            "avatarUrl": "https://bin.bnbstatic.com/images/web3-data/public/social_tracker/user_images/1861973558903308288_4cd7787b167a.jpg",
+            "rawId": "0x051a53d095d277e22e3d905b10d3bbe75f0ac508",
+            "profileUrl": null,
+            "metrics": {
+              "pnl": 131574.42417437705,
+              "roi": 0.2766368812519293,
+              "winRate": 0.5542,
+              "volume": 1144371.313692338,
+              "trades": 2987,
+              "assets": 23.320965921712048
             },
             "source": "binance-official-web3"
           },
@@ -518,9 +532,25 @@ window.PLATFORM_GENERATED={
               "pnl": 131090.25451816714,
               "roi": 0.5337286003609611,
               "winRate": 0.2586,
-              "volume": 669962.0643154924,
-              "trades": 378,
-              "assets": 9.068956410182095
+              "volume": 675423.6491621279,
+              "trades": 379,
+              "assets": 0.06885144309246134
+            },
+            "source": "binance-official-web3"
+          },
+          {
+            "name": "0xc166…3d98",
+            "wallet": "0xc16638a4ae46eae08a11a79b378290e003513d98",
+            "avatarUrl": null,
+            "rawId": "0xc16638a4ae46eae08a11a79b378290e003513d98",
+            "profileUrl": null,
+            "metrics": {
+              "pnl": 130903.98244378761,
+              "roi": 0.2215552412018844,
+              "winRate": 0.3913,
+              "volume": 1460396.7973159063,
+              "trades": 1071,
+              "assets": 183.14080880147876
             },
             "source": "binance-official-web3"
           },
@@ -541,18 +571,18 @@ window.PLATFORM_GENERATED={
             "source": "binance-official-web3"
           },
           {
-            "name": "bruce",
-            "wallet": "0x051a53d095d277e22e3d905b10d3bbe75f0ac508",
-            "avatarUrl": "https://bin.bnbstatic.com/images/web3-data/public/social_tracker/user_images/1861973558903308288_4cd7787b167a.jpg",
-            "rawId": "0x051a53d095d277e22e3d905b10d3bbe75f0ac508",
+            "name": "古月月",
+            "wallet": "0x877af245c61289b24f0c619a4346cdbc68f1aaac",
+            "avatarUrl": "https://bin.bnbstatic.com/images/web3-data/public/social_tracker/user_images/1980117151806857217_b69f4ab9c6bd.jpg",
+            "rawId": "0x877af245c61289b24f0c619a4346cdbc68f1aaac",
             "profileUrl": null,
             "metrics": {
-              "pnl": 128869.39207645155,
-              "roi": 0.27713270271551627,
-              "winRate": 0.5513,
-              "volume": 1119586.3487384242,
-              "trades": 2941,
-              "assets": 21.348605041597416
+              "pnl": 128653.85153574719,
+              "roi": 0.11365819962068606,
+              "winRate": 0.4489,
+              "volume": 2465900.5172094614,
+              "trades": 7019,
+              "assets": 30.175092033706857
             },
             "source": "binance-official-web3"
           },
@@ -563,28 +593,12 @@ window.PLATFORM_GENERATED={
             "rawId": "0xc19542f8d59e6e7fdce7bf316c19e2c84439891a",
             "profileUrl": null,
             "metrics": {
-              "pnl": 128342.68232505792,
-              "roi": 0.1488776943223313,
-              "winRate": 0.0909,
-              "volume": 1873980.58947445,
-              "trades": 549,
-              "assets": 0.10915575437295483
-            },
-            "source": "binance-official-web3"
-          },
-          {
-            "name": "古月月",
-            "wallet": "0x877af245c61289b24f0c619a4346cdbc68f1aaac",
-            "avatarUrl": "https://bin.bnbstatic.com/images/web3-data/public/social_tracker/user_images/1980117151806857217_b69f4ab9c6bd.jpg",
-            "rawId": "0x877af245c61289b24f0c619a4346cdbc68f1aaac",
-            "profileUrl": null,
-            "metrics": {
-              "pnl": 121421.68881573087,
-              "roi": 0.1118374036863656,
-              "winRate": 0.452,
-              "volume": 2354012.4672705666,
-              "trades": 6895,
-              "assets": 38.61496295594572
+              "pnl": 124385.07239983595,
+              "roi": 0.14054882221772028,
+              "winRate": 0.0833,
+              "volume": 1916962.145355368,
+              "trades": 580,
+              "assets": 0.01555007127331154
             },
             "source": "binance-official-web3"
           },
@@ -611,12 +625,12 @@ window.PLATFORM_GENERATED={
             "rawId": "0x0300e281a7affee0c7b70a2f4cfa5dda16be4112",
             "profileUrl": null,
             "metrics": {
-              "pnl": 118444.186385863,
-              "roi": 0.4535164737036235,
+              "pnl": 118445.83054859006,
+              "roi": 0.4509386721408311,
               "winRate": 0.3636,
-              "volume": 867753.3799306229,
-              "trades": 393,
-              "assets": 0.043317083949965994
+              "volume": 872248.228964412,
+              "trades": 402,
+              "assets": 0.035465185931038395
             },
             "source": "binance-official-web3"
           },
@@ -635,22 +649,6 @@ window.PLATFORM_GENERATED={
               "assets": 37.56160068082847
             },
             "source": "binance-official-web3"
-          },
-          {
-            "name": "0xffae…b4ad",
-            "wallet": "0xffae19561c038747c5c9f79f7777c29f28c4b4ad",
-            "avatarUrl": null,
-            "rawId": "0xffae19561c038747c5c9f79f7777c29f28c4b4ad",
-            "profileUrl": null,
-            "metrics": {
-              "pnl": 113667.55890736401,
-              "roi": 0.3809827114299094,
-              "winRate": 0.5556,
-              "volume": 646438.5431384322,
-              "trades": 1524,
-              "assets": 0.02900641112388708
-            },
-            "source": "binance-official-web3"
           }
         ]
       }
@@ -664,9 +662,9 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://img.bgstatic.com/otc/images/20230723/1690078445696.png?w=120&h=120&f=webp",
             "rawId": "bcb4467089bb3157a695",
             "metrics": {
-              "aum": 2.68,
-              "pnl": 52963.31,
-              "roi": 1.27
+              "aum": 2.67,
+              "pnl": 52200.11,
+              "roi": 2.03
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -677,9 +675,9 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://img.bgstatic.com/otc/images/20251206/1764981082604.png?w=98&h=98&f=webp",
             "rawId": "bbb1487e8bb43d5eac90",
             "metrics": {
-              "aum": 30,
-              "pnl": 34014.61,
-              "roi": 4.24
+              "aum": 29.68,
+              "pnl": 32997.01,
+              "roi": 7.05
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -690,9 +688,35 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://img.bgstatic.com/image/third/avatar-default-1747644203.png?w=98&h=98&f=webp",
             "rawId": "bab5497f8bb63a5ea79c",
             "metrics": {
-              "aum": 93.21,
+              "aum": 114.77,
               "pnl": 26146.84,
               "roi": 8.9
+            },
+            "source": "runtime-public",
+            "avatarSource": "official-rendered-card"
+          },
+          {
+            "name": "RICHHHHHH",
+            "profileUrl": null,
+            "avatarUrl": "https://img.bgstatic.com/otc/images/20260727/1785129965985.png?w=56&h=56&f=webp",
+            "rawId": "bbb14b7e8ab63855a292",
+            "metrics": {
+              "aum": 82325.3,
+              "pnl": 23600.46,
+              "roi": 760.73
+            },
+            "source": "runtime-public",
+            "avatarSource": "official-rendered-card"
+          },
+          {
+            "name": "Nine-Club",
+            "profileUrl": null,
+            "avatarUrl": "https://img.bgstatic.com/otc/images/20251222/1766388540233.png?w=56&h=56&f=webp",
+            "rawId": "b9b04a7586b43853a69d",
+            "metrics": {
+              "aum": 7936.13,
+              "pnl": 23570.45,
+              "roi": 0.73
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -704,34 +728,8 @@ window.PLATFORM_GENERATED={
             "rawId": "bdb74e768db73b57a59c",
             "metrics": {
               "aum": 0,
-              "pnl": 23825.57,
-              "roi": 2.4
-            },
-            "source": "runtime-public",
-            "avatarSource": "official-rendered-card"
-          },
-          {
-            "name": "Nine-Club",
-            "profileUrl": null,
-            "avatarUrl": "https://img.bgstatic.com/otc/images/20251222/1766388540233.png?w=56&h=56&f=webp",
-            "rawId": "b9b04a7586b43853a69d",
-            "metrics": {
-              "aum": 7633.54,
-              "pnl": 23786.69,
-              "roi": 0.46
-            },
-            "source": "runtime-public",
-            "avatarSource": "official-rendered-card"
-          },
-          {
-            "name": "RICHHHHHH",
-            "profileUrl": null,
-            "avatarUrl": "https://img.bgstatic.com/otc/images/20260727/1785129965985.png?w=56&h=56&f=webp",
-            "rawId": "bbb14b7e8ab63855a292",
-            "metrics": {
-              "aum": 80904.3,
-              "pnl": 23485.83,
-              "roi": 907.32
+              "pnl": 23311.93,
+              "roi": 3.93
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -742,9 +740,9 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://img.bgstatic.com/otc/images/20260810/1786345929590.png?w=56&h=56&f=webp",
             "rawId": "bfb0487e8fbb3a53a297",
             "metrics": {
-              "aum": 32345.43,
-              "pnl": 19860.1,
-              "roi": 1432.79
+              "aum": 34734.34,
+              "pnl": 19874.17,
+              "roi": 1208.89
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -756,8 +754,21 @@ window.PLATFORM_GENERATED={
             "rawId": "bbb34c7288b33c54a594",
             "metrics": {
               "aum": 0,
-              "pnl": 16312.29,
-              "roi": 74.7
+              "pnl": 14610.19,
+              "roi": 77.96
+            },
+            "source": "runtime-public",
+            "avatarSource": "official-rendered-card"
+          },
+          {
+            "name": "AspirinX",
+            "profileUrl": null,
+            "avatarUrl": "https://img.bgstatic.com/otc/images/20260813/1786554383346.png?w=56&h=56&f=webp",
+            "rawId": "bfb049768eb03152a79d",
+            "metrics": {
+              "aum": 31365.8,
+              "pnl": 14107.12,
+              "roi": 7081.11
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -769,21 +780,8 @@ window.PLATFORM_GENERATED={
             "rawId": "b0b548748ab63c57a597",
             "metrics": {
               "aum": 0,
-              "pnl": 14864.07,
-              "roi": 253.66
-            },
-            "source": "runtime-public",
-            "avatarSource": "official-rendered-card"
-          },
-          {
-            "name": "AspirinX",
-            "profileUrl": null,
-            "avatarUrl": "https://img.bgstatic.com/otc/images/20260813/1786554383346.png?w=56&h=56&f=webp",
-            "rawId": "bfb049768eb03152a79d",
-            "metrics": {
-              "aum": 29559.11,
-              "pnl": 14107.12,
-              "roi": 7081.11
+              "pnl": 12228.92,
+              "roi": 263.57
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -794,19 +792,32 @@ window.PLATFORM_GENERATED={
             "avatarUrl": null,
             "rawId": "bbb44b7186ba3855a694",
             "metrics": {
-              "aum": 1464.27,
+              "aum": 1648.99,
               "pnl": 12200.18,
-              "roi": 74.53
+              "roi": 67.26
             },
             "source": "runtime-public"
           },
           {
-            "name": "Eenis-的绝对盘感",
+            "name": "虎哥666",
             "profileUrl": null,
             "avatarUrl": "https://img.bgstatic.com/image/third/avatar-default-1747644203.png?w=56&h=56&f=webp",
+            "rawId": "b9bc4d718db1385ead97",
+            "metrics": {
+              "aum": 0,
+              "pnl": 12069.29,
+              "roi": 80.84
+            },
+            "source": "runtime-public",
+            "avatarSource": "official-rendered-card"
+          },
+          {
+            "name": "Eenis-的绝对盘感",
+            "profileUrl": null,
+            "avatarUrl": "https://img.bgstatic.com/otc/images/20251125/1764014739315.png?w=56&h=56&f=webp",
             "rawId": "b1b448778cb03b5ead96",
             "metrics": {
-              "aum": 20276.63,
+              "aum": 20280.61,
               "pnl": 11224.98,
               "roi": 2.99
             },
@@ -814,27 +825,14 @@ window.PLATFORM_GENERATED={
             "avatarSource": "official-rendered-card"
           },
           {
-            "name": "虎哥666",
-            "profileUrl": null,
-            "avatarUrl": "https://img.bgstatic.com/otc/images/20251210/1765298988825.png?w=56&h=56&f=webp",
-            "rawId": "b9bc4d718db1385ead97",
-            "metrics": {
-              "aum": 0,
-              "pnl": 10702.88,
-              "roi": 70.2
-            },
-            "source": "runtime-public",
-            "avatarSource": "official-rendered-card"
-          },
-          {
             "name": "TradeTrend",
             "profileUrl": null,
-            "avatarUrl": "https://img.bgstatic.com/otc/images/20251125/1764014739315.png?w=56&h=56&f=webp",
+            "avatarUrl": "https://img.bgstatic.com/otc/images/20251210/1765298988825.png?w=56&h=56&f=webp",
             "rawId": "bdb2467387b43a55a390",
             "metrics": {
-              "aum": 22736.97,
-              "pnl": 9945.73,
-              "roi": 251.14
+              "aum": 22827.91,
+              "pnl": 9948.16,
+              "roi": 183.76
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -845,9 +843,9 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://img.bgstatic.com/otc/images/20260725/1784961299487.png?w=56&h=56&f=webp",
             "rawId": "bbbc487089b43952a4",
             "metrics": {
-              "aum": 370.2,
-              "pnl": 9754.27,
-              "roi": 57.42
+              "aum": 371.36,
+              "pnl": 9835.8,
+              "roi": 57.62
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -858,9 +856,9 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://img.bgstatic.com/image/third/avatar-default-1747644203.png?w=56&h=56&f=webp",
             "rawId": "bab74a748db23956a593",
             "metrics": {
-              "aum": 2407.47,
+              "aum": 2132.72,
               "pnl": 9360.68,
-              "roi": 3047.09
+              "roi": 2599.11
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -871,9 +869,9 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://img.bgstatic.com/image/third/avatar-default-1747644203.png?w=56&h=56&f=webp",
             "rawId": "b1b1467f8db43955a294",
             "metrics": {
-              "aum": 21648.43,
-              "pnl": 8392.69,
-              "roi": 694.61
+              "aum": 21457.59,
+              "pnl": 8390.27,
+              "roi": 580.68
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -884,9 +882,9 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://img.bgstatic.com/otc/images/20260804/1785822373771.png?w=56&h=56&f=webp",
             "rawId": "b1b448718ab23e50a692",
             "metrics": {
-              "aum": 726,
-              "pnl": 8153.48,
-              "roi": 179.35
+              "aum": 726.83,
+              "pnl": 8168.4,
+              "roi": 171.32
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -897,9 +895,9 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://img.bgstatic.com/image/third/avatar-default-1747644203.png?w=56&h=56&f=webp",
             "rawId": "b1b648748fb23d57a292",
             "metrics": {
-              "aum": 567925.9,
-              "pnl": 7792.75,
-              "roi": 1.37
+              "aum": 567496,
+              "pnl": 7714.89,
+              "roi": 1.53
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -920,7 +918,7 @@ window.PLATFORM_GENERATED={
         ],
         "title": "bitget copy",
         "sourceUrl": "https://www.bitget.com/copy-trading/leaderboard-ranking/futures-pnl",
-        "generatedAt": "2026-08-16T13:02:27.063Z",
+        "generatedAt": "2026-08-16T18:48:29.613Z",
         "apiSources": [
           "https://www.bitget.com/v1/trigger/trace/public/traderRankingList"
         ],
@@ -934,58 +932,30 @@ window.PLATFORM_GENERATED={
       "copy": {
         "users": [
           {
-            "name": "Mexctrader-P4UUeB",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "01249789",
-            "metrics": {
-              "followers": 31,
-              "pnl": 1388.0123,
-              "roi": 142.71,
-              "mdd": 0,
-              "winRate": 76.59
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Mexctrader-lKw1yF",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "79507271",
-            "metrics": {
-              "followers": 49,
-              "pnl": 7961.4505000000345,
-              "roi": 130.25,
-              "mdd": 0,
-              "winRate": 88.88
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Mexctrader-IbPL1H",
-            "profileUrl": null,
-            "avatarUrl": "https://public.p2primeglobal.com/banner/F20260626103336151vf4VPKjbl5xebP.png",
-            "rawId": "27249572",
-            "metrics": {
-              "followers": 11,
-              "pnl": 1575.24142,
-              "roi": 127.38,
-              "mdd": 5.12,
-              "winRate": 80
-            },
-            "source": "runtime-public"
-          },
-          {
             "name": "Scalp daily as routine",
             "profileUrl": null,
             "avatarUrl": "https://public.mocortech.com/banner/F20241129180904043gzi84gxNdLPGwo.png",
             "rawId": "03923304",
             "metrics": {
-              "followers": 280,
-              "pnl": 1906.2032350000002,
-              "roi": 115.4,
+              "followers": 283,
+              "pnl": 2730.9347350000035,
+              "roi": 168.85,
               "mdd": 0,
-              "winRate": 68
+              "winRate": 66.66
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "00*****8",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "00938178",
+            "metrics": {
+              "followers": 57,
+              "pnl": 110591.633,
+              "roi": 80.64,
+              "mdd": 100,
+              "winRate": 54.54
             },
             "source": "runtime-public"
           },
@@ -995,25 +965,11 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://public.mocortech.com/banner/F20241129180904492k5udY6QFgtucrg.png",
             "rawId": "62047241",
             "metrics": {
-              "followers": 121,
-              "pnl": 2156.4676200000004,
-              "roi": 103.28,
+              "followers": 123,
+              "pnl": 1572.4114600000003,
+              "roi": 71.01,
               "mdd": 3.31,
-              "winRate": 80
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Alpha21",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20260626103335723aJUeQAgFYZrffu.png",
-            "rawId": "55282890",
-            "metrics": {
-              "followers": 56,
-              "pnl": 700.61665,
-              "roi": 101.94,
-              "mdd": 1.65,
-              "winRate": 90
+              "winRate": 72.72
             },
             "source": "runtime-public"
           },
@@ -1024,10 +980,10 @@ window.PLATFORM_GENERATED={
             "rawId": "23531356",
             "metrics": {
               "followers": 74,
-              "pnl": 2340.03659,
-              "roi": 69.14,
+              "pnl": 1497.46339,
+              "roi": 46.62,
               "mdd": 6.89,
-              "winRate": 86.91
+              "winRate": 89.3
             },
             "source": "runtime-public"
           },
@@ -1038,10 +994,24 @@ window.PLATFORM_GENERATED={
             "rawId": "89070846",
             "metrics": {
               "followers": 106,
-              "pnl": 6672.380954000002,
-              "roi": 38.09,
+              "pnl": 7718.339754000002,
+              "roi": 44.9,
               "mdd": 0,
-              "winRate": 65.78
+              "winRate": 64.78
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Mexctrader-8ntKFG野鸡杀手",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F202606261033364363NblnfnDx4gjfB.png",
+            "rawId": "60868707",
+            "metrics": {
+              "followers": 10,
+              "pnl": 3916.8103140000007,
+              "roi": 30.07,
+              "mdd": 5.93,
+              "winRate": 60.96
             },
             "source": "runtime-public"
           },
@@ -1052,10 +1022,24 @@ window.PLATFORM_GENERATED={
             "rawId": "86155564",
             "metrics": {
               "followers": 5,
-              "pnl": 3322.79019,
-              "roi": 37.16,
+              "pnl": 2176.61629,
+              "roi": 24.26,
               "mdd": 0,
-              "winRate": 88.23
+              "winRate": 91.17
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Short term",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "94429449",
+            "metrics": {
+              "followers": 6,
+              "pnl": 546.0759242193088,
+              "roi": 21.35,
+              "mdd": 0,
+              "winRate": 83.33
             },
             "source": "runtime-public"
           },
@@ -1066,24 +1050,52 @@ window.PLATFORM_GENERATED={
             "rawId": "03790371",
             "metrics": {
               "followers": 5,
-              "pnl": 16001.25485,
-              "roi": 34.08,
+              "pnl": 8375.160469999999,
+              "roi": 17.04,
               "mdd": 12.18,
-              "winRate": 58.33
+              "winRate": 52
             },
             "source": "runtime-public"
           },
           {
-            "name": "Mexctrader-YPzO1Z",
+            "name": "Denouement",
             "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "02818383",
+            "avatarUrl": "https://public.mocortech.com/banner/F20260626103336202501HZ7VSEDOmpk.png",
+            "rawId": "14484758",
             "metrics": {
-              "followers": 11,
-              "pnl": 65237.48022,
-              "roi": 253.27,
+              "followers": 52,
+              "pnl": 2678.15075,
+              "roi": 15.81,
               "mdd": 0,
-              "winRate": 100
+              "winRate": 64.7
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Famine Mbappé",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20260626103336202501HZ7VSEDOmpk.png",
+            "rawId": "18223222",
+            "metrics": {
+              "followers": 2,
+              "pnl": 2214.1655833380946,
+              "roi": 8,
+              "mdd": 15.39,
+              "winRate": 52.94
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Mexctrader-iTkj2g",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F202606261033364892epZgfBrIw7s7d.png",
+            "rawId": "97373578",
+            "metrics": {
+              "followers": 2,
+              "pnl": 1389.63963,
+              "roi": 5.46,
+              "mdd": 8.96,
+              "winRate": 54.94
             },
             "source": "runtime-public"
           },
@@ -1094,10 +1106,122 @@ window.PLATFORM_GENERATED={
             "rawId": "37556248",
             "metrics": {
               "followers": 26,
-              "pnl": 46051.16900013589,
-              "roi": 111.67,
+              "pnl": 55329.94245014341,
+              "roi": 134.34,
               "mdd": 0,
-              "winRate": 43.95
+              "winRate": 42.22
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Mexctrader-iWimuX",
+            "profileUrl": null,
+            "avatarUrl": "https://public.p2primeglobal.com/banner/F20260626103336339wf0gB5QNtBZEmB.png",
+            "rawId": "86189065",
+            "metrics": {
+              "followers": 0,
+              "pnl": 37200.7122,
+              "roi": 40.26,
+              "mdd": 5.54,
+              "winRate": 88.88
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "小豹把拔",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180904270pAvCAsM5RVCwM2.png",
+            "rawId": "50417918",
+            "metrics": {
+              "followers": 1,
+              "pnl": 27445.533700000033,
+              "roi": 8.54,
+              "mdd": 0,
+              "winRate": 53.96
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Mexctrader-C4ipPI",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "18719096",
+            "metrics": {
+              "followers": 0,
+              "pnl": 16737.39902520848,
+              "roi": 7.43,
+              "mdd": 0,
+              "winRate": 70.67
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Mexctrader-R3dEGH",
+            "profileUrl": null,
+            "avatarUrl": "https://public.p2primeglobal.com/banner/F202606261033360927PmrS8xNUWhpp1.png",
+            "rawId": "03507961",
+            "metrics": {
+              "followers": 0,
+              "pnl": 15998.147669999982,
+              "roi": 39.79,
+              "mdd": 33.33,
+              "winRate": 59.25
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Mexctrader-o0ivOT",
+            "profileUrl": null,
+            "avatarUrl": "https://public.p2primeglobal.com/banner/F20260626103336339wf0gB5QNtBZEmB.png",
+            "rawId": "74254585",
+            "metrics": {
+              "followers": 1,
+              "pnl": 14372.5,
+              "roi": 25.99,
+              "mdd": 6.84,
+              "winRate": 63.63
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "79*****8",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "79135068",
+            "metrics": {
+              "followers": 0,
+              "pnl": 11867.94897984667,
+              "roi": 2.92,
+              "mdd": 0,
+              "winRate": 58.49
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Big Sentinel",
+            "profileUrl": null,
+            "avatarUrl": "https://public.p2primeglobal.com/banner/F20260626103335933jTvCGgbNShdBwL.png",
+            "rawId": "80409380",
+            "metrics": {
+              "followers": 1,
+              "pnl": 11367.251729999996,
+              "roi": 17.13,
+              "mdd": 0,
+              "winRate": 89.2
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Mexctrader-YPzO1Z",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "02818383",
+            "metrics": {
+              "followers": 11,
+              "pnl": 33882.46281,
+              "roi": 131.54,
+              "mdd": 0,
+              "winRate": 100
             },
             "source": "runtime-public"
           },
@@ -1107,25 +1231,11 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
             "rawId": "89920323",
             "metrics": {
-              "followers": 60,
-              "pnl": 17409.88,
-              "roi": 347.15,
+              "followers": 62,
+              "pnl": 10565.02,
+              "roi": 210.67,
               "mdd": 0,
               "winRate": 55.55
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Mexctrader-aJU2gA",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20260626103336272Y7Q5V54cprXLQS.png",
-            "rawId": "89949104",
-            "metrics": {
-              "followers": 1,
-              "pnl": 11162.56435,
-              "roi": 198.76,
-              "mdd": 0,
-              "winRate": 55
             },
             "source": "runtime-public"
           },
@@ -1136,10 +1246,24 @@ window.PLATFORM_GENERATED={
             "rawId": "83675984",
             "metrics": {
               "followers": 0,
-              "pnl": 8268.865264949081,
-              "roi": 184.02,
+              "pnl": 7763.215984949082,
+              "roi": 172.77,
               "mdd": 4.29,
               "winRate": 45.45
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Mexctrader-aJU2gA",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20260626103336272Y7Q5V54cprXLQS.png",
+            "rawId": "89949104",
+            "metrics": {
+              "followers": 1,
+              "pnl": 7199.42578,
+              "roi": 128.19,
+              "mdd": 0,
+              "winRate": 50
             },
             "source": "runtime-public"
           },
@@ -1149,9 +1273,9 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://public.mocortech.com/banner/F20260626103336272Y7Q5V54cprXLQS.png",
             "rawId": "59339884",
             "metrics": {
-              "followers": 6,
-              "pnl": 3745.1493,
-              "roi": 330.35,
+              "followers": 7,
+              "pnl": 1903.13488,
+              "roi": 167.87,
               "mdd": 5.25,
               "winRate": 88.88
             },
@@ -1164,8 +1288,8 @@ window.PLATFORM_GENERATED={
             "rawId": "80816925",
             "metrics": {
               "followers": 0,
-              "pnl": 3808.62033,
-              "roi": 142.03,
+              "pnl": 2548.97801,
+              "roi": 95.06,
               "mdd": 4.45,
               "winRate": 83.33
             },
@@ -1178,24 +1302,10 @@ window.PLATFORM_GENERATED={
             "rawId": "96735520",
             "metrics": {
               "followers": 5,
-              "pnl": 1650.49324,
-              "roi": 398.5,
+              "pnl": 1384.12406,
+              "roi": 303.86,
               "mdd": 0,
               "winRate": 100
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Mexctrader-37Xelg",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "21948965",
-            "metrics": {
-              "followers": 0,
-              "pnl": 2218.3726,
-              "roi": 113.05,
-              "mdd": 0,
-              "winRate": 33.33
             },
             "source": "runtime-public"
           },
@@ -1206,38 +1316,24 @@ window.PLATFORM_GENERATED={
             "rawId": "96380198",
             "metrics": {
               "followers": 5,
-              "pnl": 2567.52588,
-              "roi": 535.18,
+              "pnl": 1269.52302,
+              "roi": 264.62,
               "mdd": 0,
               "winRate": 33.33
             },
             "source": "runtime-public"
           },
           {
-            "name": "Mexctrader-iWimuX",
+            "name": "Mexctrader-dpgm46",
             "profileUrl": null,
-            "avatarUrl": "https://public.p2primeglobal.com/banner/F20260626103336339wf0gB5QNtBZEmB.png",
-            "rawId": "86189065",
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "03283927",
             "metrics": {
-              "followers": 0,
-              "pnl": 31665.7122,
-              "roi": 34.27,
-              "mdd": 6.97,
-              "winRate": 88.88
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "小豹把拔",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180904270pAvCAsM5RVCwM2.png",
-            "rawId": "50417918",
-            "metrics": {
-              "followers": 1,
-              "pnl": 25409.443430000032,
-              "roi": 7.88,
-              "mdd": 0,
-              "winRate": 54.63
+              "followers": 12,
+              "pnl": 1103.35566,
+              "roi": 78.21,
+              "mdd": 20,
+              "winRate": 100
             },
             "source": "runtime-public"
           },
@@ -1248,66 +1344,52 @@ window.PLATFORM_GENERATED={
             "rawId": "69811569",
             "metrics": {
               "followers": 0,
-              "pnl": 17846.93807,
-              "roi": 4.88,
+              "pnl": 23976.47436,
+              "roi": 6.72,
               "mdd": 0,
-              "winRate": 84.65
+              "winRate": 85.49
             },
             "source": "runtime-public"
           },
           {
-            "name": "Mexctrader-cryptbaby",
+            "name": "Mexctrader-h0u2YR",
             "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180904199rLlpoWknmBun1K.png",
-            "rawId": "53751598",
-            "metrics": {
-              "followers": 1,
-              "pnl": 14854.41696,
-              "roi": 201.89,
-              "mdd": 3.99,
-              "winRate": 21.42
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Mexctrader-o0ivOT",
-            "profileUrl": null,
-            "avatarUrl": "https://public.p2primeglobal.com/banner/F20260626103336339wf0gB5QNtBZEmB.png",
-            "rawId": "74254585",
-            "metrics": {
-              "followers": 1,
-              "pnl": 14500.5,
-              "roi": 26.22,
-              "mdd": 6.84,
-              "winRate": 72.72
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Mexctrader-2ibNpm",
-            "profileUrl": null,
-            "avatarUrl": "https://public.p2primeglobal.com/banner/F202606261033360927PmrS8xNUWhpp1.png",
-            "rawId": "34743481",
+            "avatarUrl": "https://public.p2primeglobal.com/banner/F20260626103335531w8NCTWjsFL5fEC.png",
+            "rawId": "63831320",
             "metrics": {
               "followers": 0,
-              "pnl": 13447.62794,
-              "roi": 36.41,
-              "mdd": 1.87,
-              "winRate": 49.75
+              "pnl": 9216.98288,
+              "roi": 0.8,
+              "mdd": 17.12,
+              "winRate": 76.37
             },
             "source": "runtime-public"
           },
           {
-            "name": "79*****8",
+            "name": "69*****0",
             "profileUrl": null,
             "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "79135068",
+            "rawId": "69319070",
             "metrics": {
               "followers": 0,
-              "pnl": 10601.109669846668,
-              "roi": 2.41,
+              "pnl": 8461.47342,
+              "roi": 44.88,
               "mdd": 0,
-              "winRate": 63.24
+              "winRate": 75
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Lyhh",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "83608749",
+            "metrics": {
+              "followers": 0,
+              "pnl": 8211.65581,
+              "roi": 13.8,
+              "mdd": 0,
+              "winRate": 53.06
             },
             "source": "runtime-public"
           },
@@ -1318,38 +1400,24 @@ window.PLATFORM_GENERATED={
             "rawId": "93443749",
             "metrics": {
               "followers": 1,
-              "pnl": 11849.847839999997,
-              "roi": 2.79,
+              "pnl": 36175.54706999999,
+              "roi": 8.5,
               "mdd": 0,
-              "winRate": 71.21
+              "winRate": 61.66
             },
             "source": "runtime-public"
           },
           {
-            "name": "ThiagoD",
+            "name": "Mexctrader-adOcSI",
             "profileUrl": null,
             "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "97942465",
-            "metrics": {
-              "followers": 4,
-              "pnl": 7357.5674945843775,
-              "roi": 8.76,
-              "mdd": 6.49,
-              "winRate": 69.67
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Ross",
-            "profileUrl": null,
-            "avatarUrl": "https://public.p2primeglobal.com/banner/F202606261033360927PmrS8xNUWhpp1.png",
-            "rawId": "82901160",
+            "rawId": "29663598",
             "metrics": {
               "followers": 0,
-              "pnl": 6347.864644578971,
-              "roi": 2.65,
-              "mdd": 0.13,
-              "winRate": 76.47
+              "pnl": 6434.91461,
+              "roi": 2.83,
+              "mdd": 0,
+              "winRate": 74.21
             },
             "source": "runtime-public"
           },
@@ -1368,44 +1436,16 @@ window.PLATFORM_GENERATED={
             "source": "runtime-public"
           },
           {
-            "name": "79*****6",
+            "name": "ThiagoD",
             "profileUrl": null,
             "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "79177136",
+            "rawId": "97942465",
             "metrics": {
-              "followers": 0,
-              "pnl": 5015.83175,
-              "roi": 23.19,
-              "mdd": 0,
-              "winRate": 38.46
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "SvetlaB",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180904270pAvCAsM5RVCwM2.png",
-            "rawId": "09282623",
-            "metrics": {
-              "followers": 0,
-              "pnl": 4606.025999999998,
-              "roi": 18.22,
-              "mdd": 100,
-              "winRate": 76.88
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Mexctrader-7YpXH0",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "35877747",
-            "metrics": {
-              "followers": 0,
-              "pnl": 3638.4614739999993,
-              "roi": 30.87,
-              "mdd": 8.59,
-              "winRate": 76.62
+              "followers": 4,
+              "pnl": 5354.3664945843775,
+              "roi": 8.04,
+              "mdd": 6.49,
+              "winRate": 82.47
             },
             "source": "runtime-public"
           },
@@ -1416,24 +1456,66 @@ window.PLATFORM_GENERATED={
             "rawId": "91921638",
             "metrics": {
               "followers": 0,
-              "pnl": 3409.7803,
-              "roi": 28.56,
+              "pnl": 4382.75237,
+              "roi": 36.71,
               "mdd": 0.94,
-              "winRate": 57.73
+              "winRate": 58.76
             },
             "source": "runtime-public"
           },
           {
-            "name": "03*****2",
+            "name": "Ross",
             "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "03060792",
+            "avatarUrl": "https://public.p2primeglobal.com/banner/F202606261033360927PmrS8xNUWhpp1.png",
+            "rawId": "82901160",
             "metrics": {
               "followers": 0,
-              "pnl": 4204.44321,
-              "roi": 7,
+              "pnl": 4334.6382045789705,
+              "roi": 2.13,
+              "mdd": 0.13,
+              "winRate": 75.42
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "39*****4",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "39406674",
+            "metrics": {
+              "followers": 0,
+              "pnl": 3665.0944,
+              "roi": 25.91,
               "mdd": 0,
-              "winRate": 52.17
+              "winRate": 90.9
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Mexctrader-Eet210",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "88624335",
+            "metrics": {
+              "followers": 0,
+              "pnl": 3068.9854391125314,
+              "roi": 1.26,
+              "mdd": 6.25,
+              "winRate": 67.36
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Mexctrader-2ibNpm",
+            "profileUrl": null,
+            "avatarUrl": "https://public.p2primeglobal.com/banner/F202606261033360927PmrS8xNUWhpp1.png",
+            "rawId": "34743481",
+            "metrics": {
+              "followers": 0,
+              "pnl": 7243.34821,
+              "roi": 20.09,
+              "mdd": 1.87,
+              "winRate": 49
             },
             "source": "runtime-public"
           },
@@ -1444,10 +1526,24 @@ window.PLATFORM_GENERATED={
             "rawId": "19514212",
             "metrics": {
               "followers": 0,
-              "pnl": 3821.60817365019,
-              "roi": 20.43,
-              "mdd": 4.83,
-              "winRate": 70.58
+              "pnl": 3454.64632365019,
+              "roi": 19.79,
+              "mdd": 2.96,
+              "winRate": 71.42
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "03*****2",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "03060792",
+            "metrics": {
+              "followers": 0,
+              "pnl": 2789.39352,
+              "roi": 4.64,
+              "mdd": 0,
+              "winRate": 52.16
             },
             "source": "runtime-public"
           },
@@ -1458,24 +1554,24 @@ window.PLATFORM_GENERATED={
             "rawId": "99298578",
             "metrics": {
               "followers": 2,
-              "pnl": 13180.8171,
-              "roi": 10.21,
+              "pnl": 11596.1504,
+              "roi": 11.13,
               "mdd": 0,
-              "winRate": 69.73
+              "winRate": 76.92
             },
             "source": "runtime-public"
           },
           {
-            "name": "00*****8",
+            "name": "Mexctrader-FMzcLs",
             "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "00938178",
+            "avatarUrl": "https://public.mocortech.com/banner/F202606261033364363NblnfnDx4gjfB.png",
+            "rawId": "31119287",
             "metrics": {
-              "followers": 57,
-              "pnl": 115639.193,
-              "roi": 88.12,
-              "mdd": 100,
-              "winRate": 42.85
+              "followers": 0,
+              "pnl": 27390.85988,
+              "roi": 14.8,
+              "mdd": 0,
+              "winRate": 60.86
             },
             "source": "runtime-public"
           },
@@ -1486,10 +1582,10 @@ window.PLATFORM_GENERATED={
             "rawId": "03355759",
             "metrics": {
               "followers": 21,
-              "pnl": 1792.7379,
-              "roi": 3.74,
+              "pnl": 302.48136,
+              "roi": 0.73,
               "mdd": 4.54,
-              "winRate": 68.53
+              "winRate": 53.57
             },
             "source": "runtime-public"
           },
@@ -1500,38 +1596,10 @@ window.PLATFORM_GENERATED={
             "rawId": "94689941",
             "metrics": {
               "followers": 1,
-              "pnl": 1526.85032,
-              "roi": 1.23,
+              "pnl": 661.7118,
+              "roi": 1.3,
               "mdd": 0,
-              "winRate": 75.8
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Mexctrader-C4ipPI",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "18719096",
-            "metrics": {
-              "followers": 0,
-              "pnl": 10822.066529999995,
-              "roi": 4.81,
-              "mdd": 0,
-              "winRate": 63.44
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Mexctrader-TFq6eU",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20260626103336202501HZ7VSEDOmpk.png",
-            "rawId": "55476003",
-            "metrics": {
-              "followers": 0,
-              "pnl": 3414.3639769700967,
-              "roi": 6.33,
-              "mdd": 0,
-              "winRate": 68.96
+              "winRate": 58.06
             },
             "source": "runtime-public"
           },
@@ -1539,27 +1607,27 @@ window.PLATFORM_GENERATED={
             "name": "69*****0",
             "profileUrl": null,
             "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "69319070",
+            "rawId": "69427760",
             "metrics": {
-              "followers": 0,
-              "pnl": 7754.40942,
-              "roi": 39.61,
-              "mdd": 0,
-              "winRate": 76
+              "followers": 5,
+              "pnl": 676.468138800004,
+              "roi": 9.77,
+              "mdd": 4.19,
+              "winRate": 4
             },
             "source": "runtime-public"
           },
           {
-            "name": "MoeMoeKyung",
+            "name": "TMONEY",
             "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "90719045",
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180904199rLlpoWknmBun1K.png",
+            "rawId": "22247145",
             "metrics": {
-              "followers": 0,
-              "pnl": 10408.3328,
-              "roi": 4.71,
-              "mdd": 0,
-              "winRate": 26.66
+              "followers": 388,
+              "pnl": 11912.66265037503,
+              "roi": 6.41,
+              "mdd": 3.44,
+              "winRate": 28.67
             },
             "source": "runtime-public"
           },
@@ -1570,10 +1638,10 @@ window.PLATFORM_GENERATED={
             "rawId": "41215988",
             "metrics": {
               "followers": 7,
-              "pnl": 275.87288,
-              "roi": 0.44,
-              "mdd": 2.6,
-              "winRate": 85.71
+              "pnl": 179.02372,
+              "roi": 0.33,
+              "mdd": 2.72,
+              "winRate": 86.11
             },
             "source": "runtime-public"
           },
@@ -1584,10 +1652,10 @@ window.PLATFORM_GENERATED={
             "rawId": "09233380",
             "metrics": {
               "followers": 5,
-              "pnl": 88.4912,
-              "roi": 2.14,
+              "pnl": 67.715,
+              "roi": 1.49,
               "mdd": 1.15,
-              "winRate": 72.72
+              "winRate": 75
             },
             "source": "runtime-public"
           },
@@ -1598,52 +1666,24 @@ window.PLATFORM_GENERATED={
             "rawId": "49632186",
             "metrics": {
               "followers": 0,
-              "pnl": 62.52242,
-              "roi": 0.41,
-              "mdd": 4.82,
-              "winRate": 30
+              "pnl": 64.40222,
+              "roi": 0.43,
+              "mdd": 4.92,
+              "winRate": 33.33
             },
             "source": "runtime-public"
           },
           {
-            "name": "Echo_Agent",
+            "name": "Trend_Hunter",
             "profileUrl": null,
-            "avatarUrl": "https://public.p2primeglobal.com/banner/F202605251420598863IBdeVNWLADtr7.png",
-            "rawId": "35158194",
+            "avatarUrl": "https://public.mocortech.com/banner/F202602111112361771aAo4YV9tfsqRv.png",
+            "rawId": "07877722",
             "metrics": {
-              "followers": 15,
-              "pnl": 59.156,
-              "roi": 0.62,
-              "mdd": 1.27,
-              "winRate": 76.36
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Meme_Seeker",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20260525142127094LLCeIdpLfTLqaI.png",
-            "rawId": "84420810",
-            "metrics": {
-              "followers": 2,
-              "pnl": 42.5128,
-              "roi": 0.47,
-              "mdd": 1.22,
-              "winRate": 50
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "ReversalReaper53509412",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "53509412",
-            "metrics": {
-              "followers": 0,
-              "pnl": 41.6504,
-              "roi": 13.01,
-              "mdd": 12.95,
-              "winRate": 50
+              "followers": 27,
+              "pnl": 48.7212,
+              "roi": 1.78,
+              "mdd": 2.44,
+              "winRate": 44.44
             },
             "source": "runtime-public"
           },
@@ -1654,94 +1694,38 @@ window.PLATFORM_GENERATED={
             "rawId": "39929276",
             "metrics": {
               "followers": 0,
-              "pnl": 41.2467,
-              "roi": 25.88,
-              "mdd": 0.07,
+              "pnl": 41.2972,
+              "roi": 25.91,
+              "mdd": 0,
               "winRate": 75
             },
             "source": "runtime-public"
           },
           {
-            "name": "Contrarian Phantom",
+            "name": "ReversalReaper53509412",
             "profileUrl": null,
             "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "68266649",
+            "rawId": "53509412",
             "metrics": {
               "followers": 0,
-              "pnl": 22.68279,
-              "roi": 3.58,
-              "mdd": 2.8,
-              "winRate": 75
+              "pnl": 37.9986,
+              "roi": 13.57,
+              "mdd": 12.95,
+              "winRate": 57.14
             },
             "source": "runtime-public"
           },
           {
-            "name": "SystematicMind",
+            "name": "Meme_Seeker",
             "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "62089098",
+            "avatarUrl": "https://public.mocortech.com/banner/F20260525142127094LLCeIdpLfTLqaI.png",
+            "rawId": "84420810",
             "metrics": {
-              "followers": 0,
-              "pnl": 22.07266,
-              "roi": 3.99,
-              "mdd": 1.45,
-              "winRate": 50
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Mean Reversion Sentinel",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "78145659",
-            "metrics": {
-              "followers": 0,
-              "pnl": 21.27871,
-              "roi": 8.99,
-              "mdd": 0.05,
-              "winRate": 83.33
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Quant Echo",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "36164284",
-            "metrics": {
-              "followers": 0,
-              "pnl": 20.77548,
-              "roi": 7.52,
-              "mdd": 0.46,
-              "winRate": 85.71
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Omega Executor",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "12584048",
-            "metrics": {
-              "followers": 0,
-              "pnl": 14.90298,
-              "roi": 5.37,
-              "mdd": 2.02,
-              "winRate": 71.42
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Sigma Pair猎人",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "05293797",
-            "metrics": {
-              "followers": 0,
-              "pnl": 13.83126,
-              "roi": 2.18,
-              "mdd": 2.16,
-              "winRate": 43.75
+              "followers": 2,
+              "pnl": 32.3012,
+              "roi": 0.42,
+              "mdd": 1.41,
+              "winRate": 48.71
             },
             "source": "runtime-public"
           },
@@ -1752,23 +1736,135 @@ window.PLATFORM_GENERATED={
             "rawId": "66076181",
             "metrics": {
               "followers": 0,
-              "pnl": 11.85969,
-              "roi": 1.14,
-              "mdd": 16.65,
-              "winRate": 69.23
+              "pnl": 24.68773,
+              "roi": 2.48,
+              "mdd": 9.08,
+              "winRate": 72
             },
             "source": "runtime-public"
           },
           {
-            "name": "Reversal Reaper63213555",
+            "name": "Mean Reversion Sentinel",
             "profileUrl": null,
             "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "63213555",
+            "rawId": "78145659",
             "metrics": {
               "followers": 0,
-              "pnl": 11.5713,
-              "roi": 5.83,
-              "mdd": 0.25,
+              "pnl": 23.33871,
+              "roi": 9.86,
+              "mdd": 0.05,
+              "winRate": 100
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Quant Echo",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "36164284",
+            "metrics": {
+              "followers": 0,
+              "pnl": 21.82673,
+              "roi": 9.22,
+              "mdd": 0.46,
+              "winRate": 100
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Echo_Agent",
+            "profileUrl": null,
+            "avatarUrl": "https://public.p2primeglobal.com/banner/F202605251420598863IBdeVNWLADtr7.png",
+            "rawId": "35158194",
+            "metrics": {
+              "followers": 14,
+              "pnl": 19.431,
+              "roi": 0.24,
+              "mdd": 1.46,
+              "winRate": 78.26
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Asymmetry Hunter",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "55799970",
+            "metrics": {
+              "followers": 0,
+              "pnl": 12.68132,
+              "roi": 7.15,
+              "mdd": 3.6,
+              "winRate": 66.66
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Adaptive Grid AI27417375",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "27417375",
+            "metrics": {
+              "followers": 0,
+              "pnl": 11.90305,
+              "roi": 6.08,
+              "mdd": 0,
+              "winRate": 60
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Sigma Pair猎人",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "05293797",
+            "metrics": {
+              "followers": 0,
+              "pnl": 11.31175,
+              "roi": 2.38,
+              "mdd": 1.87,
+              "winRate": 41.66
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Momentum Chaser64610523",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "64610523",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.74708,
+              "roi": 4.51,
+              "mdd": 9.85,
+              "winRate": 66.66
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "SystematicMind",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "62089098",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.71024,
+              "roi": 2.25,
+              "mdd": 1.45,
+              "winRate": 41.66
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "ReversalReaper64446889",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "64446889",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.5056,
+              "roi": 5.29,
+              "mdd": 0.26,
               "winRate": 40
             },
             "source": "runtime-public"
@@ -1780,37 +1876,23 @@ window.PLATFORM_GENERATED={
             "rawId": "49633319",
             "metrics": {
               "followers": 0,
-              "pnl": 11.5661,
-              "roi": 5.83,
+              "pnl": 10.4437,
+              "roi": 5.26,
               "mdd": 0.25,
               "winRate": 40
             },
             "source": "runtime-public"
           },
           {
-            "name": "Asymmetry Hunter",
+            "name": "Reversal Reaper63213555",
             "profileUrl": null,
             "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "55799970",
+            "rawId": "63213555",
             "metrics": {
               "followers": 0,
-              "pnl": 11.47938,
-              "roi": 6.47,
-              "mdd": 3.6,
-              "winRate": 50
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "ReversalReaper87893791",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "87893791",
-            "metrics": {
-              "followers": 0,
-              "pnl": 11.4328,
-              "roi": 5.76,
-              "mdd": 0.29,
+              "pnl": 10.4362,
+              "roi": 5.26,
+              "mdd": 0.25,
               "winRate": 40
             },
             "source": "runtime-public"
@@ -1822,37 +1904,9 @@ window.PLATFORM_GENERATED={
             "rawId": "02606261",
             "metrics": {
               "followers": 0,
-              "pnl": 11.39,
-              "roi": 5.74,
+              "pnl": 10.414,
+              "roi": 5.25,
               "mdd": 0.25,
-              "winRate": 40
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "ReversalScythe26286407",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "26286407",
-            "metrics": {
-              "followers": 0,
-              "pnl": 11.3546,
-              "roi": 5.72,
-              "mdd": 0.29,
-              "winRate": 40
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "ReversalReaper64446889",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "64446889",
-            "metrics": {
-              "followers": 0,
-              "pnl": 11.1537,
-              "roi": 5.62,
-              "mdd": 0.26,
               "winRate": 40
             },
             "source": "runtime-public"
@@ -1864,8 +1918,8 @@ window.PLATFORM_GENERATED={
             "rawId": "88026025",
             "metrics": {
               "followers": 0,
-              "pnl": 11.0347,
-              "roi": 5.56,
+              "pnl": 10.4118,
+              "roi": 5.25,
               "mdd": 0.29,
               "winRate": 40
             },
@@ -1878,9 +1932,23 @@ window.PLATFORM_GENERATED={
             "rawId": "37398741",
             "metrics": {
               "followers": 0,
-              "pnl": 11.0214,
-              "roi": 5.55,
+              "pnl": 10.405,
+              "roi": 5.24,
               "mdd": 0.27,
+              "winRate": 40
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "ReversalScythe26286407",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "26286407",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.3702,
+              "roi": 5.23,
+              "mdd": 0.29,
               "winRate": 40
             },
             "source": "runtime-public"
@@ -1892,8 +1960,8 @@ window.PLATFORM_GENERATED={
             "rawId": "03839595",
             "metrics": {
               "followers": 0,
-              "pnl": 10.9696,
-              "roi": 5.53,
+              "pnl": 10.3514,
+              "roi": 5.22,
               "mdd": 0.29,
               "winRate": 40
             },
@@ -1906,24 +1974,52 @@ window.PLATFORM_GENERATED={
             "rawId": "40866643",
             "metrics": {
               "followers": 0,
-              "pnl": 10.9461,
-              "roi": 5.52,
+              "pnl": 10.315,
+              "roi": 5.2,
               "mdd": 0.29,
               "winRate": 40
             },
             "source": "runtime-public"
           },
           {
-            "name": "Momentum Chaser64610523",
+            "name": "ReversalReaper87893791",
             "profileUrl": null,
             "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "64610523",
+            "rawId": "87893791",
             "metrics": {
               "followers": 0,
-              "pnl": 10.7419,
-              "roi": 4.51,
-              "mdd": 9.85,
-              "winRate": 66.66
+              "pnl": 10.3059,
+              "roi": 5.19,
+              "mdd": 0.29,
+              "winRate": 40
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Contrarian Phantom",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "68266649",
+            "metrics": {
+              "followers": 0,
+              "pnl": 8.82146,
+              "roi": 1.71,
+              "mdd": 2.8,
+              "winRate": 69.23
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Trend Rider",
+            "profileUrl": null,
+            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
+            "rawId": "53334545",
+            "metrics": {
+              "followers": 0,
+              "pnl": 8.6169,
+              "roi": 3.11,
+              "mdd": 6.26,
+              "winRate": 57.14
             },
             "source": "runtime-public"
           },
@@ -1934,52 +2030,10 @@ window.PLATFORM_GENERATED={
             "rawId": "15172707",
             "metrics": {
               "followers": 0,
-              "pnl": 9.36153,
-              "roi": 3.38,
+              "pnl": 8.34498,
+              "roi": 4.21,
               "mdd": 3.4,
-              "winRate": 71.42
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Trend_Hunter",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F202602111112361771aAo4YV9tfsqRv.png",
-            "rawId": "07877722",
-            "metrics": {
-              "followers": 27,
-              "pnl": 9.1932,
-              "roi": 0.3,
-              "mdd": 2.44,
-              "winRate": 40
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Reversal Reaper98179779",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "98179779",
-            "metrics": {
-              "followers": 0,
-              "pnl": 8.4274,
-              "roi": 2.14,
-              "mdd": 1.28,
-              "winRate": 60
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Omega Reaper",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "33574169",
-            "metrics": {
-              "followers": 0,
-              "pnl": 8.11184,
-              "roi": 20.56,
-              "mdd": 0,
-              "winRate": 100
+              "winRate": 80
             },
             "source": "runtime-public"
           },
@@ -1990,76 +2044,20 @@ window.PLATFORM_GENERATED={
             "rawId": "69666206",
             "metrics": {
               "followers": 0,
-              "pnl": 7.54621,
-              "roi": 3.81,
+              "pnl": 7.74206,
+              "roi": 3.9,
               "mdd": 11.07,
               "winRate": 60
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Reversal Reaper62080221",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "62080221",
-            "metrics": {
-              "followers": 0,
-              "pnl": 6.38994,
-              "roi": 1.61,
-              "mdd": 2.18,
-              "winRate": 60
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Adaptive Grid AI27417375",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "27417375",
-            "metrics": {
-              "followers": 0,
-              "pnl": 6.33746,
-              "roi": 4.04,
-              "mdd": 3.97,
-              "winRate": 50
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Mirrored Apex Hunter",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "46042061",
-            "metrics": {
-              "followers": 0,
-              "pnl": 5.2448,
-              "roi": 2.23,
-              "mdd": 0.72,
-              "winRate": 66.66
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Reversal Reaper86660467",
-            "profileUrl": null,
-            "avatarUrl": "https://public.mocortech.com/banner/F20241129180903897wAEfT8y5WLfF2J.png",
-            "rawId": "86660467",
-            "metrics": {
-              "followers": 0,
-              "pnl": 5.23745,
-              "roi": 1.32,
-              "mdd": 0.62,
-              "winRate": 50
             },
             "source": "runtime-public"
           }
         ],
         "title": "mexc copy",
         "sourceUrl": "https://www.mexc.com/en-GB/futures/copyTrade/leaderRank",
-        "generatedAt": "2026-08-16T13:02:27.063Z",
+        "generatedAt": "2026-08-16T18:48:29.613Z",
         "apiSources": [
-          "https://www.mexc.com/api/platform/futures/copyFutures/api/v1/traders/top/v2?limit=10",
-          "https://www.mexc.com/api/platform/futures/copyFutures/api/v1/traders/v2?intervalType=SEVEN_DAYS&limit=20&orderBy=COMPREHENSIVE&page=1"
+          "https://www.mexc.com/api/platform/futures/copyFutures/api/v1/traders/v2?intervalType=SEVEN_DAYS&limit=20&orderBy=COMPREHENSIVE&page=1",
+          "https://www.mexc.com/api/platform/futures/copyFutures/api/v1/traders/top/v2?limit=10"
         ],
         "domAvatarHints": 20,
         "avatarUsers": 80,
@@ -2084,11 +2082,11 @@ window.PLATFORM_GENERATED={
             "avatarUrl": null,
             "rawId": "565811037",
             "metrics": {
-              "aum": 24574.356627,
-              "pnl": 12658.831442,
-              "roi": 162.73,
+              "aum": 25409.6624,
+              "pnl": 11843.364856,
+              "roi": 139.79,
               "mdd": 22.4654,
-              "winRate": 95.08
+              "winRate": 95.16
             },
             "source": "runtime-public"
           },
@@ -2098,9 +2096,9 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://d1x7dwosqaosdj.cloudfront.net/images/2024-12/22638b04360e476c8bc49733efd413d2.jpeg",
             "rawId": "388510905",
             "metrics": {
-              "aum": 5845.708017,
-              "pnl": 1959.542525,
-              "roi": 140.29,
+              "aum": 6018.724001,
+              "pnl": 1932.355357,
+              "roi": 129.79,
               "mdd": 10.4818,
               "winRate": 100
             },
@@ -2113,7 +2111,7 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://d1x7dwosqaosdj.cloudfront.net/images/2025-10/7d7c43e4a11b481ab515b0f26c74bbdb.jpeg",
             "rawId": "561274746",
             "metrics": {
-              "aum": 39001.968701,
+              "aum": 39329.346027,
               "pnl": 484.505177,
               "roi": 66.42,
               "mdd": 16.4696,
@@ -2128,41 +2126,11 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://d1x7dwosqaosdj.cloudfront.net/images/2026-08-07/2ba25b59-a198-45a9-80cb-f5a88108234a.jpeg",
             "rawId": "593870635",
             "metrics": {
-              "aum": 51590.729676,
-              "pnl": 13287.180195,
-              "roi": 191.09,
+              "aum": 53960.130263,
+              "pnl": 12451.386529,
+              "roi": 143.1,
               "mdd": 100,
-              "winRate": 93.98
-            },
-            "source": "runtime-public",
-            "avatarSource": "official-rendered-card"
-          },
-          {
-            "name": "极限挑战",
-            "profileUrl": null,
-            "avatarUrl": "https://download.hbfile.net/hbg/img/202507111806/c3f9ae8e380948c79e95f87e9f9ea64e/4614a1a930c4026f3b7d0775cc667e2e.png",
-            "rawId": "453018508",
-            "metrics": {
-              "aum": 9321.110722,
-              "pnl": 325.633507,
-              "roi": 89.71,
-              "mdd": 14.8648,
-              "winRate": 96
-            },
-            "source": "runtime-public",
-            "avatarSource": "official-rendered-card"
-          },
-          {
-            "name": "战斗不休",
-            "profileUrl": null,
-            "avatarUrl": "https://d1x7dwosqaosdj.cloudfront.net/images/2026-07-30/0c15d4a3-af34-46f4-83ac-1d932a0ab9c1.png",
-            "rawId": "541800459",
-            "metrics": {
-              "aum": 35566.245985,
-              "pnl": 3456.902628,
-              "roi": 9.59,
-              "mdd": 35.8748,
-              "winRate": 100
+              "winRate": 93.75
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -2173,10 +2141,25 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://d1x7dwosqaosdj.cloudfront.net/images/2026-03/52a85b38f6f548dab319c3e18379c0ad.jpeg",
             "rawId": "579639784",
             "metrics": {
-              "aum": 28370.024404,
-              "pnl": 5293.632841,
-              "roi": 15.44,
+              "aum": 27636.156914,
+              "pnl": 4195.377531,
+              "roi": 12.24,
               "mdd": 35.1454,
+              "winRate": 100
+            },
+            "source": "runtime-public",
+            "avatarSource": "official-rendered-card"
+          },
+          {
+            "name": "战斗不休",
+            "profileUrl": null,
+            "avatarUrl": "https://d1x7dwosqaosdj.cloudfront.net/images/2026-07-30/0c15d4a3-af34-46f4-83ac-1d932a0ab9c1.png",
+            "rawId": "541800459",
+            "metrics": {
+              "aum": 35568.852465,
+              "pnl": 3457.375034,
+              "roi": 9.58,
+              "mdd": 35.8748,
               "winRate": 100
             },
             "source": "runtime-public",
@@ -2188,9 +2171,9 @@ window.PLATFORM_GENERATED={
             "avatarUrl": "https://d1x7dwosqaosdj.cloudfront.net/images/2026-07-31/023fb4c0-de4a-4b7c-a883-9e1064737089.jpeg",
             "rawId": "430991105",
             "metrics": {
-              "aum": 3755.961642,
-              "pnl": 2564.980893,
-              "roi": 71.38,
+              "aum": 3755.794209,
+              "pnl": 2510.974474,
+              "roi": 69.87,
               "mdd": 62.7429,
               "winRate": 96.49
             },
@@ -2198,16 +2181,16 @@ window.PLATFORM_GENERATED={
             "avatarSource": "official-rendered-card"
           },
           {
-            "name": "应在江湖悠悠",
+            "name": "经历多轮大涨大跌",
             "profileUrl": null,
-            "avatarUrl": "https://d1x7dwosqaosdj.cloudfront.net/images/2024-08/eda96f49da22499b8470341598cfea69.jpeg",
-            "rawId": "482795431",
+            "avatarUrl": "https://download.hbfile.net/hbg/img/202507111806/c3f9ae8e380948c79e95f87e9f9ea64e/4614a1a930c4026f3b7d0775cc667e2e.png",
+            "rawId": "508280839",
             "metrics": {
-              "aum": 36199.761638,
-              "pnl": 131.223854,
-              "roi": 8.06,
-              "mdd": 8.0256,
-              "winRate": 100
+              "aum": 4347.784225,
+              "pnl": 439.015892,
+              "roi": 3.19,
+              "mdd": 6.6098,
+              "winRate": 88
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -2219,10 +2202,25 @@ window.PLATFORM_GENERATED={
             "rawId": "592805057",
             "metrics": {
               "aum": 7802.717953,
-              "pnl": 516.863516,
-              "roi": 7.09,
+              "pnl": 471.301672,
+              "roi": 6.43,
               "mdd": 1.7518,
-              "winRate": 87.5
+              "winRate": 89.74
+            },
+            "source": "runtime-public",
+            "avatarSource": "official-rendered-card"
+          },
+          {
+            "name": "五年计划",
+            "profileUrl": null,
+            "avatarUrl": "https://d1x7dwosqaosdj.cloudfront.net/images/2026-06-18/2b3797bd-122e-4750-8c52-066d5b6e4836.png",
+            "rawId": "546498641",
+            "metrics": {
+              "aum": 18724.746847,
+              "pnl": 228.87144,
+              "roi": 25.46,
+              "mdd": 9.853,
+              "winRate": 85.71
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -2234,40 +2232,25 @@ window.PLATFORM_GENERATED={
             "rawId": "490159662",
             "metrics": {
               "aum": 8087.963294,
-              "pnl": 1225.469687,
-              "roi": 15.32,
+              "pnl": 1217.963294,
+              "roi": 15.22,
               "mdd": 14.3499,
-              "winRate": 95.45
+              "winRate": 95.65
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
           },
           {
-            "name": "经历多轮大涨大跌",
+            "name": "极限挑战",
             "profileUrl": null,
             "avatarUrl": "https://download.hbfile.net/hbg/img/202507111806/c3f9ae8e380948c79e95f87e9f9ea64e/4614a1a930c4026f3b7d0775cc667e2e.png",
-            "rawId": "508280839",
+            "rawId": "453018508",
             "metrics": {
-              "aum": 4323.4992,
-              "pnl": 383.994535,
-              "roi": 2.79,
-              "mdd": 6.6098,
-              "winRate": 88
-            },
-            "source": "runtime-public",
-            "avatarSource": "official-rendered-card"
-          },
-          {
-            "name": "小向爱钓鱼",
-            "profileUrl": null,
-            "avatarUrl": "https://d1x7dwosqaosdj.cloudfront.net/images/2026-07-31/70827299-1aaa-4463-92ee-b6d4b261a23d.jpeg",
-            "rawId": "577473621",
-            "metrics": {
-              "aum": 7057.635651,
-              "pnl": 4721.66262,
-              "roi": 171.06,
-              "mdd": 11.0921,
-              "winRate": 0
+              "aum": 9981.271963,
+              "pnl": 325.633507,
+              "roi": 37.73,
+              "mdd": 42.0657,
+              "winRate": 96
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -2279,10 +2262,10 @@ window.PLATFORM_GENERATED={
             "rawId": "549363175",
             "metrics": {
               "aum": 3848.933555,
-              "pnl": 8570.769111,
-              "roi": 76.06,
+              "pnl": 8133.834453,
+              "roi": 69.49,
               "mdd": 66.9573,
-              "winRate": 66.67
+              "winRate": 80
             },
             "source": "runtime-public",
             "avatarSource": "official-rendered-card"
@@ -2290,13 +2273,13 @@ window.PLATFORM_GENERATED={
         ],
         "title": "htx copy",
         "sourceUrl": "https://futures.htx.com/zh-cn/copytrading/futures",
-        "generatedAt": "2026-08-16T13:02:27.063Z",
+        "generatedAt": "2026-08-16T18:48:29.613Z",
         "apiSources": [
           "https://futures.htx.com/-/x/hbg/v1/futures/copytrading/new-rank?rankType=0&pageNo=1&pageSize=12&timeDimension=1",
           "https://futures.htx.com/-/x/hbg/v1/futures/copytrading/rank/daily-featured"
         ],
         "domAvatarHints": 15,
-        "avatarUsers": 13,
+        "avatarUsers": 12,
         "profileUsers": 0,
         "errors": [],
         "percentNormalized": true,
@@ -2307,146 +2290,146 @@ window.PLATFORM_GENERATED={
       "copy": {
         "users": [
           {
-            "name": "Krico88",
+            "name": "AG28",
+            "profileUrl": null,
+            "avatarUrl": null,
+            "rawId": null,
+            "metrics": {
+              "pnl": -8.651913358,
+              "followerPnl": 0
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "10D",
+            "profileUrl": null,
+            "avatarUrl": "https://assets.staticimg.com/kc-v2-config/avatar/672a0c9a58fbd5000157bbe6_5.png",
+            "rawId": null,
+            "metrics": {
+              "pnl": -89.0530283214,
+              "followerPnl": -49.795311662
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Экспроприатор",
+            "profileUrl": null,
+            "avatarUrl": null,
+            "rawId": null,
+            "metrics": {
+              "pnl": -280.254080125,
+              "followerPnl": 100.6858431889
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "FeBueno666",
+            "profileUrl": null,
+            "avatarUrl": null,
+            "rawId": null,
+            "metrics": {
+              "pnl": 438.9934909487,
+              "followerPnl": 0
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Will201trader",
+            "profileUrl": null,
+            "avatarUrl": "https://assets.staticimg.com/kc-v2-config/avatar/672a0c9a58fbd5000157bbe4_3.png",
+            "rawId": null,
+            "metrics": {
+              "pnl": -2794.6060750087,
+              "followerPnl": -2008.8599999898
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "777fanno21",
+            "profileUrl": null,
+            "avatarUrl": null,
+            "rawId": null,
+            "metrics": {
+              "pnl": 579.22821126,
+              "followerPnl": 27.1821003405
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Traderab56af",
+            "profileUrl": null,
+            "avatarUrl": null,
+            "rawId": null,
+            "metrics": {
+              "pnl": 56.03540346,
+              "followerPnl": 0
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Btcoke",
+            "profileUrl": null,
+            "avatarUrl": null,
+            "rawId": null,
+            "metrics": {
+              "pnl": 40.89087445,
+              "followerPnl": 0
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "Klng",
+            "profileUrl": null,
+            "avatarUrl": null,
+            "rawId": null,
+            "metrics": {
+              "pnl": 140.54469274,
+              "followerPnl": -2.62595526
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "_HORIZON_",
+            "profileUrl": null,
+            "avatarUrl": "https://assets.staticimg.com/kc-v2-config/avatar/672a0c9a58fbd5000157bbe5_4.png",
+            "rawId": null,
+            "metrics": {
+              "pnl": 33.61177591,
+              "followerPnl": 0
+            },
+            "source": "runtime-public"
+          },
+          {
+            "name": "hdpx666",
             "profileUrl": null,
             "avatarUrl": "https://assets.staticimg.com/kc-v2-config/avatar/672a0c9a58fbd5000157bbed_12.png",
             "rawId": null,
             "metrics": {
-              "pnl": -404.2449096431,
-              "followerPnl": 394.1554803597
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Trader304c42",
-            "profileUrl": null,
-            "avatarUrl": null,
-            "rawId": null,
-            "metrics": {
-              "pnl": 146.97084876,
-              "followerPnl": 6.228178746
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "AiTradeHub",
-            "profileUrl": null,
-            "avatarUrl": null,
-            "rawId": null,
-            "metrics": {
-              "pnl": 250.1393764335,
+              "pnl": 43.70492087,
               "followerPnl": 0
             },
             "source": "runtime-public"
           },
           {
-            "name": "金雅麗KC",
+            "name": "healingcenter",
             "profileUrl": null,
             "avatarUrl": null,
             "rawId": null,
             "metrics": {
-              "pnl": 9096.23559185,
-              "followerPnl": 184.9082380815
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Deftelbow75",
-            "profileUrl": null,
-            "avatarUrl": null,
-            "rawId": null,
-            "metrics": {
-              "pnl": 247.640521998,
-              "followerPnl": 255.0070722375
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "IonGigel",
-            "profileUrl": null,
-            "avatarUrl": null,
-            "rawId": null,
-            "metrics": {
-              "pnl": -260.1066261663,
+              "pnl": 371.586886922,
               "followerPnl": 0
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Bendiga",
-            "profileUrl": null,
-            "avatarUrl": null,
-            "rawId": null,
-            "metrics": {
-              "pnl": 184.27717192,
-              "followerPnl": 8e-9
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Traderbec125",
-            "profileUrl": null,
-            "avatarUrl": null,
-            "rawId": null,
-            "metrics": {
-              "pnl": 106.7406742254,
-              "followerPnl": 0
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "CGT95",
-            "profileUrl": null,
-            "avatarUrl": "https://assets.staticimg.com/kc-v2-config/avatar/672a0c9a58fbd5000157bbea_9.png",
-            "rawId": null,
-            "metrics": {
-              "pnl": -86.1369509078,
-              "followerPnl": -205.1042224615
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Tradere26e2d",
-            "profileUrl": null,
-            "avatarUrl": null,
-            "rawId": null,
-            "metrics": {
-              "pnl": 150.11724867,
-              "followerPnl": 0
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "Maxtrad",
-            "profileUrl": null,
-            "avatarUrl": null,
-            "rawId": null,
-            "metrics": {
-              "pnl": -97.940643014,
-              "followerPnl": 0
-            },
-            "source": "runtime-public"
-          },
-          {
-            "name": "JanKaya",
-            "profileUrl": null,
-            "avatarUrl": "https://assets.staticimg.com/kc-v2-config/avatar/672a0c9a58fbd5000157bbea_9.png",
-            "rawId": null,
-            "metrics": {
-              "pnl": 591.7782175569,
-              "followerPnl": 1.08403695
             },
             "source": "runtime-public"
           }
         ],
         "title": "kucoin copy",
         "sourceUrl": "https://www.kucoin.com/copy-trading",
-        "generatedAt": "2026-08-16T13:02:27.063Z",
+        "generatedAt": "2026-08-16T18:48:29.613Z",
         "apiSources": [
           "https://www.kucoin.com/_api/ct-copy-trade/v1/copyTrading/rn/leaderboard/query?lang=en_US"
         ],
-        "domAvatarHints": 3,
-        "avatarUsers": 3,
+        "domAvatarHints": 4,
+        "avatarUsers": 4,
         "profileUsers": 0,
         "errors": []
       }
@@ -2454,16 +2437,16 @@ window.PLATFORM_GENERATED={
   },
   "diagnostics": {
     "binance:copy": {
-      "at": "2026-08-16T13:02:27.063Z",
+      "at": "2026-08-16T18:48:29.613Z",
       "found": 15,
       "apiSources": [],
       "domAvatarHints": 0,
       "avatarUsers": 15,
       "profileUsers": 0,
-      "error": "Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is | Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is | Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is | Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is | Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is"
+      "error": "Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is | Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is | Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is"
     },
     "bitget:copy": {
-      "at": "2026-08-16T13:02:27.063Z",
+      "at": "2026-08-16T18:48:29.613Z",
       "found": 20,
       "apiSources": [
         "https://www.bitget.com/v1/trigger/trace/public/traderRankingList"
@@ -2474,7 +2457,7 @@ window.PLATFORM_GENERATED={
       "error": null
     },
     "bybit:copy": {
-      "at": "2026-08-16T13:02:27.063Z",
+      "at": "2026-08-16T18:48:29.613Z",
       "found": 0,
       "apiSources": [],
       "domAvatarHints": 0,
@@ -2483,7 +2466,7 @@ window.PLATFORM_GENERATED={
       "error": "Error: page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.bybit.com/copyTrade/tradeLink\nCall log:\n  - navigating to \"https://www.bybit.com/copyTrade/tradeLink\", waiting until \"domcontentloaded\"\n | dom: locator.evaluateAll: Execution context was destroyed, most likely because of a navigation"
     },
     "bybit:trader": {
-      "at": "2026-08-16T13:02:27.063Z",
+      "at": "2026-08-16T18:48:29.613Z",
       "found": 0,
       "apiSources": [],
       "domAvatarHints": 0,
@@ -2492,7 +2475,7 @@ window.PLATFORM_GENERATED={
       "error": "Error: page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.bybit.com/en/leaderboard\nCall log:\n  - navigating to \"https://www.bybit.com/en/leaderboard\", waiting until \"domcontentloaded\"\n | dom: locator.evaluateAll: Execution context was destroyed, most likely because of a navigation"
     },
     "gate:copy": {
-      "at": "2026-08-16T13:02:27.063Z",
+      "at": "2026-08-16T18:48:29.613Z",
       "found": 0,
       "apiSources": [],
       "domAvatarHints": 0,
@@ -2501,11 +2484,11 @@ window.PLATFORM_GENERATED={
       "error": null
     },
     "mexc:copy": {
-      "at": "2026-08-16T13:02:27.063Z",
+      "at": "2026-08-16T18:48:29.613Z",
       "found": 80,
       "apiSources": [
-        "https://www.mexc.com/api/platform/futures/copyFutures/api/v1/traders/top/v2?limit=10",
-        "https://www.mexc.com/api/platform/futures/copyFutures/api/v1/traders/v2?intervalType=SEVEN_DAYS&limit=20&orderBy=COMPREHENSIVE&page=1"
+        "https://www.mexc.com/api/platform/futures/copyFutures/api/v1/traders/v2?intervalType=SEVEN_DAYS&limit=20&orderBy=COMPREHENSIVE&page=1",
+        "https://www.mexc.com/api/platform/futures/copyFutures/api/v1/traders/top/v2?limit=10"
       ],
       "domAvatarHints": 20,
       "avatarUsers": 80,
@@ -2513,30 +2496,30 @@ window.PLATFORM_GENERATED={
       "error": "SyntaxError: Unexpected end of JSON input | SyntaxError: Unexpected end of JSON input | SyntaxError: Unexpected end of JSON input | SyntaxError: Unexpected end of JSON input | SyntaxError: Unexpected end of JSON input"
     },
     "htx:copy": {
-      "at": "2026-08-16T13:02:27.063Z",
-      "found": 14,
+      "at": "2026-08-16T18:48:29.613Z",
+      "found": 13,
       "apiSources": [
         "https://futures.htx.com/-/x/hbg/v1/futures/copytrading/new-rank?rankType=0&pageNo=1&pageSize=12&timeDimension=1",
         "https://futures.htx.com/-/x/hbg/v1/futures/copytrading/rank/daily-featured"
       ],
       "domAvatarHints": 15,
-      "avatarUsers": 13,
+      "avatarUsers": 12,
       "profileUsers": 0,
       "error": null
     },
     "kucoin:copy": {
-      "at": "2026-08-16T13:02:27.063Z",
+      "at": "2026-08-16T18:48:29.613Z",
       "found": 12,
       "apiSources": [
         "https://www.kucoin.com/_api/ct-copy-trade/v1/copyTrading/rn/leaderboard/query?lang=en_US"
       ],
-      "domAvatarHints": 3,
-      "avatarUsers": 3,
+      "domAvatarHints": 4,
+      "avatarUsers": 4,
       "profileUsers": 0,
       "error": null
     },
     "crypto:trader": {
-      "at": "2026-08-16T13:02:27.063Z",
+      "at": "2026-08-16T18:48:29.613Z",
       "found": 0,
       "apiSources": [],
       "domAvatarHints": 0,
@@ -2545,14 +2528,14 @@ window.PLATFORM_GENERATED={
       "error": null
     },
     "binance:trader": {
-      "at": "2026-08-16T13:04:13.274Z",
+      "at": "2026-08-16T18:50:18.446Z",
       "found": 25,
       "error": null,
       "source": "official-web3-public-endpoint"
     }
   },
   "history": {
-    "updatedAt": "2026-08-16T13:04:13.274Z",
+    "updatedAt": "2026-08-16T18:50:18.446Z",
     "series": {
       "binance:copy:cz_love_broccoli714_and_mubarak": {
         "name": "CZ love Broccoli714 and Mubarak",
@@ -2743,6 +2726,17 @@ window.PLATFORM_GENERATED={
               "mdd": 42.243035,
               "sharpe": -0.38835997
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 36328.73775417,
+              "days": 270,
+              "pnl": 8556.46560987,
+              "roi": 43.11018744,
+              "mdd": 42.243035,
+              "sharpe": -0.38018543
+            }
           }
         ],
         "daily": [
@@ -2780,14 +2774,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 35697.02032037,
+              "aum": 36328.73775417,
               "days": 270,
-              "pnl": 8103.13407287,
-              "roi": 40.82590568,
+              "pnl": 8556.46560987,
+              "roi": 43.11018744,
               "mdd": 42.243035,
-              "sharpe": -0.38835997
+              "sharpe": -0.38018543
             }
           }
         ]
@@ -3274,6 +3268,17 @@ window.PLATFORM_GENERATED={
               "mdd": 26.147157,
               "sharpe": 1.97677894
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 32027.47391156,
+              "days": 234,
+              "pnl": 747.26472498,
+              "roi": 104.30518687,
+              "mdd": 26.147157,
+              "sharpe": 1.9943461
+            }
           }
         ],
         "daily": [
@@ -3311,14 +3316,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 32107.22475474,
+              "aum": 32027.47391156,
               "days": 234,
-              "pnl": 693.87045793,
-              "roi": 96.85206624,
+              "pnl": 747.26472498,
+              "roi": 104.30518687,
               "mdd": 26.147157,
-              "sharpe": 1.97677894
+              "sharpe": 1.9943461
             }
           }
         ]
@@ -3459,6 +3464,17 @@ window.PLATFORM_GENERATED={
               "mdd": 12.207081,
               "sharpe": -0.08672091
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 13623.92439898,
+              "days": 817,
+              "pnl": 37.37905564,
+              "roi": 110.10256811,
+              "mdd": 12.207081,
+              "sharpe": -0.0662936
+            }
           }
         ],
         "daily": [
@@ -3496,14 +3512,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 7768.75776284,
+              "aum": 13623.92439898,
               "days": 817,
-              "pnl": 39.0501537,
-              "roi": 115.02737834,
+              "pnl": 37.37905564,
+              "roi": 110.10256811,
               "mdd": 12.207081,
-              "sharpe": -0.08672091
+              "sharpe": -0.0662936
             }
           }
         ]
@@ -3730,6 +3746,17 @@ window.PLATFORM_GENERATED={
               "mdd": 9.437022,
               "sharpe": 0.38731875
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 49906.91216224,
+              "days": 572,
+              "pnl": 6.42264763,
+              "roi": 0.22139672,
+              "mdd": 9.437022,
+              "sharpe": 0.38731984
+            }
           }
         ],
         "daily": [
@@ -3767,14 +3794,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 50114.13914758,
+              "aum": 49906.91216224,
               "days": 572,
-              "pnl": 6.4251016,
-              "roi": 0.22150675,
+              "pnl": 6.42264763,
+              "roi": 0.22139672,
               "mdd": 9.437022,
-              "sharpe": 0.38731875
+              "sharpe": 0.38731984
             }
           }
         ]
@@ -3915,6 +3942,17 @@ window.PLATFORM_GENERATED={
               "mdd": 0.012466,
               "sharpe": 0.39540367
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 1242370.47378068,
+              "days": 346,
+              "pnl": 72.31392023,
+              "roi": 0.04461937,
+              "mdd": 0.012466,
+              "sharpe": 0.39517424
+            }
           }
         ],
         "daily": [
@@ -3952,14 +3990,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 1242236.73197753,
+              "aum": 1242370.47378068,
               "days": 346,
-              "pnl": 57.58306805,
-              "roi": 0.03459681,
+              "pnl": 72.31392023,
+              "roi": 0.04461937,
               "mdd": 0.012466,
-              "sharpe": 0.39540367
+              "sharpe": 0.39517424
             }
           }
         ]
@@ -4100,6 +4138,17 @@ window.PLATFORM_GENERATED={
               "mdd": 14.750009,
               "sharpe": -0.00116922
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 55232.26841029,
+              "days": 339,
+              "pnl": 378.23348109,
+              "roi": 0.62354281,
+              "mdd": 14.582189,
+              "sharpe": -0.00087167
+            }
           }
         ],
         "daily": [
@@ -4137,14 +4186,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 54908.62528853,
+              "aum": 55232.26841029,
               "days": 339,
-              "pnl": 290.32571944,
-              "roi": 0.00579694,
-              "mdd": 14.750009,
-              "sharpe": -0.00116922
+              "pnl": 378.23348109,
+              "roi": 0.62354281,
+              "mdd": 14.582189,
+              "sharpe": -0.00087167
             }
           }
         ]
@@ -4285,6 +4334,17 @@ window.PLATFORM_GENERATED={
               "mdd": 4.792188,
               "sharpe": 0.96157327
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 40019.89076605,
+              "days": 494,
+              "pnl": 66.51510943,
+              "roi": 10.52747237,
+              "mdd": 4.792188,
+              "sharpe": 0.96157085
+            }
           }
         ],
         "daily": [
@@ -4322,14 +4382,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 40062.8233463,
+              "aum": 40019.89076605,
               "days": 494,
-              "pnl": 71.39210317,
-              "roi": 11.17822508,
+              "pnl": 66.51510943,
+              "roi": 10.52747237,
               "mdd": 4.792188,
-              "sharpe": 0.96157327
+              "sharpe": 0.96157085
             }
           }
         ]
@@ -4470,6 +4530,17 @@ window.PLATFORM_GENERATED={
               "mdd": 6.608349,
               "sharpe": -1.29859422
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 515373.5151719,
+              "days": 740,
+              "pnl": -9361.61430813,
+              "roi": -4.38365873,
+              "mdd": 6.608349,
+              "sharpe": -1.29449366
+            }
           }
         ],
         "daily": [
@@ -4507,14 +4578,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 514350.41868349,
+              "aum": 515373.5151719,
               "days": 740,
-              "pnl": -9548.29996487,
-              "roi": -4.47094715,
+              "pnl": -9361.61430813,
+              "roi": -4.38365873,
               "mdd": 6.608349,
-              "sharpe": -1.29859422
+              "sharpe": -1.29449366
             }
           }
         ]
@@ -4655,6 +4726,17 @@ window.PLATFORM_GENERATED={
               "mdd": 4.825633,
               "sharpe": 0.16766201
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 979855.03381436,
+              "days": 754,
+              "pnl": 101.22479007,
+              "roi": 0.13667035,
+              "mdd": 4.825633,
+              "sharpe": 0.16354976
+            }
           }
         ],
         "daily": [
@@ -4692,14 +4774,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 980150.50017713,
+              "aum": 979855.03381436,
               "days": 754,
-              "pnl": 116.42486746,
-              "roi": 0.15773032,
+              "pnl": 101.22479007,
+              "roi": 0.13667035,
               "mdd": 4.825633,
-              "sharpe": 0.16766201
+              "sharpe": 0.16354976
             }
           }
         ]
@@ -4840,6 +4922,17 @@ window.PLATFORM_GENERATED={
               "mdd": 2.568688,
               "sharpe": -1.09155897
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 400278.56269336,
+              "days": 600,
+              "pnl": 3861.3971507,
+              "roi": 1.87375439,
+              "mdd": 2.568688,
+              "sharpe": -1.09312163
+            }
           }
         ],
         "daily": [
@@ -4877,14 +4970,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 397722.90956773,
+              "aum": 400278.56269336,
               "days": 600,
-              "pnl": 3723.02295008,
-              "roi": 1.81849936,
+              "pnl": 3861.3971507,
+              "roi": 1.87375439,
               "mdd": 2.568688,
-              "sharpe": -1.09155897
+              "sharpe": -1.09312163
             }
           }
         ]
@@ -5100,6 +5193,17 @@ window.PLATFORM_GENERATED={
               "trades": 4277,
               "assets": 108.73571826
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 352512.37609293,
+              "roi": 0.57487757,
+              "winRate": 0.7448,
+              "volume": 1709654.45830814,
+              "trades": 4329,
+              "assets": 100.40118293
+            }
           }
         ],
         "daily": [
@@ -5137,14 +5241,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 351943.66455392,
-              "roi": 0.58745207,
-              "winRate": 0.7503,
-              "volume": 1674520.70646659,
-              "trades": 4277,
-              "assets": 108.73571826
+              "pnl": 352512.37609293,
+              "roi": 0.57487757,
+              "winRate": 0.7448,
+              "volume": 1709654.45830814,
+              "trades": 4329,
+              "assets": 100.40118293
             }
           }
         ]
@@ -5285,6 +5389,17 @@ window.PLATFORM_GENERATED={
               "trades": 2933,
               "assets": 96.39551035
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 265223.19385664,
+              "roi": 0.54186602,
+              "winRate": 0.4189,
+              "volume": 1338698.96307705,
+              "trades": 2936,
+              "assets": 125.27119347
+            }
           }
         ],
         "daily": [
@@ -5322,14 +5437,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 255987.08779026,
-              "roi": 0.53221174,
+              "pnl": 265223.19385664,
+              "roi": 0.54186602,
               "winRate": 0.4189,
-              "volume": 1320987.48496979,
-              "trades": 2933,
-              "assets": 96.39551035
+              "volume": 1338698.96307705,
+              "trades": 2936,
+              "assets": 125.27119347
             }
           }
         ]
@@ -5470,6 +5585,17 @@ window.PLATFORM_GENERATED={
               "trades": 160,
               "assets": 0.1162305
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 241252.48828991,
+              "roi": 2.19488663,
+              "winRate": 0.4762,
+              "volume": 548532.71731776,
+              "trades": 160,
+              "assets": 0.1162305
+            }
           }
         ],
         "daily": [
@@ -5507,7 +5633,7 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "pnl": 241252.48828991,
               "roi": 2.19488663,
@@ -5655,6 +5781,17 @@ window.PLATFORM_GENERATED={
               "trades": 21987,
               "assets": 133.28349445
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 276615.16427589,
+              "roi": 0.07707199,
+              "winRate": 0.4076,
+              "volume": 7622159.30267307,
+              "trades": 22424,
+              "assets": 153.94919786
+            }
           }
         ],
         "daily": [
@@ -5692,14 +5829,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 256712.88366584,
-              "roi": 0.07303309,
-              "winRate": 0.4065,
-              "volume": 7448716.14575993,
-              "trades": 21987,
-              "assets": 133.28349445
+              "pnl": 276615.16427589,
+              "roi": 0.07707199,
+              "winRate": 0.4076,
+              "volume": 7622159.30267307,
+              "trades": 22424,
+              "assets": 153.94919786
             }
           }
         ]
@@ -5840,6 +5977,17 @@ window.PLATFORM_GENERATED={
               "trades": 12594,
               "assets": 31.65965774
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 265085.08068029,
+              "roi": 0.1310559,
+              "winRate": 0.5983,
+              "volume": 4519077.79539677,
+              "trades": 12664,
+              "assets": 80.98606687
+            }
           }
         ],
         "daily": [
@@ -5877,14 +6025,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 236991.25781844,
-              "roi": 0.11868555,
-              "winRate": 0.5976,
-              "volume": 4440719.52462715,
-              "trades": 12594,
-              "assets": 31.65965774
+              "pnl": 265085.08068029,
+              "roi": 0.1310559,
+              "winRate": 0.5983,
+              "volume": 4519077.79539677,
+              "trades": 12664,
+              "assets": 80.98606687
             }
           }
         ]
@@ -6025,6 +6173,17 @@ window.PLATFORM_GENERATED={
               "trades": 12293,
               "assets": 129.43431157
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 218694.7320487,
+              "roi": 0.21601327,
+              "winRate": 0.6275,
+              "volume": 2320278.75821147,
+              "trades": 12384,
+              "assets": 132.20338588
+            }
           }
         ],
         "daily": [
@@ -6062,14 +6221,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 217506.66403423,
-              "roi": 0.21672874,
-              "winRate": 0.6271,
-              "volume": 2301615.70757519,
-              "trades": 12293,
-              "assets": 129.43431157
+              "pnl": 218694.7320487,
+              "roi": 0.21601327,
+              "winRate": 0.6275,
+              "volume": 2320278.75821147,
+              "trades": 12384,
+              "assets": 132.20338588
             }
           }
         ]
@@ -6210,6 +6369,17 @@ window.PLATFORM_GENERATED={
               "trades": 571,
               "assets": 0.39501265
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 160895.81276816,
+              "roi": 0.52652774,
+              "winRate": 0.4118,
+              "volume": 977806.21870871,
+              "trades": 571,
+              "assets": 0.39501265
+            }
           }
         ],
         "daily": [
@@ -6247,7 +6417,7 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "pnl": 160895.81276816,
               "roi": 0.52652774,
@@ -6395,6 +6565,17 @@ window.PLATFORM_GENERATED={
               "trades": 414,
               "assets": 410.24931766
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 349416.63277149,
+              "roi": 0.52837637,
+              "winRate": 0.1765,
+              "volume": 1690454.34683474,
+              "trades": 437,
+              "assets": 408.6351169
+            }
           }
         ],
         "daily": [
@@ -6432,14 +6613,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 349566.05680672,
-              "roi": 0.56020666,
-              "winRate": 0.129,
-              "volume": 1615509.76427998,
-              "trades": 414,
-              "assets": 410.24931766
+              "pnl": 349416.63277149,
+              "roi": 0.52837637,
+              "winRate": 0.1765,
+              "volume": 1690454.34683474,
+              "trades": 437,
+              "assets": 408.6351169
             }
           }
         ]
@@ -6580,6 +6761,17 @@ window.PLATFORM_GENERATED={
               "trades": 549,
               "assets": 0.10915575
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 124385.07239984,
+              "roi": 0.14054882,
+              "winRate": 0.0833,
+              "volume": 1916962.14535537,
+              "trades": 580,
+              "assets": 0.01555007
+            }
           }
         ],
         "daily": [
@@ -6617,14 +6809,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 128342.68232506,
-              "roi": 0.14887769,
-              "winRate": 0.0909,
-              "volume": 1873980.58947445,
-              "trades": 549,
-              "assets": 0.10915575
+              "pnl": 124385.07239984,
+              "roi": 0.14054882,
+              "winRate": 0.0833,
+              "volume": 1916962.14535537,
+              "trades": 580,
+              "assets": 0.01555007
             }
           }
         ]
@@ -6840,6 +7032,17 @@ window.PLATFORM_GENERATED={
               "trades": 20953,
               "assets": 145.15955775
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 151572.27920695,
+              "roi": 0.06449117,
+              "winRate": 0.4611,
+              "volume": 4914194.13952781,
+              "trades": 21283,
+              "assets": 130.0628036
+            }
           }
         ],
         "daily": [
@@ -6877,14 +7080,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 150238.53309195,
-              "roi": 0.06509723,
-              "winRate": 0.4605,
-              "volume": 4818078.79992113,
-              "trades": 20953,
-              "assets": 145.15955775
+              "pnl": 151572.27920695,
+              "roi": 0.06449117,
+              "winRate": 0.4611,
+              "volume": 4914194.13952781,
+              "trades": 21283,
+              "assets": 130.0628036
             }
           }
         ]
@@ -7025,6 +7228,17 @@ window.PLATFORM_GENERATED={
               "trades": 772,
               "assets": 14.97944908
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 135558.82842522,
+              "roi": 1.41158561,
+              "winRate": 0.4714,
+              "volume": 456379.59852872,
+              "trades": 781,
+              "assets": 16.07054156
+            }
           }
         ],
         "daily": [
@@ -7062,14 +7276,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 152334.71384153,
-              "roi": 2.03748587,
-              "winRate": 0.5,
-              "volume": 448078.05713078,
-              "trades": 772,
-              "assets": 14.97944908
+              "pnl": 135558.82842522,
+              "roi": 1.41158561,
+              "winRate": 0.4714,
+              "volume": 456379.59852872,
+              "trades": 781,
+              "assets": 16.07054156
             }
           }
         ]
@@ -7210,6 +7424,17 @@ window.PLATFORM_GENERATED={
               "trades": 18506,
               "assets": 16.80188117
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 139272.07965776,
+              "roi": 0.10482342,
+              "winRate": 0.4345,
+              "volume": 2888002.02370991,
+              "trades": 18622,
+              "assets": 27.14292516
+            }
           }
         ],
         "daily": [
@@ -7247,14 +7472,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 136844.39633991,
-              "roi": 0.10424888,
-              "winRate": 0.4335,
-              "volume": 2853818.3897311,
-              "trades": 18506,
-              "assets": 16.80188117
+              "pnl": 139272.07965776,
+              "roi": 0.10482342,
+              "winRate": 0.4345,
+              "volume": 2888002.02370991,
+              "trades": 18622,
+              "assets": 27.14292516
             }
           }
         ]
@@ -7395,6 +7620,17 @@ window.PLATFORM_GENERATED={
               "trades": 394,
               "assets": 1.87563377
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 141729.5242202,
+              "roi": 0.8250009,
+              "winRate": 0.3125,
+              "volume": 554677.14720174,
+              "trades": 394,
+              "assets": 1.87563377
+            }
           }
         ],
         "daily": [
@@ -7432,7 +7668,7 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "pnl": 141729.5242202,
               "roi": 0.8250009,
@@ -7580,6 +7816,17 @@ window.PLATFORM_GENERATED={
               "trades": 2941,
               "assets": 21.34860504
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 131574.42417438,
+              "roi": 0.27663688,
+              "winRate": 0.5542,
+              "volume": 1144371.31369234,
+              "trades": 2987,
+              "assets": 23.32096592
+            }
           }
         ],
         "daily": [
@@ -7617,14 +7864,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 128869.39207645,
-              "roi": 0.2771327,
-              "winRate": 0.5513,
-              "volume": 1119586.34873842,
-              "trades": 2941,
-              "assets": 21.34860504
+              "pnl": 131574.42417438,
+              "roi": 0.27663688,
+              "winRate": 0.5542,
+              "volume": 1144371.31369234,
+              "trades": 2987,
+              "assets": 23.32096592
             }
           }
         ]
@@ -7765,6 +8012,17 @@ window.PLATFORM_GENERATED={
               "trades": 204,
               "assets": 173.55939148
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 118749.05780617,
+              "roi": 0.79509703,
+              "winRate": 0.2857,
+              "volume": 431029.9632113,
+              "trades": 204,
+              "assets": 173.55939148
+            }
           }
         ],
         "daily": [
@@ -7802,7 +8060,7 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "pnl": 118749.05780617,
               "roi": 0.79509703,
@@ -7950,6 +8208,17 @@ window.PLATFORM_GENERATED={
               "trades": 393,
               "assets": 0.04331708
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 118445.83054859,
+              "roi": 0.45093867,
+              "winRate": 0.3636,
+              "volume": 872248.22896441,
+              "trades": 402,
+              "assets": 0.03546519
+            }
           }
         ],
         "daily": [
@@ -7987,14 +8256,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 118444.18638586,
-              "roi": 0.45351647,
+              "pnl": 118445.83054859,
+              "roi": 0.45093867,
               "winRate": 0.3636,
-              "volume": 867753.37993062,
-              "trades": 393,
-              "assets": 0.04331708
+              "volume": 872248.22896441,
+              "trades": 402,
+              "assets": 0.03546519
             }
           }
         ]
@@ -8776,6 +9045,17 @@ window.PLATFORM_GENERATED={
               "trades": 6895,
               "assets": 38.61496296
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 128653.85153575,
+              "roi": 0.1136582,
+              "winRate": 0.4489,
+              "volume": 2465900.51720946,
+              "trades": 7019,
+              "assets": 30.17509203
+            }
           }
         ],
         "daily": [
@@ -8813,14 +9093,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 121421.68881573,
-              "roi": 0.1118374,
-              "winRate": 0.452,
-              "volume": 2354012.46727057,
-              "trades": 6895,
-              "assets": 38.61496296
+              "pnl": 128653.85153575,
+              "roi": 0.1136582,
+              "winRate": 0.4489,
+              "volume": 2465900.51720946,
+              "trades": 7019,
+              "assets": 30.17509203
             }
           }
         ]
@@ -9139,6 +9419,14 @@ window.PLATFORM_GENERATED={
               "pnl": 52963.31,
               "roi": 1.27
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 2.67,
+              "pnl": 52200.11,
+              "roi": 2.03
+            }
           }
         ],
         "daily": [
@@ -9167,11 +9455,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 2.68,
-              "pnl": 52963.31,
-              "roi": 1.27
+              "aum": 2.67,
+              "pnl": 52200.11,
+              "roi": 2.03
             }
           }
         ]
@@ -9276,6 +9564,14 @@ window.PLATFORM_GENERATED={
               "pnl": 10702.88,
               "roi": 70.2
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 0,
+              "pnl": 12069.29,
+              "roi": 80.84
+            }
           }
         ],
         "daily": [
@@ -9304,11 +9600,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "aum": 0,
-              "pnl": 10702.88,
-              "roi": 70.2
+              "pnl": 12069.29,
+              "roi": 80.84
             }
           }
         ]
@@ -9413,6 +9709,14 @@ window.PLATFORM_GENERATED={
               "pnl": 12200.18,
               "roi": 74.53
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 1648.99,
+              "pnl": 12200.18,
+              "roi": 67.26
+            }
           }
         ],
         "daily": [
@@ -9441,11 +9745,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 1464.27,
+              "aum": 1648.99,
               "pnl": 12200.18,
-              "roi": 74.53
+              "roi": 67.26
             }
           }
         ]
@@ -9550,6 +9854,14 @@ window.PLATFORM_GENERATED={
               "pnl": 34014.61,
               "roi": 4.24
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 29.68,
+              "pnl": 32997.01,
+              "roi": 7.05
+            }
           }
         ],
         "daily": [
@@ -9578,11 +9890,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 30,
-              "pnl": 34014.61,
-              "roi": 4.24
+              "aum": 29.68,
+              "pnl": 32997.01,
+              "roi": 7.05
             }
           }
         ]
@@ -9687,6 +9999,14 @@ window.PLATFORM_GENERATED={
               "pnl": 23485.83,
               "roi": 907.32
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 82325.3,
+              "pnl": 23600.46,
+              "roi": 760.73
+            }
           }
         ],
         "daily": [
@@ -9715,11 +10035,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 80904.3,
-              "pnl": 23485.83,
-              "roi": 907.32
+              "aum": 82325.3,
+              "pnl": 23600.46,
+              "roi": 760.73
             }
           }
         ]
@@ -9824,6 +10144,14 @@ window.PLATFORM_GENERATED={
               "pnl": 26146.84,
               "roi": 8.9
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 114.77,
+              "pnl": 26146.84,
+              "roi": 8.9
+            }
           }
         ],
         "daily": [
@@ -9852,9 +10180,9 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 93.21,
+              "aum": 114.77,
               "pnl": 26146.84,
               "roi": 8.9
             }
@@ -9961,6 +10289,14 @@ window.PLATFORM_GENERATED={
               "pnl": 23786.69,
               "roi": 0.46
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 7936.13,
+              "pnl": 23570.45,
+              "roi": 0.73
+            }
           }
         ],
         "daily": [
@@ -9989,11 +10325,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 7633.54,
-              "pnl": 23786.69,
-              "roi": 0.46
+              "aum": 7936.13,
+              "pnl": 23570.45,
+              "roi": 0.73
             }
           }
         ]
@@ -10098,6 +10434,14 @@ window.PLATFORM_GENERATED={
               "pnl": 23825.57,
               "roi": 2.4
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 0,
+              "pnl": 23311.93,
+              "roi": 3.93
+            }
           }
         ],
         "daily": [
@@ -10126,11 +10470,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "aum": 0,
-              "pnl": 23825.57,
-              "roi": 2.4
+              "pnl": 23311.93,
+              "roi": 3.93
             }
           }
         ]
@@ -10235,6 +10579,14 @@ window.PLATFORM_GENERATED={
               "pnl": 19860.1,
               "roi": 1432.79
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 34734.34,
+              "pnl": 19874.17,
+              "roi": 1208.89
+            }
           }
         ],
         "daily": [
@@ -10263,11 +10615,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 32345.43,
-              "pnl": 19860.1,
-              "roi": 1432.79
+              "aum": 34734.34,
+              "pnl": 19874.17,
+              "roi": 1208.89
             }
           }
         ]
@@ -10372,6 +10724,14 @@ window.PLATFORM_GENERATED={
               "pnl": 16312.29,
               "roi": 74.7
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 0,
+              "pnl": 14610.19,
+              "roi": 77.96
+            }
           }
         ],
         "daily": [
@@ -10400,11 +10760,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "aum": 0,
-              "pnl": 16312.29,
-              "roi": 74.7
+              "pnl": 14610.19,
+              "roi": 77.96
             }
           }
         ]
@@ -10631,6 +10991,14 @@ window.PLATFORM_GENERATED={
               "pnl": 14864.07,
               "roi": 253.66
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 0,
+              "pnl": 12228.92,
+              "roi": 263.57
+            }
           }
         ],
         "daily": [
@@ -10659,11 +11027,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "aum": 0,
-              "pnl": 14864.07,
-              "roi": 253.66
+              "pnl": 12228.92,
+              "roi": 263.57
             }
           }
         ]
@@ -10768,6 +11136,14 @@ window.PLATFORM_GENERATED={
               "pnl": 11224.98,
               "roi": 2.99
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 20280.61,
+              "pnl": 11224.98,
+              "roi": 2.99
+            }
           }
         ],
         "daily": [
@@ -10796,9 +11172,9 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 20276.63,
+              "aum": 20280.61,
               "pnl": 11224.98,
               "roi": 2.99
             }
@@ -10905,6 +11281,14 @@ window.PLATFORM_GENERATED={
               "pnl": 14107.12,
               "roi": 7081.11
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 31365.8,
+              "pnl": 14107.12,
+              "roi": 7081.11
+            }
           }
         ],
         "daily": [
@@ -10933,9 +11317,9 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 29559.11,
+              "aum": 31365.8,
               "pnl": 14107.12,
               "roi": 7081.11
             }
@@ -11042,6 +11426,14 @@ window.PLATFORM_GENERATED={
               "pnl": 9945.73,
               "roi": 251.14
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 22827.91,
+              "pnl": 9948.16,
+              "roi": 183.76
+            }
           }
         ],
         "daily": [
@@ -11070,11 +11462,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 22736.97,
-              "pnl": 9945.73,
-              "roi": 251.14
+              "aum": 22827.91,
+              "pnl": 9948.16,
+              "roi": 183.76
             }
           }
         ]
@@ -11228,6 +11620,14 @@ window.PLATFORM_GENERATED={
               "pnl": 9754.27,
               "roi": 57.42
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 371.36,
+              "pnl": 9835.8,
+              "roi": 57.62
+            }
           }
         ],
         "daily": [
@@ -11256,11 +11656,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 370.2,
-              "pnl": 9754.27,
-              "roi": 57.42
+              "aum": 371.36,
+              "pnl": 9835.8,
+              "roi": 57.62
             }
           }
         ]
@@ -11365,6 +11765,14 @@ window.PLATFORM_GENERATED={
               "pnl": 8392.69,
               "roi": 694.61
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 21457.59,
+              "pnl": 8390.27,
+              "roi": 580.68
+            }
           }
         ],
         "daily": [
@@ -11393,11 +11801,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 21648.43,
-              "pnl": 8392.69,
-              "roi": 694.61
+              "aum": 21457.59,
+              "pnl": 8390.27,
+              "roi": 580.68
             }
           }
         ]
@@ -11585,6 +11993,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 43.95
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 26,
+              "pnl": 55329.94245014,
+              "roi": 134.34,
+              "mdd": 0,
+              "winRate": 42.22
+            }
           }
         ],
         "daily": [
@@ -11619,13 +12037,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 26,
-              "pnl": 46051.16900014,
-              "roi": 111.67,
+              "pnl": 55329.94245014,
+              "roi": 134.34,
               "mdd": 0,
-              "winRate": 43.95
+              "winRate": 42.22
             }
           }
         ]
@@ -12092,6 +12510,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 68
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 283,
+              "pnl": 2730.934735,
+              "roi": 168.85,
+              "mdd": 0,
+              "winRate": 66.66
+            }
           }
         ],
         "daily": [
@@ -12126,13 +12554,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "followers": 280,
-              "pnl": 1906.203235,
-              "roi": 115.4,
+              "followers": 283,
+              "pnl": 2730.934735,
+              "roi": 168.85,
               "mdd": 0,
-              "winRate": 68
+              "winRate": 66.66
             }
           }
         ]
@@ -12499,6 +12927,16 @@ window.PLATFORM_GENERATED={
               "mdd": 6.89,
               "winRate": 86.91
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 74,
+              "pnl": 1497.46339,
+              "roi": 46.62,
+              "mdd": 6.89,
+              "winRate": 89.3
+            }
           }
         ],
         "daily": [
@@ -12533,13 +12971,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 74,
-              "pnl": 2340.03659,
-              "roi": 69.14,
+              "pnl": 1497.46339,
+              "roi": 46.62,
               "mdd": 6.89,
-              "winRate": 86.91
+              "winRate": 89.3
             }
           }
         ]
@@ -12836,6 +13274,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 88.23
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 5,
+              "pnl": 2176.61629,
+              "roi": 24.26,
+              "mdd": 0,
+              "winRate": 91.17
+            }
           }
         ],
         "daily": [
@@ -12870,13 +13318,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 5,
-              "pnl": 3322.79019,
-              "roi": 37.16,
+              "pnl": 2176.61629,
+              "roi": 24.26,
               "mdd": 0,
-              "winRate": 88.23
+              "winRate": 91.17
             }
           }
         ]
@@ -12965,6 +13413,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 65.78
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 106,
+              "pnl": 7718.339754,
+              "roi": 44.9,
+              "mdd": 0,
+              "winRate": 64.78
+            }
           }
         ],
         "daily": [
@@ -12999,13 +13457,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 106,
-              "pnl": 6672.380954,
-              "roi": 38.09,
+              "pnl": 7718.339754,
+              "roi": 44.9,
               "mdd": 0,
-              "winRate": 65.78
+              "winRate": 64.78
             }
           }
         ]
@@ -13242,6 +13700,16 @@ window.PLATFORM_GENERATED={
               "mdd": 13.66,
               "winRate": 55.6
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 2,
+              "pnl": 2214.16558334,
+              "roi": 8,
+              "mdd": 15.39,
+              "winRate": 52.94
+            }
           }
         ],
         "daily": [
@@ -13276,13 +13744,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T01:57:41.409Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 2,
-              "pnl": 3137.48691024,
-              "roi": 10.35,
-              "mdd": 13.66,
-              "winRate": 55.6
+              "pnl": 2214.16558334,
+              "roi": 8,
+              "mdd": 15.39,
+              "winRate": 52.94
             }
           }
         ]
@@ -13390,6 +13858,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 70.73
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 52,
+              "pnl": 2678.15075,
+              "roi": 15.81,
+              "mdd": 0,
+              "winRate": 64.7
+            }
           }
         ],
         "daily": [
@@ -13424,13 +13902,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T01:57:41.409Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "followers": 54,
-              "pnl": 3029.99495,
-              "roi": 13.32,
+              "followers": 52,
+              "pnl": 2678.15075,
+              "roi": 15.81,
               "mdd": 0,
-              "winRate": 70.73
+              "winRate": 64.7
             }
           }
         ]
@@ -13568,6 +14046,16 @@ window.PLATFORM_GENERATED={
               "mdd": 8.83,
               "winRate": 62.05
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 10,
+              "pnl": 3916.810314,
+              "roi": 30.07,
+              "mdd": 5.93,
+              "winRate": 60.96
+            }
           }
         ],
         "daily": [
@@ -13592,13 +14080,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T01:57:41.409Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 10,
-              "pnl": 1556.205811,
-              "roi": 11.22,
-              "mdd": 8.83,
-              "winRate": 62.05
+              "pnl": 3916.810314,
+              "roi": 30.07,
+              "mdd": 5.93,
+              "winRate": 60.96
             }
           }
         ]
@@ -13756,6 +14244,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 100
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 11,
+              "pnl": 33882.46281,
+              "roi": 131.54,
+              "mdd": 0,
+              "winRate": 100
+            }
           }
         ],
         "daily": [
@@ -13790,11 +14288,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 11,
-              "pnl": 65237.48022,
-              "roi": 253.27,
+              "pnl": 33882.46281,
+              "roi": 131.54,
               "mdd": 0,
               "winRate": 100
             }
@@ -13925,6 +14423,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 55
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 1,
+              "pnl": 7199.42578,
+              "roi": 128.19,
+              "mdd": 0,
+              "winRate": 50
+            }
           }
         ],
         "daily": [
@@ -13959,13 +14467,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 1,
-              "pnl": 11162.56435,
-              "roi": 198.76,
+              "pnl": 7199.42578,
+              "roi": 128.19,
               "mdd": 0,
-              "winRate": 55
+              "winRate": 50
             }
           }
         ]
@@ -14123,6 +14631,16 @@ window.PLATFORM_GENERATED={
               "mdd": 4.29,
               "winRate": 45.45
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 7763.21598495,
+              "roi": 172.77,
+              "mdd": 4.29,
+              "winRate": 45.45
+            }
           }
         ],
         "daily": [
@@ -14157,11 +14675,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 8268.86526495,
-              "roi": 184.02,
+              "pnl": 7763.21598495,
+              "roi": 172.77,
               "mdd": 4.29,
               "winRate": 45.45
             }
@@ -14292,6 +14810,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 55.55
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 62,
+              "pnl": 10565.02,
+              "roi": 210.67,
+              "mdd": 0,
+              "winRate": 55.55
+            }
           }
         ],
         "daily": [
@@ -14326,11 +14854,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "followers": 60,
-              "pnl": 17409.88,
-              "roi": 347.15,
+              "followers": 62,
+              "pnl": 10565.02,
+              "roi": 210.67,
               "mdd": 0,
               "winRate": 55.55
             }
@@ -14717,6 +15245,16 @@ window.PLATFORM_GENERATED={
               "mdd": 6.49,
               "winRate": 69.67
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 4,
+              "pnl": 5354.36649458,
+              "roi": 8.04,
+              "mdd": 6.49,
+              "winRate": 82.47
+            }
           }
         ],
         "daily": [
@@ -14751,13 +15289,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 4,
-              "pnl": 7357.56749458,
-              "roi": 8.76,
+              "pnl": 5354.36649458,
+              "roi": 8.04,
               "mdd": 6.49,
-              "winRate": 69.67
+              "winRate": 82.47
             }
           }
         ]
@@ -15055,6 +15593,16 @@ window.PLATFORM_GENERATED={
               "mdd": 9.96,
               "winRate": 76.92
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 5813.14675,
+              "roi": 9.51,
+              "mdd": 9.96,
+              "winRate": 76.92
+            }
           }
         ],
         "daily": [
@@ -15089,7 +15637,7 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
               "pnl": 5813.14675,
@@ -15342,6 +15890,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0.94,
               "winRate": 57.73
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 4382.75237,
+              "roi": 36.71,
+              "mdd": 0.94,
+              "winRate": 58.76
+            }
           }
         ],
         "daily": [
@@ -15376,13 +15934,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 3409.7803,
-              "roi": 28.56,
+              "pnl": 4382.75237,
+              "roi": 36.71,
               "mdd": 0.94,
-              "winRate": 57.73
+              "winRate": 58.76
             }
           }
         ]
@@ -15679,6 +16237,16 @@ window.PLATFORM_GENERATED={
               "mdd": 1.87,
               "winRate": 49.75
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 7243.34821,
+              "roi": 20.09,
+              "mdd": 1.87,
+              "winRate": 49
+            }
           }
         ],
         "daily": [
@@ -15713,13 +16281,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 13447.62794,
-              "roi": 36.41,
+              "pnl": 7243.34821,
+              "roi": 20.09,
               "mdd": 1.87,
-              "winRate": 49.75
+              "winRate": 49
             }
           }
         ]
@@ -15927,6 +16495,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0.13,
               "winRate": 76.47
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 4334.63820458,
+              "roi": 2.13,
+              "mdd": 0.13,
+              "winRate": 75.42
+            }
           }
         ],
         "daily": [
@@ -15961,13 +16539,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 6347.86464458,
-              "roi": 2.65,
+              "pnl": 4334.63820458,
+              "roi": 2.13,
               "mdd": 0.13,
-              "winRate": 76.47
+              "winRate": 75.42
             }
           }
         ]
@@ -16066,6 +16644,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 52.17
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 2789.39352,
+              "roi": 4.64,
+              "mdd": 0,
+              "winRate": 52.16
+            }
           }
         ],
         "daily": [
@@ -16100,13 +16688,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 4204.44321,
-              "roi": 7,
+              "pnl": 2789.39352,
+              "roi": 4.64,
               "mdd": 0,
-              "winRate": 52.17
+              "winRate": 52.16
             }
           }
         ]
@@ -16235,6 +16823,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 69.73
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 2,
+              "pnl": 11596.1504,
+              "roi": 11.13,
+              "mdd": 0,
+              "winRate": 76.92
+            }
           }
         ],
         "daily": [
@@ -16269,13 +16867,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 2,
-              "pnl": 13180.8171,
-              "roi": 10.21,
+              "pnl": 11596.1504,
+              "roi": 11.13,
               "mdd": 0,
-              "winRate": 69.73
+              "winRate": 76.92
             }
           }
         ]
@@ -16404,6 +17002,16 @@ window.PLATFORM_GENERATED={
               "mdd": 100,
               "winRate": 42.85
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 57,
+              "pnl": 110591.633,
+              "roi": 80.64,
+              "mdd": 100,
+              "winRate": 54.54
+            }
           }
         ],
         "daily": [
@@ -16438,13 +17046,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 57,
-              "pnl": 115639.193,
-              "roi": 88.12,
+              "pnl": 110591.633,
+              "roi": 80.64,
               "mdd": 100,
-              "winRate": 42.85
+              "winRate": 54.54
             }
           }
         ]
@@ -16642,6 +17250,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 75.8
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 1,
+              "pnl": 661.7118,
+              "roi": 1.3,
+              "mdd": 0,
+              "winRate": 58.06
+            }
           }
         ],
         "daily": [
@@ -16676,13 +17294,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 1,
-              "pnl": 1526.85032,
-              "roi": 1.23,
+              "pnl": 661.7118,
+              "roi": 1.3,
               "mdd": 0,
-              "winRate": 75.8
+              "winRate": 58.06
             }
           }
         ]
@@ -16771,6 +17389,16 @@ window.PLATFORM_GENERATED={
               "mdd": 4.19,
               "winRate": 17.24
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 5,
+              "pnl": 676.4681388,
+              "roi": 9.77,
+              "mdd": 4.19,
+              "winRate": 4
+            }
           }
         ],
         "daily": [
@@ -16802,6 +17430,16 @@ window.PLATFORM_GENERATED={
               "roi": 6.24,
               "mdd": 4.19,
               "winRate": 17.24
+            }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 5,
+              "pnl": 676.4681388,
+              "roi": 9.77,
+              "mdd": 4.19,
+              "winRate": 4
             }
           }
         ]
@@ -17049,6 +17687,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 84.57
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 1,
+              "pnl": 11367.25173,
+              "roi": 17.13,
+              "mdd": 0,
+              "winRate": 89.2
+            }
           }
         ],
         "daily": [
@@ -17080,6 +17728,16 @@ window.PLATFORM_GENERATED={
               "roi": 17.89,
               "mdd": 0,
               "winRate": 84.57
+            }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 1,
+              "pnl": 11367.25173,
+              "roi": 17.13,
+              "mdd": 0,
+              "winRate": 89.2
             }
           }
         ]
@@ -17325,6 +17983,16 @@ window.PLATFORM_GENERATED={
               "mdd": 2.6,
               "winRate": 85.71
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 7,
+              "pnl": 179.02372,
+              "roi": 0.33,
+              "mdd": 2.72,
+              "winRate": 86.11
+            }
           }
         ],
         "daily": [
@@ -17359,13 +18027,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 7,
-              "pnl": 275.87288,
-              "roi": 0.44,
-              "mdd": 2.6,
-              "winRate": 85.71
+              "pnl": 179.02372,
+              "roi": 0.33,
+              "mdd": 2.72,
+              "winRate": 86.11
             }
           }
         ]
@@ -17494,6 +18162,16 @@ window.PLATFORM_GENERATED={
               "mdd": 4.82,
               "winRate": 30
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 64.40222,
+              "roi": 0.43,
+              "mdd": 4.92,
+              "winRate": 33.33
+            }
           }
         ],
         "daily": [
@@ -17528,13 +18206,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 62.52242,
-              "roi": 0.41,
-              "mdd": 4.82,
-              "winRate": 30
+              "pnl": 64.40222,
+              "roi": 0.43,
+              "mdd": 4.92,
+              "winRate": 33.33
             }
           }
         ]
@@ -17663,6 +18341,16 @@ window.PLATFORM_GENERATED={
               "mdd": 12.95,
               "winRate": 50
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 37.9986,
+              "roi": 13.57,
+              "mdd": 12.95,
+              "winRate": 57.14
+            }
           }
         ],
         "daily": [
@@ -17697,13 +18385,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 41.6504,
-              "roi": 13.01,
+              "pnl": 37.9986,
+              "roi": 13.57,
               "mdd": 12.95,
-              "winRate": 50
+              "winRate": 57.14
             }
           }
         ]
@@ -17901,6 +18589,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0.07,
               "winRate": 75
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 41.2972,
+              "roi": 25.91,
+              "mdd": 0,
+              "winRate": 75
+            }
           }
         ],
         "daily": [
@@ -17935,12 +18633,12 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 41.2467,
-              "roi": 25.88,
-              "mdd": 0.07,
+              "pnl": 41.2972,
+              "roi": 25.91,
+              "mdd": 0,
               "winRate": 75
             }
           }
@@ -18070,6 +18768,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0.05,
               "winRate": 83.33
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 23.33871,
+              "roi": 9.86,
+              "mdd": 0.05,
+              "winRate": 100
+            }
           }
         ],
         "daily": [
@@ -18104,13 +18812,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 21.27871,
-              "roi": 8.99,
+              "pnl": 23.33871,
+              "roi": 9.86,
               "mdd": 0.05,
-              "winRate": 83.33
+              "winRate": 100
             }
           }
         ]
@@ -18239,6 +18947,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0.46,
               "winRate": 85.71
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 21.82673,
+              "roi": 9.22,
+              "mdd": 0.46,
+              "winRate": 100
+            }
           }
         ],
         "daily": [
@@ -18273,13 +18991,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 20.77548,
-              "roi": 7.52,
+              "pnl": 21.82673,
+              "roi": 9.22,
               "mdd": 0.46,
-              "winRate": 85.71
+              "winRate": 100
             }
           }
         ]
@@ -18408,6 +19126,16 @@ window.PLATFORM_GENERATED={
               "mdd": 1.22,
               "winRate": 50
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 2,
+              "pnl": 32.3012,
+              "roi": 0.42,
+              "mdd": 1.41,
+              "winRate": 48.71
+            }
           }
         ],
         "daily": [
@@ -18442,13 +19170,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 2,
-              "pnl": 42.5128,
-              "roi": 0.47,
-              "mdd": 1.22,
-              "winRate": 50
+              "pnl": 32.3012,
+              "roi": 0.42,
+              "mdd": 1.41,
+              "winRate": 48.71
             }
           }
         ]
@@ -18577,6 +19305,16 @@ window.PLATFORM_GENERATED={
               "mdd": 9.85,
               "winRate": 66.66
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.74708,
+              "roi": 4.51,
+              "mdd": 9.85,
+              "winRate": 66.66
+            }
           }
         ],
         "daily": [
@@ -18611,10 +19349,10 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 10.7419,
+              "pnl": 10.74708,
               "roi": 4.51,
               "mdd": 9.85,
               "winRate": 66.66
@@ -18746,6 +19484,16 @@ window.PLATFORM_GENERATED={
               "mdd": 2.8,
               "winRate": 75
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 8.82146,
+              "roi": 1.71,
+              "mdd": 2.8,
+              "winRate": 69.23
+            }
           }
         ],
         "daily": [
@@ -18780,13 +19528,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 22.68279,
-              "roi": 3.58,
+              "pnl": 8.82146,
+              "roi": 1.71,
               "mdd": 2.8,
-              "winRate": 75
+              "winRate": 69.23
             }
           }
         ]
@@ -19064,6 +19812,16 @@ window.PLATFORM_GENERATED={
               "mdd": 3.6,
               "winRate": 50
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 12.68132,
+              "roi": 7.15,
+              "mdd": 3.6,
+              "winRate": 66.66
+            }
           }
         ],
         "daily": [
@@ -19098,13 +19856,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 11.47938,
-              "roi": 6.47,
+              "pnl": 12.68132,
+              "roi": 7.15,
               "mdd": 3.6,
-              "winRate": 50
+              "winRate": 66.66
             }
           }
         ]
@@ -19252,6 +20010,16 @@ window.PLATFORM_GENERATED={
               "mdd": 11.07,
               "winRate": 60
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 7.74206,
+              "roi": 3.9,
+              "mdd": 11.07,
+              "winRate": 60
+            }
           }
         ],
         "daily": [
@@ -19286,11 +20054,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 7.54621,
-              "roi": 3.81,
+              "pnl": 7.74206,
+              "roi": 3.9,
               "mdd": 11.07,
               "winRate": 60
             }
@@ -19421,6 +20189,16 @@ window.PLATFORM_GENERATED={
               "mdd": 1.45,
               "winRate": 50
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.71024,
+              "roi": 2.25,
+              "mdd": 1.45,
+              "winRate": 41.66
+            }
           }
         ],
         "daily": [
@@ -19455,13 +20233,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 22.07266,
-              "roi": 3.99,
+              "pnl": 10.71024,
+              "roi": 2.25,
               "mdd": 1.45,
-              "winRate": 50
+              "winRate": 41.66
             }
           }
         ]
@@ -19759,6 +20537,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0.25,
               "winRate": 40
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.4362,
+              "roi": 5.26,
+              "mdd": 0.25,
+              "winRate": 40
+            }
           }
         ],
         "daily": [
@@ -19793,11 +20581,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 11.5713,
-              "roi": 5.83,
+              "pnl": 10.4362,
+              "roi": 5.26,
               "mdd": 0.25,
               "winRate": 40
             }
@@ -19928,6 +20716,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0.25,
               "winRate": 40
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.4437,
+              "roi": 5.26,
+              "mdd": 0.25,
+              "winRate": 40
+            }
           }
         ],
         "daily": [
@@ -19962,11 +20760,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 11.5661,
-              "roi": 5.83,
+              "pnl": 10.4437,
+              "roi": 5.26,
               "mdd": 0.25,
               "winRate": 40
             }
@@ -20097,6 +20895,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0.29,
               "winRate": 40
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.3059,
+              "roi": 5.19,
+              "mdd": 0.29,
+              "winRate": 40
+            }
           }
         ],
         "daily": [
@@ -20131,11 +20939,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 11.4328,
-              "roi": 5.76,
+              "pnl": 10.3059,
+              "roi": 5.19,
               "mdd": 0.29,
               "winRate": 40
             }
@@ -20256,6 +21064,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0.29,
               "winRate": 40
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.3702,
+              "roi": 5.23,
+              "mdd": 0.29,
+              "winRate": 40
+            }
           }
         ],
         "daily": [
@@ -20290,11 +21108,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 11.3546,
-              "roi": 5.72,
+              "pnl": 10.3702,
+              "roi": 5.23,
               "mdd": 0.29,
               "winRate": 40
             }
@@ -20564,6 +21382,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0.25,
               "winRate": 40
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.414,
+              "roi": 5.25,
+              "mdd": 0.25,
+              "winRate": 40
+            }
           }
         ],
         "daily": [
@@ -20598,11 +21426,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 11.39,
-              "roi": 5.74,
+              "pnl": 10.414,
+              "roi": 5.25,
               "mdd": 0.25,
               "winRate": 40
             }
@@ -20723,6 +21551,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0.26,
               "winRate": 40
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.5056,
+              "roi": 5.29,
+              "mdd": 0.26,
+              "winRate": 40
+            }
           }
         ],
         "daily": [
@@ -20757,11 +21595,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 11.1537,
-              "roi": 5.62,
+              "pnl": 10.5056,
+              "roi": 5.29,
               "mdd": 0.26,
               "winRate": 40
             }
@@ -20882,6 +21720,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0.29,
               "winRate": 40
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.4118,
+              "roi": 5.25,
+              "mdd": 0.29,
+              "winRate": 40
+            }
           }
         ],
         "daily": [
@@ -20916,11 +21764,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 11.0347,
-              "roi": 5.56,
+              "pnl": 10.4118,
+              "roi": 5.25,
               "mdd": 0.29,
               "winRate": 40
             }
@@ -21041,6 +21889,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0.29,
               "winRate": 40
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.315,
+              "roi": 5.2,
+              "mdd": 0.29,
+              "winRate": 40
+            }
           }
         ],
         "daily": [
@@ -21075,11 +21933,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 10.9461,
-              "roi": 5.52,
+              "pnl": 10.315,
+              "roi": 5.2,
               "mdd": 0.29,
               "winRate": 40
             }
@@ -21200,6 +22058,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0.29,
               "winRate": 40
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.3514,
+              "roi": 5.22,
+              "mdd": 0.29,
+              "winRate": 40
+            }
           }
         ],
         "daily": [
@@ -21234,11 +22102,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 10.9696,
-              "roi": 5.53,
+              "pnl": 10.3514,
+              "roi": 5.22,
               "mdd": 0.29,
               "winRate": 40
             }
@@ -21369,6 +22237,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0.27,
               "winRate": 40
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 10.405,
+              "roi": 5.24,
+              "mdd": 0.27,
+              "winRate": 40
+            }
           }
         ],
         "daily": [
@@ -21403,11 +22281,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 11.0214,
-              "roi": 5.55,
+              "pnl": 10.405,
+              "roi": 5.24,
               "mdd": 0.27,
               "winRate": 40
             }
@@ -21696,6 +22574,16 @@ window.PLATFORM_GENERATED={
               "mdd": 100,
               "winRate": 93.98
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 53960.130263,
+              "pnl": 12451.386529,
+              "roi": 143.1,
+              "mdd": 100,
+              "winRate": 93.75
+            }
           }
         ],
         "daily": [
@@ -21730,13 +22618,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 51590.729676,
-              "pnl": 13287.180195,
-              "roi": 191.09,
+              "aum": 53960.130263,
+              "pnl": 12451.386529,
+              "roi": 143.1,
               "mdd": 100,
-              "winRate": 93.98
+              "winRate": 93.75
             }
           }
         ]
@@ -21855,6 +22743,16 @@ window.PLATFORM_GENERATED={
               "mdd": 35.1454,
               "winRate": 100
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 27636.156914,
+              "pnl": 4195.377531,
+              "roi": 12.24,
+              "mdd": 35.1454,
+              "winRate": 100
+            }
           }
         ],
         "daily": [
@@ -21889,11 +22787,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 28370.024404,
-              "pnl": 5293.632841,
-              "roi": 15.44,
+              "aum": 27636.156914,
+              "pnl": 4195.377531,
+              "roi": 12.24,
               "mdd": 35.1454,
               "winRate": 100
             }
@@ -22053,6 +22951,16 @@ window.PLATFORM_GENERATED={
               "mdd": 22.4654,
               "winRate": 95.08
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 25409.6624,
+              "pnl": 11843.364856,
+              "roi": 139.79,
+              "mdd": 22.4654,
+              "winRate": 95.16
+            }
           }
         ],
         "daily": [
@@ -22087,13 +22995,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 24574.356627,
-              "pnl": 12658.831442,
-              "roi": 162.73,
+              "aum": 25409.6624,
+              "pnl": 11843.364856,
+              "roi": 139.79,
               "mdd": 22.4654,
-              "winRate": 95.08
+              "winRate": 95.16
             }
           }
         ]
@@ -22222,6 +23130,16 @@ window.PLATFORM_GENERATED={
               "mdd": 10.4818,
               "winRate": 100
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 6018.724001,
+              "pnl": 1932.355357,
+              "roi": 129.79,
+              "mdd": 10.4818,
+              "winRate": 100
+            }
           }
         ],
         "daily": [
@@ -22256,11 +23174,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 5845.708017,
-              "pnl": 1959.542525,
-              "roi": 140.29,
+              "aum": 6018.724001,
+              "pnl": 1932.355357,
+              "roi": 129.79,
               "mdd": 10.4818,
               "winRate": 100
             }
@@ -22381,6 +23299,16 @@ window.PLATFORM_GENERATED={
               "mdd": 35.8748,
               "winRate": 100
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 35568.852465,
+              "pnl": 3457.375034,
+              "roi": 9.58,
+              "mdd": 35.8748,
+              "winRate": 100
+            }
           }
         ],
         "daily": [
@@ -22415,11 +23343,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 35566.245985,
-              "pnl": 3456.902628,
-              "roi": 9.59,
+              "aum": 35568.852465,
+              "pnl": 3457.375034,
+              "roi": 9.58,
               "mdd": 35.8748,
               "winRate": 100
             }
@@ -22540,6 +23468,16 @@ window.PLATFORM_GENERATED={
               "mdd": 16.4696,
               "winRate": 100
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 39329.346027,
+              "pnl": 484.505177,
+              "roi": 66.42,
+              "mdd": 16.4696,
+              "winRate": 100
+            }
           }
         ],
         "daily": [
@@ -22574,9 +23512,9 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 39001.968701,
+              "aum": 39329.346027,
               "pnl": 484.505177,
               "roi": 66.42,
               "mdd": 16.4696,
@@ -22699,6 +23637,16 @@ window.PLATFORM_GENERATED={
               "mdd": 62.7429,
               "winRate": 96.49
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 3755.794209,
+              "pnl": 2510.974474,
+              "roi": 69.87,
+              "mdd": 62.7429,
+              "winRate": 96.49
+            }
           }
         ],
         "daily": [
@@ -22733,11 +23681,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 3755.961642,
-              "pnl": 2564.980893,
-              "roi": 71.38,
+              "aum": 3755.794209,
+              "pnl": 2510.974474,
+              "roi": 69.87,
               "mdd": 62.7429,
               "winRate": 96.49
             }
@@ -23027,6 +23975,16 @@ window.PLATFORM_GENERATED={
               "mdd": 14.3499,
               "winRate": 95.45
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 8087.963294,
+              "pnl": 1217.963294,
+              "roi": 15.22,
+              "mdd": 14.3499,
+              "winRate": 95.65
+            }
           }
         ],
         "daily": [
@@ -23061,13 +24019,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "aum": 8087.963294,
-              "pnl": 1225.469687,
-              "roi": 15.32,
+              "pnl": 1217.963294,
+              "roi": 15.22,
               "mdd": 14.3499,
-              "winRate": 95.45
+              "winRate": 95.65
             }
           }
         ]
@@ -23196,6 +24154,16 @@ window.PLATFORM_GENERATED={
               "mdd": 14.8648,
               "winRate": 96
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 9981.271963,
+              "pnl": 325.633507,
+              "roi": 37.73,
+              "mdd": 42.0657,
+              "winRate": 96
+            }
           }
         ],
         "daily": [
@@ -23230,12 +24198,12 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 9321.110722,
+              "aum": 9981.271963,
               "pnl": 325.633507,
-              "roi": 89.71,
-              "mdd": 14.8648,
+              "roi": 37.73,
+              "mdd": 42.0657,
               "winRate": 96
             }
           }
@@ -23365,6 +24333,16 @@ window.PLATFORM_GENERATED={
               "mdd": 1.7518,
               "winRate": 87.5
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 7802.717953,
+              "pnl": 471.301672,
+              "roi": 6.43,
+              "mdd": 1.7518,
+              "winRate": 89.74
+            }
           }
         ],
         "daily": [
@@ -23399,13 +24377,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "aum": 7802.717953,
-              "pnl": 516.863516,
-              "roi": 7.09,
+              "pnl": 471.301672,
+              "roi": 6.43,
               "mdd": 1.7518,
-              "winRate": 87.5
+              "winRate": 89.74
             }
           }
         ]
@@ -24158,6 +25136,13 @@ window.PLATFORM_GENERATED={
               "pnl": 47.44054702,
               "followerPnl": 0
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 40.89087445,
+              "followerPnl": 0
+            }
           }
         ],
         "daily": [
@@ -24176,9 +25161,9 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T07:02:11.637Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 47.44054702,
+              "pnl": 40.89087445,
               "followerPnl": 0
             }
           }
@@ -24351,6 +25336,17 @@ window.PLATFORM_GENERATED={
               "mdd": 10.37989,
               "sharpe": -1.50701179
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 83132.0202048,
+              "days": 823,
+              "pnl": -99.8575604,
+              "roi": -9.55099033,
+              "mdd": 10.401853,
+              "sharpe": -1.50012343
+            }
           }
         ],
         "daily": [
@@ -24388,14 +25384,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 83242.11557337,
+              "aum": 83132.0202048,
               "days": 823,
-              "pnl": -98.21704883,
-              "roi": -9.39422362,
-              "mdd": 10.37989,
-              "sharpe": -1.50701179
+              "pnl": -99.8575604,
+              "roi": -9.55099033,
+              "mdd": 10.401853,
+              "sharpe": -1.50012343
             }
           }
         ]
@@ -24500,6 +25496,14 @@ window.PLATFORM_GENERATED={
               "pnl": 9360.68,
               "roi": 3047.09
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 2132.72,
+              "pnl": 9360.68,
+              "roi": 2599.11
+            }
           }
         ],
         "daily": [
@@ -24528,11 +25532,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 2407.47,
+              "aum": 2132.72,
               "pnl": 9360.68,
-              "roi": 3047.09
+              "roi": 2599.11
             }
           }
         ]
@@ -24670,6 +25674,16 @@ window.PLATFORM_GENERATED={
               "mdd": 12.12,
               "winRate": 72.67
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 2,
+              "pnl": 1389.63963,
+              "roi": 5.46,
+              "mdd": 8.96,
+              "winRate": 54.94
+            }
           }
         ],
         "daily": [
@@ -24691,6 +25705,16 @@ window.PLATFORM_GENERATED={
               "roi": 6.35,
               "mdd": 12.12,
               "winRate": 72.67
+            }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 2,
+              "pnl": 1389.63963,
+              "roi": 5.46,
+              "mdd": 8.96,
+              "winRate": 54.94
             }
           }
         ]
@@ -24819,6 +25843,16 @@ window.PLATFORM_GENERATED={
               "mdd": 5.25,
               "winRate": 88.88
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 7,
+              "pnl": 1903.13488,
+              "roi": 167.87,
+              "mdd": 5.25,
+              "winRate": 88.88
+            }
           }
         ],
         "daily": [
@@ -24853,11 +25887,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "followers": 6,
-              "pnl": 3745.1493,
-              "roi": 330.35,
+              "followers": 7,
+              "pnl": 1903.13488,
+              "roi": 167.87,
               "mdd": 5.25,
               "winRate": 88.88
             }
@@ -24937,6 +25971,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 57.14
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 27390.85988,
+              "roi": 14.8,
+              "mdd": 0,
+              "winRate": 60.86
+            }
           }
         ],
         "daily": [
@@ -24958,6 +26002,16 @@ window.PLATFORM_GENERATED={
               "roi": 1.79,
               "mdd": 0,
               "winRate": 57.14
+            }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 27390.85988,
+              "roi": 14.8,
+              "mdd": 0,
+              "winRate": 60.86
             }
           }
         ]
@@ -25076,6 +26130,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 63.44
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 16737.39902521,
+              "roi": 7.43,
+              "mdd": 0,
+              "winRate": 70.67
+            }
           }
         ],
         "daily": [
@@ -25110,13 +26174,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 10822.06653,
-              "roi": 4.81,
+              "pnl": 16737.39902521,
+              "roi": 7.43,
               "mdd": 0,
-              "winRate": 63.44
+              "winRate": 70.67
             }
           }
         ]
@@ -26259,6 +27323,13 @@ window.PLATFORM_GENERATED={
               "pnl": -283.06042044,
               "followerPnl": 97.73897598
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": -280.25408012,
+              "followerPnl": 100.68584319
+            }
           }
         ],
         "daily": [
@@ -26284,10 +27355,10 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T02:00:43.165Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": -283.06042044,
-              "followerPnl": 97.73897598
+              "pnl": -280.25408012,
+              "followerPnl": 100.68584319
             }
           }
         ]
@@ -26487,6 +27558,17 @@ window.PLATFORM_GENERATED={
               "mdd": 4.15318,
               "sharpe": -0.13410063
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 445561.47464998,
+              "days": 255,
+              "pnl": 3732.41836548,
+              "roi": 1.10541935,
+              "mdd": 4.15318,
+              "sharpe": -0.13723635
+            }
           }
         ],
         "daily": [
@@ -26513,14 +27595,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 445681.81071842,
+              "aum": 445561.47464998,
               "days": 255,
-              "pnl": 2863.0379901,
-              "roi": 0.90391648,
+              "pnl": 3732.41836548,
+              "roi": 1.10541935,
               "mdd": 4.15318,
-              "sharpe": -0.13410063
+              "sharpe": -0.13723635
             }
           }
         ]
@@ -26599,6 +27681,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 100
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 5,
+              "pnl": 1384.12406,
+              "roi": 303.86,
+              "mdd": 0,
+              "winRate": 100
+            }
           }
         ],
         "daily": [
@@ -26623,11 +27715,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 5,
-              "pnl": 1650.49324,
-              "roi": 398.5,
+              "pnl": 1384.12406,
+              "roi": 303.86,
               "mdd": 0,
               "winRate": 100
             }
@@ -26708,6 +27800,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 33.33
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 5,
+              "pnl": 1269.52302,
+              "roi": 264.62,
+              "mdd": 0,
+              "winRate": 33.33
+            }
           }
         ],
         "daily": [
@@ -26732,11 +27834,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 5,
-              "pnl": 2567.52588,
-              "roi": 535.18,
+              "pnl": 1269.52302,
+              "roi": 264.62,
               "mdd": 0,
               "winRate": 33.33
             }
@@ -26866,6 +27968,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 71.21
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 1,
+              "pnl": 36175.54707,
+              "roi": 8.5,
+              "mdd": 0,
+              "winRate": 61.66
+            }
           }
         ],
         "daily": [
@@ -26890,13 +28002,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 1,
-              "pnl": 11849.84784,
-              "roi": 2.79,
+              "pnl": 36175.54707,
+              "roi": 8.5,
               "mdd": 0,
-              "winRate": 71.21
+              "winRate": 61.66
             }
           }
         ]
@@ -27073,6 +28185,16 @@ window.PLATFORM_GENERATED={
               "mdd": 1.15,
               "winRate": 72.72
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 5,
+              "pnl": 67.715,
+              "roi": 1.49,
+              "mdd": 1.15,
+              "winRate": 75
+            }
           }
         ],
         "daily": [
@@ -27097,13 +28219,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 5,
-              "pnl": 88.4912,
-              "roi": 2.14,
+              "pnl": 67.715,
+              "roi": 1.49,
               "mdd": 1.15,
-              "winRate": 72.72
+              "winRate": 75
             }
           }
         ]
@@ -27222,6 +28344,16 @@ window.PLATFORM_GENERATED={
               "mdd": 16.65,
               "winRate": 69.23
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 24.68773,
+              "roi": 2.48,
+              "mdd": 9.08,
+              "winRate": 72
+            }
           }
         ],
         "daily": [
@@ -27246,13 +28378,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 11.85969,
-              "roi": 1.14,
-              "mdd": 16.65,
-              "winRate": 69.23
+              "pnl": 24.68773,
+              "roi": 2.48,
+              "mdd": 9.08,
+              "winRate": 72
             }
           }
         ]
@@ -27719,6 +28851,17 @@ window.PLATFORM_GENERATED={
               "trades": 25901,
               "assets": 293.34026666
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 367525.82125448,
+              "roi": 0.16400592,
+              "winRate": 0.6398,
+              "volume": 5389685.71229954,
+              "trades": 26141,
+              "assets": 187.56696048
+            }
           }
         ],
         "daily": [
@@ -27745,14 +28888,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 362209.0760765,
-              "roi": 0.1647434,
-              "winRate": 0.6399,
-              "volume": 5230987.09887276,
-              "trades": 25901,
-              "assets": 293.34026666
+              "pnl": 367525.82125448,
+              "roi": 0.16400592,
+              "winRate": 0.6398,
+              "volume": 5389685.71229954,
+              "trades": 26141,
+              "assets": 187.56696048
             }
           }
         ]
@@ -27903,6 +29046,16 @@ window.PLATFORM_GENERATED={
               "mdd": 2.16,
               "winRate": 43.75
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 11.31175,
+              "roi": 2.38,
+              "mdd": 1.87,
+              "winRate": 41.66
+            }
           }
         ],
         "daily": [
@@ -27927,13 +29080,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 13.83126,
-              "roi": 2.18,
-              "mdd": 2.16,
-              "winRate": 43.75
+              "pnl": 11.31175,
+              "roi": 2.38,
+              "mdd": 1.87,
+              "winRate": 41.66
             }
           }
         ]
@@ -27979,11 +29132,25 @@ window.PLATFORM_GENERATED={
               "pnl": 579.22821126,
               "followerPnl": 27.18210034
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 579.22821126,
+              "followerPnl": 27.18210034
+            }
           }
         ],
         "daily": [
           {
             "at": "2026-08-14T07:54:20.546Z",
+            "metrics": {
+              "pnl": 579.22821126,
+              "followerPnl": 27.18210034
+            }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "pnl": 579.22821126,
               "followerPnl": 27.18210034
@@ -28035,6 +29202,14 @@ window.PLATFORM_GENERATED={
               "pnl": 7322.2,
               "roi": 597.63
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 0,
+              "pnl": 7322.2,
+              "roi": 597.63
+            }
           }
         ],
         "daily": [
@@ -28055,7 +29230,7 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "aum": 0,
               "pnl": 7322.2,
@@ -28187,6 +29362,16 @@ window.PLATFORM_GENERATED={
               "mdd": 3.31,
               "winRate": 80
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 123,
+              "pnl": 1572.41146,
+              "roi": 71.01,
+              "mdd": 3.31,
+              "winRate": 72.72
+            }
           }
         ],
         "daily": [
@@ -28211,13 +29396,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "followers": 121,
-              "pnl": 2156.46762,
-              "roi": 103.28,
+              "followers": 123,
+              "pnl": 1572.41146,
+              "roi": 71.01,
               "mdd": 3.31,
-              "winRate": 80
+              "winRate": 72.72
             }
           }
         ]
@@ -28305,6 +29490,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 41.66
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 3665.0944,
+              "roi": 25.91,
+              "mdd": 0,
+              "winRate": 90.9
+            }
           }
         ],
         "daily": [
@@ -28316,6 +29511,16 @@ window.PLATFORM_GENERATED={
               "roi": 12.24,
               "mdd": 0,
               "winRate": 41.66
+            }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 3665.0944,
+              "roi": 25.91,
+              "mdd": 0,
+              "winRate": 90.9
             }
           }
         ]
@@ -28414,6 +29619,16 @@ window.PLATFORM_GENERATED={
               "mdd": 4.83,
               "winRate": 70.58
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 3454.64632365,
+              "roi": 19.79,
+              "mdd": 2.96,
+              "winRate": 71.42
+            }
           }
         ],
         "daily": [
@@ -28438,13 +29653,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 3821.60817365,
-              "roi": 20.43,
-              "mdd": 4.83,
-              "winRate": 70.58
+              "pnl": 3454.64632365,
+              "roi": 19.79,
+              "mdd": 2.96,
+              "winRate": 71.42
             }
           }
         ]
@@ -28720,6 +29935,16 @@ window.PLATFORM_GENERATED={
               "mdd": 9.853,
               "winRate": 86.67
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 18724.746847,
+              "pnl": 228.87144,
+              "roi": 25.46,
+              "mdd": 9.853,
+              "winRate": 85.71
+            }
           }
         ],
         "daily": [
@@ -28731,6 +29956,16 @@ window.PLATFORM_GENERATED={
               "roi": 31.01,
               "mdd": 9.853,
               "winRate": 86.67
+            }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 18724.746847,
+              "pnl": 228.87144,
+              "roi": 25.46,
+              "mdd": 9.853,
+              "winRate": 85.71
             }
           }
         ]
@@ -28847,6 +30082,16 @@ window.PLATFORM_GENERATED={
               "mdd": 6.6098,
               "winRate": 88
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 4347.784225,
+              "pnl": 439.015892,
+              "roi": 3.19,
+              "mdd": 6.6098,
+              "winRate": 88
+            }
           }
         ],
         "daily": [
@@ -28871,11 +30116,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 4323.4992,
-              "pnl": 383.994535,
-              "roi": 2.79,
+              "aum": 4347.784225,
+              "pnl": 439.015892,
+              "roi": 3.19,
               "mdd": 6.6098,
               "winRate": 88
             }
@@ -29014,6 +30259,17 @@ window.PLATFORM_GENERATED={
               "trades": 10819,
               "assets": 10.81765919
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 233089.72197797,
+              "roi": 0.15246298,
+              "winRate": 0.3244,
+              "volume": 3419242.08247668,
+              "trades": 10940,
+              "assets": 17.45834705
+            }
           }
         ],
         "daily": [
@@ -29040,14 +30296,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 234509.69635455,
-              "roi": 0.16103366,
-              "winRate": 0.3212,
-              "volume": 3330297.00717213,
-              "trades": 10819,
-              "assets": 10.81765919
+              "pnl": 233089.72197797,
+              "roi": 0.15246298,
+              "winRate": 0.3244,
+              "volume": 3419242.08247668,
+              "trades": 10940,
+              "assets": 17.45834705
             }
           }
         ]
@@ -29155,6 +30411,17 @@ window.PLATFORM_GENERATED={
               "trades": 137,
               "assets": 0.00974444
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 167717.31871063,
+              "roi": 0.67001417,
+              "winRate": 0.2308,
+              "volume": 745218.10655911,
+              "trades": 137,
+              "assets": 0.00974444
+            }
           }
         ],
         "daily": [
@@ -29181,7 +30448,7 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "pnl": 167717.31871063,
               "roi": 0.67001417,
@@ -29544,6 +30811,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 63.24
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 11867.94897985,
+              "roi": 2.92,
+              "mdd": 0,
+              "winRate": 58.49
+            }
           }
         ],
         "daily": [
@@ -29568,13 +30845,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 10601.10966985,
-              "roi": 2.41,
+              "pnl": 11867.94897985,
+              "roi": 2.92,
               "mdd": 0,
-              "winRate": 63.24
+              "winRate": 58.49
             }
           }
         ]
@@ -29663,6 +30940,16 @@ window.PLATFORM_GENERATED={
               "mdd": 4.54,
               "winRate": 68.53
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 21,
+              "pnl": 302.48136,
+              "roi": 0.73,
+              "mdd": 4.54,
+              "winRate": 53.57
+            }
           }
         ],
         "daily": [
@@ -29687,13 +30974,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 21,
-              "pnl": 1792.7379,
-              "roi": 3.74,
+              "pnl": 302.48136,
+              "roi": 0.73,
               "mdd": 4.54,
-              "winRate": 68.53
+              "winRate": 53.57
             }
           }
         ]
@@ -29782,6 +31069,16 @@ window.PLATFORM_GENERATED={
               "mdd": 1.27,
               "winRate": 76.36
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 14,
+              "pnl": 19.431,
+              "roi": 0.24,
+              "mdd": 1.46,
+              "winRate": 78.26
+            }
           }
         ],
         "daily": [
@@ -29806,13 +31103,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "followers": 15,
-              "pnl": 59.156,
-              "roi": 0.62,
-              "mdd": 1.27,
-              "winRate": 76.36
+              "followers": 14,
+              "pnl": 19.431,
+              "roi": 0.24,
+              "mdd": 1.46,
+              "winRate": 78.26
             }
           }
         ]
@@ -30137,6 +31434,13 @@ window.PLATFORM_GENERATED={
               "pnl": -2671.50960117,
               "followerPnl": -2008.85999999
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": -2794.60607501,
+              "followerPnl": -2008.85999999
+            }
           }
         ],
         "daily": [
@@ -30151,6 +31455,13 @@ window.PLATFORM_GENERATED={
             "at": "2026-08-15T01:52:27.045Z",
             "metrics": {
               "pnl": -2671.50960117,
+              "followerPnl": -2008.85999999
+            }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": -2794.60607501,
               "followerPnl": -2008.85999999
             }
           }
@@ -30181,6 +31492,13 @@ window.PLATFORM_GENERATED={
               "pnl": -8.84846409,
               "followerPnl": 0
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": -8.65191336,
+              "followerPnl": 0
+            }
           }
         ],
         "daily": [
@@ -30195,6 +31513,13 @@ window.PLATFORM_GENERATED={
             "at": "2026-08-15T18:50:33.378Z",
             "metrics": {
               "pnl": -8.84846409,
+              "followerPnl": 0
+            }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": -8.65191336,
               "followerPnl": 0
             }
           }
@@ -30292,6 +31617,17 @@ window.PLATFORM_GENERATED={
               "trades": 1524,
               "assets": 0.02900641
             }
+          },
+          {
+            "at": "2026-08-16T18:48:29.613Z",
+            "metrics": {
+              "pnl": 113667.55890736,
+              "roi": 0.38098271,
+              "winRate": 0.5556,
+              "volume": 646438.54313843,
+              "trades": 1524,
+              "assets": 0.02900641
+            }
           }
         ],
         "daily": [
@@ -30318,7 +31654,7 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:48:29.613Z",
             "metrics": {
               "pnl": 113667.55890736,
               "roi": 0.38098271,
@@ -30398,6 +31734,17 @@ window.PLATFORM_GENERATED={
               "mdd": 28.95467,
               "sharpe": -1.57607723
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 5429.31662532,
+              "days": 390,
+              "pnl": 65.58749472,
+              "roi": 81.967983,
+              "mdd": 28.95467,
+              "sharpe": -1.59327699
+            }
           }
         ],
         "daily": [
@@ -30410,6 +31757,17 @@ window.PLATFORM_GENERATED={
               "roi": 78.82918908,
               "mdd": 28.95467,
               "sharpe": -1.57607723
+            }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 5429.31662532,
+              "days": 390,
+              "pnl": 65.58749472,
+              "roi": 81.967983,
+              "mdd": 28.95467,
+              "sharpe": -1.59327699
             }
           }
         ]
@@ -30507,6 +31865,16 @@ window.PLATFORM_GENERATED={
               "mdd": 2.44,
               "winRate": 40
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 27,
+              "pnl": 48.7212,
+              "roi": 1.78,
+              "mdd": 2.44,
+              "winRate": 44.44
+            }
           }
         ],
         "daily": [
@@ -30521,13 +31889,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 27,
-              "pnl": 9.1932,
-              "roi": 0.3,
+              "pnl": 48.7212,
+              "roi": 1.78,
               "mdd": 2.44,
-              "winRate": 40
+              "winRate": 44.44
             }
           }
         ]
@@ -30593,6 +31961,13 @@ window.PLATFORM_GENERATED={
               "pnl": -89.10413318,
               "followerPnl": -49.79531166
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": -89.05302832,
+              "followerPnl": -49.79531166
+            }
           }
         ],
         "daily": [
@@ -30604,9 +31979,9 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T02:00:43.165Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": -89.10413318,
+              "pnl": -89.05302832,
               "followerPnl": -49.79531166
             }
           }
@@ -30644,6 +32019,13 @@ window.PLATFORM_GENERATED={
               "pnl": 35.9279967,
               "followerPnl": 0
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 33.61177591,
+              "followerPnl": 0
+            }
           }
         ],
         "daily": [
@@ -30655,9 +32037,9 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T02:00:43.165Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 35.9279967,
+              "pnl": 33.61177591,
               "followerPnl": 0
             }
           }
@@ -30695,6 +32077,13 @@ window.PLATFORM_GENERATED={
               "pnl": 51.21973296,
               "followerPnl": 0
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 56.03540346,
+              "followerPnl": 0
+            }
           }
         ],
         "daily": [
@@ -30706,9 +32095,9 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T02:00:43.165Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 51.21973296,
+              "pnl": 56.03540346,
               "followerPnl": 0
             }
           }
@@ -30739,6 +32128,13 @@ window.PLATFORM_GENERATED={
               "pnl": 126.69311886,
               "followerPnl": -3.02112027
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 140.54469274,
+              "followerPnl": -2.62595526
+            }
           }
         ],
         "daily": [
@@ -30750,10 +32146,10 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T02:00:43.165Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 126.69311886,
-              "followerPnl": -3.02112027
+              "pnl": 140.54469274,
+              "followerPnl": -2.62595526
             }
           }
         ]
@@ -30790,6 +32186,13 @@ window.PLATFORM_GENERATED={
               "pnl": 372.92312859,
               "followerPnl": 0
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 371.58688692,
+              "followerPnl": 0
+            }
           }
         ],
         "daily": [
@@ -30801,9 +32204,9 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T02:00:43.165Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 372.92312859,
+              "pnl": 371.58688692,
               "followerPnl": 0
             }
           }
@@ -30887,6 +32290,17 @@ window.PLATFORM_GENERATED={
               "mdd": 7.495719,
               "sharpe": -0.56959935
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 66437.19093523,
+              "days": 480,
+              "pnl": 3110.03266601,
+              "roi": 5.14484033,
+              "mdd": 7.495719,
+              "sharpe": -0.57983043
+            }
           }
         ],
         "daily": [
@@ -30902,14 +32316,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T02:00:43.165Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 66920.54577687,
+              "aum": 66437.19093523,
               "days": 480,
-              "pnl": 3379.55485678,
-              "roi": 5.59136518,
+              "pnl": 3110.03266601,
+              "roi": 5.14484033,
               "mdd": 7.495719,
-              "sharpe": -0.56959935
+              "sharpe": -0.57983043
             }
           }
         ]
@@ -30958,6 +32372,16 @@ window.PLATFORM_GENERATED={
               "mdd": 20,
               "winRate": 100
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 12,
+              "pnl": 1103.35566,
+              "roi": 78.21,
+              "mdd": 20,
+              "winRate": 100
+            }
           }
         ],
         "daily": [
@@ -30972,11 +32396,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T02:00:43.165Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 12,
-              "pnl": 2067.69372,
-              "roi": 146.57,
+              "pnl": 1103.35566,
+              "roi": 78.21,
               "mdd": 20,
               "winRate": 100
             }
@@ -31136,6 +32560,16 @@ window.PLATFORM_GENERATED={
               "mdd": 6.97,
               "winRate": 88.88
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 37200.7122,
+              "roi": 40.26,
+              "mdd": 5.54,
+              "winRate": 88.88
+            }
           }
         ],
         "daily": [
@@ -31150,12 +32584,12 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 31665.7122,
-              "roi": 34.27,
-              "mdd": 6.97,
+              "pnl": 37200.7122,
+              "roi": 40.26,
+              "mdd": 5.54,
               "winRate": 88.88
             }
           }
@@ -31225,6 +32659,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 54.63
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 1,
+              "pnl": 27445.5337,
+              "roi": 8.54,
+              "mdd": 0,
+              "winRate": 53.96
+            }
           }
         ],
         "daily": [
@@ -31239,13 +32683,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 1,
-              "pnl": 25409.44343,
-              "roi": 7.88,
+              "pnl": 27445.5337,
+              "roi": 8.54,
               "mdd": 0,
-              "winRate": 54.63
+              "winRate": 53.96
             }
           }
         ]
@@ -31353,6 +32797,16 @@ window.PLATFORM_GENERATED={
               "mdd": 6.84,
               "winRate": 72.72
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 1,
+              "pnl": 14372.5,
+              "roi": 25.99,
+              "mdd": 6.84,
+              "winRate": 63.63
+            }
           }
         ],
         "daily": [
@@ -31367,13 +32821,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 1,
-              "pnl": 14500.5,
-              "roi": 26.22,
+              "pnl": 14372.5,
+              "roi": 25.99,
               "mdd": 6.84,
-              "winRate": 72.72
+              "winRate": 63.63
             }
           }
         ]
@@ -31442,6 +32896,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 84.65
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 23976.47436,
+              "roi": 6.72,
+              "mdd": 0,
+              "winRate": 85.49
+            }
           }
         ],
         "daily": [
@@ -31456,13 +32920,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 17846.93807,
-              "roi": 4.88,
+              "pnl": 23976.47436,
+              "roi": 6.72,
               "mdd": 0,
-              "winRate": 84.65
+              "winRate": 85.49
             }
           }
         ]
@@ -31617,6 +33081,14 @@ window.PLATFORM_GENERATED={
               "pnl": 8153.48,
               "roi": 179.35
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 726.83,
+              "pnl": 8168.4,
+              "roi": 171.32
+            }
           }
         ],
         "daily": [
@@ -31629,11 +33101,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 726,
-              "pnl": 8153.48,
-              "roi": 179.35
+              "aum": 726.83,
+              "pnl": 8168.4,
+              "roi": 171.32
             }
           }
         ]
@@ -32123,6 +33595,17 @@ window.PLATFORM_GENERATED={
               "mdd": 11.415459,
               "sharpe": -0.56659168
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 796.13557849,
+              "days": 740,
+              "pnl": 93.31508844,
+              "roi": 87.17745631,
+              "mdd": 11.415459,
+              "sharpe": -0.54587551
+            }
           }
         ],
         "daily": [
@@ -32138,14 +33621,14 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 511.60629827,
+              "aum": 796.13557849,
               "days": 740,
-              "pnl": 97.69501822,
-              "roi": 91.27105294,
+              "pnl": 93.31508844,
+              "roi": 87.17745631,
               "mdd": 11.415459,
-              "sharpe": -0.56659168
+              "sharpe": -0.54587551
             }
           }
         ]
@@ -32186,6 +33669,14 @@ window.PLATFORM_GENERATED={
               "pnl": 7792.75,
               "roi": 1.37
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 567496,
+              "pnl": 7714.89,
+              "roi": 1.53
+            }
           }
         ],
         "daily": [
@@ -32198,11 +33689,11 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "aum": 567925.9,
-              "pnl": 7792.75,
-              "roi": 1.37
+              "aum": 567496,
+              "pnl": 7714.89,
+              "roi": 1.53
             }
           }
         ]
@@ -32241,6 +33732,16 @@ window.PLATFORM_GENERATED={
               "mdd": 12.18,
               "winRate": 58.33
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 5,
+              "pnl": 8375.16047,
+              "roi": 17.04,
+              "mdd": 12.18,
+              "winRate": 52
+            }
           }
         ],
         "daily": [
@@ -32255,13 +33756,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 5,
-              "pnl": 16001.25485,
-              "roi": 34.08,
+              "pnl": 8375.16047,
+              "roi": 17.04,
               "mdd": 12.18,
-              "winRate": 58.33
+              "winRate": 52
             }
           }
         ]
@@ -32290,6 +33791,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 84.61
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 6,
+              "pnl": 546.07592422,
+              "roi": 21.35,
+              "mdd": 0,
+              "winRate": 83.33
+            }
           }
         ],
         "daily": [
@@ -32304,13 +33815,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T01:57:41.409Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 6,
-              "pnl": 621.48704899,
-              "roi": 19.13,
+              "pnl": 546.07592422,
+              "roi": 21.35,
               "mdd": 0,
-              "winRate": 84.61
+              "winRate": 83.33
             }
           }
         ]
@@ -32477,6 +33988,16 @@ window.PLATFORM_GENERATED={
               "mdd": 0,
               "winRate": 76
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 8461.47342,
+              "roi": 44.88,
+              "mdd": 0,
+              "winRate": 75
+            }
           }
         ],
         "daily": [
@@ -32491,13 +34012,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 7754.40942,
-              "roi": 39.61,
+              "pnl": 8461.47342,
+              "roi": 44.88,
               "mdd": 0,
-              "winRate": 76
+              "winRate": 75
             }
           }
         ]
@@ -32546,6 +34067,16 @@ window.PLATFORM_GENERATED={
               "mdd": 3.4,
               "winRate": 71.42
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 8.34498,
+              "roi": 4.21,
+              "mdd": 3.4,
+              "winRate": 80
+            }
           }
         ],
         "daily": [
@@ -32560,13 +34091,13 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 9.36153,
-              "roi": 3.38,
+              "pnl": 8.34498,
+              "roi": 4.21,
               "mdd": 3.4,
-              "winRate": 71.42
+              "winRate": 80
             }
           }
         ]
@@ -32612,6 +34143,13 @@ window.PLATFORM_GENERATED={
               "pnl": 416.46410595,
               "followerPnl": 0
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 438.99349095,
+              "followerPnl": 0
+            }
           }
         ],
         "daily": [
@@ -32623,9 +34161,9 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T02:00:43.165Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 416.46410595,
+              "pnl": 438.99349095,
               "followerPnl": 0
             }
           }
@@ -32753,6 +34291,17 @@ window.PLATFORM_GENERATED={
               "trades": 848,
               "assets": 37.56160068
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 117927.86111346,
+              "roi": 0.81990459,
+              "winRate": 0.4435,
+              "volume": 446261.43505536,
+              "trades": 848,
+              "assets": 37.56160068
+            }
           }
         ],
         "daily": [
@@ -32768,7 +34317,7 @@ window.PLATFORM_GENERATED={
             }
           },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "pnl": 117927.86111346,
               "roi": 0.81990459,
@@ -32867,17 +34416,27 @@ window.PLATFORM_GENERATED={
               "mdd": 66.9573,
               "winRate": 66.67
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "aum": 3848.933555,
+              "pnl": 8133.834453,
+              "roi": 69.49,
+              "mdd": 66.9573,
+              "winRate": 80
+            }
           }
         ],
         "daily": [
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "aum": 3848.933555,
-              "pnl": 8570.769111,
-              "roi": 76.06,
+              "pnl": 8133.834453,
+              "roi": 69.49,
               "mdd": 66.9573,
-              "winRate": 66.67
+              "winRate": 80
             }
           }
         ]
@@ -32939,17 +34498,27 @@ window.PLATFORM_GENERATED={
               "mdd": 3.97,
               "winRate": 50
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 11.90305,
+              "roi": 6.08,
+              "mdd": 0,
+              "winRate": 60
+            }
           }
         ],
         "daily": [
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 6.33746,
-              "roi": 4.04,
-              "mdd": 3.97,
-              "winRate": 50
+              "pnl": 11.90305,
+              "roi": 6.08,
+              "mdd": 0,
+              "winRate": 60
             }
           }
         ]
@@ -33058,15 +34627,25 @@ window.PLATFORM_GENERATED={
               "mdd": 4.45,
               "winRate": 83.33
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 2548.97801,
+              "roi": 95.06,
+              "mdd": 4.45,
+              "winRate": 83.33
+            }
           }
         ],
         "daily": [
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "followers": 0,
-              "pnl": 3808.62033,
-              "roi": 142.03,
+              "pnl": 2548.97801,
+              "roi": 95.06,
               "mdd": 4.45,
               "winRate": 83.33
             }
@@ -33311,18 +34890,29 @@ window.PLATFORM_GENERATED={
               "trades": 237,
               "assets": 186.83775838
             }
+          },
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 161209.65504453,
+              "roi": 5.35045135,
+              "winRate": 0.3846,
+              "volume": 237834.04825025,
+              "trades": 252,
+              "assets": 228.84585523
+            }
           }
         ],
         "daily": [
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
-              "pnl": 140609.48202008,
-              "roi": 5.58215332,
+              "pnl": 161209.65504453,
+              "roi": 5.35045135,
               "winRate": 0.3846,
-              "volume": 212292.88280362,
-              "trades": 237,
-              "assets": 186.83775838
+              "volume": 237834.04825025,
+              "trades": 252,
+              "assets": 228.84585523
             }
           }
         ]
@@ -33342,18 +34932,29 @@ window.PLATFORM_GENERATED={
               "trades": 378,
               "assets": 9.06895641
             }
-          }
-        ],
-        "daily": [
+          },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "pnl": 131090.25451817,
               "roi": 0.5337286,
               "winRate": 0.2586,
-              "volume": 669962.06431549,
-              "trades": 378,
-              "assets": 9.06895641
+              "volume": 675423.64916213,
+              "trades": 379,
+              "assets": 0.06885144
+            }
+          }
+        ],
+        "daily": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 131090.25451817,
+              "roi": 0.5337286,
+              "winRate": 0.2586,
+              "volume": 675423.64916213,
+              "trades": 379,
+              "assets": 0.06885144
             }
           }
         ]
@@ -33373,11 +34974,9 @@ window.PLATFORM_GENERATED={
               "trades": 322,
               "assets": 1e-8
             }
-          }
-        ],
-        "daily": [
+          },
           {
-            "at": "2026-08-16T13:04:13.274Z",
+            "at": "2026-08-16T18:50:18.446Z",
             "metrics": {
               "pnl": 129187.35133164,
               "roi": 2.12056075,
@@ -33385,6 +34984,276 @@ window.PLATFORM_GENERATED={
               "volume": 266542.02234675,
               "trades": 322,
               "assets": 1e-8
+            }
+          }
+        ],
+        "daily": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 129187.35133164,
+              "roi": 2.12056075,
+              "winRate": 0.2143,
+              "volume": 266542.02234675,
+              "trades": 322,
+              "assets": 1e-8
+            }
+          }
+        ]
+      },
+      "mexc:copy:03507961": {
+        "name": "Mexctrader-R3dEGH",
+        "platform": "mexc",
+        "mode": "copy",
+        "raw": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 15998.14767,
+              "roi": 39.79,
+              "mdd": 33.33,
+              "winRate": 59.25
+            }
+          }
+        ],
+        "daily": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 15998.14767,
+              "roi": 39.79,
+              "mdd": 33.33,
+              "winRate": 59.25
+            }
+          }
+        ]
+      },
+      "mexc:copy:63831320": {
+        "name": "Mexctrader-h0u2YR",
+        "platform": "mexc",
+        "mode": "copy",
+        "raw": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 9216.98288,
+              "roi": 0.8,
+              "mdd": 17.12,
+              "winRate": 76.37
+            }
+          }
+        ],
+        "daily": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 9216.98288,
+              "roi": 0.8,
+              "mdd": 17.12,
+              "winRate": 76.37
+            }
+          }
+        ]
+      },
+      "mexc:copy:83608749": {
+        "name": "Lyhh",
+        "platform": "mexc",
+        "mode": "copy",
+        "raw": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 8211.65581,
+              "roi": 13.8,
+              "mdd": 0,
+              "winRate": 53.06
+            }
+          }
+        ],
+        "daily": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 8211.65581,
+              "roi": 13.8,
+              "mdd": 0,
+              "winRate": 53.06
+            }
+          }
+        ]
+      },
+      "mexc:copy:29663598": {
+        "name": "Mexctrader-adOcSI",
+        "platform": "mexc",
+        "mode": "copy",
+        "raw": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 6434.91461,
+              "roi": 2.83,
+              "mdd": 0,
+              "winRate": 74.21
+            }
+          }
+        ],
+        "daily": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 6434.91461,
+              "roi": 2.83,
+              "mdd": 0,
+              "winRate": 74.21
+            }
+          }
+        ]
+      },
+      "mexc:copy:88624335": {
+        "name": "Mexctrader-Eet210",
+        "platform": "mexc",
+        "mode": "copy",
+        "raw": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 3068.98543911,
+              "roi": 1.26,
+              "mdd": 6.25,
+              "winRate": 67.36
+            }
+          }
+        ],
+        "daily": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 3068.98543911,
+              "roi": 1.26,
+              "mdd": 6.25,
+              "winRate": 67.36
+            }
+          }
+        ]
+      },
+      "mexc:copy:22247145": {
+        "name": "TMONEY",
+        "platform": "mexc",
+        "mode": "copy",
+        "raw": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 388,
+              "pnl": 11912.66265038,
+              "roi": 6.41,
+              "mdd": 3.44,
+              "winRate": 28.67
+            }
+          }
+        ],
+        "daily": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 388,
+              "pnl": 11912.66265038,
+              "roi": 6.41,
+              "mdd": 3.44,
+              "winRate": 28.67
+            }
+          }
+        ]
+      },
+      "mexc:copy:53334545": {
+        "name": "Trend Rider",
+        "platform": "mexc",
+        "mode": "copy",
+        "raw": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 8.6169,
+              "roi": 3.11,
+              "mdd": 6.26,
+              "winRate": 57.14
+            }
+          }
+        ],
+        "daily": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "followers": 0,
+              "pnl": 8.6169,
+              "roi": 3.11,
+              "mdd": 6.26,
+              "winRate": 57.14
+            }
+          }
+        ]
+      },
+      "kucoin:copy:hdpx666": {
+        "name": "hdpx666",
+        "platform": "kucoin",
+        "mode": "copy",
+        "raw": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 43.70492087,
+              "followerPnl": 0
+            }
+          }
+        ],
+        "daily": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 43.70492087,
+              "followerPnl": 0
+            }
+          }
+        ]
+      },
+      "binance:trader:0xc16638a4ae46eae08a11a79b378290e003513d98": {
+        "name": "0xc166…3d98",
+        "platform": "binance",
+        "mode": "trader",
+        "raw": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 130903.98244379,
+              "roi": 0.22155524,
+              "winRate": 0.3913,
+              "volume": 1460396.79731591,
+              "trades": 1071,
+              "assets": 183.1408088
+            }
+          }
+        ],
+        "daily": [
+          {
+            "at": "2026-08-16T18:50:18.446Z",
+            "metrics": {
+              "pnl": 130903.98244379,
+              "roi": 0.22155524,
+              "winRate": 0.3913,
+              "volume": 1460396.79731591,
+              "trades": 1071,
+              "assets": 183.1408088
             }
           }
         ]
