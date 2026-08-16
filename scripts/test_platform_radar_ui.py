@@ -4,6 +4,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 V3 = (ROOT / "crypto-radar" / "platform-v3.js").read_text(encoding="utf-8")
 V2 = (ROOT / "crypto-radar" / "platform-v2.js").read_text(encoding="utf-8")
+COLLECTOR = (ROOT / "scripts" / "collect_platform_radar.mjs").read_text(encoding="utf-8")
 
 
 def test_short_cross_platform_history_is_not_rendered_as_a_trend() -> None:
@@ -24,3 +25,10 @@ def test_empty_platform_state_exposes_capture_diagnostics() -> None:
 
 def test_seed_users_are_not_presented_as_current_when_live_board_is_empty() -> None:
     assert "if(!live)return{...fallback,users:[],_origin:'empty'" in V2
+
+
+def test_collector_enriches_json_users_from_official_card_dom() -> None:
+    assert "domAvatarHints" in COLLECTOR
+    assert "enrichUsersFromDom" in COLLECTOR
+    assert "currentSrc" in COLLECTOR
+    assert "profileUrl" in COLLECTOR
