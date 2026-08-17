@@ -1,5 +1,5 @@
 /* All non-OKX exchange screens inherit the OKX visual grammar. */
-.v3-headbadges{display:none}
+.v3-headbadges{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.v3-headbadges span{display:inline-flex;align-items:center;padding:5px 8px;border-radius:999px;background:#e2e8ef;color:var(--muted);font-size:9px;font-weight:850}.v3-headbadges .v3-data-ok{background:#e0eee8;color:var(--green)}.v3-headbadges .v3-data-partial{background:#eee7dc;color:var(--amber)}.v3-headbadges .v3-data-empty{background:#e5e9ee;color:var(--muted)}
 .v3-shell{grid-column:1/-1}
 .v3-summary{display:none}
 #platformView .platform-head{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:21px 23px;margin-bottom:15px}
@@ -9,6 +9,7 @@
 #platformView .platform-user{flex:none;text-align:right}
 #platformView .platform-user span{display:block;color:var(--muted);font-size:10px}
 #platformView .platform-user strong{display:block;margin-top:5px;color:var(--blue2);font-size:22px}
+.v3-source-link{display:inline-flex;margin-top:8px;padding:6px 9px;border-radius:999px;background:#e2e8ef;color:var(--soft);font-size:9px;font-weight:900;text-decoration:none}
 #platformView .platform-subnav{display:flex;gap:7px;overflow:auto;padding:10px 12px;margin-bottom:15px}
 #platformView .platform-subtab{flex:none;border:0;border-radius:999px;padding:8px 12px;background:#e2e8ef;color:var(--muted);font-size:11px;font-weight:850}
 #platformView .platform-subtab.active{background:#202a38;color:#fff}

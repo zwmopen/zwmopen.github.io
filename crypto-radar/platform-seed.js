@@ -19,7 +19,7 @@ window.PLATFORM_SEED={
     ]}
   },
   bybit:{
-    copy:{title:'Bybit Master Trader ROI',period:'Current',sourceUrl:'https://www.bybit.com/copyTrading/en/trader-vs-bot',users:[
+    copy:{title:'Bybit Master Trader ROI',period:'Current',sourceUrl:'https://www.bybitglobal.com/copyTrade/',users:[
       {name:'Treasure_D',metrics:{roi:203.92},badge:'Human Squad'},
       {name:'dcagod',metrics:{roi:183.13},badge:'Human Squad'},
       {name:'Marginator',metrics:{roi:176.51},badge:'Human Squad'},
@@ -31,12 +31,12 @@ window.PLATFORM_SEED={
       {name:'VKryptos',metrics:{roi:61.38},badge:'Human Squad'},
       {name:'CryptoPizza-Valera-X',metrics:{roi:58.28},badge:'Human Squad'}
     ]},
-    trader:{title:'Bybit 普通交易员榜',period:'Daily',sourceUrl:'https://www.bybit.com/en/leaderboard',users:[
+    trader:{title:'Bybit 普通交易员榜',period:'Daily',sourceUrl:'https://www.bybitglobal.com/copyTrade/',users:[
       {name:'Super Prophet',metrics:{},badge:'Leaderboard'}
     ],note:'官方普通交易员榜为 Top 500；动态用户名、PnL、ROI 由浏览器采集器同步。'}
   },
   gate:{
-    copy:{title:'Gate Lead Traders',period:'Current',sourceUrl:'https://www.gate.com/copytrading',users:[
+    copy:{title:'Gate Lead Traders',period:'Current',sourceUrl:'https://gate.ac/copytrading',users:[
       {name:'Gotothemoon',profileUrl:'https://www.gate.com/zh/copytrading/trader/futures/8907',badge:'高级交易员 · 高频 · 激进 · 短线',metrics:{aum:472.18,followers:25,days:483,pnl:-10.68,roi:-21.35,mdd:26.93,winRate:66.66,assets:0,trades:3,profitShare:18,followerPnl:0,sharpe:-0.73}},
       {name:'Shunping',profileUrl:'https://www.gate.com/copytrading/trader/futures/22593',badge:'高频 · 短线 · 保守',metrics:{aum:14756.42,followers:11,days:38,pnl:274.22,roi:7.08,mdd:3.89,winRate:92.30,assets:1879.37,trades:91,followerPnl:-716.52,sharpe:7.58}},
       {name:'Jonggeon',profileUrl:'https://www.gate.com/copytrading/trader/futures/25345',badge:'长期 · 高频 · 激进',metrics:{aum:52,followers:3,days:14,pnl:1956.76,roi:263.69,mdd:58.05,winRate:96.29,assets:3545.82,trades:27,followerPnl:-225.17,sharpe:8.88}},
@@ -48,10 +48,10 @@ window.PLATFORM_SEED={
       {name:'AI Contract Productivity',profileUrl:'https://www.gate.com/copytrading/trader/futures/27342',badge:'长期 · 高频 · 激进',metrics:{aum:0,followers:0,days:2,pnl:157.34,roi:10.01,mdd:19.23,winRate:61.53,assets:1731.13,trades:13,followerPnl:-410.39}},
       {name:'Professional Trader 5',profileUrl:'https://www.gate.com/copytrading/trader/futures/27794',badge:'长期 · 高频 · 保守',metrics:{aum:10,followers:1,days:2,pnl:-61.29,roi:-7.57,mdd:.21,winRate:100,assets:507.66,trades:11,followerPnl:.44}}
     ]},
-    trader:{title:'Gate 普通交易员 / 活动交易榜',period:'Event',sourceUrl:'https://www.gate.com/competition',users:[],note:'常驻公开细节目前主要集中在 Lead Trader 用户页；活动交易榜与带单榜分开。'}
+    trader:{title:'Gate 普通交易员 / 活动交易榜',period:'Event',sourceUrl:'https://gate.ac/copytrading',users:[],note:'常驻公开细节目前主要集中在 Lead Trader 用户页；活动交易榜与带单榜分开。'}
   },
   kucoin:{
-    copy:{title:'KuCoin Lead Traders',period:'7/30/90D',sourceUrl:'https://www.kucoin.com/support/39212120334745',users:[],note:'KuCoin 用户榜目前以 App 为主；自动采集器尝试抓取 Web/App 公开运行态，失败时不伪造用户。'},
+    copy:{title:'KuCoin Lead Traders',period:'7/30/90D',sourceUrl:'https://www.kucoin.com/copytrading',users:[],note:'KuCoin 用户榜当前可取得官方公开快照，但头像与用户主页字段不完整；缺失部分不补造。'},
     trader:{title:'KuCoin 普通交易员榜',period:'—',sourceUrl:'https://www.kucoin.com/',users:[],note:'未把 Lead Trader 用户冒充普通交易员。'}
   },
   mexc:{

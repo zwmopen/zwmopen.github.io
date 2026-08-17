@@ -20,6 +20,13 @@ def test_platform_cards_expose_a_clear_detail_action() -> None:
     assert "暂无可验证用户主页链接" in V3
 
 
+def test_incomplete_platforms_expose_quality_and_official_source() -> None:
+    assert "暂无可验证用户 · 不展示假用户" in V3
+    assert "头像 ${avatars}/${count} · 主页 ${profiles}/${count}" in V3
+    assert "v3-source-link" in V3
+    assert "核对官方榜 ↗" in V3
+
+
 def test_rank_markers_are_compact_metadata_not_large_buttons() -> None:
     assert "grid-template-columns:34px minmax(0,1fr)" in BASE_CSS
     assert ".ranknum{width:28px;height:28px" in BASE_CSS
@@ -33,6 +40,8 @@ def test_rank_markers_are_compact_metadata_not_large_buttons() -> None:
 def test_empty_platform_state_exposes_capture_diagnostics() -> None:
     assert "syncDiagnostic(platform,mode)" in V3
     assert "抓取诊断" in V3
+    assert "diagnosticSummary(diag)" in V3
+    assert "本轮官方抓取未通过 HTTP/2 或区域访问限制" in V3
 
 
 def test_seed_users_are_not_presented_as_current_when_live_board_is_empty() -> None:
