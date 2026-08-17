@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import {spawnSync} from 'node:child_process';
 import {chromium} from 'playwright';
+import {enrichUsersFromDom} from './platform_radar_dom.mjs';
 
 const OUT='crypto-radar/platforms-generated.js';
 const NOW=new Date().toISOString();
@@ -53,6 +54,7 @@ function normalize(obj,sourceUrl){
 }
 function walk(node,sourceUrl,out,depth=0){if(depth>12||node===null||node===undefined)return;if(Array.isArray(node)){for(const x of node)walk(x,sourceUrl,out,depth+1);return}if(typeof node!=='object')return;const n=normalize(node,sourceUrl);if(n)out.push(n);for(const v of Object.values(node))if(v&&typeof v==='object')walk(v,sourceUrl,out,depth+1)}
 function dedupe(items){const map=new Map();for(const u of items){const key=(u.rawId||u.name).toLowerCase();const old=map.get(key);if(!old||Object.keys(u.metrics).length>Object.keys(old.metrics).length)map.set(key,u)}return[...map.values()].filter(x=>Object.keys(x.metrics).length>=2).slice(0,80)}
+async function domAvatarHints(page,sourceUrl){return page.locator('img').evaluateAll((nodes,baseUrl)=>{const metricPattern=/(?:roi|收益|跟单|followers|pnl|drawdown|回撤|交易胜率|trading\s*days)/i,out=[];for(const img of nodes){const raw=img.currentSrc||img.src||img.getAttribute('src')||'',alt=(img.alt||'').toLowerCase();if(!raw||raw.startsWith('data:')||/(?:top trader|logo|decorate|badge|medal|icon|twitter|telegram|discord|instagram|youtube)/i.test(alt))continue;const rect=img.getBoundingClientRect();if(rect.width<32||rect.height<32||rect.width>180||rect.height>180)continue;let card=img.parentElement;while(card&&card!==document.body){const text=(card.innerText||'').trim();if(text.length>=30&&text.length<=2400&&metricPattern.test(text))break;card=card.parentElement}if(!card||card===document.body)continue;let avatarUrl=null;try{avatarUrl=new URL(raw,baseUrl).href}catch{}if(!avatarUrl||!/^https?:\/\//i.test(avatarUrl))continue;const text=(card.innerText||'').trim(),lines=text.split(/\n+/).map(x=>x.trim()).filter(Boolean),links=[...card.querySelectorAll('a[href]')].map(a=>{try{return new URL(a.href,baseUrl).href}catch{return null}}).filter(Boolean);out.push({avatarUrl,text,lines,links})}return out},sourceUrl)}
 async function scrape(page,key,mode,url){
   const candidates=[];const api=[];const errors=[];
   const onResponse=async r=>{try{const ct=(r.headers()['content-type']||'').toLowerCase();if(!ct.includes('json'))return;if(r.status()<200||r.status()>=400)return;const data=await r.json();const before=candidates.length;walk(data,r.url(),candidates);if(candidates.length>before)api.push(r.url())}catch(e){errors.push(String(e).slice(0,120))}};
@@ -62,8 +64,9 @@ async function scrape(page,key,mode,url){
     const blobs=await page.locator('script').evaluateAll(nodes=>nodes.map(n=>n.textContent||'').filter(t=>t.length>40&&t.length<4_000_000));
     for(const text of blobs){const t=text.trim();if(!(t.startsWith('{')||t.startsWith('[')))continue;try{walk(JSON.parse(t),url,candidates)}catch{}}
   }catch(e){errors.push(`${e.name}: ${e.message}`)}finally{page.off('response',onResponse)}
-  const users=dedupe(candidates);
-  return{users,title:`${key} ${mode}`,sourceUrl:url,generatedAt:NOW,apiSources:[...new Set(api)].slice(0,12),errors:errors.slice(0,5)}
+  const hints=await domAvatarHints(page,url).catch(e=>{errors.push(`dom: ${e.message}`);return[]});
+  const users=enrichUsersFromDom(dedupe(candidates),hints);
+  return{users,title:`${key} ${mode}`,sourceUrl:url,generatedAt:NOW,apiSources:[...new Set(api)].slice(0,12),domAvatarHints:hints.length,avatarUsers:users.filter(x=>x.avatarUrl).length,profileUsers:users.filter(x=>x.profileUrl).length,errors:errors.slice(0,5)}
 }
 function findArrays(node,out=[]){if(Array.isArray(node)){if(node.length&&node.every(x=>x&&typeof x==='object'))out.push(node);for(const x of node)findArrays(x,out)}else if(node&&typeof node==='object')for(const v of Object.values(node))findArrays(v,out);return out}
 function binanceWeb3(){
@@ -77,7 +80,7 @@ function binanceWeb3(){
 }
 const out=previous();out.generatedAt=NOW;out.platforms=out.platforms||{};out.diagnostics=out.diagnostics||{};
 const browser=await chromium.launch({headless:true});const context=await browser.newContext({locale:'en-US',viewport:{width:1440,height:1000},userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36'});
-for(const [key,mode,url] of targets){const page=await context.newPage();const k=`${key}:${mode}`;try{const result=await scrape(page,key,mode,url);out.diagnostics[k]={at:NOW,found:result.users.length,apiSources:result.apiSources,error:result.errors.join(' | ')||null};if(result.users.length>=3){out.platforms[key]=out.platforms[key]||{};out.platforms[key][mode]=result;console.log(k,'updated',result.users.length)}else console.log(k,'kept previous; candidates',result.users.length)}finally{await page.close()}}
+for(const [key,mode,url] of targets){const page=await context.newPage();const k=`${key}:${mode}`;try{const result=await scrape(page,key,mode,url);out.diagnostics[k]={at:NOW,found:result.users.length,apiSources:result.apiSources,domAvatarHints:result.domAvatarHints,avatarUsers:result.avatarUsers,profileUsers:result.profileUsers,error:result.errors.join(' | ')||null};if(result.users.length>=3){out.platforms[key]=out.platforms[key]||{};out.platforms[key][mode]=result;console.log(k,'updated',result.users.length,'avatars',result.avatarUsers,'profiles',result.profileUsers)}else console.log(k,'kept previous; candidates',result.users.length)}finally{await page.close()}}
 await browser.close();
 const web3=binanceWeb3();out.diagnostics['binance:trader']={at:NOW,found:web3.users.length,error:web3.error||null};if(web3.users.length>=3){out.platforms.binance=out.platforms.binance||{};out.platforms.binance.trader={title:'Binance Web3 链上交易员榜',period:'30D',...web3};console.log('binance:trader updated',web3.users.length)}
 fs.writeFileSync(OUT,`// Auto-generated public leaderboard snapshot.\nwindow.PLATFORM_GENERATED=${JSON.stringify(out,null,2)};\n`,'utf8');

@@ -8,6 +8,8 @@ on:
     branches: [master]
     paths:
       - "scripts/collect_platform_radar.mjs"
+      - "scripts/platform_radar_dom.mjs"
+      - "scripts/test_platform_radar_dom.mjs"
       - "scripts/postprocess_platform_radar.mjs"
       - "crypto-radar/platform-seed.js"
       - ".github/workflows/collect-platform-radar.yml"
@@ -39,6 +41,9 @@ jobs:
 
       - name: Collect public platform leaderboards
         run: node scripts/collect_platform_radar.mjs
+
+      - name: Test official card DOM enrichment
+        run: node scripts/test_platform_radar_dom.mjs
 
       - name: Normalize metrics and add Binance Web3 trader leaderboard
         run: node scripts/postprocess_platform_radar.mjs
