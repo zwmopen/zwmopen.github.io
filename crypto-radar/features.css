@@ -21,7 +21,7 @@ footer{padding:24px 4px 4px;color:var(--muted);font-size:10px;text-align:center}
  .okx-head{display:block;padding:17px}.okx-head h1{font-size:26px}.open-origin{margin-top:11px;width:100%}
  .rank-console{padding:11px}.console-row{display:block}.rank-tabs{margin-bottom:8px}.period-select,.search{width:100%;margin-top:7px}.search{min-width:0}
  .console-meta{display:block}.console-meta span{display:block;margin-top:4px}
- .trader-list{gap:9px}.trader-card{padding:14px 13px;grid-template-columns:38px minmax(0,1fr);gap:10px}.ranknum{width:36px;height:36px;font-size:12px}
+ .trader-list{gap:9px}.trader-card{padding:14px 13px;grid-template-columns:30px minmax(0,1fr);gap:10px}.ranknum{width:28px;height:28px;font-size:10px}
  .identity{grid-column:2}.avatar{width:44px;height:44px}.name{font-size:16px}.mid{grid-column:1/-1;padding-left:48px}.primary{font-size:27px}.sparkbox,.spark{height:52px}
  .actions{right:10px;top:10px}.star,.profile{width:28px;height:28px}.subline{gap:9px}
  .simple-grid{grid-template-columns:1fr}.placeholder{padding:22px;min-height:210px}.alert-row{grid-template-columns:1fr}.alert-side{text-align:left}

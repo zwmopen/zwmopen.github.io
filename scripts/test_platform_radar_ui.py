@@ -4,6 +4,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 V3 = (ROOT / "crypto-radar" / "platform-v3.js").read_text(encoding="utf-8")
 V2 = (ROOT / "crypto-radar" / "platform-v2.js").read_text(encoding="utf-8")
+BASE_CSS = (ROOT / "crypto-radar" / "base.css").read_text(encoding="utf-8")
+V3_CSS = (ROOT / "crypto-radar" / "platform-v3.css").read_text(encoding="utf-8")
 COLLECTOR = (ROOT / "scripts" / "collect_platform_radar.mjs").read_text(encoding="utf-8")
 
 
@@ -16,6 +18,16 @@ def test_short_cross_platform_history_is_not_rendered_as_a_trend() -> None:
 def test_platform_cards_expose_a_clear_detail_action() -> None:
     assert "查看详情 ↗" in V3
     assert "暂无可验证用户主页链接" in V3
+
+
+def test_rank_markers_are_compact_metadata_not_large_buttons() -> None:
+    assert "grid-template-columns:34px minmax(0,1fr)" in BASE_CSS
+    assert ".ranknum{width:28px;height:28px" in BASE_CSS
+    assert ".ranknum.top3{color:var(--blue2);background:rgba(91,112,235,.12)" in BASE_CSS
+    assert "grid-template-columns:34px minmax(0,1fr)" in V3_CSS
+    assert ".v3-rank{grid-column:1;grid-row:1;width:28px;height:28px" in V3_CSS
+    assert "box-shadow:none" in V3_CSS
+    assert "grid-template-columns:30px minmax(0,1fr)" in V3_CSS
 
 
 def test_empty_platform_state_exposes_capture_diagnostics() -> None:
