@@ -8,12 +8,12 @@ const NOW=new Date().toISOString();
 const targets=[
   ['binance','copy','https://www.binance.com/en/copy-trading'],
   ['bitget','copy','https://www.bitget.com/copy-trading/leaderboard-ranking/futures-pnl'],
-  ['bybit','copy','https://www.bybit.com/copyTrade/tradeLink'],
+  ['bybit','copy','https://www.bybit.com/copyTrading/en/leader-board'],
   ['bybit','trader','https://www.bybit.com/en/leaderboard'],
   ['gate','copy','https://www.gate.com/copytrading'],
   ['mexc','copy','https://www.mexc.com/en-GB/futures/copyTrade/leaderRank'],
   ['htx','copy','https://futures.htx.com/zh-cn/copytrading/futures'],
-  ['kucoin','copy','https://www.kucoin.com/copy-trading'],
+  ['kucoin','copy','https://www.kucoin.com/copytrading'],
   ['crypto','trader','https://crypto.com/exchange/trading-arena']
 ];
 const NAME_KEYS=['nickName','nickname','traderName','leadTraderName','leadName','userName','username','displayName','name','addressLabel','address'];

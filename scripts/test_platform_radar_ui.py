@@ -27,6 +27,14 @@ def test_incomplete_platforms_expose_quality_and_official_source() -> None:
     assert "核对官方榜 ↗" in V3
 
 
+def test_empty_platforms_use_configured_official_fallback_instead_of_fake_cards() -> None:
+    assert "const OFFICIAL_FALLBACK" in V3
+    assert "data-official-frame" in V3
+    assert "打开官方榜单 ↗" in V3
+    assert "官方页面由平台自己渲染" in V3
+    assert "www.gate.com/copytrading" in V3
+
+
 def test_rank_markers_are_compact_metadata_not_large_buttons() -> None:
     assert "grid-template-columns:34px minmax(0,1fr)" in BASE_CSS
     assert ".ranknum{width:28px;height:28px" in BASE_CSS
