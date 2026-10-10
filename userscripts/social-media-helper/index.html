@@ -3,28 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111827">
 <title>ZWM 社媒助手 Lite</title>
 <style>
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f5f6f8;color:#111827}
-main{max-width:560px;margin:0 auto;padding:48px 20px}
+main{max-width:620px;margin:0 auto;padding:38px 18px 64px}
 .card{background:#fff;border-radius:22px;padding:24px;box-shadow:0 12px 45px #00000014}
-h1{margin:0 0 8px;font-size:28px}.sub{color:#6b7280;line-height:1.7}
-a.btn{display:block;margin-top:18px;padding:15px 18px;border-radius:14px;text-decoration:none;text-align:center;font-weight:800;background:#111827;color:#fff}
+h1{margin:0 0 8px;font-size:28px}.sub{color:#6b7280;line-height:1.7}.badge{display:inline-block;margin-top:8px;padding:5px 9px;border-radius:999px;background:#ecfdf5;color:#047857;font-weight:700;font-size:12px}
+a.btn{display:block;margin-top:16px;padding:15px 18px;border-radius:14px;text-decoration:none;text-align:center;font-weight:800;background:#111827;color:#fff}
 a.light{background:#eef2f7;color:#111827}
-ul{line-height:1.9;padding-left:20px}
+h2{font-size:17px;margin:24px 0 8px}ul{line-height:1.9;padding-left:20px;margin:8px 0}
+.note{margin-top:16px;padding:12px 14px;border-radius:14px;background:#f9fafb;color:#4b5563;line-height:1.7;font-size:13px}
 small{display:block;margin-top:18px;color:#9ca3af;line-height:1.6}
 </style>
 </head>
 <body><main><div class="card">
 <h1>ZWM 社媒助手 Lite</h1>
-<div class="sub">小红书当前笔记提取 / 复制 JSON / 复制正文 / 图片视频下载。v0.1.0</div>
+<div class="sub">手机优先的小红书 Userscript：当前笔记提取、复制、素材下载。</div>
+<span class="badge">v0.2.0 · 单文件自包含</span>
 <a class="btn" href="https://raw.githubusercontent.com/zwmopen/zwmopen.github.io/master/userscripts/social-media-helper.user.js">安装 / 更新脚本</a>
-<a class="btn light" href="https://github.com/zwmopen/zwmopen.github.io/blob/master/userscripts/social-media-helper.user.js">查看源码</a>
+<a class="btn light" href="https://github.com/zwmopen/zwmopen.github.io/blob/master/userscripts/social-media-helper.user.js">查看 GitHub 源码</a>
+
+<h2>当前功能</h2>
 <ul>
-<li>打开小红书网页版笔记，右下角出现“素材”按钮。</li>
-<li>支持复制 JSON、正文、图片链接。</li>
-<li>支持下载当前笔记图片和视频。</li>
-<li>支持小红书 SPA 页面切换后重新识别。</li>
+<li>识别小红书当前具体笔记，并自动适配 SPA 页面切换。</li>
+<li>复制结构化 JSON、正文、图片链接、视频链接、全部媒体链接。</li>
+<li>下载当前笔记图片和视频；GM_download 失败时自动尝试备用下载方式。</li>
+<li>优先读取笔记结构化数据，降低推荐区头像、缩略图混入概率。</li>
+<li>手机端使用底部面板，非具体笔记页面自动隐藏按钮。</li>
 </ul>
-<small>需要在支持 Userscript 的浏览器/脚本管理器中使用。普通浏览器若不支持用户脚本，打开安装链接只会显示源码。</small>
+
+<h2>手机使用</h2>
+<div class="note">先在支持 Userscript 的浏览器或脚本管理器中打开上方“安装 / 更新脚本”。安装后进入小红书网页版具体笔记，页面右下角会出现“素材”按钮。普通浏览器如果没有 Userscript 能力，打开安装链接只会显示源码。</div>
+
+<small>这是个人工作流实验版。小红书页面结构变化后，提取规则可能需要同步更新；更新脚本即可继续使用。</small>
 </div></main></body></html>
