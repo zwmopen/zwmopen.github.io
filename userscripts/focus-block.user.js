@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         全网净化与拦截助手-五连提示版V4.8.2
+// @name         全网净化与拦截助手-五连提示版V4.8.3
 // @namespace    http://tampermonkey.net/
-// @version      4.8.2
+// @version      4.8.3
 // @description  黑名单与关键词统一伪装断网；30分钟内连续触发5次后显示专用拟态语录提醒
-// @author       zwmopen / Gemini Partner
+// @author       zwmopen / ChatGPT Partner
 // @match        *://*/*
 // @grant        GM_addStyle
 // @grant        GM_registerMenuCommand
@@ -22,7 +22,7 @@
     const ALLOW_KEY = 'keyword_allow_domain_list_v4_6';
     const USER_STRONG_KEY = 'user_strong_terms_v4_6';
     const USER_WEAK_KEY = 'user_weak_terms_v4_6';
-    const BLOCK_FLOW_KEY = 'block_flow_events_v4_8_2';
+    const BLOCK_FLOW_KEY = 'block_flow_events_v4_8_3';
 
     const SCORE_THRESHOLD = 80;
     const BODY_SCAN_LIMIT = 1600000;
@@ -87,21 +87,6 @@
         '警方','法院','检察院','记者','通报','案件','新闻','报道','辟谣','反诈','医院','医生','患者','疾病','治疗','检查','手术','科普','研究','论文','法律','判决','未成年人保护','宠物','动物','养殖','兽医','生理期','青春期','教材','课程','心理咨询'
     ];
 
-    const FLOW_QUOTES = [
-        '你已经连续试探 5 次了。现在离开屏幕，去做一个现实动作。',
-        '这不是正常浏览，这是连续试探。',
-        '你不是在找网站，你是在被冲动牵着走。现在退出。',
-        '不要继续刷新，直接锁屏。',
-        '现在停，损失最小。',
-        '已经触发不等于已经失败，继续才是失控。',
-        '别让一次试探变成一整晚报废。',
-        '把手机扣在桌上，站起来喝水。',
-        '离开屏幕 2 分钟，不要讲道理。',
-        '你正在训练的是停止能力，不是忍耐能力。',
-        '每一次及时退出，都是在重建自控权。',
-        '这一次继续，会解决什么现实问题？'
-    ];
-
     const QUOTES = [
         '停。你打开这个页面，不是因为你真的需要它。','先别继续。关掉页面，站起来走十步。','现在退出，还只是一个念头；继续下去，就会变成一段浪费。',
         '别跟冲动讲道理，直接关掉。','这一页没有你真正想要的东西。','你已经识别到诱惑了，现在只差执行关闭。','此刻最正确的动作只有一个：关闭页面。',
@@ -112,8 +97,37 @@
         '你想成为的人，不会把时间交给这种页面。','真正的自由，是能对即时刺激说不。','你的时间很贵，不该被廉价刺激收割。','不要背叛那个正在努力改变生活的自己。',
         '关掉。别再给自己找借口。','不要拿“最后一次”欺骗自己。','这不是奖励，这是陷阱。','别把失控包装成放松。','关闭页面，别让垃圾内容赢。',
         '不用责怪自己，轻轻关掉页面就好。','冲动出现很正常，选择不跟随它就够了。','现在退出，不是剥夺快乐，而是在保护自己。','你可以重新开始，而且不需要等到明天。',
-        '十分钟后，你会感谢自己继续看，还是感谢自己及时退出？','你是在主动选择，还是在被冲动操控？','这个页面能解决你现在真正的问题吗？','你想要的是几秒快感，还是一整晚的掌控感？',
         '冲动会过去，选择会留下。','关掉刺激，拿回注意力。','不点开，是自由；能退出，是力量。','退出不是损失，是止损。','清醒比快感更值钱。','关掉页面，回到人生。'
+    ];
+
+    const FLOW_QUOTES = [
+        '你真的想打开它，还是只是在逃避当前状态？',
+        '10 分钟后，你会感谢继续刷新，还是感谢现在停下？',
+        '这件事会让你明天更轻松，还是更后悔？',
+        '你现在是在主动选择，还是在被惯性拖着走？',
+        '你要的是放松，还是刺激后的空虚？',
+        '这一次继续，会解决什么现实问题？',
+        '你要做的是把注意力拿回来。',
+        '每一次及时退出，都是在重建自控权。',
+        '把手机扣在桌上，站起来喝水。',
+        '离开屏幕 2 分钟，不要讲道理。',
+        '现在起身，去洗把脸。',
+        '把浏览器关掉，打开一个现实任务。',
+        '这不是正常浏览，这是连续试探。',
+        '你现在不是需要信息，是在寻找刺激入口。',
+        '你已经进入自动刷新模式了，先打断。',
+        '你不是在解决问题，你是在延长冲动。',
+        '不要继续刷新，直接锁屏。',
+        '现在停，损失最小。',
+        '已经触发不等于已经失败，继续才是失控。',
+        '别让一次试探变成一整晚报废。',
+        '这不是网站问题，是你已经进入连续试探状态了。先停 10 分钟。',
+        '第 5 次了。别继续证明它能不能打开，证明你能不能停下。',
+        '你正在训练的是停止能力，不是忍耐能力。',
+        '能停下的人，才是真正自由的人。',
+        '你不是不能看，你是在选择不被它控制。',
+        '今天少一次失控，明天多一点底气。',
+        '每一次及时退出，都是在重建自控权。'
     ];
 
     const CLEAN_RULES = {
@@ -274,10 +288,8 @@
         return detectStatic() || detectBody();
     }
 
-    function randomQuote(list) {
-        const pool = Array.isArray(list) && list.length ? list : QUOTES;
-        return pool[Math.floor(Math.random() * pool.length)];
-    }
+    function randomQuote() { return QUOTES[Math.floor(Math.random() * QUOTES.length)]; }
+    function randomFlowQuote() { return FLOW_QUOTES[Math.floor(Math.random() * FLOW_QUOTES.length)]; }
     function stopMonitoring() {
         if (observer) { observer.disconnect(); observer = null; }
         if (scanTimer) { clearTimeout(scanTimer); scanTimer = null; }
@@ -383,7 +395,7 @@
             const countdown = document.getElementById('focus-block-countdown');
             const quote = document.getElementById('focus-block-quote');
             if (countdown) countdown.textContent = String(Math.max(count, 0));
-            if (count <= 0) { count = 10; if (quote) quote.innerHTML = randomQuote(FLOW_QUOTES); }
+            if (count <= 0) { count = 10; if (quote) quote.innerHTML = randomFlowQuote() || randomQuote(); }
         }, 1000);
     }
 
