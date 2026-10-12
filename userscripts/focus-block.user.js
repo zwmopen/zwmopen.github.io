@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         全网净化与拦截助手-伪装断网页V4.7
+// @name         全网净化与拦截助手-纯断网页V4.7.1
 // @namespace    http://tampermonkey.net/
-// @version      4.7.0
-// @description  域名黑名单伪装断网+三刷语录提示+关键词风险评分+主流网站防误伤
+// @version      4.7.1
+// @description  黑名单域名始终伪装断网+关键词风险评分语录拦截+主流网站防误伤
 // @author       zwmopen / Gemini Partner
 // @match        *://*/*
 // @grant        GM_addStyle
@@ -22,40 +22,33 @@
     const ALLOW_KEY = 'keyword_allow_domain_list_v4_6';
     const USER_STRONG_KEY = 'user_strong_terms_v4_6';
     const USER_WEAK_KEY = 'user_weak_terms_v4_6';
-    const BLOCK_ATTEMPT_KEY = 'domain_block_attempts_v4_7';
 
     const SCORE_THRESHOLD = 80;
     const BODY_SCAN_LIMIT = 1600000;
     const NODE_SCAN_LIMIT = 260000;
-    const DOMAIN_PROMPT_AFTER = 3;
-    const DOMAIN_ATTEMPT_WINDOW_MS = 5 * 60 * 1000;
 
     const DEFAULT_BLACKLIST = [
         'qingheks.com','nnttrr.com',
-        'yangdex.com','mrfldh.com','baozougif.com','mmz.moe','tom.ynydsm.com','m.wmtxt.com',
-        'm.changdusk.com','sosadfun.net','m.rmxs8.com','wap.bxshuku.com','m.fashuwx.com','xiaomixiaoshuo.com',
-        'pornhub','1024z.cc','phncdn.com','p.eikuaitao.com','m2.ddbiquge.cc','m.wrshuw.com','m.xuankuks.com',
-        'm.xtxt99.com','wap.baimoge.com','img.ypqrgim.cn','sydswxx.com','dibaqu123.com','wap.ddsge.com',
-        'm.ucwxs.com','m.ddshubao.cc','m.heiyan.la','ysiqmzfr.eileader.cn','jj.shzpkc.cn','hongqiao668.com',
-        'lingyun-chain.com','m.qududu.cc','m.zaohuatu.com','tesexiaoshuo.com','xwbiquge.cc','minguoqiren.info',
-        'xvideos','porn','91short','nineonebuf','2xmzazd.cn','nineone','faloo.com','aabqg520.com',
-        'bstatic.pgpfp.com','shushudu.com','182135.com','yandex.com','mohvxrvd.xyz','maihuo.org','utezxmpb.xyz',
-        'heiliao','glb112.cc','toutiaocc.com','dqhevnpya9a75','wvwvon.com','lldh5.buzz','lldh.top','88ghl.live',
-        'yxz2.huainani.cn','gs5.fun','ilebjy.com','hlcg1.com','obifixjub.tips','jxz4k8.com','hlsxzz.com',
-        '911blw.net','zpixtngk.xyz','8ghl.me','abh2g.cc','pic.jfcskx.cn','ibdy33.com','3x5usfan.tips',
-        'a1x.net','mshu8.com','biqge6.cc','qishuta.org','wap.bishige.com','bqyd.cc','91-av.com','st10.gs2.fun',
-        'yuzhaiw.cc','biquge365.net','m.cuhebook.com','kanunu.info','m.okbiq.com','m.qidian.com','sxxs.cc',
-        'm.qidiansk.com','m.dswang.org','babynovel.com','gua04.fun','lyspzc.com.cn','811765.com','biqukan.co',
-        'lxjhigzgg.com','cgw10.cc','hllrweg.2024ents.life','tumblr.com','52cg1.fit','mrds1.life','renqixiaoshuo.net',
-        'zmhxs.com','qozdwvjr.com','dingdian666.com','aixuwens.com','fxxs2.com','nongcunxsw.cc','diyishu.cc',
-        '51baoliao01.com','hlw04.cc','uukojlk.com','cmdseacf.com','nj1ssyiu.net','ggxtnua.org','smzaspg.org',
-        'zvecvgl.com','m.hbpas.org','zrhvwdpq.com','bi53.cc','51cg1.com','mshu88.com','aguxs.com','bxrwdyrb.com',
-        '199833.xyz','jrgtil.com','m.ltxs520.net','huangsexiaoshuo.net','m.nilxs.com','erifeng.com','gugexs.com',
-        'dubmmdpw.com','aaccnn.com','dmdbjywe.com','mrds66.com','doublejoy.cyou','putaoks.com','feifanks.com',
-        'n.cn','shenmuxsw.cc','qqdrjkjx.cc','ihlw35.com','tantanread.com','nf8hlbk.com','hlbk11.com','lsxs.org',
-        'hl23.co','ranwennovel.com','51bl3.me','cloudfront.net','jpbqg6.com','cgw321.com','w2.sn11a.cc',
-        'juemm3.top','mvll8.cc','91blc.com','fshlkq.jpds3.makeup','ifxqgc.flsp2.homes','eld.aavv9.com',
-        'nvhai13.top','mmzx12.cc','lds15.cc'
+        'yangdex.com','mrfldh.com','baozougif.com','mmz.moe','tom.ynydsm.com','m.wmtxt.com','m.changdusk.com','sosadfun.net',
+        'm.rmxs8.com','wap.bxshuku.com','m.fashuwx.com','xiaomixiaoshuo.com','pornhub','1024z.cc','phncdn.com','p.eikuaitao.com',
+        'm2.ddbiquge.cc','m.wrshuw.com','m.xuankuks.com','m.xtxt99.com','wap.baimoge.com','img.ypqrgim.cn','sydswxx.com',
+        'dibaqu123.com','wap.ddsge.com','m.ucwxs.com','m.ddshubao.cc','m.heiyan.la','ysiqmzfr.eileader.cn','jj.shzpkc.cn',
+        'hongqiao668.com','lingyun-chain.com','m.qududu.cc','m.zaohuatu.com','tesexiaoshuo.com','xwbiquge.cc','minguoqiren.info',
+        'xvideos','porn','91short','nineonebuf','2xmzazd.cn','nineone','faloo.com','aabqg520.com','bstatic.pgpfp.com',
+        'shushudu.com','182135.com','yandex.com','mohvxrvd.xyz','maihuo.org','utezxmpb.xyz','heiliao','glb112.cc','toutiaocc.com',
+        'dqhevnpya9a75','wvwvon.com','lldh5.buzz','lldh.top','88ghl.live','yxz2.huainani.cn','gs5.fun','ilebjy.com','hlcg1.com',
+        'obifixjub.tips','jxz4k8.com','hlsxzz.com','911blw.net','zpixtngk.xyz','8ghl.me','abh2g.cc','pic.jfcskx.cn',
+        'ibdy33.com','3x5usfan.tips','a1x.net','mshu8.com','biqge6.cc','qishuta.org','wap.bishige.com','bqyd.cc','91-av.com',
+        'st10.gs2.fun','yuzhaiw.cc','biquge365.net','m.cuhebook.com','kanunu.info','m.okbiq.com','m.qidian.com','sxxs.cc',
+        'm.qidiansk.com','m.dswang.org','babynovel.com','gua04.fun','lyspzc.com.cn','811765.com','biqukan.co','lxjhigzgg.com',
+        'cgw10.cc','hllrweg.2024ents.life','tumblr.com','52cg1.fit','mrds1.life','renqixiaoshuo.net','zmhxs.com','qozdwvjr.com',
+        'dingdian666.com','aixuwens.com','fxxs2.com','nongcunxsw.cc','diyishu.cc','51baoliao01.com','hlw04.cc','uukojlk.com',
+        'cmdseacf.com','nj1ssyiu.net','ggxtnua.org','smzaspg.org','zvecvgl.com','m.hbpas.org','zrhvwdpq.com','bi53.cc',
+        '51cg1.com','mshu88.com','aguxs.com','bxrwdyrb.com','199833.xyz','jrgtil.com','m.ltxs520.net','huangsexiaoshuo.net',
+        'm.nilxs.com','erifeng.com','gugexs.com','dubmmdpw.com','aaccnn.com','dmdbjywe.com','mrds66.com','doublejoy.cyou',
+        'putaoks.com','feifanks.com','n.cn','shenmuxsw.cc','qqdrjkjx.cc','ihlw35.com','tantanread.com','nf8hlbk.com','hlbk11.com',
+        'lsxs.org','hl23.co','ranwennovel.com','51bl3.me','cloudfront.net','jpbqg6.com','cgw321.com','w2.sn11a.cc','juemm3.top',
+        'mvll8.cc','91blc.com','fshlkq.jpds3.makeup','ifxqgc.flsp2.homes','eld.aavv9.com','nvhai13.top','mmzx12.cc','lds15.cc'
     ];
 
     const REQUIRED_DOMAIN_PATCHES = ['qingheks.com','nnttrr.com'];
@@ -71,17 +64,15 @@
     ];
 
     const STRONG_TERMS = [
-        '小穴','肉穴','蜜穴','花穴','淫穴','骚穴','嫩穴','阴穴','穴口','穴壁','蜜壶','淫液','爱液',
-        '肉棒','巨根','阳具','肉根','肉柱','肉茎','胯下巨物','抽插','狠狠干','一插到底','撞击花心',
-        '口交','深喉','颜射','口射','舔弄阴蒂','吞吐肉棒','舔舐肉棒','舔弄小穴','埋首腿间',
-        '肉便器','性奴','高h','高H','肉文','里番','成人动漫','成人漫画','黄色小说','色情小说','成人小说','情色小说',
-        '成人视频','色情视频','黄色视频','成人网站','色情网站','成人直播','色情直播','裸体直播','无码av','无码高清',
-        '国产自拍','自拍偷拍','成人视频APP','成人直播APP','看片神器','成人视频入口','色情网站导航',
-        '同城约炮','附近约炮','招嫖信息','酒店上门服务','按摩特殊服务','洗浴特殊服务'
+        '小穴','肉穴','蜜穴','花穴','淫穴','骚穴','嫩穴','阴穴','穴口','穴壁','蜜壶','淫液','爱液','肉棒','巨根','阳具',
+        '肉根','肉柱','肉茎','胯下巨物','抽插','狠狠干','一插到底','撞击花心','口交','深喉','颜射','口射',
+        '舔弄阴蒂','吞吐肉棒','舔舐肉棒','舔弄小穴','埋首腿间','肉便器','性奴','高h','高H','肉文','里番',
+        '成人动漫','成人漫画','黄色小说','色情小说','成人小说','情色小说','成人视频','色情视频','黄色视频','成人网站',
+        '色情网站','成人直播','色情直播','裸体直播','无码av','无码高清','国产自拍','自拍偷拍','成人视频APP','成人直播APP',
+        '看片神器','成人视频入口','色情网站导航','同城约炮','附近约炮','招嫖信息','酒店上门服务','按摩特殊服务','洗浴特殊服务'
     ];
 
     const SPECIAL_TERMS = ['中出'];
-
     const WEAK_TERMS = [
         ['娇喘',45],['娇吟',38],['呻吟',28],['喘息',18],['私处',28],['下体',18],['乳房',14],['乳头',18],
         ['阴茎',18],['阴道',14],['射精',22],['高潮',20],['调教',22],['床戏',22],['欲望',12],['情欲',20],
@@ -91,14 +82,8 @@
         ['刷单返利',28],['兼职刷单',28],['跑分兼职',35],['洗钱跑分',45],['银行卡四件套',45],['接码平台',28]
     ];
 
-    const CONTEXT_TERMS = [
-        '小穴','肉穴','蜜穴','淫穴','肉棒','巨根','阳具','抽插','肉文','高h','成人视频','色情视频','成人网站',
-        '番号','无码','国产自拍','自拍偷拍','颜射','内射','舔弄','调教','性奴','肉便器','口交','深喉'
-    ];
-
-    const PROTECT_TERMS = [
-        '警方','法院','检察院','记者','通报','案件','新闻','报道','辟谣','反诈','医院','医生','患者','疾病','治疗','检查','手术','科普','研究','论文','法律','判决','未成年人保护','宠物','动物','养殖','兽医','生理期','青春期','教材','课程','心理咨询'
-    ];
+    const CONTEXT_TERMS = ['小穴','肉穴','蜜穴','淫穴','肉棒','巨根','阳具','抽插','肉文','高h','成人视频','色情视频','成人网站','番号','无码','国产自拍','自拍偷拍','颜射','内射','舔弄','调教','性奴','肉便器','口交','深喉'];
+    const PROTECT_TERMS = ['警方','法院','检察院','记者','通报','案件','新闻','报道','辟谣','反诈','医院','医生','患者','疾病','治疗','检查','手术','科普','研究','论文','法律','判决','未成年人保护','宠物','动物','养殖','兽医','生理期','青春期','教材','课程','心理咨询'];
 
     const QUOTES = [
         '停。你打开这个页面，不是因为你真的需要它。','先别继续。关掉页面，站起来走十步。','现在退出，还只是一个念头；继续下去，就会变成一段浪费。',
@@ -122,8 +107,7 @@
         'zsxq.com': 'app-header>.header-container,footer,.qrcode-container,.enter-group,#header,.user-info',
         'dedao.cn': '.iget-invoke-app-bar,.logo,.update-reminder'
     };
-
-    const IGNORED_SELECTOR = 'script,style,noscript,template,svg,canvas,code,pre,textarea,input,select,option,[contenteditable="true"],#focus-block-root,#fake-offline-root';
+    const IGNORED_SELECTOR = 'script,style,noscript,template,svg,canvas,code,pre,textarea,input,select,option,[contenteditable="true"],#focus-block-root';
 
     let blocked = false;
     let observer = null;
@@ -137,7 +121,7 @@
     let lastScan = 0;
 
     let blackList = loadList(DOMAIN_KEY, ['block_domain_list_v4'], DEFAULT_BLACKLIST);
-    let allowList = loadList(ALLOW_KEY, ['keyword_allow_domain_list_v4_6','keyword_allow_domain_list_v4_5','keyword_allow_domain_list_v4_3','keyword_allow_domain_list_v4_2','keyword_allow_domain_list_v4_1'], DEFAULT_ALLOWLIST);
+    let allowList = loadList(ALLOW_KEY, ['keyword_allow_domain_list_v4_5','keyword_allow_domain_list_v4_3','keyword_allow_domain_list_v4_2','keyword_allow_domain_list_v4_1'], DEFAULT_ALLOWLIST);
     let userStrongTerms = unique(GM_getValue(USER_STRONG_KEY, []));
     let userWeakTerms = unique(GM_getValue(USER_WEAK_KEY, []));
 
@@ -179,9 +163,18 @@
         }
     }
 
-    function saveAllowList() { allowList = unique(allowList); GM_setValue(ALLOW_KEY, allowList); }
-    function saveUserStrong() { userStrongTerms = unique(userStrongTerms); GM_setValue(USER_STRONG_KEY, userStrongTerms); }
-    function saveUserWeak() { userWeakTerms = unique(userWeakTerms); GM_setValue(USER_WEAK_KEY, userWeakTerms); }
+    function saveAllowList() {
+        allowList = unique(allowList);
+        GM_setValue(ALLOW_KEY, allowList);
+    }
+    function saveUserStrong() {
+        userStrongTerms = unique(userStrongTerms);
+        GM_setValue(USER_STRONG_KEY, userStrongTerms);
+    }
+    function saveUserWeak() {
+        userWeakTerms = unique(userWeakTerms);
+        GM_setValue(USER_WEAK_KEY, userWeakTerms);
+    }
 
     function normalize(value) {
         let text = String(value || '');
@@ -197,7 +190,6 @@
         if (!r) return false;
         return r.includes('.') ? (h === r || h.endsWith('.' + r)) : h.includes(r);
     }
-
     function domainBlocked() { return blackList.some(rule => domainMatches(location.hostname, rule)); }
     function keywordAllowed() { return !allowList.some(rule => domainMatches(location.hostname, rule)); }
 
@@ -212,7 +204,6 @@
         }
         return count;
     }
-
     function hasAny(normalizedText, terms) { return terms.some(term => normalizedText.includes(normalize(term))); }
 
     function analyzeText(text, source) {
@@ -224,7 +215,9 @@
         const allStrong = unique([...STRONG_TERMS, ...userStrongTerms]);
         for (const term of allStrong) {
             const n = normalize(term);
-            if (n && normalizedText.includes(n)) return { type: 'risk', method: '高度明确词', keyword: term, source, score: 100 };
+            if (n && normalizedText.includes(n)) {
+                return { type: 'risk', method: '高度明确词', source, score: 100 };
+            }
         }
 
         const contextHit = hasAny(normalizedText, CONTEXT_TERMS);
@@ -233,7 +226,9 @@
             const n = normalize(term);
             const rawCount = countOccurrences(rawText, term);
             const looseCount = countOccurrences(normalizedText, n);
-            if (rawCount >= 2 || (rawCount >= 1 && contextHit) || (looseCount >= 2 && contextHit)) return { type: 'risk', method: '特殊词+语境', keyword: term, source, score: 95 };
+            if (rawCount >= 2 || (rawCount >= 1 && contextHit) || (looseCount >= 2 && contextHit)) {
+                return { type: 'risk', method: '特殊词+语境', source, score: 95 };
+            }
             if (rawCount || looseCount) specialHits.push(term);
         }
 
@@ -241,7 +236,6 @@
         const hits = [];
         const weakMap = new Map(WEAK_TERMS.map(([term, points]) => [term, points]));
         for (const term of userWeakTerms) weakMap.set(term, 25);
-
         for (const [term, points] of weakMap.entries()) {
             const n = normalize(term);
             if (!n) continue;
@@ -253,43 +247,29 @@
                 hits.push({ term, count, points });
             }
         }
-
         const positiveHits = hits.filter(h => h.points > 0);
         if (positiveHits.length >= 2) score += 30;
         if (positiveHits.length >= 3) score += 20;
         if (contextHit && positiveHits.length >= 1) score += 25;
         if (specialHits.length && positiveHits.length >= 1) score += 35;
-
         const protectCount = PROTECT_TERMS.reduce((sum, term) => sum + (normalizedText.includes(normalize(term)) ? 1 : 0), 0);
         if (protectCount > 0 && !contextHit) score -= Math.min(50, protectCount * 18);
-
-        if (score >= SCORE_THRESHOLD) return { type: 'risk', method: '累计风险评分', keyword: '已隐藏', source, score };
+        if (score >= SCORE_THRESHOLD) return { type: 'risk', method: '累计风险评分', source, score };
         return null;
     }
 
     function decodedUrl() { try { return decodeURIComponent(location.href); } catch (error) { return location.href; } }
-
-    function detectStatic() {
-        if (!keywordAllowed()) return null;
-        return analyzeText(decodedUrl(), '网页地址') || analyzeText(document.title || '', '网页标题') || analyzeMeta();
-    }
-
+    function detectStatic() { if (!keywordAllowed()) return null; return analyzeText(decodedUrl(), '网页地址') || analyzeText(document.title || '', '网页标题') || analyzeMeta(); }
     function analyzeMeta() {
         if (!document.documentElement) return null;
-        const metaText = Array.from(document.querySelectorAll([
-            'meta[name="description"]','meta[name="keywords"]','meta[property="og:title"]','meta[property="og:description"]','meta[name="twitter:title"]','meta[name="twitter:description"]'
-        ].join(','))).map(el => el.getAttribute('content') || '').join(' ');
+        const metaText = Array.from(document.querySelectorAll(['meta[name="description"]','meta[name="keywords"]','meta[property="og:title"]','meta[property="og:description"]','meta[name="twitter:title"]','meta[name="twitter:description"]'].join(','))).map(el => el.getAttribute('content') || '').join(' ');
         return analyzeText(metaText, '网页描述');
     }
-
     function ignoredElement(element) {
         if (!element || element.nodeType !== Node.ELEMENT_NODE) return false;
-        try { return Boolean(element.matches(IGNORED_SELECTOR) || element.closest(IGNORED_SELECTOR)); }
-        catch (error) { return false; }
+        try { return Boolean(element.matches(IGNORED_SELECTOR) || element.closest(IGNORED_SELECTOR)); } catch (error) { return false; }
     }
-
     function ignoredTextNode(node) { return !node || !node.parentElement || ignoredElement(node.parentElement); }
-
     function detectNode(node) {
         if (!node || blocked || !keywordAllowed()) return null;
         if (node.nodeType === Node.TEXT_NODE) {
@@ -301,7 +281,6 @@
         try { text = node.innerText || node.textContent || ''; } catch (error) { text = node.textContent || ''; }
         return analyzeText(text.slice(0, NODE_SCAN_LIMIT), '动态加载正文');
     }
-
     function detectBody() {
         if (!keywordAllowed() || !document.body) return null;
         const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
@@ -319,36 +298,11 @@
         }
         return analyzeText(text, '页面正文');
     }
-
     function detectReason() {
         if (domainBlocked()) return { type: 'domain', domain: location.hostname, source: '域名黑名单' };
         if (!keywordAllowed()) return null;
         return detectStatic() || detectBody();
     }
-
-    function getDomainAttempt(host) {
-        const data = GM_getValue(BLOCK_ATTEMPT_KEY, {});
-        const now = Date.now();
-        const record = data && data[host] ? data[host] : { count: 0, firstAt: now };
-        if (!record.firstAt || now - record.firstAt > DOMAIN_ATTEMPT_WINDOW_MS) {
-            data[host] = { count: 1, firstAt: now };
-        } else {
-            data[host] = { count: Number(record.count || 0) + 1, firstAt: record.firstAt };
-        }
-        GM_setValue(BLOCK_ATTEMPT_KEY, data);
-        return data[host].count;
-    }
-
-    function clearDomainAttempt(host) {
-        const data = GM_getValue(BLOCK_ATTEMPT_KEY, {});
-        if (data && data[host]) {
-            delete data[host];
-            GM_setValue(BLOCK_ATTEMPT_KEY, data);
-        }
-    }
-
-    function escapeHtml(value) { return String(value || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;'); }
-    function randomQuote() { return QUOTES[Math.floor(Math.random() * QUOTES.length)]; }
 
     function stopMonitoring() {
         if (observer) { observer.disconnect(); observer = null; }
@@ -356,62 +310,33 @@
         if (urlTimer) { clearInterval(urlTimer); urlTimer = null; }
         if (safetyTimer) { clearInterval(safetyTimer); safetyTimer = null; }
     }
+    function randomQuote() { return QUOTES[Math.floor(Math.random() * QUOTES.length)]; }
 
-    function hardStop() { try { window.stop(); } catch (error) {} }
-
-    function renderFakeOffline() {
+    function renderOfflinePage() {
         if (blocked) return;
         blocked = true;
         stopMonitoring();
-        hardStop();
-
+        try { window.stop(); } catch (error) {}
         function enforce() {
             if (!document.documentElement) return;
-            document.documentElement.style.setProperty('background', '#ffffff', 'important');
-            document.documentElement.style.setProperty('overflow', 'hidden', 'important');
-            if (document.body) {
-                document.body.style.setProperty('background', '#ffffff', 'important');
-                document.body.style.setProperty('overflow', 'hidden', 'important');
-            }
-            let style = document.getElementById('fake-offline-style');
-            if (!style) {
-                style = document.createElement('style');
-                style.id = 'fake-offline-style';
-                style.textContent = `
-                    body > *:not(#fake-offline-root){display:none!important;visibility:hidden!important;pointer-events:none!important;}
-                    #fake-offline-root{position:fixed!important;inset:0!important;z-index:2147483647!important;background:#fff!important;color:#5f6368!important;font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif!important;display:flex!important;align-items:flex-start!important;justify-content:center!important;padding:96px 24px!important;box-sizing:border-box!important;}
-                    #fake-offline-card{width:min(620px,100%)!important;text-align:left!important;}
-                    #fake-offline-icon{width:72px!important;height:72px!important;border-radius:50%!important;background:#f1f3f4!important;margin-bottom:26px!important;position:relative!important;}
-                    #fake-offline-icon:before{content:""!important;position:absolute!important;left:18px!important;top:34px!important;width:36px!important;height:4px!important;background:#9aa0a6!important;border-radius:8px!important;transform:rotate(-18deg)!important;}
-                    #fake-offline-title{font-size:24px!important;line-height:1.35!important;color:#202124!important;margin:0 0 16px 0!important;font-weight:400!important;}
-                    #fake-offline-text{font-size:14px!important;line-height:1.75!important;color:#5f6368!important;margin:0!important;}
-                    #fake-offline-code{font-size:12px!important;color:#9aa0a6!important;margin-top:18px!important;}
-                `;
-                (document.head || document.documentElement).appendChild(style);
-            }
-            let root = document.getElementById('fake-offline-root');
-            if (!root) {
-                root = document.createElement('div');
-                root.id = 'fake-offline-root';
-                root.innerHTML = `<div id="fake-offline-card"><div id="fake-offline-icon"></div><h1 id="fake-offline-title">无法访问此网站</h1><p id="fake-offline-text">请检查网络连接、防火墙和代理设置。<br>如果问题仍然存在，请稍后再试。</p><div id="fake-offline-code">ERR_CONNECTION_CLOSED</div></div>`;
-                document.documentElement.appendChild(root);
+            const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>无法访问此网站</title><style>body{margin:0;background:#fff;color:#3c4043;font-family:Arial,'PingFang SC','Microsoft YaHei',sans-serif}.wrap{box-sizing:border-box;max-width:640px;margin:12vh auto 0;padding:0 32px}.icon{width:72px;height:72px;margin-bottom:24px;color:#9aa0a6}.title{font-size:24px;line-height:1.35;font-weight:400;margin:0 0 14px}.desc{font-size:15px;line-height:1.7;color:#5f6368;margin:0 0 20px}.code{font-size:12px;color:#777;margin-top:14px}.btn{display:inline-block;margin-top:18px;border:1px solid #dadce0;border-radius:20px;padding:8px 18px;color:#1a73e8;font-size:14px}</style></head><body><div class="wrap"><div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18L19 6.3V11c0 4.52-2.98 8.79-7 9.93C7.98 19.79 5 15.52 5 11V6.3l7-3.12z" opacity=".28"/><path d="M7.5 12.5h9v2h-9z"/></svg></div><h1 class="title">无法访问此网站</h1><p class="desc">网页可能暂时无法连接，或者它已永久移动到了新网址。</p><p class="code">ERR_CONNECTION_CLOSED</p><span class="btn">重新加载</span></div></body></html>`;
+            try {
+                document.open();
+                document.write(html);
+                document.close();
+            } catch (error) {
+                document.documentElement.innerHTML = html;
             }
         }
-
         enforce();
-        guardTimer = setInterval(() => {
-            if (!blocked) { clearInterval(guardTimer); guardTimer = null; return; }
-            enforce();
-            hardStop();
-        }, 100);
+        guardTimer = setInterval(enforce, 800);
     }
 
-    function renderBlockCard() {
+    function renderQuoteCard() {
         if (blocked) return;
         blocked = true;
         stopMonitoring();
-        hardStop();
-
+        try { window.stop(); } catch (error) {}
         function enforce() {
             if (!document.documentElement) return;
             document.documentElement.style.setProperty('overflow', 'hidden', 'important');
@@ -424,15 +349,7 @@
             if (!style) {
                 style = document.createElement('style');
                 style.id = 'focus-block-style';
-                style.textContent = `
-                    #focus-block-root{all:initial!important;position:fixed!important;inset:0!important;z-index:2147483647!important;display:flex!important;align-items:center!important;justify-content:center!important;width:100vw!important;height:100vh!important;padding:18px!important;box-sizing:border-box!important;overflow:hidden!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;background:#e0e5ec!important;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif!important;}
-                    #focus-block-root,#focus-block-root *{box-sizing:border-box!important;}
-                    #focus-block-card{width:min(760px,92vw)!important;padding:42px 36px!important;border-radius:30px!important;background:#e0e5ec!important;text-align:center!important;box-shadow:20px 20px 60px #bec3c9,-20px -20px 60px #ffffff!important;}
-                    #focus-block-quote{margin:0 0 20px 0!important;color:#313b48!important;font-size:clamp(22px,4vw,34px)!important;font-weight:400!important;line-height:1.65!important;}
-                    #focus-block-quote strong{color:#e53e3e!important;}
-                    #focus-block-timer{color:#e53e3e!important;font-size:20px!important;font-weight:700!important;}
-                    @media screen and (max-width:600px){#focus-block-card{width:100%!important;padding:34px 23px!important;border-radius:24px!important;}#focus-block-quote{font-size:23px!important;}}
-                `;
+                style.textContent = `#focus-block-root{all:initial!important;position:fixed!important;inset:0!important;z-index:2147483647!important;display:flex!important;align-items:center!important;justify-content:center!important;width:100vw!important;height:100vh!important;padding:18px!important;box-sizing:border-box!important;overflow:hidden!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;background:#e0e5ec!important;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif!important;}#focus-block-root,#focus-block-root *{box-sizing:border-box!important;}#focus-block-card{width:min(760px,92vw)!important;padding:42px 36px!important;border-radius:30px!important;background:#e0e5ec!important;text-align:center!important;box-shadow:20px 20px 60px #bec3c9,-20px -20px 60px #ffffff!important;}#focus-block-quote{margin:0 0 20px 0!important;color:#313b48!important;font-size:clamp(22px,4vw,34px)!important;font-weight:400!important;line-height:1.65!important;}#focus-block-timer{color:#e53e3e!important;font-size:20px!important;font-weight:700!important;}@media screen and (max-width:600px){#focus-block-card{width:100%!important;padding:34px 23px!important;border-radius:24px!important;}#focus-block-quote{font-size:23px!important;}}`;
                 (document.head || document.documentElement).appendChild(style);
             }
             let root = document.getElementById('focus-block-root');
@@ -443,14 +360,8 @@
                 document.documentElement.appendChild(root);
             }
         }
-
         enforce();
-        guardTimer = setInterval(() => {
-            if (!blocked) { clearInterval(guardTimer); guardTimer = null; return; }
-            enforce();
-            hardStop();
-        }, 100);
-
+        guardTimer = setInterval(enforce, 100);
         let count = 10;
         quoteTimer = setInterval(() => {
             count -= 1;
@@ -461,34 +372,20 @@
         }, 1000);
     }
 
-    function renderReason(reason) {
-        if (reason && reason.type === 'domain') {
-            const count = getDomainAttempt(location.hostname);
-            if (count >= DOMAIN_PROMPT_AFTER) {
-                clearDomainAttempt(location.hostname);
-                renderBlockCard();
-            } else {
-                renderFakeOffline();
-            }
-            return;
-        }
-        renderBlockCard();
-    }
-
     function applyCleanRules() {
         const host = location.hostname;
         for (const [domain, selector] of Object.entries(CLEAN_RULES)) {
             if (host === domain || host.endsWith('.' + domain)) GM_addStyle(`${selector}{display:none!important;}`);
         }
     }
-
     function runScan() {
         if (blocked) return;
         lastScan = Date.now();
         const reason = detectReason();
-        if (reason) renderReason(reason);
+        if (!reason) return;
+        if (reason.type === 'domain') renderOfflinePage();
+        else renderQuoteCard();
     }
-
     function scheduleScan(delay = 80, force = false) {
         if (blocked) return;
         if (scanTimer) clearTimeout(scanTimer);
@@ -496,7 +393,6 @@
         if (!force) wait = Math.max(wait, 180 - (Date.now() - lastScan), 0);
         scanTimer = setTimeout(runScan, wait);
     }
-
     function attachObserver() {
         if (blocked || !document.documentElement) return;
         if (observer && observedRoot === document.documentElement) return;
@@ -507,12 +403,12 @@
             for (const mutation of mutations) {
                 if (mutation.type === 'characterData') {
                     const hit = detectNode(mutation.target);
-                    if (hit) { renderReason(hit); return; }
+                    if (hit) { renderQuoteCard(); return; }
                 }
                 if (mutation.type === 'childList') {
                     for (const addedNode of mutation.addedNodes) {
                         const hit = detectNode(addedNode);
-                        if (hit) { renderReason(hit); return; }
+                        if (hit) { renderQuoteCard(); return; }
                     }
                 }
                 if (mutation.type === 'attributes') {
@@ -520,7 +416,7 @@
                     if (target && target.nodeType === Node.ELEMENT_NODE) {
                         const attributeText = ['content','title','href'].map(name => target.getAttribute(name)).filter(Boolean).join(' ');
                         const hit = analyzeText(attributeText, '动态页面属性');
-                        if (hit) { renderReason(hit); return; }
+                        if (hit) { renderQuoteCard(); return; }
                     }
                 }
             }
@@ -528,7 +424,6 @@
         });
         observer.observe(observedRoot, { subtree:true, childList:true, characterData:true, attributes:true, attributeFilter:['content','title','href'] });
     }
-
     function patchHistory() {
         if (window.__focusBlockHistoryPatched) return;
         window.__focusBlockHistoryPatched = true;
@@ -541,7 +436,6 @@
             };
         }
     }
-
     function startMonitoring() {
         attachObserver();
         patchHistory();
@@ -571,46 +465,46 @@
 
     GM_registerMenuCommand('📌 拦截当前域名', () => {
         const host = location.hostname;
-        if (!blackList.some(rule => rule.toLowerCase() === host.toLowerCase())) blackList.push(host);
+        if (!blackList.some(rule => String(rule).toLowerCase() === host.toLowerCase())) blackList.push(host);
         GM_setValue(DOMAIN_KEY, unique(blackList));
         location.reload();
     });
-
     GM_registerMenuCommand('🔤 添加强拦截词', () => {
         const term = String(prompt('输入强拦截词：命中一次直接拦截。') || '').trim();
         if (!term) return;
         userStrongTerms.push(term);
         saveUserStrong();
-        alert('已添加强拦截词。');
+        alert(`已添加强拦截词：${term}`);
         scheduleScan(0, true);
     });
-
     GM_registerMenuCommand('🟡 添加弱评分词', () => {
         const term = String(prompt('输入弱评分词：不会单独拦截，会参与累计评分。') || '').trim();
         if (!term) return;
         userWeakTerms.push(term);
         saveUserWeak();
-        alert('已添加弱评分词。');
+        alert(`已添加弱评分词：${term}`);
         scheduleScan(0, true);
     });
-
     GM_registerMenuCommand('🛡️ 当前网站关闭/恢复关键词检测', () => {
         const host = location.hostname;
-        const idx = allowList.findIndex(rule => rule.toLowerCase() === host.toLowerCase());
+        const idx = allowList.findIndex(rule => String(rule).toLowerCase() === host.toLowerCase());
         if (idx >= 0) { allowList.splice(idx, 1); alert(`已恢复关键词检测：${host}`); }
         else { allowList.push(host); alert(`已关闭该网站的关键词检测：${host}`); }
         saveAllowList();
         location.reload();
     });
-
     GM_registerMenuCommand('📋 查看主流白名单', () => { alert(`以下网站不扫描页面关键词，共 ${allowList.length} 个：\n\n${allowList.join('\n')}`); });
-    GM_registerMenuCommand('📋 查看自定义词数量', () => { alert(`强拦截词：${userStrongTerms.length} 个\n弱评分词：${userWeakTerms.length} 个`); });
+    GM_registerMenuCommand('📋 查看自定义词', () => { alert(`强拦截词：\n${userStrongTerms.join('\n') || '无'}\n\n弱评分词：\n${userWeakTerms.join('\n') || '无'}`); });
     GM_registerMenuCommand('♻️ 恢复默认主流白名单', () => { allowList = [...DEFAULT_ALLOWLIST]; saveAllowList(); location.reload(); });
 
     function init() {
         applyCleanRules();
         const earlyReason = detectReason();
-        if (earlyReason) { renderReason(earlyReason); return; }
+        if (earlyReason) {
+            if (earlyReason.type === 'domain') renderOfflinePage();
+            else renderQuoteCard();
+            return;
+        }
         startMonitoring();
         scheduleScan(0, true);
         document.addEventListener('readystatechange', () => scheduleScan(0, true), true);
