@@ -1,14 +1,13 @@
 // ==UserScript==
 // @name         ZWM 社媒助手 Lite - 小红书
 // @namespace    https://github.com/zwmopen
-// @version      0.2.0
-// @description  手机优先：提取小红书当前笔记、复制 JSON/正文/媒体链接、下载图片和视频；支持 SPA 页面切换。
+// @version      0.2.1
+// @description  Via 浏览器优先：提取小红书当前笔记、复制 JSON/正文/媒体链接、下载图片和视频；支持 SPA 页面切换。
 // @author       zwmopen
 // @match        https://www.xiaohongshu.com/*
 // @match        https://xiaohongshu.com/*
 // @match        https://*.xiaohongshu.com/*
 // @run-at       document-idle
-// @grant        unsafeWindow
 // @grant        GM_setClipboard
 // @grant        GM_download
 // @grant        GM_xmlhttpRequest
@@ -25,8 +24,8 @@
 (function () {
   'use strict';
 
-  var VERSION = '0.2.0';
-  var PAGE = typeof unsafeWindow !== 'undefined' ? unsafeWindow : window;
+  var VERSION = '0.2.1';
+  var PAGE = window;
   var HOST_ID = 'zwm-social-helper-host';
   var lastUrl = location.href;
   var timer = null;
@@ -154,6 +153,56 @@
     return fallbackScore >= 5 ? fallback : null;
   }
 
+  function parseEmbeddedState(text) {
+    if (!text || text.length > 12000000) return null;
+    try { return JSON.parse(text); } catch (_) {}
+
+    var markers = [
+      'window.__INITIAL_STATE__',
+      'window.__INITIAL_SSR_STATE__',
+      'window.__NEXT_DATA__',
+      'window.__NUXT__'
+    ];
+
+    for (var i = 0; i < markers.length; i++) {
+      var marker = markers[i];
+      var p = text.indexOf(marker);
+      if (p < 0) continue;
+      var eq = text.indexOf('=', p + marker.length);
+      if (eq < 0) continue;
+      var start = eq + 1;
+      while (/\s/.test(text[start] || '')) start++;
+      if (text[start] !== '{' && text[start] !== '[') continue;
+
+      var open = text[start];
+      var close = open === '{' ? '}' : ']';
+      var depth = 0;
+      var inString = false;
+      var escaped = false;
+
+      for (var j = start; j < text.length; j++) {
+        var ch = text[j];
+        if (inString) {
+          if (escaped) escaped = false;
+          else if (ch === '\\') escaped = true;
+          else if (ch === '"') inString = false;
+          continue;
+        }
+        if (ch === '"') {
+          inString = true;
+          continue;
+        }
+        if (ch === open) depth++;
+        if (ch === close) depth--;
+        if (depth === 0) {
+          var jsonText = text.slice(start, j + 1);
+          try { return JSON.parse(jsonText); } catch (_) { break; }
+        }
+      }
+    }
+    return null;
+  }
+
   function roots() {
     var out = [];
     var keys = ['__INITIAL_STATE__', '__INITIAL_SSR_STATE__', '__NEXT_DATA__', '__NUXT__'];
@@ -162,12 +211,28 @@
         if (PAGE && PAGE[key] && typeof PAGE[key] === 'object') out.push(PAGE[key]);
       } catch (_) {}
     });
-    qa('script[type="application/json"]').forEach(function (script) {
+
+    qa('script').forEach(function (script) {
       try {
         var text = script.textContent || '';
-        if (text && text.length < 12000000) out.push(JSON.parse(text));
+        if (!text) return;
+        if (script.type === 'application/json') {
+          var parsedJson = parseEmbeddedState(text);
+          if (parsedJson) out.push(parsedJson);
+          return;
+        }
+        if (
+          text.indexOf('__INITIAL_STATE__') >= 0 ||
+          text.indexOf('__INITIAL_SSR_STATE__') >= 0 ||
+          text.indexOf('__NEXT_DATA__') >= 0 ||
+          text.indexOf('__NUXT__') >= 0
+        ) {
+          var embedded = parseEmbeddedState(text);
+          if (embedded) out.push(embedded);
+        }
       } catch (_) {}
     });
+
     return out;
   }
 
@@ -769,7 +834,7 @@
     schedule(450);
     setTimeout(function () { schedule(0); }, 1500);
     setTimeout(function () { schedule(0); }, 3500);
-    console.info('[ZWM 社媒助手 Lite] loaded v' + VERSION);
+    console.info('[ZWM 社媒助手 Lite] Via-first build loaded v' + VERSION);
   }
 
   if (document.readyState === 'loading') {
