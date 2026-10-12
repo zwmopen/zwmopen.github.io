@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         全网净化与拦截助手-五连提示版V4.8.4
+// @name         全网净化与拦截助手-五连提示版V4.8.5
 // @namespace    http://tampermonkey.net/
-// @version      4.8.4
-// @description  黑名单与关键词统一伪装断网；30分钟内连续触发5次后显示专用拟态语录提醒，支持点击切换语录
+// @version      4.8.5
+// @description  黑名单与关键词统一伪装断网；30分钟内连续触发5次后只显示专用拟态语录提醒，支持点击切换
 // @author       zwmopen / ChatGPT Partner
 // @match        *://*/*
 // @grant        GM_addStyle
@@ -87,7 +87,6 @@
         '不要继续刷新，直接锁屏。','走到门口再回来，别坐着硬扛。'
     ]);
 
-    const QUOTES = ['停。你打开这个页面，不是因为你真的需要它。','先别继续。关掉页面，站起来走十步。','现在退出，还只是一个念头；继续下去，就会变成一段浪费。','别跟冲动讲道理，直接关掉。','这一页没有你真正想要的东西。','你已经识别到诱惑了，现在只差执行关闭。','此刻最正确的动作只有一个：关闭页面。','冲动会过去，选择会留下。','关掉刺激，拿回注意力。','退出不是损失，是止损。','清醒比快感更值钱。','关掉页面，回到人生。'];
     const CLEAN_RULES = {'yinxiang.com':'.sc-jWBwVP,.eBgsec,.sc-cMljjf,.sc-hSdWYo,img[src*="yx-icon@300.png"]','flomoapp.com':'.LaunchAppTop,.LaunchAppBottom','weread.qq.com':'.wr_tabBar_item_App,.wr_tabBar','jianshu.com':'.jianshu-header,img[src*="assets.xiaozuowen.net"],#jianshu-header','zsxq.com':'app-header>.header-container,footer,.qrcode-container,.enter-group,#header,.user-info','dedao.cn':'.iget-invoke-app-bar,.logo,.update-reminder'};
     const IGNORED_SELECTOR = 'script,style,noscript,template,svg,canvas,code,pre,textarea,input,select,option,[contenteditable="true"],#focus-block-root,#fake-network-root';
 
@@ -116,7 +115,7 @@
     function ignoredTextNode(node){return !node||!node.parentElement||ignoredElement(node.parentElement);}function detectNode(node){if(!node||blocked||!keywordAllowed())return null;if(node.nodeType===Node.TEXT_NODE){if(ignoredTextNode(node))return null;return analyzeText(node.nodeValue||'','动态加载正文');}if(node.nodeType!==Node.ELEMENT_NODE||ignoredElement(node))return null;let text='';try{text=node.innerText||node.textContent||'';}catch(error){text=node.textContent||'';}return analyzeText(text.slice(0,NODE_SCAN_LIMIT),'动态加载正文');}
     function detectBody(){if(!keywordAllowed()||!document.body)return null;const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode(node){if(ignoredTextNode(node))return NodeFilter.FILTER_REJECT;if(!node.nodeValue||!node.nodeValue.trim())return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT;}});let text='',node;while((node=walker.nextNode())){text+=' '+(node.nodeValue||'');if(text.length>=BODY_SCAN_LIMIT)break;}return analyzeText(text,'页面正文');}
     function detectReason(){if(domainBlocked())return{type:'domain',domain:location.hostname,source:'域名黑名单'};if(!keywordAllowed())return null;return detectStatic()||detectBody();}
-    function nextFlowQuote(){if(!nextFlowQuote.index&&nextFlowQuote.index!==0)nextFlowQuote.index=0;const quote=FLOW_QUOTES[nextFlowQuote.index%FLOW_QUOTES.length]||randomQuote();nextFlowQuote.index+=1;return quote;}function randomQuote(){return QUOTES[Math.floor(Math.random()*QUOTES.length)];}
+    function nextFlowQuote(){if(!nextFlowQuote.index&&nextFlowQuote.index!==0)nextFlowQuote.index=0;if(!FLOW_QUOTES.length)return FIRST_PROMPT_QUOTE;const quote=FLOW_QUOTES[nextFlowQuote.index%FLOW_QUOTES.length];nextFlowQuote.index+=1;return quote;}
     function stopMonitoring(){if(observer){observer.disconnect();observer=null;}if(scanTimer){clearTimeout(scanTimer);scanTimer=null;}if(urlTimer){clearInterval(urlTimer);urlTimer=null;}if(safetyTimer){clearInterval(safetyTimer);safetyTimer=null;}}
     function recordBlockEventAndShouldPrompt(){const now=Date.now();let flow=GM_getValue(BLOCK_FLOW_KEY,[]);if(!Array.isArray(flow))flow=[];flow=flow.filter(item=>item&&item.time&&now-item.time<=FLOW_WINDOW_MS);flow.push({host:location.hostname.replace(/^www\./,''),time:now});if(flow.length>=FLOW_PROMPT_AFTER){GM_setValue(BLOCK_FLOW_KEY,[]);return true;}GM_setValue(BLOCK_FLOW_KEY,flow);return false;}
     function renderBlock(reason){if(blocked)return;const shouldPrompt=recordBlockEventAndShouldPrompt();if(shouldPrompt)renderQuoteBlock();else renderFakeNetworkPage();}
