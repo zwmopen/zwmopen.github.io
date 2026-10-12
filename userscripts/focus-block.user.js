@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         全网净化与拦截助手-五连提示版V4.8.1
+// @name         全网净化与拦截助手-五连提示版V4.8.2
 // @namespace    http://tampermonkey.net/
-// @version      4.8.1
-// @description  黑名单与关键词统一伪装断网；30分钟内连续触发5次后显示拟态语录提醒
+// @version      4.8.2
+// @description  黑名单与关键词统一伪装断网；30分钟内连续触发5次后显示专用拟态语录提醒
 // @author       zwmopen / Gemini Partner
 // @match        *://*/*
 // @grant        GM_addStyle
@@ -22,14 +22,14 @@
     const ALLOW_KEY = 'keyword_allow_domain_list_v4_6';
     const USER_STRONG_KEY = 'user_strong_terms_v4_6';
     const USER_WEAK_KEY = 'user_weak_terms_v4_6';
-    const BLOCK_FLOW_KEY = 'block_flow_events_v4_8_1';
+    const BLOCK_FLOW_KEY = 'block_flow_events_v4_8_2';
 
     const SCORE_THRESHOLD = 80;
     const BODY_SCAN_LIMIT = 1600000;
     const NODE_SCAN_LIMIT = 260000;
     const FLOW_PROMPT_AFTER = 5;
     const FLOW_WINDOW_MS = 30 * 60 * 1000;
-    const FIRST_PROMPT_QUOTE = '连续多次触发拦截，先离开屏幕，做一个现实动作。';
+    const FIRST_PROMPT_QUOTE = '你已经连续试探 5 次了。现在离开屏幕，去做一个现实动作。';
 
     const DEFAULT_BLACKLIST = [
         'qingheks.com','nnttrr.com','yangdex.com','mrfldh.com','baozougif.com','mmz.moe','tom.ynydsm.com','m.wmtxt.com',
@@ -85,6 +85,21 @@
 
     const PROTECT_TERMS = [
         '警方','法院','检察院','记者','通报','案件','新闻','报道','辟谣','反诈','医院','医生','患者','疾病','治疗','检查','手术','科普','研究','论文','法律','判决','未成年人保护','宠物','动物','养殖','兽医','生理期','青春期','教材','课程','心理咨询'
+    ];
+
+    const FLOW_QUOTES = [
+        '你已经连续试探 5 次了。现在离开屏幕，去做一个现实动作。',
+        '这不是正常浏览，这是连续试探。',
+        '你不是在找网站，你是在被冲动牵着走。现在退出。',
+        '不要继续刷新，直接锁屏。',
+        '现在停，损失最小。',
+        '已经触发不等于已经失败，继续才是失控。',
+        '别让一次试探变成一整晚报废。',
+        '把手机扣在桌上，站起来喝水。',
+        '离开屏幕 2 分钟，不要讲道理。',
+        '你正在训练的是停止能力，不是忍耐能力。',
+        '每一次及时退出，都是在重建自控权。',
+        '这一次继续，会解决什么现实问题？'
     ];
 
     const QUOTES = [
@@ -156,8 +171,7 @@
         let text = String(value || '');
         try { text = text.normalize('NFKC'); } catch (error) {}
         text = text.toLowerCase();
-        try { return text.replace(/[\s\u200B-\u200D\uFEFF\p{P}\p{S}]+/gu, ''); }
-        catch (error) { return text.replace(/[\s\u200B-\u200D\uFEFF\-_.·•,，。！？!?:：;；'"“”‘’()（）[\]【】{}<>《》/\\|@#$%^&*+=~`]+/g, ''); }
+        return text.replace(/[\s\u200B-\u200D\uFEFF\-_.·•,，。！？!?:：;；'"“”‘’()（）[\]【】{}<>《》/\\|@#$%^&*+=~`]+/g, '');
     }
 
     function domainMatches(host, rule) {
@@ -260,7 +274,10 @@
         return detectStatic() || detectBody();
     }
 
-    function randomQuote() { return QUOTES[Math.floor(Math.random() * QUOTES.length)]; }
+    function randomQuote(list) {
+        const pool = Array.isArray(list) && list.length ? list : QUOTES;
+        return pool[Math.floor(Math.random() * pool.length)];
+    }
     function stopMonitoring() {
         if (observer) { observer.disconnect(); observer = null; }
         if (scanTimer) { clearTimeout(scanTimer); scanTimer = null; }
@@ -366,7 +383,7 @@
             const countdown = document.getElementById('focus-block-countdown');
             const quote = document.getElementById('focus-block-quote');
             if (countdown) countdown.textContent = String(Math.max(count, 0));
-            if (count <= 0) { count = 10; if (quote) quote.innerHTML = randomQuote(); }
+            if (count <= 0) { count = 10; if (quote) quote.innerHTML = randomQuote(FLOW_QUOTES); }
         }, 1000);
     }
 
