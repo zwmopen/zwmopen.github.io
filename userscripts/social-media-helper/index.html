@@ -19,8 +19,8 @@ small{display:block;margin-top:18px;color:#9ca3af;line-height:1.6}
 </head>
 <body><main><div class="card">
 <h1>ZWM 社媒助手 Lite</h1>
-<div class="sub">手机优先的小红书 Userscript：当前笔记提取、复制、素材下载。</div>
-<span class="badge">v0.2.0 · 单文件自包含</span>
+<div class="sub">Via 浏览器优先的小红书 Userscript：当前笔记提取、复制、素材下载。</div>
+<span class="badge">v0.2.1 · 单文件自包含</span>
 <a class="btn" href="https://raw.githubusercontent.com/zwmopen/zwmopen.github.io/master/userscripts/social-media-helper.user.js">安装 / 更新脚本</a>
 <a class="btn light" href="https://github.com/zwmopen/zwmopen.github.io/blob/master/userscripts/social-media-helper.user.js">查看 GitHub 源码</a>
 
@@ -30,11 +30,11 @@ small{display:block;margin-top:18px;color:#9ca3af;line-height:1.6}
 <li>复制结构化 JSON、正文、图片链接、视频链接、全部媒体链接。</li>
 <li>下载当前笔记图片和视频；GM_download 失败时自动尝试备用下载方式。</li>
 <li>优先读取笔记结构化数据，降低推荐区头像、缩略图混入概率。</li>
-<li>手机端使用底部面板，非具体笔记页面自动隐藏按钮。</li>
+<li>针对 Via 浏览器适配：不依赖 unsafeWindow，保留 Via 官方支持的 GM_download / GM_xmlhttpRequest / GM_setClipboard。</li><li>手机端使用底部面板，非具体笔记页面自动隐藏按钮。</li>
 </ul>
 
 <h2>手机使用</h2>
-<div class="note">先在支持 Userscript 的浏览器或脚本管理器中打开上方“安装 / 更新脚本”。安装后进入小红书网页版具体笔记，页面右下角会出现“素材”按钮。普通浏览器如果没有 Userscript 能力，打开安装链接只会显示源码。</div>
+<div class="note">Via 浏览器可直接安装这类 UserScript。先在 Via 中打开上方“安装 / 更新脚本”链接；若 Via 显示脚本安装确认，直接安装并启用。安装后进入小红书网页版具体笔记，右下角会出现“素材”按钮。</div>
 
 <small>这是个人工作流实验版。小红书页面结构变化后，提取规则可能需要同步更新；更新脚本即可继续使用。</small>
 </div></main></body></html>
