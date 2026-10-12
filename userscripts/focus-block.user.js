@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         全网净化与拦截助手-五连提示版V4.8
+// @name         全网净化与拦截助手-五连提示版V4.8.1
 // @namespace    http://tampermonkey.net/
-// @version      4.8.0
-// @description  黑名单与关键词统一伪装断网；连续命中5个不同站点后显示拟态语录提醒
+// @version      4.8.1
+// @description  黑名单与关键词统一伪装断网；30分钟内连续触发5次后显示拟态语录提醒
 // @author       zwmopen / Gemini Partner
 // @match        *://*/*
 // @grant        GM_addStyle
@@ -22,13 +22,14 @@
     const ALLOW_KEY = 'keyword_allow_domain_list_v4_6';
     const USER_STRONG_KEY = 'user_strong_terms_v4_6';
     const USER_WEAK_KEY = 'user_weak_terms_v4_6';
-    const BLOCK_FLOW_KEY = 'block_flow_hosts_v4_8';
+    const BLOCK_FLOW_KEY = 'block_flow_events_v4_8_1';
 
     const SCORE_THRESHOLD = 80;
     const BODY_SCAN_LIMIT = 1600000;
     const NODE_SCAN_LIMIT = 260000;
     const FLOW_PROMPT_AFTER = 5;
-    const FLOW_WINDOW_MS = 10 * 60 * 1000;
+    const FLOW_WINDOW_MS = 30 * 60 * 1000;
+    const FIRST_PROMPT_QUOTE = '连续多次触发拦截，先离开屏幕，做一个现实动作。';
 
     const DEFAULT_BLACKLIST = [
         'qingheks.com','nnttrr.com','yangdex.com','mrfldh.com','baozougif.com','mmz.moe','tom.ynydsm.com','m.wmtxt.com',
@@ -183,7 +184,7 @@
         const allStrong = unique([...STRONG_TERMS, ...userStrongTerms]);
         for (const term of allStrong) {
             const n = normalize(term);
-            if (n && normalizedText.includes(n)) return { type:'risk', method:'高度明确词', keyword:term, source, score:100 };
+            if (n && normalizedText.includes(n)) return { type:'risk', method:'高度明确词', keyword:'hidden', source, score:100 };
         }
         const contextHit = hasAny(normalizedText, CONTEXT_TERMS);
         const specialHits = [];
@@ -191,7 +192,7 @@
             const n = normalize(term);
             const rawCount = countOccurrences(rawText, term);
             const looseCount = countOccurrences(normalizedText, n);
-            if (rawCount >= 2 || (rawCount >= 1 && contextHit) || (looseCount >= 2 && contextHit)) return { type:'risk', method:'特殊词+语境', keyword:term, source, score:95 };
+            if (rawCount >= 2 || (rawCount >= 1 && contextHit) || (looseCount >= 2 && contextHit)) return { type:'risk', method:'特殊词+语境', keyword:'hidden', source, score:95 };
             if (rawCount || looseCount) specialHits.push(term);
         }
         let score = 0;
@@ -267,17 +268,13 @@
         if (safetyTimer) { clearInterval(safetyTimer); safetyTimer = null; }
     }
 
-    function recordBlockedHostAndShouldPrompt() {
+    function recordBlockEventAndShouldPrompt() {
         const now = Date.now();
-        const host = location.hostname.replace(/^www\./, '');
         let flow = GM_getValue(BLOCK_FLOW_KEY, []);
         if (!Array.isArray(flow)) flow = [];
-        flow = flow.filter(item => item && item.host && now - item.time <= FLOW_WINDOW_MS);
-        const last = flow[flow.length - 1];
-        if (!last || last.host !== host) flow.push({ host, time: now });
-        const uniqueHosts = [];
-        for (const item of flow) if (!uniqueHosts.includes(item.host)) uniqueHosts.push(item.host);
-        if (uniqueHosts.length >= FLOW_PROMPT_AFTER) {
+        flow = flow.filter(item => item && item.time && now - item.time <= FLOW_WINDOW_MS);
+        flow.push({ host: location.hostname.replace(/^www\./, ''), time: now });
+        if (flow.length >= FLOW_PROMPT_AFTER) {
             GM_setValue(BLOCK_FLOW_KEY, []);
             return true;
         }
@@ -287,7 +284,7 @@
 
     function renderBlock(reason) {
         if (blocked) return;
-        const shouldPrompt = recordBlockedHostAndShouldPrompt();
+        const shouldPrompt = recordBlockEventAndShouldPrompt();
         if (shouldPrompt) renderQuoteBlock();
         else renderFakeNetworkPage();
     }
@@ -357,7 +354,7 @@
             if (!root) {
                 root = document.createElement('div');
                 root.id = 'focus-block-root';
-                root.innerHTML = `<div id="focus-block-card"><div id="focus-block-quote">${randomQuote()}</div><div id="focus-block-timer"><span id="focus-block-countdown">10</span>s</div><div id="focus-block-sub">连续多次触发拦截，先离开屏幕，做一个现实动作。</div></div>`;
+                root.innerHTML = `<div id="focus-block-card"><div id="focus-block-quote">${FIRST_PROMPT_QUOTE}</div><div id="focus-block-timer"><span id="focus-block-countdown">10</span>s</div><div id="focus-block-sub">先离开屏幕，不要继续刷新或换站点试探。</div></div>`;
                 document.documentElement.appendChild(root);
             }
         }
