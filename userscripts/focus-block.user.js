@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         全网净化与拦截助手-干净提示版V4.6.1
+// @name         全网净化与拦截助手-伪装断网页V4.7
 // @namespace    http://tampermonkey.net/
-// @version      4.6.1
-// @description  域名黑名单+风险评分拦截+主流网站防误伤+干净拟态语录卡片
+// @version      4.7.0
+// @description  域名黑名单伪装断网+三刷语录提示+关键词风险评分+主流网站防误伤
 // @author       zwmopen / Gemini Partner
 // @match        *://*/*
 // @grant        GM_addStyle
@@ -22,13 +22,16 @@
     const ALLOW_KEY = 'keyword_allow_domain_list_v4_6';
     const USER_STRONG_KEY = 'user_strong_terms_v4_6';
     const USER_WEAK_KEY = 'user_weak_terms_v4_6';
+    const BLOCK_ATTEMPT_KEY = 'domain_block_attempts_v4_7';
 
     const SCORE_THRESHOLD = 80;
     const BODY_SCAN_LIMIT = 1600000;
     const NODE_SCAN_LIMIT = 260000;
+    const DOMAIN_PROMPT_AFTER = 3;
+    const DOMAIN_ATTEMPT_WINDOW_MS = 5 * 60 * 1000;
 
     const DEFAULT_BLACKLIST = [
-        'qingheks.com',
+        'qingheks.com','nnttrr.com',
         'yangdex.com','mrfldh.com','baozougif.com','mmz.moe','tom.ynydsm.com','m.wmtxt.com',
         'm.changdusk.com','sosadfun.net','m.rmxs8.com','wap.bxshuku.com','m.fashuwx.com','xiaomixiaoshuo.com',
         'pornhub','1024z.cc','phncdn.com','p.eikuaitao.com','m2.ddbiquge.cc','m.wrshuw.com','m.xuankuks.com',
@@ -55,6 +58,8 @@
         'nvhai13.top','mmzx12.cc','lds15.cc'
     ];
 
+    const REQUIRED_DOMAIN_PATCHES = ['qingheks.com','nnttrr.com'];
+
     const DEFAULT_ALLOWLIST = [
         'google.com','google.com.hk','bing.com','baidu.com','sogou.com','so.com','sm.cn','quark.cn','duckduckgo.com','yahoo.com',
         'zhihu.com','douyin.com','bilibili.com','weibo.com','xiaohongshu.com','toutiao.com','qq.com','weixin.qq.com','douban.com',
@@ -78,12 +83,12 @@
     const SPECIAL_TERMS = ['中出'];
 
     const WEAK_TERMS = [
-        ['娇喘', 45], ['娇吟', 38], ['呻吟', 28], ['喘息', 18], ['私处', 28], ['下体', 18], ['乳房', 14], ['乳头', 18],
-        ['阴茎', 18], ['阴道', 14], ['射精', 22], ['高潮', 20], ['调教', 22], ['床戏', 22], ['欲望', 12], ['情欲', 20],
-        ['淫荡', 35], ['淫乱', 35], ['淫靡', 28], ['发情', 12], ['内射', 45], ['啪啪啪', 10], ['成人内容', 10], ['限制级内容', 10],
-        ['强奸', 0], ['强暴', 0], ['轮奸', 0], ['性侵', 0], ['偷拍视频', 0], ['抽搐', 0], ['发情期', 0],
-        ['在线赌博', 25], ['网络赌博', 25], ['赌博网站', 35], ['博彩网站', 35], ['真人娱乐城', 35], ['充值送彩金', 35], ['首充送彩金', 35],
-        ['刷单返利', 28], ['兼职刷单', 28], ['跑分兼职', 35], ['洗钱跑分', 45], ['银行卡四件套', 45], ['接码平台', 28]
+        ['娇喘',45],['娇吟',38],['呻吟',28],['喘息',18],['私处',28],['下体',18],['乳房',14],['乳头',18],
+        ['阴茎',18],['阴道',14],['射精',22],['高潮',20],['调教',22],['床戏',22],['欲望',12],['情欲',20],
+        ['淫荡',35],['淫乱',35],['淫靡',28],['发情',12],['内射',45],['啪啪啪',10],['成人内容',10],['限制级内容',10],
+        ['强奸',0],['强暴',0],['轮奸',0],['性侵',0],['偷拍视频',0],['抽搐',0],['发情期',0],
+        ['在线赌博',25],['网络赌博',25],['赌博网站',35],['博彩网站',35],['真人娱乐城',35],['充值送彩金',35],['首充送彩金',35],
+        ['刷单返利',28],['兼职刷单',28],['跑分兼职',35],['洗钱跑分',45],['银行卡四件套',45],['接码平台',28]
     ];
 
     const CONTEXT_TERMS = [
@@ -96,105 +101,17 @@
     ];
 
     const QUOTES = [
-        '停。你打开这个页面，不是因为你真的需要它。',
-        '先别继续。关掉页面，站起来走十步。',
-        '现在退出，还只是一个念头；继续下去，就会变成一段浪费。',
-        '你不需要再看一眼，你需要的是立刻离开。',
-        '别跟冲动讲道理，直接关掉。',
-        '这一页没有你真正想要的东西。',
-        '暂停十秒。你确定要把今天交给这个页面吗？',
-        '你已经识别到诱惑了，现在只差执行关闭。',
-        '不要继续滑。下一条不会让你满足，只会让你更空。',
-        '此刻最正确的动作只有一个：关闭页面。',
-        '先退出，再决定。不要在刺激里做决定。',
-        '你不是必须看完，你随时可以停下来。',
-        '不要验证自己的自制力，直接远离触发源。',
-        '越早退出，损失越小。',
-        '这不是放松，这是在透支注意力。',
-        '这只是冲动，不是命令。',
-        '欲望会升起，也会自然退下，你不需要服从它。',
-        '你不是非看不可，只是大脑在索要即时奖励。',
-        '冲动最强的时候，往往也是最短的时候。',
-        '你现在缺的可能是休息，不是刺激。',
-        '先问自己：我是在寻找快乐，还是在逃避焦虑？',
-        '这不是你的真实需求，只是惯性在自动运行。',
-        '别把无聊误认成需求，别把冲动误认成选择。',
-        '你真正想解决的问题，不在这个网页里。',
-        '刺激不会填满空虚，只会把空虚推迟。',
-        '疲惫时不要寻找强刺激，先让身体恢复。',
-        '几分钟的刺激，可能换来几个小时的涣散。',
-        '你每继续一分钟，退出的成本就会更高。',
-        '短暂快感结束后，留下的通常是空虚、疲惫和后悔。',
-        '不要让一次点击，带走整个晚上的节奏。',
-        '你明天的状态，正在被你现在的选择决定。',
-        '现在省下来的意志力，会变成之后做事的底气。',
-        '继续浏览不会结束欲望，只会喂大欲望。',
-        '每一次及时停止，都是在削弱坏习惯。',
-        '关掉它，喝口水，洗把脸，重新开始。',
-        '把手机放远两分钟，让冲动自己下降。',
-        '先离开这个房间，换一个环境。',
-        '不要要求自己立刻高效，只要求自己先退出。',
-        '先把屏幕锁上三分钟，什么都不用做。',
-        '你不需要立刻振作，只需要停止继续下滑。',
-        '退出页面后，做一件不会后悔的小事。',
-        '先做五分钟正事，五分钟后再重新判断。',
-        '已经看了不代表必须继续，止损永远来得及。',
-        '刚才失控了也没关系，现在停下就是胜利。',
-        '不要因为已经浪费十分钟，就继续浪费一个小时。',
-        '一次滑坡不等于整晚失败。',
-        '你不需要等到明天才能重新开始。',
-        '最好的停止时间是打开之前，其次就是现在。',
-        '犯错之后最重要的，不是自责，而是立刻收手。',
-        '只要现在关掉，今天就还没有被毁掉。',
-        '停止不是失败，停止是重新取得控制。',
-        '现在收手，就是在保护接下来的自己。',
-        '你想成为的人，不会把时间交给这种页面。',
-        '真正的自由，是能对即时刺激说不。',
-        '每一次拒绝诱惑，都是在塑造新的自己。',
-        '自律不是没有欲望，而是不被欲望牵着走。',
-        '你的人生目标，比这一页重要得多。',
-        '你的时间很贵，不该被廉价刺激收割。',
-        '真正让你有底气的，是完成、积累和掌控感。',
-        '你不是欲望的奴隶，你有能力决定下一步。',
-        '今天的克制，会成为明天的清醒。',
-        '不要背叛那个正在努力改变生活的自己。',
-        '关掉。别再给自己找借口。',
-        '你知道继续下去会发生什么，现在就停。',
-        '不要拿“最后一次”欺骗自己。',
-        '这不是奖励，这是陷阱。',
-        '别用廉价刺激毁掉昂贵的注意力。',
-        '继续看不会变好，只会更难停。',
-        '别把失控包装成放松。',
-        '现在退出，是自救；继续浏览，是主动放弃控制。',
-        '关闭页面，别让垃圾内容赢。',
-        '不用责怪自己，轻轻关掉页面就好。',
-        '冲动出现很正常，选择不跟随它就够了。',
-        '你不需要和欲望战斗，只需要暂时不行动。',
-        '慢一点，深呼吸，你仍然拥有选择。',
-        '现在退出，不是剥夺快乐，而是在保护自己。',
-        '允许自己不舒服几分钟，冲动会过去。',
-        '你可以重新开始，而且不需要等到明天。',
-        '关掉之后，给自己一个真正的休息。',
-        '十分钟后，你会感谢自己继续看，还是感谢自己及时退出？',
-        '你是在主动选择，还是在被冲动操控？',
-        '这个页面能解决你现在真正的问题吗？',
-        '你想要的是几秒快感，还是一整晚的掌控感？',
-        '这次继续，会让你更接近目标还是更远？',
-        '继续往下滑，真的会出现一个让你满足的终点吗？',
-        '这一刻，你想训练自控，还是训练失控？',
-        '冲动会过去，选择会留下。',
-        '关掉刺激，拿回注意力。',
-        '不点开，是自由；能退出，是力量。',
-        '先停止，再重启。',
-        '退出不是损失，是止损。',
-        '别喂养你想戒掉的东西。',
-        '注意力在哪里，人生就流向哪里。',
-        '短痛可忍，长痛不值。',
-        '一次拒绝，一次变强。',
-        '现在关掉，今天还来得及。',
-        '清醒比快感更值钱。',
-        '克制一时，轻松一晚。',
-        '关掉页面，回到人生。'
+        '停。你打开这个页面，不是因为你真的需要它。','先别继续。关掉页面，站起来走十步。','现在退出，还只是一个念头；继续下去，就会变成一段浪费。',
+        '别跟冲动讲道理，直接关掉。','这一页没有你真正想要的东西。','你已经识别到诱惑了，现在只差执行关闭。','此刻最正确的动作只有一个：关闭页面。',
+        '这只是冲动，不是命令。','欲望会升起，也会自然退下，你不需要服从它。','你现在缺的可能是休息，不是刺激。','别把无聊误认成需求，别把冲动误认成选择。',
+        '几分钟的刺激，可能换来几个小时的涣散。','不要让一次点击，带走整个晚上的节奏。','继续浏览不会结束欲望，只会喂大欲望。','每一次及时停止，都是在削弱坏习惯。',
+        '关掉它，喝口水，洗把脸，重新开始。','把手机放远两分钟，让冲动自己下降。','先离开这个房间，换一个环境。','先做五分钟正事，五分钟后再重新判断。',
+        '已经看了不代表必须继续，止损永远来得及。','一次滑坡不等于整晚失败。','最好的停止时间是打开之前，其次就是现在。','现在收手，就是在保护接下来的自己。',
+        '你想成为的人，不会把时间交给这种页面。','真正的自由，是能对即时刺激说不。','你的时间很贵，不该被廉价刺激收割。','不要背叛那个正在努力改变生活的自己。',
+        '关掉。别再给自己找借口。','不要拿“最后一次”欺骗自己。','这不是奖励，这是陷阱。','别把失控包装成放松。','关闭页面，别让垃圾内容赢。',
+        '不用责怪自己，轻轻关掉页面就好。','冲动出现很正常，选择不跟随它就够了。','现在退出，不是剥夺快乐，而是在保护自己。','你可以重新开始，而且不需要等到明天。',
+        '十分钟后，你会感谢自己继续看，还是感谢自己及时退出？','你是在主动选择，还是在被冲动操控？','这个页面能解决你现在真正的问题吗？','你想要的是几秒快感，还是一整晚的掌控感？',
+        '冲动会过去，选择会留下。','关掉刺激，拿回注意力。','不点开，是自由；能退出，是力量。','退出不是损失，是止损。','清醒比快感更值钱。','关掉页面，回到人生。'
     ];
 
     const CLEAN_RULES = {
@@ -206,7 +123,7 @@
         'dedao.cn': '.iget-invoke-app-bar,.logo,.update-reminder'
     };
 
-    const IGNORED_SELECTOR = 'script,style,noscript,template,svg,canvas,code,pre,textarea,input,select,option,[contenteditable="true"],#focus-block-root';
+    const IGNORED_SELECTOR = 'script,style,noscript,template,svg,canvas,code,pre,textarea,input,select,option,[contenteditable="true"],#focus-block-root,#fake-offline-root';
 
     let blocked = false;
     let observer = null;
@@ -219,10 +136,12 @@
     let lastUrl = location.href;
     let lastScan = 0;
 
-    let blackList = loadMergedList(DOMAIN_KEY, ['block_domain_list_v4'], DEFAULT_BLACKLIST);
-    let allowList = loadMergedList(ALLOW_KEY, ['keyword_allow_domain_list_v4_5','keyword_allow_domain_list_v4_3','keyword_allow_domain_list_v4_2','keyword_allow_domain_list_v4_1'], DEFAULT_ALLOWLIST);
+    let blackList = loadList(DOMAIN_KEY, ['block_domain_list_v4'], DEFAULT_BLACKLIST);
+    let allowList = loadList(ALLOW_KEY, ['keyword_allow_domain_list_v4_6','keyword_allow_domain_list_v4_5','keyword_allow_domain_list_v4_3','keyword_allow_domain_list_v4_2','keyword_allow_domain_list_v4_1'], DEFAULT_ALLOWLIST);
     let userStrongTerms = unique(GM_getValue(USER_STRONG_KEY, []));
     let userWeakTerms = unique(GM_getValue(USER_WEAK_KEY, []));
+
+    patchRequiredDomains();
 
     function unique(list) {
         return [...new Set((Array.isArray(list) ? list : []).map(v => String(v).trim()).filter(Boolean))];
@@ -233,32 +152,36 @@
         return Array.isArray(value) ? value : null;
     }
 
-    function loadMergedList(key, oldKeys, defaults) {
-        const current = storedArray(key) || [];
+    function loadList(key, oldKeys, defaults) {
+        const current = storedArray(key);
+        if (current) return unique(current);
         const migrated = [];
         for (const oldKey of oldKeys) {
             const oldValue = storedArray(oldKey);
             if (oldValue) migrated.push(...oldValue);
         }
-        const result = unique([...defaults, ...migrated, ...current]);
+        const result = unique([...defaults, ...migrated]);
         GM_setValue(key, result);
         return result;
     }
 
-    function saveAllowList() {
-        allowList = unique(allowList);
-        GM_setValue(ALLOW_KEY, allowList);
+    function patchRequiredDomains() {
+        let changed = false;
+        for (const domain of REQUIRED_DOMAIN_PATCHES) {
+            if (!blackList.some(rule => String(rule).toLowerCase() === domain.toLowerCase())) {
+                blackList.push(domain);
+                changed = true;
+            }
+        }
+        if (changed) {
+            blackList = unique(blackList);
+            GM_setValue(DOMAIN_KEY, blackList);
+        }
     }
 
-    function saveUserStrong() {
-        userStrongTerms = unique(userStrongTerms);
-        GM_setValue(USER_STRONG_KEY, userStrongTerms);
-    }
-
-    function saveUserWeak() {
-        userWeakTerms = unique(userWeakTerms);
-        GM_setValue(USER_WEAK_KEY, userWeakTerms);
-    }
+    function saveAllowList() { allowList = unique(allowList); GM_setValue(ALLOW_KEY, allowList); }
+    function saveUserStrong() { userStrongTerms = unique(userStrongTerms); GM_setValue(USER_STRONG_KEY, userStrongTerms); }
+    function saveUserWeak() { userWeakTerms = unique(userWeakTerms); GM_setValue(USER_WEAK_KEY, userWeakTerms); }
 
     function normalize(value) {
         let text = String(value || '');
@@ -275,13 +198,8 @@
         return r.includes('.') ? (h === r || h.endsWith('.' + r)) : h.includes(r);
     }
 
-    function domainBlocked() {
-        return blackList.some(rule => domainMatches(location.hostname, rule));
-    }
-
-    function keywordAllowed() {
-        return !allowList.some(rule => domainMatches(location.hostname, rule));
-    }
+    function domainBlocked() { return blackList.some(rule => domainMatches(location.hostname, rule)); }
+    function keywordAllowed() { return !allowList.some(rule => domainMatches(location.hostname, rule)); }
 
     function countOccurrences(haystack, needle) {
         if (!haystack || !needle) return 0;
@@ -295,11 +213,9 @@
         return count;
     }
 
-    function hasAny(normalizedText, terms) {
-        return terms.some(term => normalizedText.includes(normalize(term)));
-    }
+    function hasAny(normalizedText, terms) { return terms.some(term => normalizedText.includes(normalize(term))); }
 
-    function analyzeText(text) {
+    function analyzeText(text, source) {
         if (!text || !keywordAllowed()) return null;
         const rawText = String(text || '');
         const normalizedText = normalize(rawText);
@@ -308,9 +224,7 @@
         const allStrong = unique([...STRONG_TERMS, ...userStrongTerms]);
         for (const term of allStrong) {
             const n = normalize(term);
-            if (n && normalizedText.includes(n)) {
-                return true;
-            }
+            if (n && normalizedText.includes(n)) return { type: 'risk', method: '高度明确词', keyword: term, source, score: 100 };
         }
 
         const contextHit = hasAny(normalizedText, CONTEXT_TERMS);
@@ -319,9 +233,7 @@
             const n = normalize(term);
             const rawCount = countOccurrences(rawText, term);
             const looseCount = countOccurrences(normalizedText, n);
-            if (rawCount >= 2 || (rawCount >= 1 && contextHit) || (looseCount >= 2 && contextHit)) {
-                return true;
-            }
+            if (rawCount >= 2 || (rawCount >= 1 && contextHit) || (looseCount >= 2 && contextHit)) return { type: 'risk', method: '特殊词+语境', keyword: term, source, score: 95 };
             if (rawCount || looseCount) specialHits.push(term);
         }
 
@@ -351,24 +263,23 @@
         const protectCount = PROTECT_TERMS.reduce((sum, term) => sum + (normalizedText.includes(normalize(term)) ? 1 : 0), 0);
         if (protectCount > 0 && !contextHit) score -= Math.min(50, protectCount * 18);
 
-        return score >= SCORE_THRESHOLD;
+        if (score >= SCORE_THRESHOLD) return { type: 'risk', method: '累计风险评分', keyword: '已隐藏', source, score };
+        return null;
     }
 
-    function decodedUrl() {
-        try { return decodeURIComponent(location.href); } catch (error) { return location.href; }
-    }
+    function decodedUrl() { try { return decodeURIComponent(location.href); } catch (error) { return location.href; } }
 
     function detectStatic() {
-        if (!keywordAllowed()) return false;
-        return analyzeText(decodedUrl()) || analyzeText(document.title || '') || analyzeMeta();
+        if (!keywordAllowed()) return null;
+        return analyzeText(decodedUrl(), '网页地址') || analyzeText(document.title || '', '网页标题') || analyzeMeta();
     }
 
     function analyzeMeta() {
-        if (!document.documentElement) return false;
+        if (!document.documentElement) return null;
         const metaText = Array.from(document.querySelectorAll([
             'meta[name="description"]','meta[name="keywords"]','meta[property="og:title"]','meta[property="og:description"]','meta[name="twitter:title"]','meta[name="twitter:description"]'
         ].join(','))).map(el => el.getAttribute('content') || '').join(' ');
-        return analyzeText(metaText);
+        return analyzeText(metaText, '网页描述');
     }
 
     function ignoredElement(element) {
@@ -377,25 +288,22 @@
         catch (error) { return false; }
     }
 
-    function ignoredTextNode(node) {
-        return !node || !node.parentElement || ignoredElement(node.parentElement);
-    }
+    function ignoredTextNode(node) { return !node || !node.parentElement || ignoredElement(node.parentElement); }
 
     function detectNode(node) {
-        if (!node || blocked || !keywordAllowed()) return false;
+        if (!node || blocked || !keywordAllowed()) return null;
         if (node.nodeType === Node.TEXT_NODE) {
-            if (ignoredTextNode(node)) return false;
-            return analyzeText(node.nodeValue || '');
+            if (ignoredTextNode(node)) return null;
+            return analyzeText(node.nodeValue || '', '动态加载正文');
         }
-        if (node.nodeType !== Node.ELEMENT_NODE || ignoredElement(node)) return false;
+        if (node.nodeType !== Node.ELEMENT_NODE || ignoredElement(node)) return null;
         let text = '';
-        try { text = node.innerText || node.textContent || ''; }
-        catch (error) { text = node.textContent || ''; }
-        return analyzeText(text.slice(0, NODE_SCAN_LIMIT));
+        try { text = node.innerText || node.textContent || ''; } catch (error) { text = node.textContent || ''; }
+        return analyzeText(text.slice(0, NODE_SCAN_LIMIT), '动态加载正文');
     }
 
     function detectBody() {
-        if (!keywordAllowed() || !document.body) return false;
+        if (!keywordAllowed() || !document.body) return null;
         const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
             acceptNode(node) {
                 if (ignoredTextNode(node)) return NodeFilter.FILTER_REJECT;
@@ -409,18 +317,38 @@
             text += ' ' + (node.nodeValue || '');
             if (text.length >= BODY_SCAN_LIMIT) break;
         }
-        return analyzeText(text);
+        return analyzeText(text, '页面正文');
     }
 
-    function shouldBlock() {
-        if (domainBlocked()) return true;
-        if (!keywordAllowed()) return false;
+    function detectReason() {
+        if (domainBlocked()) return { type: 'domain', domain: location.hostname, source: '域名黑名单' };
+        if (!keywordAllowed()) return null;
         return detectStatic() || detectBody();
     }
 
-    function randomQuote() {
-        return QUOTES[Math.floor(Math.random() * QUOTES.length)];
+    function getDomainAttempt(host) {
+        const data = GM_getValue(BLOCK_ATTEMPT_KEY, {});
+        const now = Date.now();
+        const record = data && data[host] ? data[host] : { count: 0, firstAt: now };
+        if (!record.firstAt || now - record.firstAt > DOMAIN_ATTEMPT_WINDOW_MS) {
+            data[host] = { count: 1, firstAt: now };
+        } else {
+            data[host] = { count: Number(record.count || 0) + 1, firstAt: record.firstAt };
+        }
+        GM_setValue(BLOCK_ATTEMPT_KEY, data);
+        return data[host].count;
     }
+
+    function clearDomainAttempt(host) {
+        const data = GM_getValue(BLOCK_ATTEMPT_KEY, {});
+        if (data && data[host]) {
+            delete data[host];
+            GM_setValue(BLOCK_ATTEMPT_KEY, data);
+        }
+    }
+
+    function escapeHtml(value) { return String(value || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;'); }
+    function randomQuote() { return QUOTES[Math.floor(Math.random() * QUOTES.length)]; }
 
     function stopMonitoring() {
         if (observer) { observer.disconnect(); observer = null; }
@@ -429,11 +357,60 @@
         if (safetyTimer) { clearInterval(safetyTimer); safetyTimer = null; }
     }
 
-    function renderBlock() {
+    function hardStop() { try { window.stop(); } catch (error) {} }
+
+    function renderFakeOffline() {
         if (blocked) return;
         blocked = true;
         stopMonitoring();
-        try { window.stop(); } catch (error) {}
+        hardStop();
+
+        function enforce() {
+            if (!document.documentElement) return;
+            document.documentElement.style.setProperty('background', '#ffffff', 'important');
+            document.documentElement.style.setProperty('overflow', 'hidden', 'important');
+            if (document.body) {
+                document.body.style.setProperty('background', '#ffffff', 'important');
+                document.body.style.setProperty('overflow', 'hidden', 'important');
+            }
+            let style = document.getElementById('fake-offline-style');
+            if (!style) {
+                style = document.createElement('style');
+                style.id = 'fake-offline-style';
+                style.textContent = `
+                    body > *:not(#fake-offline-root){display:none!important;visibility:hidden!important;pointer-events:none!important;}
+                    #fake-offline-root{position:fixed!important;inset:0!important;z-index:2147483647!important;background:#fff!important;color:#5f6368!important;font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif!important;display:flex!important;align-items:flex-start!important;justify-content:center!important;padding:96px 24px!important;box-sizing:border-box!important;}
+                    #fake-offline-card{width:min(620px,100%)!important;text-align:left!important;}
+                    #fake-offline-icon{width:72px!important;height:72px!important;border-radius:50%!important;background:#f1f3f4!important;margin-bottom:26px!important;position:relative!important;}
+                    #fake-offline-icon:before{content:""!important;position:absolute!important;left:18px!important;top:34px!important;width:36px!important;height:4px!important;background:#9aa0a6!important;border-radius:8px!important;transform:rotate(-18deg)!important;}
+                    #fake-offline-title{font-size:24px!important;line-height:1.35!important;color:#202124!important;margin:0 0 16px 0!important;font-weight:400!important;}
+                    #fake-offline-text{font-size:14px!important;line-height:1.75!important;color:#5f6368!important;margin:0!important;}
+                    #fake-offline-code{font-size:12px!important;color:#9aa0a6!important;margin-top:18px!important;}
+                `;
+                (document.head || document.documentElement).appendChild(style);
+            }
+            let root = document.getElementById('fake-offline-root');
+            if (!root) {
+                root = document.createElement('div');
+                root.id = 'fake-offline-root';
+                root.innerHTML = `<div id="fake-offline-card"><div id="fake-offline-icon"></div><h1 id="fake-offline-title">无法访问此网站</h1><p id="fake-offline-text">请检查网络连接、防火墙和代理设置。<br>如果问题仍然存在，请稍后再试。</p><div id="fake-offline-code">ERR_CONNECTION_CLOSED</div></div>`;
+                document.documentElement.appendChild(root);
+            }
+        }
+
+        enforce();
+        guardTimer = setInterval(() => {
+            if (!blocked) { clearInterval(guardTimer); guardTimer = null; return; }
+            enforce();
+            hardStop();
+        }, 100);
+    }
+
+    function renderBlockCard() {
+        if (blocked) return;
+        blocked = true;
+        stopMonitoring();
+        hardStop();
 
         function enforce() {
             if (!document.documentElement) return;
@@ -471,7 +448,7 @@
         guardTimer = setInterval(() => {
             if (!blocked) { clearInterval(guardTimer); guardTimer = null; return; }
             enforce();
-            try { window.stop(); } catch (error) {}
+            hardStop();
         }, 100);
 
         let count = 10;
@@ -484,6 +461,20 @@
         }, 1000);
     }
 
+    function renderReason(reason) {
+        if (reason && reason.type === 'domain') {
+            const count = getDomainAttempt(location.hostname);
+            if (count >= DOMAIN_PROMPT_AFTER) {
+                clearDomainAttempt(location.hostname);
+                renderBlockCard();
+            } else {
+                renderFakeOffline();
+            }
+            return;
+        }
+        renderBlockCard();
+    }
+
     function applyCleanRules() {
         const host = location.hostname;
         for (const [domain, selector] of Object.entries(CLEAN_RULES)) {
@@ -494,7 +485,8 @@
     function runScan() {
         if (blocked) return;
         lastScan = Date.now();
-        if (shouldBlock()) renderBlock();
+        const reason = detectReason();
+        if (reason) renderReason(reason);
     }
 
     function scheduleScan(delay = 80, force = false) {
@@ -514,18 +506,21 @@
             if (blocked || !keywordAllowed()) return;
             for (const mutation of mutations) {
                 if (mutation.type === 'characterData') {
-                    if (detectNode(mutation.target)) { renderBlock(); return; }
+                    const hit = detectNode(mutation.target);
+                    if (hit) { renderReason(hit); return; }
                 }
                 if (mutation.type === 'childList') {
                     for (const addedNode of mutation.addedNodes) {
-                        if (detectNode(addedNode)) { renderBlock(); return; }
+                        const hit = detectNode(addedNode);
+                        if (hit) { renderReason(hit); return; }
                     }
                 }
                 if (mutation.type === 'attributes') {
                     const target = mutation.target;
                     if (target && target.nodeType === Node.ELEMENT_NODE) {
                         const attributeText = ['content','title','href'].map(name => target.getAttribute(name)).filter(Boolean).join(' ');
-                        if (analyzeText(attributeText)) { renderBlock(); return; }
+                        const hit = analyzeText(attributeText, '动态页面属性');
+                        if (hit) { renderReason(hit); return; }
                     }
                 }
             }
@@ -577,8 +572,7 @@
     GM_registerMenuCommand('📌 拦截当前域名', () => {
         const host = location.hostname;
         if (!blackList.some(rule => rule.toLowerCase() === host.toLowerCase())) blackList.push(host);
-        blackList = unique(blackList);
-        GM_setValue(DOMAIN_KEY, blackList);
+        GM_setValue(DOMAIN_KEY, unique(blackList));
         location.reload();
     });
 
@@ -587,7 +581,7 @@
         if (!term) return;
         userStrongTerms.push(term);
         saveUserStrong();
-        alert('已添加。');
+        alert('已添加强拦截词。');
         scheduleScan(0, true);
     });
 
@@ -596,24 +590,27 @@
         if (!term) return;
         userWeakTerms.push(term);
         saveUserWeak();
-        alert('已添加。');
+        alert('已添加弱评分词。');
         scheduleScan(0, true);
     });
 
     GM_registerMenuCommand('🛡️ 当前网站关闭/恢复关键词检测', () => {
         const host = location.hostname;
         const idx = allowList.findIndex(rule => rule.toLowerCase() === host.toLowerCase());
-        if (idx >= 0) { allowList.splice(idx, 1); alert('已恢复关键词检测。'); }
-        else { allowList.push(host); alert('已关闭该网站的关键词检测。'); }
+        if (idx >= 0) { allowList.splice(idx, 1); alert(`已恢复关键词检测：${host}`); }
+        else { allowList.push(host); alert(`已关闭该网站的关键词检测：${host}`); }
         saveAllowList();
         location.reload();
     });
 
+    GM_registerMenuCommand('📋 查看主流白名单', () => { alert(`以下网站不扫描页面关键词，共 ${allowList.length} 个：\n\n${allowList.join('\n')}`); });
+    GM_registerMenuCommand('📋 查看自定义词数量', () => { alert(`强拦截词：${userStrongTerms.length} 个\n弱评分词：${userWeakTerms.length} 个`); });
     GM_registerMenuCommand('♻️ 恢复默认主流白名单', () => { allowList = [...DEFAULT_ALLOWLIST]; saveAllowList(); location.reload(); });
 
     function init() {
         applyCleanRules();
-        if (shouldBlock()) { renderBlock(); return; }
+        const earlyReason = detectReason();
+        if (earlyReason) { renderReason(earlyReason); return; }
         startMonitoring();
         scheduleScan(0, true);
         document.addEventListener('readystatechange', () => scheduleScan(0, true), true);
