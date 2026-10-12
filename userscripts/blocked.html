@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>无法访问此网站</title>
+<link rel="icon" href="data:,">
+<style>
+html,body{margin:0;width:100%;min-height:100%;font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#3c4043;overflow:hidden}body{box-sizing:border-box}.offline{position:fixed;inset:0;background:#fff;padding:72px 28px;box-sizing:border-box;color:#3c4043}.box{max-width:640px;margin:0 auto}.icon{width:72px;height:72px;margin-bottom:26px;color:#9aa0a6}.title{font-size:24px;line-height:1.35;font-weight:400;margin:0 0 16px;color:#202124}.text{font-size:15px;line-height:1.7;color:#5f6368;margin:0 0 14px}.error{font-size:12px;color:#70757a;margin-top:18px}.flow{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;width:100vw;height:100vh;padding:18px;box-sizing:border-box;overflow:hidden;background:#e0e5ec;cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}.card{width:min(760px,92vw);padding:42px 36px;border-radius:30px;background:#e0e5ec;text-align:center;box-shadow:20px 20px 60px #bec3c9,-20px -20px 60px #ffffff}.quote{margin:0 0 20px;color:#313b48;font-size:clamp(22px,4vw,34px);font-weight:400;line-height:1.65}.timer{color:#e53e3e;font-size:20px;font-weight:700}.sub{margin-top:18px;color:#7b8794;font-size:13px;line-height:1.6}@media(max-width:600px){.offline{padding:58px 28px}.title{font-size:22px}.card{width:100%;padding:34px 23px;border-radius:24px}.quote{font-size:23px}}
+</style>
+</head>
+<body>
+<script>
+(function(){
+'use strict';
+const FIRST='你已经连续试探 5 次了。现在离开屏幕，去做一个现实动作。';
+const FLOW=[
+'这不是正常浏览，这是连续试探。','你现在不是需要信息，是在寻找刺激入口。','你已经进入自动刷新模式了，先打断。','你不是在解决问题，你是在延长冲动。',
+'你真的想打开它，还是只是在逃避当前状态？','10 分钟后，你会感谢继续刷新，还是感谢现在停下？','这件事会让你明天更轻松，还是更后悔？','你现在是在主动选择，还是在被惯性拖着走？',
+'你要的是放松，还是刺激后的空虚？','这一次继续，会解决什么现实问题？','你要做的是把注意力拿回来。','每一次及时退出，都是在重建自控权。',
+'把手机扣在桌上，站起来喝水。','离开屏幕 2 分钟，不要讲道理。','现在起身，去洗把脸。','把浏览器关掉，打开一个现实任务。',
+'现在停，损失最小。','已经触发不等于已经失败，继续才是失控。','别让一次试探变成一整晚报废。','你正在训练的是停止能力，不是忍耐能力。',
+'能停下的人，才是真正自由的人。','你不是不能看，你是在选择不被它控制。','今天少一次失控，明天多一点底气。','第 5 次了。别继续证明它能不能打开，证明你能不能停下。',
+'不要继续刷新，直接锁屏。','走到门口再回来，别坐着硬扛。'
+];
+let i=0,count=10;
+function offline(){document.body.innerHTML='<main class="offline"><div class="box"><svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 3a7 7 0 016.32 10H5.68A7 7 0 0112 5zm0 14a7 7 0 01-5.66-2.9h11.32A7 7 0 0112 19z" fill="currentColor" opacity=".35"/></svg><h1 class="title">无法访问此网站</h1><p class="text">网页可能暂时无法连接，或者它已永久性地移动到了新网址。</p><p class="error">ERR_CONNECTION_CLOSED</p></div></main>';}
+function next(reset){const q=document.querySelector('.quote');const t=document.querySelector('.count');if(q){q.textContent=FLOW[i%FLOW.length]||FIRST;i++;}if(reset)count=10;if(t)t.textContent=String(count);}
+function flow(){document.body.innerHTML='<main class="flow"><div class="card"><div class="quote">'+FIRST+'</div><div class="timer"><span class="count">10</span>s</div><div class="sub">点击屏幕任意位置切换提示。先离开屏幕，不要继续刷新或换站点试探。</div></div></main>';document.querySelector('.flow').addEventListener('click',function(e){e.preventDefault();next(true);},true);setInterval(function(){count--;const t=document.querySelector('.count');if(t)t.textContent=String(Math.max(count,0));if(count<=0){count=10;next(false);}},1000);}
+if(location.hash==='#flow')flow();else offline();
+})();
+</script>
+</body>
+</html>
