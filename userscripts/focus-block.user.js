@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         全网净化与拦截助手-历史保护版V4.9
+// @name         全网净化与拦截助手-历史保护版V4.9.1
 // @namespace    http://tampermonkey.net/
-// @version      4.9.0
-// @description  黑名单与关键词统一伪装断网；命中后跳转中立拦截页，尽量避免原站历史记录；30分钟内连续触发5次后显示专用拟态语录
+// @version      4.9.1
+// @description  历史保护与5连提醒；修复正常指南页面被正文累计评分误拦截
 // @author       zwmopen / ChatGPT Partner
 // @match        *://*/*
 // @grant        GM_addStyle
@@ -41,7 +41,16 @@ function patchRequiredDomains(){let changed=false;for(const domain of REQUIRED_D
 function saveAllowList(){allowList=unique(allowList);GM_setValue(ALLOW_KEY,allowList);}function saveUserStrong(){userStrongTerms=unique(userStrongTerms);GM_setValue(USER_STRONG_KEY,userStrongTerms);}function saveUserWeak(){userWeakTerms=unique(userWeakTerms);GM_setValue(USER_WEAK_KEY,userWeakTerms);}
 function normalize(value){let text=String(value||'');try{text=text.normalize('NFKC');}catch(error){}text=text.toLowerCase();return text.replace(/[\s\u200B-\u200D\uFEFF\-_.·•,，。！？!?:：;；'"“”‘’()（）[\]【】{}<>《》/\\|@#$%^&*+=~`]+/g,'');}
 function domainMatches(host,rule){const h=String(host||'').toLowerCase().replace(/^www\./,'');const r=String(rule||'').toLowerCase().replace(/^https?:\/\//,'').replace(/^www\./,'').split('/')[0].trim();if(!r)return false;return r.includes('.')?(h===r||h.endsWith('.'+r)):h.includes(r);}
-function domainBlocked(){return blackList.some(rule=>domainMatches(location.hostname,rule));}function keywordAllowed(){return !allowList.some(rule=>domainMatches(location.hostname,rule));}
+// Narrow route-specific protection: only skip keyword scanning on this known normal long-form guide.
+// Do not exempt all github.io pages. Explicit user domain blocks still take precedence.
+const SAFE_READING_ROUTES=[{host:'cdyforever.github.io',path:'/how-to-live-better'}];
+function isSafeReadingRoute(){
+ const host=location.hostname.toLowerCase();
+ const path=location.pathname.toLowerCase().replace(/\/+$/,'')||'/';
+ return SAFE_READING_ROUTES.some(route=>host===route.host&&(path===route.path||path.startsWith(route.path+'/')));
+}
+function domainBlocked(){return blackList.some(rule=>domainMatches(location.hostname,rule));}
+function keywordAllowed(){return !isSafeReadingRoute()&&!allowList.some(rule=>domainMatches(location.hostname,rule));}
 function countOccurrences(haystack,needle){if(!haystack||!needle)return 0;let count=0,idx=0;while((idx=haystack.indexOf(needle,idx))!==-1){count++;idx+=Math.max(needle.length,1);if(count>=20)break;}return count;}
 function hasAny(normalizedText,terms){return terms.some(term=>normalizedText.includes(normalize(term)));}
 function analyzeText(text,source){if(!text||!keywordAllowed())return null;const rawText=String(text||''),normalizedText=normalize(rawText);if(!normalizedText)return null;const allStrong=unique([...STRONG_TERMS,...userStrongTerms]);for(const term of allStrong){const n=normalize(term);if(n&&normalizedText.includes(n))return{type:'risk',method:'高度明确词',keyword:'hidden',source,score:100};}const contextHit=hasAny(normalizedText,CONTEXT_TERMS),specialHits=[];for(const term of SPECIAL_TERMS){const n=normalize(term),rawCount=countOccurrences(rawText,term),looseCount=countOccurrences(normalizedText,n);if(rawCount>=2||(rawCount>=1&&contextHit)||(looseCount>=2&&contextHit))return{type:'risk',method:'特殊词+语境',keyword:'hidden',source,score:95};if(rawCount||looseCount)specialHits.push(term);}let score=0;const hits=[],weakMap=new Map(WEAK_TERMS.map(([term,points])=>[term,points]));for(const term of userWeakTerms)weakMap.set(term,25);for(const[term,points]of weakMap.entries()){const n=normalize(term);if(!n)continue;const count=countOccurrences(normalizedText,n);if(count>0){const capped=Math.min(count,5);score+=Math.max(points,0)*capped;if(count>=2&&points>0)score+=10;hits.push({term,count,points});}}const positiveHits=hits.filter(h=>h.points>0);if(positiveHits.length>=2)score+=30;if(positiveHits.length>=3)score+=20;if(contextHit&&positiveHits.length>=1)score+=25;if(specialHits.length&&positiveHits.length>=1)score+=35;const protectCount=PROTECT_TERMS.reduce((sum,term)=>sum+(normalizedText.includes(normalize(term))?1:0),0);if(protectCount>0&&!contextHit)score-=Math.min(50,protectCount*18);if(score>=SCORE_THRESHOLD)return{type:'risk',method:'累计风险评分',keyword:'hidden',source,score};return null;}
