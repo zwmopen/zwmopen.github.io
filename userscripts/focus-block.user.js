@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         全网净化与拦截助手-历史保护版V4.9.2
+// @name         全网净化与拦截助手-智能冷却版V5.0.0
 // @namespace    http://tampermonkey.net/
-// @version      4.9.2
-// @description  历史保护与5连提醒；新闻聚合防误判，长文按局部内容评分
+// @version      5.0.0
+// @description  双关键词组合识别；先提醒，连续高风险浏览后冷却10分钟；保留独立域名黑名单
 // @author       zwmopen / ChatGPT Partner
 // @match        *://*/*
 // @grant        GM_addStyle
@@ -71,18 +71,24 @@ function analyzeText(text,source){
  const normalizedText=normalize(rawText);
  if(!normalizedText)return null;
  if(isEditorialSite()||source==='动态页面属性'){
-  for(const term of userStrongTerms){const n=normalize(term);if(n&&normalizedText.includes(n))return{type:'risk',method:'用户强拦截词',keyword:'hidden',source,score:100};}
-  let customScore=0;
-  for(const term of userWeakTerms){const n=normalize(term);if(n)customScore+=Math.min(5,countOccurrences(normalizedText,n))*25;}
-  if(customScore>=SCORE_THRESHOLD)return{type:'risk',method:'用户弱评分词',keyword:'hidden',source,score:customScore};
+  // News and dynamic attributes are error-prone: never block from one phrase.
+  const customHits=unique([...userStrongTerms,...userWeakTerms]).filter(term=>{const n=normalize(term);return n&&normalizedText.includes(n);});
+  if(customHits.length>=2)return{type:'risk',method:'用户组合词',keyword:'hidden',source,score:90};
   return null;
- }const allStrong=unique([...STRONG_TERMS,...userStrongTerms]);for(const term of allStrong){const n=normalize(term);if(n&&normalizedText.includes(n)){
-  if(isBodySource&&!userStrongTerms.includes(term)){
-   const totalStrong=STRONG_TERMS.filter(t=>normalizedText.includes(normalize(t))).length;
-   if(totalStrong<2&&countOccurrences(normalizedText,n)<3)continue;
-  }
-  return{type:'risk',method:'高度明确词',keyword:'hidden',source,score:100};
- }}const contextHit=hasAny(normalizedText,CONTEXT_TERMS),specialHits=[];for(const term of SPECIAL_TERMS){const n=normalize(term),rawCount=countOccurrences(rawText,term),looseCount=countOccurrences(normalizedText,n);if(rawCount>=2||(rawCount>=1&&contextHit)||(looseCount>=2&&contextHit))return{type:'risk',method:'特殊词+语境',keyword:'hidden',source,score:95};if(rawCount||looseCount)specialHits.push(term);}let score=0;const hits=[],weakMap=new Map(WEAK_TERMS.map(([term,points])=>[term,points]));for(const term of userWeakTerms)weakMap.set(term,25);for(const[term,points]of weakMap.entries()){const n=normalize(term);if(!n)continue;const count=countOccurrences(normalizedText,n);if(count>0){const capped=Math.min(count,5);score+=Math.max(points,0)*capped;if(count>=2&&points>0)score+=10;hits.push({term,count,points});}}const positiveHits=hits.filter(h=>h.points>0);if(positiveHits.length>=2)score+=30;if(positiveHits.length>=3)score+=20;if(contextHit&&positiveHits.length>=1)score+=25;if(specialHits.length&&positiveHits.length>=1)score+=35;const protectCount=PROTECT_TERMS.reduce((sum,term)=>sum+(normalizedText.includes(normalize(term))?1:0),0);if(protectCount>0&&!contextHit)score-=Math.min(50,protectCount*18);if(score>=SCORE_THRESHOLD&&positiveHits.length>=2)return{type:'risk',method:'局部风险评分',keyword:'hidden',source,score};return null;}
+ }
+ const strongHits=unique([...STRONG_TERMS,...userStrongTerms]).filter(term=>{const n=normalize(term);return n&&normalizedText.includes(n);});
+ const contextHit=hasAny(normalizedText,CONTEXT_TERMS),specialHits=[];
+ for(const term of SPECIAL_TERMS){
+  const n=normalize(term);
+  if(n&&normalizedText.includes(n)&&contextHit)specialHits.push(term);
+ }
+ // An individual word, including a user-added "strong" word, is never enough.
+ // Explicit domain blacklists remain a separate, deliberate hard-block policy.
+ if(strongHits.length>=2){
+  const protectionCount=PROTECT_TERMS.filter(term=>normalizedText.includes(normalize(term))).length;
+  if(protectionCount===0||strongHits.length>=3)return{type:'risk',method:'两项以上强信号',keyword:'hidden',source,score:100};
+ }
+ let score=0;const hits=[],weakMap=new Map(WEAK_TERMS.map(([term,points])=>[term,points]));for(const term of userWeakTerms)weakMap.set(term,25);for(const[term,points]of weakMap.entries()){const n=normalize(term);if(!n)continue;const count=countOccurrences(normalizedText,n);if(count>0){const capped=Math.min(count,5);score+=Math.max(points,0)*capped;if(count>=2&&points>0)score+=10;hits.push({term,count,points});}}const positiveHits=hits.filter(h=>h.points>0);if(positiveHits.length>=2)score+=30;if(positiveHits.length>=3)score+=20;if(contextHit&&positiveHits.length>=1)score+=25;if(specialHits.length&&positiveHits.length>=1)score+=35;if(strongHits.length&&positiveHits.length>=1)score+=35;const protectCount=PROTECT_TERMS.reduce((sum,term)=>sum+(normalizedText.includes(normalize(term))?1:0),0);if(protectCount>0&&!contextHit)score-=Math.min(50,protectCount*18);if(score>=SCORE_THRESHOLD&&positiveHits.length>=2)return{type:'risk',method:'局部风险评分',keyword:'hidden',source,score};return null;}
 function decodedUrl(){try{return decodeURIComponent(location.href);}catch(error){return location.href;}}
 function detectStatic(){if(!keywordAllowed())return null;return analyzeText(decodedUrl(),'网页地址')||analyzeText(document.title||'','网页标题')||analyzeMeta();}
 function analyzeMeta(){if(!document.documentElement)return null;const metaText=Array.from(document.querySelectorAll(['meta[name="description"]','meta[name="keywords"]','meta[property="og:title"]','meta[property="og:description"]','meta[name="twitter:title"]','meta[name="twitter:description"]'].join(','))).map(el=>el.getAttribute('content')||'').join(' ');return analyzeText(metaText,'网页描述');}
@@ -90,15 +96,84 @@ function ignoredElement(element){if(!element||element.nodeType!==Node.ELEMENT_NO
 function ignoredTextNode(node){return !node||!node.parentElement||ignoredElement(node.parentElement);}function detectNode(node){if(!node||blocked||!keywordAllowed())return null;if(node.nodeType===Node.TEXT_NODE){if(ignoredTextNode(node))return null;return analyzeText(node.nodeValue||'','动态加载正文');}if(node.nodeType!==Node.ELEMENT_NODE||ignoredElement(node))return null;let text='';try{text=node.innerText||node.textContent||'';}catch(error){text=node.textContent||'';}return analyzeText(text.slice(0,NODE_SCAN_LIMIT),'动态加载正文');}
 function detectBody(){if(!keywordAllowed()||!document.body)return null;const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode(node){if(ignoredTextNode(node))return NodeFilter.FILTER_REJECT;if(!node.nodeValue||!node.nodeValue.trim())return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT;}});let text='',node;while((node=walker.nextNode())){text+=' '+(node.nodeValue||'');if(text.length>=BODY_SCAN_LIMIT)break;}return analyzeText(text,'页面正文');}
 function detectReason(){if(domainBlocked())return{type:'domain',source:'域名黑名单'};if(!keywordAllowed())return null;return detectStatic()||detectBody();}
-function stopMonitoring(){if(observer){observer.disconnect();observer=null;}if(scanTimer){clearTimeout(scanTimer);scanTimer=null;}if(urlTimer){clearInterval(urlTimer);urlTimer=null;}if(safetyTimer){clearInterval(safetyTimer);safetyTimer=null;}}
+function stopMonitoring(){if(observer){observer.disconnect();observer=null;}if(scanTimer){clearTimeout(scanTimer);scanTimer=null;}if(riskTimer){clearInterval(riskTimer);riskTimer=null;}if(urlTimer){clearInterval(urlTimer);urlTimer=null;}if(safetyTimer){clearInterval(safetyTimer);safetyTimer=null;}}
 function recordBlockEventAndShouldPrompt(){const now=Date.now();let flow=GM_getValue(BLOCK_FLOW_KEY,[]);if(!Array.isArray(flow))flow=[];flow=flow.filter(item=>item&&item.time&&now-item.time<=FLOW_WINDOW_MS);flow.push({host:location.hostname.replace(/^www\./,''),time:now});if(flow.length>=FLOW_PROMPT_AFTER){GM_setValue(BLOCK_FLOW_KEY,[]);return true;}GM_setValue(BLOCK_FLOW_KEY,flow);return false;}
 function redirectToBlocked(shouldPrompt){blocked=true;stopMonitoring();try{document.title='无法访问此网站';}catch(error){}try{location.replace(BLOCK_PAGE+(shouldPrompt?'#flow':'#offline'));}catch(error){location.href=BLOCK_PAGE+(shouldPrompt?'#flow':'#offline');}}
-function renderBlock(reason){if(blocked)return;redirectToBlocked(recordBlockEventAndShouldPrompt());}
+const SMART_SESSION_KEY='stimulus_guard_session_v5';
+const SMART_COOLDOWN_KEY='stimulus_guard_cooldown_until_v5';
+const SMART_STATS_KEY='stimulus_guard_daily_stats_v5';
+const SMART_COOLDOWN_MS=10*60*1000,SMART_WINDOW_MS=10*60*1000;
+let riskActive=false,riskTimer=null,lastRiskActivityAt=0;
+function smartNow(){return Date.now();}
+function hashRisk(input){let h=2166136261;for(let i=0;i<input.length;i++)h=Math.imul(h^input.charCodeAt(i),16777619);return(h>>>0).toString(36);}
+function smartSignature(reason){return hashRisk(location.origin+location.pathname+location.search+'|'+(document.title||'')+'|'+reason.method);}
+function readSmartState(){const state=GM_getValue(SMART_SESSION_KEY,{});return state&&typeof state==='object'&&Array.isArray(state.events)?state:{events:[],activeMs:0,lastSeen:0};}
+function smartStats(type){const date=new Date().toLocaleDateString('sv-SE');const val=GM_getValue(SMART_STATS_KEY,{});const state=val&&val.day===date?val:{day:date,warnings:0,cooldowns:0};state[type]=(Number(state[type])||0)+1;GM_setValue(SMART_STATS_KEY,state);}
+function resetSmartSession(){GM_setValue(SMART_SESSION_KEY,{events:[],activeMs:0,lastSeen:0});}
+function smartCooldownUntil(){return Number(GM_getValue(SMART_COOLDOWN_KEY,0))||0;}
+function beginSmartCooldown(){
+ const until=smartNow()+SMART_COOLDOWN_MS;
+ GM_setValue(SMART_COOLDOWN_KEY,until);resetSmartSession();smartStats('cooldowns');
+ blocked=true;stopMonitoring();
+ try{location.replace(BLOCK_PAGE+'#cooldown-'+until);}catch(e){location.href=BLOCK_PAGE+'#cooldown-'+until;}
+}
+function showSmartWarning(repeated){
+ const build=()=>{
+  if(blocked||document.getElementById('stimulus-guard-warning')||!document.body)return;
+  const wrap=document.createElement('div');wrap.id='stimulus-guard-warning';
+  wrap.setAttribute('style','position:fixed;z-index:2147483647;top:12px;left:12px;right:12px;max-width:480px;margin:auto;padding:18px;border-radius:16px;background:#f8fafc;color:#1e293b;box-shadow:0 8px 28px #0003;font:15px/1.6 system-ui,sans-serif;');
+  const h=document.createElement('div');h.style.fontWeight='700';h.textContent=repeated?'连续风险浏览提醒':'内容识别提醒';
+  const p=document.createElement('p');p.textContent=repeated?'10分钟内再次进入高风险内容。第三个不同页面，或连续高风险浏览满10分钟，将启动冷却。':'检测到多项风险内容信号。这不是禁止正常阅读；请确认是否正在无意识寻找刺激。';
+  const leave=document.createElement('button');leave.type='button';leave.textContent='离开页面';leave.style.marginRight='12px';leave.onclick=()=>{wrap.remove();history.length>1?history.back():location.replace(BLOCK_PAGE);};
+  const close=document.createElement('button');close.type='button';close.textContent='我知道了';close.onclick=()=>wrap.remove();
+  wrap.append(h,p,leave,close);document.body.append(wrap);
+ };
+ if(document.body)build();else document.addEventListener('DOMContentLoaded',build,{once:true});
+}
+function touchRiskActivity(){lastRiskActivityAt=smartNow();}
+function armRiskHeartbeat(){
+ if(riskTimer)return;
+ for(const evt of ['scroll','touchstart','keydown','mousedown'])document.addEventListener(evt,touchRiskActivity,{passive:true,capture:true});
+ riskTimer=setInterval(()=>{
+  if(blocked||!riskActive||document.hidden||!document.hasFocus())return;
+  const now=smartNow();if(now-lastRiskActivityAt>60000)return;
+  let state=readSmartState();
+  if(now-state.lastSeen>120000){riskActive=false;resetSmartSession();return;}
+  state.activeMs=(Number(state.activeMs)||0)+5000;state.lastSeen=now;
+  if(state.activeMs>=SMART_WINDOW_MS){beginSmartCooldown();return;}
+  GM_setValue(SMART_SESSION_KEY,state);
+ },5000);
+}
+function smartRiskHit(reason){
+ const now=smartNow();
+ if(now<smartCooldownUntil()){beginExistingCooldown();return;}
+ const signature=smartSignature(reason);
+ let state=readSmartState();
+ if(now-state.lastSeen>120000)state={events:[],activeMs:0,lastSeen:now};
+ state.events=state.events.filter(item=>item&&now-item.at<=SMART_WINDOW_MS);
+ const already=state.events.some(item=>item.signature===signature);
+ if(already){riskActive=true;return;}
+ state.events.push({signature,at:now});state.lastSeen=now;
+ riskActive=true;touchRiskActivity();
+ GM_setValue(SMART_SESSION_KEY,state);
+ if(state.events.length>=3){beginSmartCooldown();return;}
+ smartStats('warnings');showSmartWarning(state.events.length>1);armRiskHeartbeat();
+}
+function beginExistingCooldown(){
+ blocked=true;stopMonitoring();const until=smartCooldownUntil();
+ try{location.replace(BLOCK_PAGE+'#cooldown-'+until);}catch(e){location.href=BLOCK_PAGE+'#cooldown-'+until;}
+}
+function renderBlock(reason){
+ if(blocked)return;
+ if(reason.type==='domain'){redirectToBlocked(recordBlockEventAndShouldPrompt());return;}
+ smartRiskHit(reason);
+}
 function applyCleanRules(){const host=location.hostname;for(const[domain,selector]of Object.entries(CLEAN_RULES))if(host===domain||host.endsWith('.'+domain))GM_addStyle(`${selector}{display:none!important;}`);}
 function runScan(){if(blocked)return;lastScan=Date.now();const reason=detectReason();if(reason)renderBlock(reason);}function scheduleScan(delay=80,force=false){if(blocked)return;if(scanTimer)clearTimeout(scanTimer);let wait=Math.max(0,delay);if(!force)wait=Math.max(wait,180-(Date.now()-lastScan),0);scanTimer=setTimeout(runScan,wait);}
 function attachObserver(){if(blocked||!document.documentElement)return;if(observer&&observedRoot===document.documentElement)return;if(observer)observer.disconnect();observedRoot=document.documentElement;observer=new MutationObserver(mutations=>{if(blocked||!keywordAllowed())return;for(const mutation of mutations){if(mutation.type==='characterData'){const hit=detectNode(mutation.target);if(hit){renderBlock(hit);return;}}if(mutation.type==='childList')for(const addedNode of mutation.addedNodes){const hit=detectNode(addedNode);if(hit){renderBlock(hit);return;}}if(mutation.type==='attributes'){const target=mutation.target;if(target&&target.nodeType===Node.ELEMENT_NODE){const attributeText=['content','title','href'].map(name=>target.getAttribute(name)).filter(Boolean).join(' ');const hit=analyzeText(attributeText,'动态页面属性');if(hit){renderBlock(hit);return;}}}}scheduleScan(60,true);});observer.observe(observedRoot,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['content','title','href']});}
 function patchHistory(){if(window.__focusBlockHistoryPatched)return;window.__focusBlockHistoryPatched=true;for(const method of['pushState','replaceState']){const original=history[method];history[method]=function(...args){const result=original.apply(this,args);setTimeout(()=>{lastUrl=location.href;attachObserver();scheduleScan(0,true);},0);return result;};}}
 function startMonitoring(){attachObserver();patchHistory();const rescan=()=>{attachObserver();scheduleScan(0,true);};window.addEventListener('popstate',rescan,true);window.addEventListener('hashchange',rescan,true);window.addEventListener('pageshow',rescan,true);window.addEventListener('focus',rescan,true);document.addEventListener('visibilitychange',()=>{if(!document.hidden)rescan();},true);urlTimer=setInterval(()=>{if(blocked)return;attachObserver();if(location.href!==lastUrl){lastUrl=location.href;scheduleScan(0,true);}},250);let checks=0;safetyTimer=setInterval(()=>{if(blocked)return;checks++;attachObserver();scheduleScan(0,true);if(checks>=24){clearInterval(safetyTimer);safetyTimer=setInterval(()=>{if(!blocked){attachObserver();scheduleScan(0,true);}},5000);}},250);}
+GM_registerMenuCommand('🧭 今日智能冷却统计',()=>{const s=GM_getValue(SMART_STATS_KEY,{});const d=new Date().toLocaleDateString('sv-SE');alert(s.day===d?('今日提醒 '+(s.warnings||0)+' 次，冷却 '+(s.cooldowns||0)+' 次。只统计次数，不保存正文。'):'今日尚无记录。');});
 GM_registerMenuCommand('📌 拦截当前域名',()=>{const host=location.hostname;if(!blackList.some(rule=>rule.toLowerCase()===host.toLowerCase()))blackList.push(host);GM_setValue(DOMAIN_KEY,unique(blackList));location.reload();});
 GM_registerMenuCommand('🔤 添加强拦截词',()=>{const term=String(prompt('输入强拦截词：命中一次直接拦截。')||'').trim();if(!term)return;userStrongTerms.push(term);saveUserStrong();alert(`已添加强拦截词：${term}`);scheduleScan(0,true);});
 GM_registerMenuCommand('🟡 添加弱评分词',()=>{const term=String(prompt('输入弱评分词：不会单独拦截，会参与累计评分。')||'').trim();if(!term)return;userWeakTerms.push(term);saveUserWeak();alert(`已添加弱评分词：${term}`);scheduleScan(0,true);});
