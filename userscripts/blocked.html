@@ -27,7 +27,15 @@ let i=0,count=10;
 function offline(){document.body.innerHTML='<main class="offline"><div class="box"><svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 3a7 7 0 016.32 10H5.68A7 7 0 0112 5zm0 14a7 7 0 01-5.66-2.9h11.32A7 7 0 0112 19z" fill="currentColor" opacity=".35"/></svg><h1 class="title">无法访问此网站</h1><p class="text">网页可能暂时无法连接，或者它已永久性地移动到了新网址。</p><p class="error">ERR_CONNECTION_CLOSED</p></div></main>';}
 function next(reset){const q=document.querySelector('.quote');const t=document.querySelector('.count');if(q){q.textContent=FLOW[i%FLOW.length]||FIRST;i++;}if(reset)count=10;if(t)t.textContent=String(count);}
 function flow(){document.body.innerHTML='<main class="flow"><div class="card"><div class="quote">'+FIRST+'</div><div class="timer"><span class="count">10</span>s</div><div class="sub">点击屏幕任意位置切换提示。先离开屏幕，不要继续刷新或换站点试探。</div></div></main>';document.querySelector('.flow').addEventListener('click',function(e){e.preventDefault();next(true);},true);setInterval(function(){count--;const t=document.querySelector('.count');if(t)t.textContent=String(Math.max(count,0));if(count<=0){count=10;next(false);}},1000);}
-if(location.hash==='#flow')flow();else offline();
+function cooldown(){
+ const until=Number(location.hash.slice('#cooldown-'.length));
+ if(!Number.isFinite(until)||until<Date.now()-3600000||until>Date.now()+3600000){offline();return;}
+ document.body.innerHTML='<main class="flow"><div class="card"><div class="quote">进入10分钟冷静时间</div><div class="timer"><span class="cooldown-count">10:00</span></div><div class="sub">这次限制的是反复寻找高风险内容，不是正常阅读或其他手机功能。关闭此页去做别的事，时间到了再自主选择。</div></div></main>';
+ const timer=document.querySelector('.cooldown-count');
+ function tick(){const remaining=Math.max(0,Math.ceil((until-Date.now())/1000));if(timer)timer.textContent=remaining>0?(String(Math.floor(remaining/60)).padStart(2,'0')+':'+String(remaining%60).padStart(2,'0')):'本轮冷却已结束';if(remaining<=0)clearInterval(interval);}
+ const interval=setInterval(tick,1000);tick();
+}
+if(location.hash.startsWith('#cooldown-'))cooldown();else if(location.hash==='#flow')flow();else offline();
 })();
 </script>
 </body>
