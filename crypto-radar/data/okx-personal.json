@@ -3,7 +3,7 @@
   "status": "unavailable",
   "trader_type": "personal",
   "source_type": "official_api",
-  "updated_at": "2026-11-19T08:46:57+00:00",
+  "updated_at": "2026-11-20T08:31:46+00:00",
   "period": null,
   "traders": [],
   "source_candidates": [
@@ -17,8 +17,8 @@
     {
       "url": "https://www.okx.com/leaderboard",
       "source_type": "official_page",
-      "status": 200,
-      "reason": "page requires browser inspection before it can be promoted",
+      "status": 404,
+      "reason": "official leaderboard route is not currently available anonymously",
       "contains_leaderboard_text": false
     },
     {
