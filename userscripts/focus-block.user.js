@@ -80,7 +80,7 @@ function novelChapterDetected(){
  if(isSafeReadingRoute()||!document.body)return false;
  const title=String(document.title||'').slice(0,250);
  const headings=Array.from(document.querySelectorAll('h1,h2')).slice(0,6).map(el=>el.textContent||'').join(' ').slice(0,500);
- if(!/第\\s*[0-9零〇一二三四五六七八九十百千万两]{1,12}\\s*[章回节]/.test(title+' '+headings))return false;
+ if(!/第\s*[0-9零〇一二三四五六七八九十百千万两]{1,12}\s*[章回节]/.test(title+' '+headings))return false;
  const text=String(document.body.innerText||'').slice(0,80000);
  if(text.length<150)return false;
  const hasPrevious=/上一章|上一回|上一节|前一章|前一回/.test(text);
