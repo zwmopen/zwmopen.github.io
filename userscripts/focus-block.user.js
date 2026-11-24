@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         全网净化与拦截助手-历史保护版V4.9.3
+// @name         全网净化与拦截助手-历史保护版V4.9.2
 // @namespace    http://tampermonkey.net/
 // @version      4.9.3
 // @description  历史保护与5连提醒；补强小说网站和章节阅读页拦截，保留新闻防误判
