@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         全网净化与拦截助手-历史保护版V4.9.2
+// @name         全网净化与拦截助手-历史保护版V4.9.3
 // @namespace    http://tampermonkey.net/
-// @version      4.9.2
-// @description  历史保护与5连提醒；新闻聚合防误判，长文按局部内容评分
+// @version      4.9.3
+// @description  历史保护与5连提醒；补强小说网站和章节阅读页拦截，保留新闻防误判
 // @author       zwmopen / ChatGPT Partner
 // @match        *://*/*
 // @grant        GM_addStyle
@@ -22,6 +22,11 @@ if(location.hostname==='zwmopen.github.io'&&location.pathname==='/userscripts/bl
 const DOMAIN_KEY='block_domain_list_v4_3',ALLOW_KEY='keyword_allow_domain_list_v4_6',USER_STRONG_KEY='user_strong_terms_v4_6',USER_WEAK_KEY='user_weak_terms_v4_6',BLOCK_FLOW_KEY='block_flow_events_v4_9';
 const SCORE_THRESHOLD=80,BODY_SCAN_LIMIT=1600000,NODE_SCAN_LIMIT=260000,FLOW_PROMPT_AFTER=5,FLOW_WINDOW_MS=30*60*1000;
 const DEFAULT_BLACKLIST=['qingheks.com','nnttrr.com','yangdex.com','mrfldh.com','baozougif.com','mmz.moe','tom.ynydsm.com','m.wmtxt.com','m.changdusk.com','sosadfun.net','m.rmxs8.com','wap.bxshuku.com','m.fashuwx.com','xiaomixiaoshuo.com','pornhub','1024z.cc','phncdn.com','p.eikuaitao.com','m2.ddbiquge.cc','m.wrshuw.com','m.xuankuks.com','m.xtxt99.com','wap.baimoge.com','sydswxx.com','dibaqu123.com','wap.ddsge.com','m.ucwxs.com','m.ddshubao.cc','m.heiyan.la','tesexiaoshuo.com','xwbiquge.cc','minguoqiren.info','xvideos','porn','91short','nineonebuf','nineone','faloo.com','aabqg520.com','shushudu.com','182135.com','yandex.com','heiliao','glb112.cc','toutiaocc.com','lldh5.buzz','lldh.top','88ghl.live','911blw.net','8ghl.me','mshu8.com','biqge6.cc','qishuta.org','bqyd.cc','91-av.com','yuzhaiw.cc','biquge365.net','kanunu.info','m.qidian.com','sxxs.cc','babynovel.com','gua04.fun','811765.com','biqukan.co','tumblr.com','52cg1.fit','mrds1.life','renqixiaoshuo.net','zmhxs.com','diyishu.cc','51baoliao01.com','hlw04.cc','bi53.cc','51cg1.com','mshu88.com','199833.xyz','huangsexiaoshuo.net','mrds66.com','feifanks.com','shenmuxsw.cc','ihlw35.com','tantanread.com','nf8hlbk.com','hlbk11.com','lsxs.org','hl23.co','ranwennovel.com','51bl3.me','cloudfront.net','jpbqg6.com','cgw321.com','juemm3.top','mvll8.cc','91blc.com','nvhai13.top','mmzx12.cc','lds15.cc'];
+// Novel reading: known platforms plus distinct clone-site hostname patterns.
+ // Use a one-time migration so existing installs with persisted domain lists receive these additions.
+const NOVEL_DOMAIN_PATCH_KEY='novel_domain_patch_v4_9_3';
+const NOVEL_DOMAINS=['fanqienovel.com','qidian.com','qimao.com','jjwxc.net','zongheng.com','17k.com','shuqi.com','shuqiwang.com','shuqiwang.cn','hongxiu.com','xxsy.net','readnovel.com','book.qq.com','yunqi.qq.com','biquge.com','biquge.info','biquge5200.com','69shuba.com','69shu.com'];
+const NOVEL_HOST_FRAGMENTS=['biquge','biqukan','bqg','xiaoshuo','shuba','ranwen','booktxt'];
 const REQUIRED_DOMAIN_PATCHES=['qingheks.com','nnttrr.com'];
 const DEFAULT_ALLOWLIST=['google.com','google.com.hk','bing.com','baidu.com','sogou.com','so.com','sm.cn','quark.cn','duckduckgo.com','yahoo.com','zhihu.com','douyin.com','bilibili.com','weibo.com','xiaohongshu.com','toutiao.com','qq.com','weixin.qq.com','douban.com','kuaishou.com','163.com','sina.com.cn','thepaper.cn','ifeng.com','people.com.cn','xinhuanet.com','youtube.com','youku.com','iqiyi.com','mgtv.com','tiktok.com','instagram.com','facebook.com','x.com','twitter.com','reddit.com','quora.com','wikipedia.org','discord.com','telegram.org','chatgpt.com','openai.com','claude.ai','deepseek.com','kimi.com','doubao.com','perplexity.ai','github.com','stackoverflow.com','csdn.net','juejin.cn','jianshu.com','cnblogs.com','v2ex.com','segmentfault.com','notion.so','feishu.cn','docs.qq.com','taobao.com','tmall.com','jd.com','pinduoduo.com','meituan.com','dianping.com','ctrip.com','12306.cn','alipay.com'];
 const STRONG_TERMS=['小穴','肉穴','蜜穴','花穴','淫穴','骚穴','嫩穴','阴穴','穴口','穴壁','蜜壶','淫液','爱液','肉棒','巨根','阳具','肉根','肉柱','肉茎','胯下巨物','抽插','狠狠干','一插到底','撞击花心','口交','深喉','颜射','口射','舔弄阴蒂','吞吐肉棒','舔舐肉棒','舔弄小穴','埋首腿间','肉便器','性奴','高h','高H','肉文','里番','成人动漫','成人漫画','黄色小说','色情小说','成人小说','情色小说','成人视频','色情视频','黄色视频','成人网站','色情网站','成人直播','色情直播','裸体直播','无码av','无码高清','国产自拍','自拍偷拍','成人视频APP','成人直播APP','看片神器','成人视频入口','色情网站导航','同城约炮','附近约炮','招嫖信息','酒店上门服务','按摩特殊服务','洗浴特殊服务'];
@@ -37,7 +42,18 @@ patchRequiredDomains();
 function unique(list){return[...new Set((Array.isArray(list)?list:[]).map(v=>String(v).trim()).filter(Boolean))];}
 function storedArray(key){const value=GM_getValue(key,null);return Array.isArray(value)?value:null;}
 function loadList(key,oldKeys,defaults){const current=storedArray(key);if(current)return unique(current);const migrated=[];for(const oldKey of oldKeys){const oldValue=storedArray(oldKey);if(oldValue)migrated.push(...oldValue);}const result=unique([...defaults,...migrated]);GM_setValue(key,result);return result;}
-function patchRequiredDomains(){let changed=false;for(const domain of REQUIRED_DOMAIN_PATCHES){if(!blackList.some(rule=>String(rule).toLowerCase()===domain.toLowerCase())){blackList.push(domain);changed=true;}}if(changed){blackList=unique(blackList);GM_setValue(DOMAIN_KEY,blackList);}}
+function patchRequiredDomains(){
+ const needsNovelPatch=GM_getValue(NOVEL_DOMAIN_PATCH_KEY,false)!==true;
+ const required=needsNovelPatch?[...REQUIRED_DOMAIN_PATCHES,...NOVEL_DOMAINS]:REQUIRED_DOMAIN_PATCHES;
+ let changed=false;
+ for(const domain of required){
+  if(!blackList.some(rule=>String(rule).toLowerCase()===domain.toLowerCase())){
+   blackList.push(domain);changed=true;
+  }
+ }
+ if(changed){blackList=unique(blackList);GM_setValue(DOMAIN_KEY,blackList);}
+ if(needsNovelPatch)GM_setValue(NOVEL_DOMAIN_PATCH_KEY,true);
+}
 function saveAllowList(){allowList=unique(allowList);GM_setValue(ALLOW_KEY,allowList);}function saveUserStrong(){userStrongTerms=unique(userStrongTerms);GM_setValue(USER_STRONG_KEY,userStrongTerms);}function saveUserWeak(){userWeakTerms=unique(userWeakTerms);GM_setValue(USER_WEAK_KEY,userWeakTerms);}
 function normalize(value){let text=String(value||'');try{text=text.normalize('NFKC');}catch(error){}text=text.toLowerCase();return text.replace(/[\s\u200B-\u200D\uFEFF\-_.·•,，。！？!?:：;；'"“”‘’()（）[\]【】{}<>《》/\\|@#$%^&*+=~`]+/g,'');}
 function domainMatches(host,rule){const h=String(host||'').toLowerCase().replace(/^www\./,'');const r=String(rule||'').toLowerCase().replace(/^https?:\/\//,'').replace(/^www\./,'').split('/')[0].trim();if(!r)return false;return r.includes('.')?(h===r||h.endsWith('.'+r)):h.includes(r);}
@@ -53,6 +69,25 @@ function isSafeReadingRoute(){
 const EDITORIAL_HOSTS=['sohu.com','aihot.news'];
 function isEditorialSite(){return EDITORIAL_HOSTS.some(h=>location.hostname===h||location.hostname.endsWith('.'+h));}
 function domainBlocked(){return blackList.some(rule=>domainMatches(location.hostname,rule));}
+function novelHostBlocked(){
+ const host=String(location.hostname||'').toLowerCase();
+ return NOVEL_HOST_FRAGMENTS.some(fragment=>host.includes(fragment));
+}
+// On previously unknown domains, block only high-confidence novel chapter readers.
+// A chapter heading, both chapter navigation controls and a novel-reading marker
+// must occur together; a general article mentioning “小说” does not qualify.
+function novelChapterDetected(){
+ if(isSafeReadingRoute()||!document.body)return false;
+ const title=String(document.title||'').slice(0,250);
+ const headings=Array.from(document.querySelectorAll('h1,h2')).slice(0,6).map(el=>el.textContent||'').join(' ').slice(0,500);
+ if(!/第\\s*[0-9零〇一二三四五六七八九十百千万两]{1,12}\\s*[章回节]/.test(title+' '+headings))return false;
+ const text=String(document.body.innerText||'').slice(0,80000);
+ if(text.length<150)return false;
+ const hasPrevious=/上一章|上一回|上一节|前一章|前一回/.test(text);
+ const hasNext=/下一章|下一回|下一节|后一章|后一回/.test(text);
+ if(!hasPrevious||!hasNext)return false;
+ return /加入书架|返回书架|我的书架|小说目录|章节目录|最新章节|本书作者|书籍详情|小说阅读|阅读设置|本章未完/.test(title+' '+text);
+}
 function keywordAllowed(){return !isSafeReadingRoute()&&!allowList.some(rule=>domainMatches(location.hostname,rule));}
 function countOccurrences(haystack,needle){if(!haystack||!needle)return 0;let count=0,idx=0;while((idx=haystack.indexOf(needle,idx))!==-1){count++;idx+=Math.max(needle.length,1);if(count>=20)break;}return count;}
 function hasAny(normalizedText,terms){return terms.some(term=>normalizedText.includes(normalize(term)));}
@@ -89,7 +124,7 @@ function analyzeMeta(){if(!document.documentElement)return null;const metaText=A
 function ignoredElement(element){if(!element||element.nodeType!==Node.ELEMENT_NODE)return false;try{return Boolean(element.matches(IGNORED_SELECTOR)||element.closest(IGNORED_SELECTOR));}catch(error){return false;}}
 function ignoredTextNode(node){return !node||!node.parentElement||ignoredElement(node.parentElement);}function detectNode(node){if(!node||blocked||!keywordAllowed())return null;if(node.nodeType===Node.TEXT_NODE){if(ignoredTextNode(node))return null;return analyzeText(node.nodeValue||'','动态加载正文');}if(node.nodeType!==Node.ELEMENT_NODE||ignoredElement(node))return null;let text='';try{text=node.innerText||node.textContent||'';}catch(error){text=node.textContent||'';}return analyzeText(text.slice(0,NODE_SCAN_LIMIT),'动态加载正文');}
 function detectBody(){if(!keywordAllowed()||!document.body)return null;const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode(node){if(ignoredTextNode(node))return NodeFilter.FILTER_REJECT;if(!node.nodeValue||!node.nodeValue.trim())return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT;}});let text='',node;while((node=walker.nextNode())){text+=' '+(node.nodeValue||'');if(text.length>=BODY_SCAN_LIMIT)break;}return analyzeText(text,'页面正文');}
-function detectReason(){if(domainBlocked())return{type:'domain',source:'域名黑名单'};if(!keywordAllowed())return null;return detectStatic()||detectBody();}
+function detectReason(){if(domainBlocked())return{type:'domain',source:'域名黑名单'};if(novelHostBlocked())return{type:'novel',source:'小说站域名特征'};if(novelChapterDetected())return{type:'novel',source:'小说章节阅读页'};if(!keywordAllowed())return null;return detectStatic()||detectBody();}
 function stopMonitoring(){if(observer){observer.disconnect();observer=null;}if(scanTimer){clearTimeout(scanTimer);scanTimer=null;}if(urlTimer){clearInterval(urlTimer);urlTimer=null;}if(safetyTimer){clearInterval(safetyTimer);safetyTimer=null;}}
 function recordBlockEventAndShouldPrompt(){const now=Date.now();let flow=GM_getValue(BLOCK_FLOW_KEY,[]);if(!Array.isArray(flow))flow=[];flow=flow.filter(item=>item&&item.time&&now-item.time<=FLOW_WINDOW_MS);flow.push({host:location.hostname.replace(/^www\./,''),time:now});if(flow.length>=FLOW_PROMPT_AFTER){GM_setValue(BLOCK_FLOW_KEY,[]);return true;}GM_setValue(BLOCK_FLOW_KEY,flow);return false;}
 function redirectToBlocked(shouldPrompt){blocked=true;stopMonitoring();try{document.title='无法访问此网站';}catch(error){}try{location.replace(BLOCK_PAGE+(shouldPrompt?'#flow':'#offline'));}catch(error){location.href=BLOCK_PAGE+(shouldPrompt?'#flow':'#offline');}}
@@ -100,6 +135,13 @@ function attachObserver(){if(blocked||!document.documentElement)return;if(observ
 function patchHistory(){if(window.__focusBlockHistoryPatched)return;window.__focusBlockHistoryPatched=true;for(const method of['pushState','replaceState']){const original=history[method];history[method]=function(...args){const result=original.apply(this,args);setTimeout(()=>{lastUrl=location.href;attachObserver();scheduleScan(0,true);},0);return result;};}}
 function startMonitoring(){attachObserver();patchHistory();const rescan=()=>{attachObserver();scheduleScan(0,true);};window.addEventListener('popstate',rescan,true);window.addEventListener('hashchange',rescan,true);window.addEventListener('pageshow',rescan,true);window.addEventListener('focus',rescan,true);document.addEventListener('visibilitychange',()=>{if(!document.hidden)rescan();},true);urlTimer=setInterval(()=>{if(blocked)return;attachObserver();if(location.href!==lastUrl){lastUrl=location.href;scheduleScan(0,true);}},250);let checks=0;safetyTimer=setInterval(()=>{if(blocked)return;checks++;attachObserver();scheduleScan(0,true);if(checks>=24){clearInterval(safetyTimer);safetyTimer=setInterval(()=>{if(!blocked){attachObserver();scheduleScan(0,true);}},5000);}},250);}
 GM_registerMenuCommand('📌 拦截当前域名',()=>{const host=location.hostname;if(!blackList.some(rule=>rule.toLowerCase()===host.toLowerCase()))blackList.push(host);GM_setValue(DOMAIN_KEY,unique(blackList));location.reload();});
+GM_registerMenuCommand('📚 补全常见小说网站黑名单',()=>{
+ const before=blackList.length;
+ blackList=unique([...blackList,...NOVEL_DOMAINS]);
+ GM_setValue(DOMAIN_KEY,blackList);
+ alert('已加入常见小说站：'+(blackList.length-before)+' 个新域名。');
+ scheduleScan(0,true);
+});
 GM_registerMenuCommand('🔤 添加强拦截词',()=>{const term=String(prompt('输入强拦截词：命中一次直接拦截。')||'').trim();if(!term)return;userStrongTerms.push(term);saveUserStrong();alert(`已添加强拦截词：${term}`);scheduleScan(0,true);});
 GM_registerMenuCommand('🟡 添加弱评分词',()=>{const term=String(prompt('输入弱评分词：不会单独拦截，会参与累计评分。')||'').trim();if(!term)return;userWeakTerms.push(term);saveUserWeak();alert(`已添加弱评分词：${term}`);scheduleScan(0,true);});
 GM_registerMenuCommand('🛡️ 当前网站关闭/恢复关键词检测',()=>{const host=location.hostname;const idx=allowList.findIndex(rule=>rule.toLowerCase()===host.toLowerCase());if(idx>=0){allowList.splice(idx,1);alert(`已恢复关键词检测：${host}`);}else{allowList.push(host);alert(`已关闭该网站的关键词检测：${host}`);}saveAllowList();location.reload();});
